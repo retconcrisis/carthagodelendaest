@@ -4,4 +4,4 @@ tags={
 }
 name="Carthago Delenda Est (150 BC) [Beta]"
 supported_version="2.*"
-remote_file_id="2827580531"
+path="C:/Users/sahan/Documents/Paradox Interactive/Imperator/mod/carthagodelendaest_2.0"

@@ -1,0 +1,42 @@
+﻿"ADI"={
+	country="ADI"
+	
+	#First king of Adiabene
+	135={
+		first_name = "Abdissares"
+		family = c:ADI.fam:Abdissarid
+		nickname = "NICKNAME_ADAIABENOI"
+		birth_date=539.12.30	#215 BC
+		culture="assyrian"
+		religion="mesopotamian_religion"
+		no_stats=yes
+		add_martial=5
+		add_charisma=9
+		add_finesse=8
+		add_zeal=7
+		no_traits=yes
+		add_trait="proud"
+		add_trait="assertive"
+		add_trait="founder"
+		add_gold=250
+		add_popularity=75
+		c:ADI = {
+			set_as_ruler=char:135
+		}
+		dna="CfYJ9sWfxZ/smuyaAm4CbgJxAnECagJqAnQCdAKZApkChwKHAnkCeQKEAoQCkwKTAnkCeQJ5AnkDtgO2Am4CbgFSAVICZwJnAnECcQJwAnADrwOvAoQChAJ6AnoCeAJ4AnMCcwKZApkCjAKMAUwBTAKVApUCfQJ9AmgCaAJyAnICagJqAmkCaQJyAnIBYwFjApgCmAJ5AnkCawJrApACkAJ5AnkDnwOfAoYChgJ6AnoCdQJ1AnMCcwKVApUCjgKOAoMCgwJrAmsCdwJ3An4CfgKQApACfAJ8AncCdwAzADMClgKWAD0APQEIAQgAPQA9AKAAoABpAGkAjACMAHMAcwEcARwA2gDaAoYChgB/AH8AUgBSAo0CjQB/AH8APAA8AM4AzgCpAKkBGgEaAPkA+QDZANkA/wD/ASMBIwB/AH8A4QDhAKgAqACiAKIAtQC1At0C3QAeAB4A2ADYA20DbQDhAOEEmASYA1UDVQCZAJkL0wfXAH8AfwXYBdgGAAYUATUBNQO7A8cELwQvAfgB+AAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Fictional Heir of Abdissares
+	136={
+		family = c:ADI.fam:Abdissarid
+		birth_date=576.2.27		#178 BC
+		father="char:135"		#Abdissares is his father
+		culture="assyrian"
+		religion="mesopotamian_religion"
+		add_gold=100
+		add_popularity=55
+		dna="GP0Y/ZifmJ/a8drxAnUCdQJnAmcCggKCApcClwKYApgCbAJsAo4CjgKHAocCZwJnAoACgAKFAoUDyQPJAokCiQFhAWECdAJ0AmcCZwKQApACcQJxAmkCaQJ9An0CfQJ9AnICcgJpAmkCfgJ+Ao4CjgKZApkChwKHAn4CfgJ+An4CewJ7AmYCZgJ6AnoCcwJzAoYChgJpAmkBVwFXAmoCagJ5AnkCegJ6ACEAIQKOAo4ClAKUApMCkwKHAocDmQOZAnUCdQAiACICbgJuAm0CbQKhAqECiwKLAEQARAJqAmoCjwKPAm0CbQQUBBQASgBKARsBGwCrAKsBJQElAoYChgLHAscCmwKbAF8AXwKwArADcANwASUBJQB/AH8AGgAaAEQARAFUAVQALwAvAAoACgBVAFUADAAMARcBFwB/AH8C2gLaATIBMgKSApIBRwFHACQAJABfAF8A4wDjAzsDOwBWAFYCjQKNATkBOQCjAKMH3QfaAH8AfwVMBUwF0gYLAe4B7gOMA/4ESwR+AmMBRAAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

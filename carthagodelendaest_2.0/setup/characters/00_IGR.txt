@@ -1,0 +1,104 @@
+﻿"IGR"={
+	country="IGR"
+	
+	#Menander I Soter, current ruler of Indo-Greek Kingdom, at its greatest extent
+	122={
+		first_name = "Menandros"
+		nickname = "NICKNAME_SOTER"
+		family = c:IGR.fam:Euthydemid
+		birth_date=565.5.5		#189 BC
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=11
+		add_charisma=7
+		add_finesse=10
+		add_zeal=5
+		no_traits=yes
+		add_trait="intelligent"
+		add_trait="tolerant"
+		add_trait="generous"
+		add_gold=400
+		add_popularity=90
+		c:IGR = {
+			set_as_ruler=char:122
+		}
+		dna="lbqVup6Gnoa0p7SnAnECcQFkAWQCdwJ3AnECcQKVApUClQKVAoQChAJwAnACkwKTBNoE2gKXApcClQKVAnsCewKCAoICdAJ0AmoCagKUApQClAKUApECkQJ3AncCeAJ4AocChwJ9An0DmwObAmgCaAKPAo8CiAKIAoACgAKHAocCdwJ3ApMCkwJnAmcCiAKIBL0EvQJ/An0CgAJ4Ao4CjgKIAogClQKVAnECcQJ7AnsCkwKTA5kDmQFWAVYCdQJ1AnkCeQKVApUCjgKOApECkQJxAnECagJqAV4BXgKSApICmAKYAosCiwLkAuQACAAIANEA0QEIAQgACQAJAJ0AnQC7ALsADQANAPMA8wEgASAACgAKALYAtgB/AH8A/AD8ARYBFgD8AvwApgCmAHoAegDBAMEDnQOdANkA2QB/AH8BagFqAL4AvgK6AroAkQC0AXkBeQFoAWgAYABgAqACoACNAI0EkASQAwADAABNAE0CrgLRAH8AfwNUA1QFggWCAEsAagUGBbACNQJiAh8C5gAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Agathokleia Theotropos, wife of Menander I
+	123={
+		first_name = "Agathokleia"
+		nickname = "NICKNAME_THEOTROPOS"
+		family = c:IGR.fam:Euthydemid
+		birth_date=574.3.24		#180 BC
+		female=yes
+		marry_character="char:122"		#Menandros I
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=2
+		add_charisma=6
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="just"
+		add_trait="generous"
+		add_trait="pious"
+		add_gold=200
+		add_popularity=60
+		dna="H+sf67iJuInngOeAAnACcAKZApkCiAKIApYClgJ+An4CfwJ/A6UDpQKFAoUCdwJ3A6sDqwJ0AnQCiAKIAmoCagKFAoUCbQJtAosCiwJ8AnwExgTGAoECgQKKAooCjgKOAnoCegA2ADYExATEAoQChAKUApQCkQKRAm0CbQKIAogCcwJzAnkCeQJ+An4CbgJuAVkBWQKYApgCdAJ0AnkCeQFdAV0CbAJsAoYChgJtAm0CZgJmAowCjAKEAoQChwKHAm4CbgAiACICeAJ4Am0CbQJwAnACjAKMAnkCeQJ5AnkCZgJmAokCiQLwAvABWgFaAMoAygCzALMA2ADYAHMAcwB8AHwA/AD8ABUAFQF+AX4BeQF5AT4BPgB/AH8AuQC5AIkAiQDXANcAoACgAOgA6ALrAusBywHLANsA2wB/AH8A+gD6AqkCqQADAAMBKwErAPkA+QDXANcAVABUAAwADAEfAR8BSQFJAx0DHQCPAI8Mdgx2AH8AfwHdAd0F/wXyAGkAaQWqBaoJmwJGBgACCgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Zoilos, either ruled after Menander or was a rival king
+	124={
+		first_name = "Zoilos"
+		nickname = "NICKNAME_DIKAIOS"
+		family = c:IGR.fam:Euthydemid
+		birth_date=570.8.2		#184 BC
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=4
+		add_zeal=5
+		no_traits=yes
+		add_trait="just"
+		add_trait="ambitious"
+		add_gold=150
+		add_popularity=40
+		dna="cqdyp8p1ynW42LjYAo0CjQJ3AncCfgJ+ACAAIAKXAVYCeAJ4Ao0CjQKEAoQBUQFRAmwCbAJ0AnQCdAJ0Ao0CjQJ+An4CiwKLApECkQFhAWECegJ6AowCjAJ8AnwCaQJpAooCigKZApkCiwKLAmkCaQKMAowChAKEAnsCewJtAm0CkQKRAowCjAJ1AmcClwKXA60DrQJsAmwClAKUAoQChAKMAowCfQJ9An4CfgKJAokCfAJ8ApMCkwJ0AnQCcAJwAocChwTDBMMCkwKTAmgCaAKQApACkgKSApkCmQJ9An0CbQJtAoMCgwIRAhEBGgEaABYAFgLlAuUBGAEYAsoCygBhAGEBUgFSAoACgAEyATIApgCmAtgC2AB/AH8BQwFDABwAHACvAK8AtQC1ASkBKQAbABsAIQAhAFsAWwB/AH8BfgF+ANgA2AAPAA8A7gDuAKoAqgMBAwEAYQBhAG4AbgBCAEIEvQS9AzMDMwN/A38HlweXAH8AfwHnAecFKAUoAGwAbAUABQACAAJuAj0CPQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Lysias, became king after Menander and Zoilos
+	125={
+		first_name = "Lysias"
+		nickname = "NICKNAME_ANICETUS"
+		family = c:IGR.fam:Euthydemid
+		birth_date=584.12.26		#170 BC
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=5
+		add_finesse=4
+		add_zeal=5
+		add_gold=150
+		add_popularity=40
+		dna="O9s72758vny12rXaAm8CbwKCAoIClwKXAoUChQKKAooClQKVApcClwKMAowDrQOtAmoCagJoAmgCagJqAooCigKNAo0CagJqBNgE2AKAAoACbwJvAoYChgKEAoQCkAKQAngCeAJpAmkCgQKBA6ADoABGAEYCagJqAnYCdgJ2AnYCbgJuApcClwKBAoECggKCA6wDrAJmAmYCfgJ+Am0CbQKUApQBYgFiAnkCeQJwAnACegJ6AnsCewKSApICZgJmApgCmAJqAmoCcQJxAogCiAJ5AnkCdQJ1ApICkgKCAoIBUQFRAmsCawEBAQECxwLHACwALACZAJkArgCuATUBNQDSANIARwBHAW4BbgFnAWcElgSWAXQBdAB/AH8BGAEYALMAswFHAUcAdgB2AEUARQBjAGMAHwAfAXIBcgB/AH8AlwCXAOsA6wEoASgAEQARAI4AjgDTANMAEwATAHQAdACvAK8AXgBeA08DTwBRAFEHuAe4AH8AfwJIAkgFvQW9AI4AjgVnBWcCjQJMAvIC8gAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Antialkidas, Indo-Greek King in Taxila c. 130-120 BC
+	126={
+		first_name = "Antialkidas"
+		family = c:IGR.fam:Euthydemid
+		birth_date=582.6.10		#172 BC
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		add_gold=150
+		add_popularity=40
+	}
+	
+	
+}

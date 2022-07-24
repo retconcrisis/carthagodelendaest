@@ -1,0 +1,406 @@
+﻿namespace = cde_regency
+
+#Appoint a Regent - gives stats boost to current character but does NOT replace main ruler to avoid SUCCESSION ISSUES!
+cde_regency.1 = {
+	type = country_event
+	title = "cde_regency.1.t"
+	desc = "cde_regency.1.desc"
+	picture = successors
+	
+	left_portrait = root.current_ruler
+	left_portrait = scope:regent_mother_option_scope
+	right_portrait = scope:regent_power_base_option_scope
+	right_portrait = scope:regent_prominence_option_scope
+	
+	immediate = {
+		current_ruler = {
+			save_scope_as = regent_co_ruler
+		}
+		ordered_character = {
+			limit = {
+				employer = root
+				is_female = yes
+				is_adult = yes
+				any_child = {
+					is_ruler = yes
+					employer = root
+				}
+			}
+			check_range_bounds = no
+			save_scope_as = regent_mother_option_scope
+		}
+		ordered_character = {
+			limit = {
+				prisoner = no
+				is_adult = yes
+				is_minor_character = no
+				is_ruler = no
+				trigger_if = {
+					limit = {
+						employer = { gender_equality = no }
+					}
+					is_female = no
+				}
+			}
+			order_by = power_base
+			max = 1
+			check_range_bounds = no
+			save_scope_as = regent_power_base_option_scope
+		}
+		ordered_character = {
+			limit = {
+				prisoner = no
+				is_adult = yes
+				is_minor_character = no
+				is_ruler = no
+				trigger_if = {
+					limit = {
+						employer = { gender_equality = no }
+					}
+					is_female = no
+				}
+			}
+			order_by = prominence
+			max = 1
+			save_scope_as = regent_prominence_option_scope
+		}
+		set_variable = { 
+			name = cde_in_regency
+		}
+	}
+	
+	option = {
+		name = cde_regency.1.a		#Mother becomes Regent
+		
+		trigger = {
+			exists = scope:regent_mother_option_scope
+		}
+		
+		if = {
+			limit = {
+				government = despotic_monarchy
+			}
+			change_government = regency_despotic_monarchy
+		}
+		if = {
+			limit = {
+				government = aristocratic_monarchy
+			}
+			change_government = regency_aristocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = stratocratic_monarchy
+			}
+			change_government = regency_stratocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = theocratic_monarchy
+			}
+			change_government = regency_theocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = plutocratic_monarchy
+			}
+			change_government = regency_plutocratic_monarchy
+		}
+		
+		set_as_coruler = scope:regent_mother_option_scope	#swapped to avoid succession issues
+		
+		set_variable = {
+			name = regent_co_ruler_var
+			value = scope:regent_co_ruler
+		}
+		
+		set_variable = {
+			name = acting_regent_var
+			value = scope:regent_mother_option_scope
+		}
+	}
+	option = {
+		name = cde_regency.1.b		#Most power base becomes Regent
+		
+		if = {
+			limit = {
+				government = despotic_monarchy
+			}
+			change_government = regency_despotic_monarchy
+		}
+		if = {
+			limit = {
+				government = aristocratic_monarchy
+			}
+			change_government = regency_aristocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = stratocratic_monarchy
+			}
+			change_government = regency_stratocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = theocratic_monarchy
+			}
+			change_government = regency_theocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = plutocratic_monarchy
+			}
+			change_government = regency_plutocratic_monarchy
+		}
+		
+		set_as_coruler = scope:regent_power_base_option_scope
+		
+		set_variable = {
+			name = regent_co_ruler_var
+			value = scope:regent_co_ruler
+		}
+		
+		set_variable = {
+			name = acting_regent_var
+			value = scope:regent_power_base_option_scope
+		}
+	}
+	option = {
+		name = cde_regency.1.c		#Most prominence becomes Regent
+		
+		if = {
+			limit = {
+				government = despotic_monarchy
+			}
+			change_government = regency_despotic_monarchy
+		}
+		if = {
+			limit = {
+				government = aristocratic_monarchy
+			}
+			change_government = regency_aristocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = stratocratic_monarchy
+			}
+			change_government = regency_stratocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = theocratic_monarchy
+			}
+			change_government = regency_theocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = plutocratic_monarchy
+			}
+			change_government = regency_plutocratic_monarchy
+		}
+		
+		set_as_coruler = scope:regent_prominence_option_scope
+		
+		set_variable = {
+			name = regent_co_ruler_var
+			value = scope:regent_co_ruler
+		}
+		
+		set_variable = {
+			name = acting_regent_var
+			value = scope:regent_prominence_option_scope
+		}
+	}
+	option = {
+		name = cde_regency.1.d		#Change mind
+		
+		remove_variable = cde_in_regency
+	}
+}
+
+
+#Regent Steps Down
+cde_regency.2 = {
+	type = country_event
+	title = "cde_regency.2.t"
+	desc = "cde_regency.2.desc"
+	picture = successors
+	
+	left_portrait = var:regent_co_ruler_var
+	right_portrait = var:acting_regent_var
+	
+	trigger = {
+		has_variable = cde_in_regency
+		var:regent_co_ruler_var = {			#Variable set in previous event, since scopes don't transfer outside of event chains
+			is_alive = yes
+			is_adult = yes
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				government = regency_despotic_monarchy
+			}
+			change_government = despotic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_aristocratic_monarchy
+			}
+			change_government = aristocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_stratocratic_monarchy
+			}
+			change_government = stratocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_theocratic_monarchy
+			}
+			change_government = theocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_plutocratic_monarchy
+			}
+			change_government = plutocratic_monarchy
+		}
+	}
+	
+	option = {
+		name = cde_regency.2.a		#Regent steps down
+		
+		custom_tooltip = cde_regency.2.tt
+		
+		remove_variable = regent_co_ruler_var		#removes so can be used again
+		remove_variable = acting_regent_var		#removes so can be used again
+		
+		remove_variable = cde_in_regency
+	}
+}
+
+
+#Death of the Monarch - triggers when Monarch (child ruler) dies
+cde_regency.3 = {
+	type = country_event
+	title = "cde_regency.3.t"
+	desc = "cde_regency.3.desc"
+	picture = successors
+	
+	left_portrait = var:regent_co_ruler_var
+	right_portrait = var:acting_regent_var
+	
+	trigger = {
+		has_variable = cde_in_regency
+		#do not need to specify monarch is dead, since activates on ruler change in on action "on_ruler_change"
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				government = regency_despotic_monarchy
+			}
+			change_government = despotic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_aristocratic_monarchy
+			}
+			change_government = aristocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_stratocratic_monarchy
+			}
+			change_government = stratocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_theocratic_monarchy
+			}
+			change_government = theocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_plutocratic_monarchy
+			}
+			change_government = plutocratic_monarchy
+		}
+	}
+	
+	option = {
+		name = cde_regency.3.a		#End the regency
+		
+		custom_tooltip = cde_regency.3.tt
+		
+		remove_variable = regent_co_ruler_var		#removes so can be used again
+		remove_variable = acting_regent_var		#removes so can be used again
+		
+		remove_variable = cde_in_regency
+	}
+}
+
+#Death of the Regent - ends regency
+cde_regency.4 = {
+	type = country_event
+	title = "cde_regency.4.t"
+	desc = "cde_regency.4.desc"
+	picture = successors
+	
+	left_portrait = var:regent_co_ruler_var
+	right_portrait = var:acting_regent_var
+	
+	trigger = {
+		has_variable = cde_in_regency
+		var:acting_regent_var = {
+			is_alive = no
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				government = regency_despotic_monarchy
+			}
+			change_government = despotic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_aristocratic_monarchy
+			}
+			change_government = aristocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_stratocratic_monarchy
+			}
+			change_government = stratocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_theocratic_monarchy
+			}
+			change_government = theocratic_monarchy
+		}
+		if = {
+			limit = {
+				government = regency_plutocratic_monarchy
+			}
+			change_government = plutocratic_monarchy
+		}
+	}
+	
+	option = {
+		name = cde_regency.4.a		#End the regency
+		
+		custom_tooltip = cde_regency.4.tt
+		
+		remove_variable = regent_co_ruler_var		#removes so can be used again
+		remove_variable = acting_regent_var		#removes so can be used again
+		
+		remove_variable = cde_in_regency
+	}
+}

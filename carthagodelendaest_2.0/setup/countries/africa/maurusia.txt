@@ -1,0 +1,15 @@
+﻿color = rgb { 90 153 108 }
+color2 = rgb { 90 153 108 }
+
+ship_names = {
+	Babba
+	Banasa
+	Chellah
+	Iol
+	Lixus
+	Mauri Mogador
+	Oujda
+	Siga
+	Tingis Tipaza
+	Volubilis
+}

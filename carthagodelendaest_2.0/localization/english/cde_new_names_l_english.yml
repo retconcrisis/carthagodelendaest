@@ -1,0 +1,111 @@
+﻿l_english:
+ #Roman
+ NICKNAME_FLAMININIUS: "Flamininus"
+ NICKNAME_ACILIUS: "Acilius"
+ NICKNAME_CATO_SAPIENS: "Cato Sapiens"
+ NICKNAME_SCIPIO_NASICA_CORCULUM: "Scipio Nasica Corculum"
+ NICKNAME_SCIPIO_NASICA_SERAPIO: "Scipio Nasica Serapio"
+ NICKNAME_SCIPIO_AFRICANUS: "Scipio Africanus"
+ NICKNAME_AFRICANA_MAJOR: "Africana Major"
+ NICKNAME_AFRICANA_MINOR: "Africana Minor"
+ NICKNAME_SCIPIO_AEMILIANUS: "Scipio Aemilianus"
+ NICKNAME_METELLUS: "Metellus"
+ NICKNAME_DRUSUS: "Drusus"
+ NICKNAME_MESSALLA: "Messalla"
+ NICKNAME_GRACCHUS_THE_ELDER: "Gracchus the Elder"
+ NICKNAME_GRACCHUS: "Gracchus"
+ NICKNAME_PULCHER: "Pulcher"
+ NICKNAME_VESTAL: "Vestal"
+ NICKNAME_MINOR: "Minor"
+ NICKNAME_TERTIA: "Tertia"
+ NICKNAME_SCIPIO_HISPANUS: "Scipio Hispanus"
+ NICKNAME_MARCELLUS: "Marcellus"
+ NICKNAME_CATO_SALONIANUS: "Cato Salonianus"
+ NICKNAME_NERO: "Nero"
+ NICKNAME_GALBA: "Galba"
+ NICKNAME_SULLA: "Sulla"
+ NICKNAME_LIBO: "Libo"
+ NICKNAME_AFRICANUS: "Africanus"
+ NICKNAME_CENSORINUS: "Censorinus"
+ NICKNAME_MANCINUS: "Mancinus"
+ NICKNAME_PHILUS: "Philus"
+ NICKNAME_CAESAR: "Caesar"
+ NICKNAME_TORQUATUS: "Torquatus"
+ NICKNAME_BRUTUS: "Brutus"
+ NICKNAME_CAEPIO: "Caepio"
+ 
+ 
+ #Greek
+ NICKNAME_EPIPHANES: "Epiphanes"
+ NICKNAME_EUPATOR: "Eupator"
+ NICKNAME_PHILOPATOR: "Philopator"
+ NICKNAME_SOTER: "Soter"
+ NICKNAME_THEOPATOR: "Theopator"
+ NICKNAME_PHILOMETOR: "Philometor"
+ NICKNAME_NEOS_PHILOPATOR: "Neos Philopator"
+ NICKNAME_THEA: "Thea"
+ NICKNAME_EUERGETES: "Euergetes"               #The Benefactor
+ NICKNAME_EUSEBES: "Eusebes"                   #The Pious
+ NICKNAME_EUSEBES_PHILOPATOR: "Eusebes Philopator"
+ NICKNAME_PHILADELPHUS: "Philadelphos"
+ NICKNAME_PHILOMETOR_EUERGETES: "Philometor Euergetes"
+ NICKNAME_KYNEGOS: "Kynegos"                   #The Hunter
+ NICKNAME_THEOTROPOS: "Theotropos"             #Goddess-like
+ NICKNAME_DIKAIOS: "Dikaios"                   #The Just
+ NICKNAME_ANICETUS: "Anicetus"                 #The Invincible
+ NICKNAME_PHILOTEKNOS: "Philoteknos"           #Lover of their Children
+ NICKNAME_ADAIABENOI: "Adaiabenoi"             #Of Adiabene
+ NICKNAME_THEOSEBES_DIKAIOS: "Theosebes Dikaios"
+ NICKNAME_PHYSCON: "Physcon"               #Fatty, nickname of Ptolemy VIII
+ NICKNAME_MEGAS_SOTER: "Megas Soter"   #Great Savior, of Kamnaskires of Elymais
+ NICKNAME_EPIPHANES_PHILADELPHOS: "Epiphanes Philadelphos" #Illustrious and Sibling-loving, Laodike of Pontus
+ NICKNAME_APION: "Apion"
+ 
+ #Greek with Regnal number
+ NICKNAME_III_THE_GREAT: "III 'The Great'"
+ NICKNAME_IV_EPIPHANES: "IV Epiphanes"
+ NICKNAME_V_EUPATOR: "V Eupator"
+ 
+ NICKNAME_I_SOTER: "I Soter"
+ NICKNAME_II_PHILADELPHUS: "II Philadelphos"
+ NICKNAME_III_EUERGETES: "III Euergetes"
+ NICKNAME_IV_PHILOPATOR: "IV Philopator"
+ NICKNAME_V_EPIPHANES: "V Epiphanes"
+ NICKNAME_IV_PHILOPATOR_PHILADELPHUS: "IV Philopator Philadelphos"
+ 
+ NICKNAME_IV_EUSEBES: "IV Eusebes"
+ NICKNAME_II_SOTER: "II Soter"
+ NICKNAME_II_PHILOTEKNOS: "II Philoteknos"     #Lover of Children
+ 
+ #Judean/Jewish
+ NICKNAME_BEN_JOHANAN: "ben Yohanan"
+ NICKNAME_MACCABEUS: "Maccabeus"   #The Hammer
+ NICKNAME_APPHUS: "Apphus"           #The Diplomat
+ NICKNAME_THASSI: "Thassi"         #The Wise
+ 
+ #Carthaginian
+ NICKNAME_THE_SAMNITE: "'The Samnite'"
+ NICKNAME_THE_STARLIGHT: "'The Starlight'"
+ 
+ #Generic
+ NICKNAME_THE_GREAT: "'The Great'"
+ 
+ #Indian
+ NICKNAME_FEARLESS: "'The Fearless'"
+ NICKNAME_TRATARASA: "Tratarasa"   #Savior in Pali
+ 
+ #For Women or Deceased characters, who lack regnal numbers
+ NICKNAME_I: "I"
+ NICKNAME_II: "II"
+ NICKNAME_III: "III"
+ NICKNAME_IV: "IV"
+ NICKNAME_V: "V"
+ NICKNAME_VI: "VI"
+ 
+ #Other
+ NICKNAME_OF_SPARTA: "of Sparta"
+ 
+ Philip_VI: "Philip VI"    #for Andriskos
+ 
+ 
+ 

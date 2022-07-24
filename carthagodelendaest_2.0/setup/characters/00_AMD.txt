@@ -1,0 +1,24 @@
+﻿"AMD"={
+	country="AMD"
+	
+	#Arsacid dynasty branch ruler in Amardia
+	269={	
+		first_name="Phraates"
+		family = c:AMD.fam:Arsacid
+		birth_date=564.5.4		#190 BC
+		father="char:224"				#Phraates I
+		culture="parthian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=6
+		add_charisma=6
+		add_finesse=10
+		add_zeal=10
+		add_gold=200
+		add_popularity=60
+		c:AMD = {
+			set_as_ruler=char:269
+		}
+	}
+	
+}

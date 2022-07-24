@@ -1,0 +1,73 @@
+﻿###################################
+#Events / On_Action Modifiers
+###################################
+rome_carthage_war_enemies_op = {
+	value = -80
+	yearly_decay = 2
+}
+
+tre_helped_to_throne_op = {
+	value = 100
+	yearly_decay = 5
+}
+
+rom_mac_rebelled_against_rule = {
+	value = -100
+	yearly_decay = 3
+}
+
+rom_punic_war_allies = {
+	value = 40
+	yearly_decay = 1
+}
+
+royal_marriage_op = {
+	value = 20
+	yearly_decay = 2
+}
+
+family_ties_op = {
+	value = 20
+	yearly_decay = 1
+}
+
+lus_betrayed_and_massacred_our_people = {
+	value = -70
+	yearly_decay = 1
+}
+
+
+
+###################################
+#Missions
+###################################
+spa_ach_claims_dispute_made = {
+	value = -40
+	yearly_decay = 1
+}
+
+spa_ach_roman_delegate_ach = {
+	value = -50
+	yearly_decay = 1
+}
+
+spa_ach_roman_delegate_rom = {
+	value = 25
+	yearly_decay = 2.5
+}
+
+spa_ach_roman_delegate_spa = {
+	value = 50
+	yearly_decay = 2
+}
+
+rom_envoys_reassured = {
+	value = 25
+	yearly_decay = 1
+}
+
+me_pon_donated_to_delphi = {
+	value = 30
+	yearly_decay = 1
+}
+

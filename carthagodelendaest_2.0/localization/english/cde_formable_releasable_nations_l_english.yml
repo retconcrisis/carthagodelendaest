@@ -1,0 +1,38 @@
+﻿l_english:
+ #Formable Nation decisions
+ form_vandalia: "Form Vandalia"
+ form_vandalia_desc: "With the unification of thousands and thousands of the Vandal people under a single banner, our ruler can finally declare the establishment of a united Vandal confederation."
+ formable_not_vandalia_exists: "#Y Vandalia#! does not exist"
+ any_vandal_country_tt: "All #Y Vandal#! nations are our subjects, or we are the only #Y Vandal nation."
+ 
+ form_nestiotic_league: "Form the Nesiotic League"
+ form_nestiotic_league_desc: "The League of the Islanders in the Aegean has always been subject to foreign powers, whether it be Egypt or Rhodes. However, with the collapse of the great states of Greece in the face of the Roman Republic, our islands have now been liberated from foreign control. Thus, perhaps we should form our own, independent Nesiotic League to protect the interests of the islands of the Cyclades."
+ formable_not_nesiotic_league_exists: "#Y Nesiotic League#! does not exist"
+ formable_nesiotic_league_provinces: "Own at least #Y 5#! territories in the #Y Cyclades#! province" 
+ 
+ form_macedonian_league: "Form the Macedonian League"
+ form_macedonian_league_desc: "Although the Macedonian kingdom was dismantled by the Romans after the Third Roman-Macedonian War, many of the Macedonian people still long for a united Macedonian state; at the same time, republicanism has become embraced by many Macedonians, and support for republicanism continues to grow. Thus, if we unite the four cities of the client republics, a new united Macedonia can be restored with the republic of the League of Macedonians at its head."
+ formable_not_macedonian_league_exists: "#Y Macedonian League#! does not exist"
+ add_macedonian_league_claims: "Gain claims on Emathia, Pelagonia and Chalkidiki"
+ 
+ form_daamat: "Form Daa'mat"
+ form_daamat_desc: "The Kingdom of Daa'mat was a regional power in Aksum before it broke apart into divided kingdoms centuries ago. With its capital in Yeha, the Kingdom of Daa'mat built the Great Temple of Yeha dedicated to Ilmuqah, which still stands to this day despite the passage of centuries since the kingdom's fragmentation. By controlling the capital of Yeha as well as the historical territories of the kingdom along the coast, we can claim their legacy as the legitimate heirs of the Daa'mat kingdom."
+ daamat_not_exists: "#Y Daa'mat#! does not exist"
+ 
+ cde_claim_seleukid_throne: "Claim the Seleukid Throne"
+ cde_claim_seleukid_throne_desc: "#Y Alexandros Balas#! emerged from obscurity and declared his true lineage to the world as the lost son of #Y Antiochos IV#! of the Seleukid Kingdom, waging a war for the Seleukid throne against the basileus #Y Demetrios I#! Seleukid. Should we seize #Y Antiocheia#! and utterly defeat any pretenders to the throne, Alexandros would finally and rightfully acquire the Seleukid throne as its undisputed basileus."
+ 
+ 
+ #Releasable Nation decisions
+ restore_the_epirote_league: "Restore the Epirote League"
+ restore_the_epirote_league_desc: "The Epirote League was dissolved after the Third Macedonian War, as the Molossians had treacherously sided with Antigonids. However, the Chaonians and Thesprotians had sided with Rome, and the Epirotes have since displayed loyalty and good behavior following their annexation. Thus, some of the Senate have proposed the restoration of the Epirote League as a client state under our rule, granting autonomy to Epirus while ensuring they continue to make monetary and military contributions to Rome."
+ new_epirote_league_country_tt: "Releases #Y Epirus#! as a client state and gives Epirus all territories in the province of Epirus"
+ 
+ establish_mauretanian_client_king: "Establish a Client King in Mauretania"
+ establish_mauretanian_client_king_desc: "The Senate in Rome agree that we have little interest or benefit from directly governing the far-away lands of Mauretania. Thus, many agree that it may be ideal to establish a client state of Mauretania and install a ruler who would remain loyal to Rome."
+ rom_mauretanian_client_state_country_tt: "Releases #Y Mauretania#! as a client state and gives the client state all territories in the #Y Mauretania region#!"
+ rom_mauretanian_client_state_provinces_tt: "Own at least #Y 15#! territories in the #Y Mauretania region#!"
+ 
+ 
+ 
+ 

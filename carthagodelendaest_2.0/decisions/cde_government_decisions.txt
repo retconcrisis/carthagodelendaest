@@ -1,0 +1,33 @@
+﻿country_decisions = {
+	appoint_a_regent = {		#For child ruler
+		potential = {
+			current_ruler = {
+				is_adult = no
+			}
+			NOT = { has_variable = cde_in_regency }
+			OR = {
+				government = despotic_monarchy
+				government = aristocratic_monarchy
+			}
+		}
+		allow = {
+			war = no
+			has_civil_war = no
+			current_ruler = {
+				is_adult = no
+			}
+		}
+		effect = {
+			trigger_event = {
+				id = "cde_regency.1"
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}
+
+
+

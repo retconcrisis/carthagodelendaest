@@ -1,0 +1,168 @@
+﻿"BPK"={
+	country="BPK"
+	
+	#Leukon II (Hades), great grandfather of current ruler
+	127={		
+		first_name="Leukon"
+		family =  c:BPK.fam:Spartokid
+		nickname="NICKNAME_II"
+		birth_date=494.3.5		#260 BC
+		death_date=534.5.8		#220 BC
+		culture="bosporan"
+		religion="roman_pantheon"
+	}
+	
+	#Alkathoe (Hades), wife of Leukon II who murdered him after he killed his brother for an affair with her
+	128={		
+		first_name="Alkathoe"
+		family =  c:BPK.fam:Spartokid
+		birth_date=504.3.5		#250 BC
+		death_date=534.5.8		#220 BC
+		female = yes
+		culture="bosporan"
+		religion="roman_pantheon"
+		no_traits=yes
+		add_trait="lustful"
+		add_trait="vengeful"
+	}
+	
+	#Spartakos V (Hades), brother of Pairisades III
+	129={		
+		first_name="Spartakos"
+		family =  c:BPK.fam:Spartokid
+		nickname="NICKNAME_V"
+		birth_date=524.3.1		#230 BC
+		death_date=574.1.1		#180 BC
+		father="char:127"		#Leukon II
+		mother="char:128"		#Alkathoe
+		culture="bosporan"
+		religion="roman_pantheon"
+		dna="Yddh15h5mHnhwuHCAm8CbwJnAmcCgwKDAoICggKOAo4CfwJ/AnwCfAKOAo4CiAKIAo0CjQKQApACkgKSApICkgS8BLwChwKHApgCmAJ5AnkCagJqAnICcgJ4AngCigKKA5MDkwJrAmsCjQKNAn0CfQKJAokCagJqAnICcgJnAmcCaQJpAm0CbQJ2AnYCbwJvAnECcQKFAoUCcgJyApICkgKRApECeQJ5AosCiwKAAoABTQFNAnICcgKPAo8DsQOxAnQCdAJqAmoBTAFMApMCkwJ8AnwCkAKQAWABYAJvAm8CaQJpAm8CbwLJAskAMAAwAFMAUwCRAJEAvwC/ATABMAC7ALsA+AD4AoACgAD+AP4ASABIAIkAiQB/AH8C1gLWASUBJQLDAsMAOgA6AScBJwCzALMAgACAADoAOgB/AH8BFAEUARQBFAECAQIBYgFiASwBLAECAQIBRAFEABsAGwCAAIADWgNaAEcARwFAAUAA9AihAH8AfwBCBEIF/QXwABYAFgUoBSgC/wKMAmgCaAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Pairisades III (Hades), previous ruler and father of current ruler
+	130={		
+		first_name="Pairisades"
+		family =  c:BPK.fam:Spartokid
+		nickname="NICKNAME_III"
+		birth_date=544.3.1		#210 BC
+		death_date=604.1.1		#150 BC
+		father="char:127"		#Leukon II
+		mother="char:128"		#Alkathoe
+		culture="bosporan"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=6
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="benefactor"
+		add_trait="just"
+	}
+	
+	#Kamasarye II Philoteknos, wife of Pairisades III and mother of current ruler - was a very politically active Queen
+	131={		
+		first_name="Kamasarye"
+		family =  c:BPK.fam:Spartokid
+		nickname="NICKNAME_II_PHILOTEKNOS"
+		birth_date=554.5.4		#200 BC
+		father="char:129"		#Spartakos V
+		female = yes
+		culture="bosporan"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=2
+		add_charisma=10	#honored by dedication to her and husband in Delphi
+		add_finesse=11	#very politically active
+		add_zeal=8
+		no_traits=yes
+		add_trait="loving"
+		add_trait="honest"
+		add_trait="benefactor"
+		add_gold=250
+		add_popularity=50
+		dna="Yddh15h5mHnhwuHCAm8CbwJnAmcCgwKDAoICggKOAo4CfwJ/AnwCfAKOAo4CiAKIAo0CjQKQApACkgKSApICkgS8BLwChwKHApgCmAJ5AnkCagJqAnICcgJ4AngCigKKA5MDkwJrAmsCjQKNAn0CfQKJAokCagJqAnICcgJnAmcCaQJpAm0CbQJ2AnYCbwJvAnECcQKFAoUCcgJyApICkgKRApECeQJ5AosCiwKAAoABTQFNAnICcgKPAo8DsQOxAnQCdAJqAmoBTAFMApMCkwJ8AnwCkAKQAWABYAJvAm8CaQJpAm8CbwLJAskAMAAwAFMAUwCRAJEAvwC/ATABMAC7ALsA+AD4AoACgAD+AP4ASABIAIkAiQB/AH8C1gLWASUBJQLDAsMAOgA6AScBJwCzALMAgACAADoAOgB/AH8BFAEUARQBFAECAQIBYgFiASwBLAECAQIBRAFEABsAGwCAAIADWgNaAEcARwFAAUAA9AihAH8AfwBCBEIF/QXwABYAFgUoBSgC/wKMAmgCaAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Pairisades IV Philometor, current ruler
+	240={
+		first_name = "Pairisades"
+		nickname = "NICKNAME_PHILOMETOR"
+		family =  c:BPK.fam:Spartokid
+		birth_date=574.11.9		#180 BC
+		father="char:130"		#Pairisades III
+		mother="char:131"		#Kamasarye II
+		culture="bosporan"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="loving"
+		add_trait="trusting"
+		add_trait="barren"		#never had an heir
+		add_gold=350
+		add_popularity=70
+		c:BPK = {
+			set_as_ruler=char:240
+		}
+		dna="BesF64F2gXbExcTFAo8CjwJ9An0CkQKRAn0CfQJsAmwCVQKVApcClwJ0AnQCjAJyAnYCdgJtAm0CZgJmAocChwKaAnICSQKLAnUCdQJmAmYCiwKLAnwCfAKGAoYCYwKMAmwCawJ8AnwCfAJ8AnwCfAJ3AncBTAFMAmgCaAKBAoECgQKBAnkCeQKXApcCkAKQAmsCawKTApMCaQKBAnACcAKSApICjAKGApECkQKJAokCgwKDAmgCaAOrA6sCcgJyAmwCbAKEAoQCigJ0ApMCkwFRAVECbAJsAnICcgJrAmsCeAJ4ApcClwK1ArUAhgCGAFsAWwDlAPkA7gDuAlcBCgDRANEBBQCOAvUA9QHBAMEAsACwAqsCqwB/AH8ATQBNADkAOQE8ATwA2QDZAMEAwQE1ATUAVwBXAWcBZwB/AH8AYgBiAsUCxQDSANIBfwF/AFIAUgMhAyEAzwDPBJoEmgBGAEYBTAFMAGMAYwMcAxwEbQNxAH8AfwFdAMgFwAXgAFoAeQWIBYYCVAIQArACsAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Pairisades V, younger brother of current ruler
+	241={
+		first_name = "Pairisades"
+		family =  c:BPK.fam:Spartokid
+		birth_date=594.2.8		#160 BC
+		father="char:130"		#Pairisades III
+		mother="char:131"		#Kamasarye II
+		culture="bosporan"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=7
+		add_finesse=3
+		add_zeal=4
+		no_traits=yes
+		add_trait="submissive"
+		add_trait="humble"
+		add_gold=200
+		add_popularity=50
+		dna="BesF64F2gXbExcTFAo8CjwJ9An0CkQKRAn0CfQJsAmwCVQKVApcClwJ0AnQCcgJyAnYCdgJtAm0CZgJmAocChwJyAnICSQKLAnUCdQJmAmYCiwKLAnwCfAKGAoYCjAKMAkgCawJ8AnwCfAJ8AnwCfAJ3AncBTAFMAmgCaAKBAoECgQKBAnkCeQKXApcCkAKQAmsCawKTApMCaQKBAnACcAKSApICUQKGApECkQKJAokCgwKDAmgCaAOrA6sCcgJyAmwCbAKEAoQCdAJ0ApMCkwFRAVECbAJsAnICcgJrAmsCeAJ4ApcClwK1ArUAhgCGAFsAWwD5APkA7gDuAQoBCgDRANEAjgCOAPUA9QDBAMEAsACwAqsCqwB/AH8ATQBNADkAOQE8ATwA2QDZAMEAwQE1ATUAVwBXAWcBZwB/AH8AYgBiAsUCxQDSANIBfwF/AFIAUgMhAyEAzwDPBJoEmgBGAEYBTAFMAGMAYwMcAxwDcQNxAH8AfwLIAMgFVgXgAHkAeQUABYYCEAIQArACsAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Spartokos VI, probable member of ruling family
+	242={
+		first_name = "Spartokos"
+		family =  c:BPK.fam:Spartokid
+		birth_date=599.8.5		#155 BC
+		father="char:130"		#may be son of Pairisades III and another wife
+		culture="bosporan"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=4
+		add_finesse=4
+		add_zeal=6
+		add_gold=150
+		add_popularity=40
+		dna="ONc416V/pX/l2OXYApECkQKVApUCaQJpAmsCawJmAmYCZwJnAnoCegJoAmgCcgJyAmYCZgJsAmwCkgKSApgCmAKUApQCjwKPAmgCaAKOAo4CdgJ2AVUBVQJyAnICgQKBAnYCdgJ5AnkDqgOqAnECcQKZApkCeQJ5AnoCegOjA6MChgKGAmYCZgKWApYChAKEAm0CbQJnAmcCjAKMAm8CbwKEAoQCaQJpAnYCdgJ+An4CeAJ4BN8E3wTdBN0AHAAcAm4CbgJsAmwCegJ6AosCiwKEAoQCcQJxAosCiwJ0AnQChgKGAnsCewQlBCUAGwAbAPkA+QE0ATQA8QDxAv0C/QBkAGQAeAB4ARcBFwFuAW4DAAMAAI0AjQB/AH8AsACwAHoAegCYAJgAZgBmAo0CjQDlAOUAXABcAOMA4wB/AH8CrgKuAr0CvQDoAOgA8gDyAGwAbASrBKsC0gLSA2UDZQK5ArkBOwE7BPsE+wB1AHUEXgReAH8AfwSIBIgF8QXxAHcAdwW8BT8CEQIRArQCtAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Argotes, Scythian prince who married queen mother Kamasarye before 160 BC
+	243={
+		first_name = "Argotes"
+		family_name = "Isanthid"	#son of Isanthos
+		birth_date=560.9.3		#194 BC
+		culture="scythian"				#Scythian culture
+		religion="indo_iranian_religion"
+		marry_character="char:131"	#Kamasarye II
+		add_gold=200
+		dna="c+5z7qCGoIa98L3wAm8CbwKJAokCfQJ9AnQCdAJ4AngDpgOmApMCkwJsAmwCfwJ/AnICcgJxAnEDwwPDAnUCdQOeA54CggKCAmwCbAJnAmcCcwJzAngCeAJsAmwAKwArAnACcAKIAogCegJ6AWQBZATQBNACdwJ3AmsCawKYApgCZwJnApACkAKBAoECiAKIAWQBZAKGAoYCkAKQApUClQKCAoIDrAOsAooCigKKAooALwAvAoECgQOoA6gBawFrAoYChgJpAmkCbAJsAmYCZgKHAocCfQJ9AnMCcwJ2AnYCgQKBAoQChAKcApwAAAAAAQkBCQBDAEMC4gLiABEAEQEMAQwAUQBRANkA2QB+AH4CXgJeAQgBCAB/AH8A6QDpAqsCqwFIAUgACgAKAV4BXgDIAMgCcQJxAJMAkwB/AH8AfgB+AIgAiAADAAMC8QLxARwBHACUAJQA/AD8AygDKABOAE4BKQEpBH0EfQEVARUKTQpNAH8AfwVbBVsLBws/AaEBoQNZAxwCAAuABOQE5AAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

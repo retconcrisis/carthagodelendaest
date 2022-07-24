@@ -1,0 +1,1003 @@
+﻿namespace = cde_me_mac_01
+
+#Odrysian Warrior from Thrace
+cde_me_mac_01.1 = {
+	type = country_event
+	title = "cde_me_mac_01.1.t"
+	desc = "cde_me_mac_01.1.desc"
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = c:TRE.current_ruler
+	right_portrait = scope:mac_odrysian_warrior
+	
+	fire_only_once = yes
+	
+	immediate = {
+		custom_tooltip = cde_me_mac_01.1.tt
+		hidden_effect = {
+			create_character = {
+				culture = odrysi
+				religion = shamanism
+				female = no
+				age = 32
+				no_stats = yes
+				great_martial_effect = yes
+				average_charisma_effect = yes
+				average_finesse_effect = yes
+				good_zeal_effect = yes
+				add_trait = "steadfast"
+				save_scope_as = mac_odrysian_warrior
+			}
+		}
+	
+	}
+	
+	option = {
+		name = cde_me_mac_01.1.a
+		
+		
+	}
+}
+
+#Quashing of Republican Ideals
+cde_me_mac_01.2 = {
+	type = country_event
+	title = "cde_me_mac_01.2.t"
+	desc = "cde_me_mac_01.2.desc"
+	picture = cde_event_greek_debate_crowd
+	
+	left_portrait = current_ruler
+	right_portrait = scope:mac_loyal_head_of_family
+	
+	fire_only_once = yes
+	
+	immediate = {
+		random_character = {		#at least one head of family
+			limit = {
+				is_ruler = no
+				is_minor_character = no
+				is_head_of_family = yes
+			}
+			save_scope_as=mac_loyal_head_of_family
+		}
+	}
+	
+	option = {
+		name = cde_me_mac_01.2.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_anti_republican_policy
+			duration = 3650
+		}
+	}
+}
+
+#Unification of Macedonia
+cde_me_mac_01.3 = {
+	type = country_event
+	title = "cde_me_mac_01.3.t"
+	desc = "cde_me_mac_01.3.desc"
+	picture = great_work_celebration
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.3.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_united_macedonian_army
+			duration = 7300
+		}
+	}
+}
+
+#Investments in Pella
+cde_me_mac_01.4 = {
+	type = country_event
+	title = "cde_me_mac_01.4.t"
+	desc = "cde_me_mac_01.4.desc"
+	picture = road_construction
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.4.a
+		
+		p:379.state = {
+			add_state_modifier = {
+				name = cde_me_mac_capital_investments
+				duration = -1		#permanent
+			}
+		}
+	}
+}
+
+#True Basileus of Macedonia
+cde_me_mac_01.5 = {
+	type = country_event
+	title = "cde_me_mac_01.5.t"
+	desc = "cde_me_mac_01.5.desc"
+	picture = greek_religious_rite
+	
+	left_portrait = current_ruler
+	left_portrait = char:265		#Kallippa
+	right_portrait = char:82		#Philip V
+	right_portrait = char:83		#Perseus
+	
+	fire_only_once = yes
+	
+	immediate = {
+		show_as_tooltip = {
+			current_ruler = {
+				add_popularity = 20
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_mac_01.5.a
+		
+		custom_tooltip = 01_cde_macedonia_missions_01_task_9.tt
+		hidden_effect = {
+			current_ruler = {
+				set_firstname = "Philip_VI"		#Philip VI, historical name change
+			}
+		}
+	}
+}
+
+#Palace Restoration Begins
+cde_me_mac_01.6 = {
+	type = country_event
+	title = "cde_me_mac_01.6.t"
+	desc = "cde_me_mac_01.6.desc"
+	picture = city_construction
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = cde_me_mac_01.6.a
+		
+		custom_tooltip = cde_me_mac_01.6.tt
+	}
+}
+
+#New Antigonid Palace
+cde_me_mac_01.7 = {
+	type = country_event
+	title = "cde_me_mac_01.7.t"
+	desc = "cde_me_mac_01.7.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = char:82		#Philip V
+	right_portrait = char:83		#Perseus
+	
+	fire_only_once = yes
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = cde_me_mac_01.7.a
+		
+		p:379 = {
+			add_province_modifier = {
+				name = cde_me_mac_antigonid_palace
+				duration = -1		#permanent
+			}
+		}
+	}
+}
+
+#A New Breadbasket in Greece
+cde_me_mac_01.8 = {
+	type = country_event
+	title = "cde_me_mac_01.8.t"
+	desc = "cde_me_mac_01.8.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.8.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_breadbasket_of_macedonia
+			duration = 7300
+		}
+	}
+}
+
+#Naval Base in Kassandreia
+cde_me_mac_01.9 = {
+	type = country_event
+	title = "cde_me_mac_01.9.t"
+	desc = "cde_me_mac_01.9.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.9.a
+		
+		p:376 = {
+			add_province_modifier = {
+				name = cde_me_mac_designated_naval_base
+				duration = -1
+			}
+		}
+	}
+}
+
+#Grand Fleet of Macedonia
+cde_me_mac_01.10 = {
+	type = country_event
+	title = "cde_me_mac_01.10.t"
+	desc = "cde_me_mac_01.10.desc"
+	picture = naval_battle
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.10.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_grand_fleet_of_macedonia
+			duration = 7300
+		}
+	}
+}
+
+#Nobles of Beroia
+cde_me_mac_01.11 = {
+	type = country_event
+	title = "cde_me_mac_01.11.t"
+	desc = "cde_me_mac_01.11.desc"
+	picture = greek_home
+	
+	left_portrait = current_ruler
+	right_portrait = scope:mac_beroian_male_noble
+	right_portrait = scope:mac_beroian_female_noble
+	
+	fire_only_once = yes
+	
+	immediate = {
+		p:381 = {
+			define_pop = {
+				culture = macedonian
+				religion = roman_pantheon
+				type = nobles
+			}
+		}
+		
+		custom_tooltip = 01_cde_macedonia_missions_01_task_13.tt
+		hidden_effect = {
+			create_character = {
+				family_name = "Hippostratid-Kallipid"		#1 male, 1 female
+				culture = macedonian
+				religion = roman_pantheon
+				female = no
+				age = 28
+				no_stats = yes
+				average_martial_effect = yes
+				good_charisma_effect = yes
+				great_finesse_effect = yes
+				good_zeal_effect = yes
+				save_scope_as = mac_beroian_male_noble
+			}
+			create_character = {
+				family_name = "Hippostratid-Kallipid"
+				culture = macedonian
+				religion = roman_pantheon
+				female = yes
+				age = 22
+				no_stats = yes
+				average_martial_effect = yes
+				good_charisma_effect = yes
+				great_finesse_effect = yes
+				good_zeal_effect = yes
+				save_scope_as = mac_beroian_female_noble
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_mac_01.11.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_beroian_noble_ties
+			duration = 3650
+		}
+	}
+}
+
+#City of Abdera
+cde_me_mac_01.12 = {
+	type = country_event
+	title = "cde_me_mac_01.12.t"
+	desc = "cde_me_mac_01.12.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.12.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_thracian_trade_access
+			duration = 3650
+		}
+	}
+}
+
+#The Leagues of Thessaly and Euboea
+cde_me_mac_01.13 = {
+	type = country_event
+	title = "cde_me_mac_01.13.t"
+	desc = "cde_me_mac_01.13.desc"
+	picture = greek_political_discussion
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.13.a
+		
+		current_ruler = {
+			add_popularity = 20
+		}
+		add_country_modifier = {
+			name = cde_me_mac_guardian_archon_of_the_leagues
+			duration = 3650
+		}
+	}
+}
+
+#Zeus Eleutherios
+cde_me_mac_01.14 = {
+	type = country_event
+	title = "cde_me_mac_01.14.t"
+	desc = "cde_me_mac_01.14.desc"
+	picture = hellenic_temple
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.14.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_zeus_eleutherios
+			duration = 7300
+		}
+	}
+}
+
+#Commonwealth of Athamanians Restored
+cde_me_mac_01.15 = {
+	type = country_event
+	title = "cde_me_mac_01.15.t"
+	desc = "cde_me_mac_01.15.desc"
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.15.a
+		
+		random_owned_province = {
+			limit = {
+				is_in_area = thessaly_area
+				has_building = hill_fort #Tribal Settlement
+			}
+			define_pop = {
+				culture = thessalian
+				religion = roman_pantheon
+				type = tribesmen
+			}
+		}
+		add_country_modifier = {
+			name = cde_me_mac_athamanian_auxiliaries
+			duration = 7300
+		}
+	}
+}
+
+#Antigonid Coinage
+cde_me_mac_01.16 = {
+	type = country_event
+	title = "cde_me_mac_01.16.t"
+	desc = "cde_me_mac_01.16.desc"
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.16.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_antigonid_coinage
+			duration = 7300
+		}
+	}
+}
+
+#Greek Campaign
+cde_me_mac_01.17 = {
+	type = country_event
+	title = "cde_me_mac_01.17.t"
+	desc = "cde_me_mac_01.17.desc"
+	picture = greeks_marching
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.17.a
+		
+		custom_tooltip = 01_cde_macedonia_missions_01_task_19.tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						is_in_area = boeotia_area
+						is_in_area = aetolia_area
+						AND= {
+							is_in_area = central_greece_area	#Attica
+							NOT = { province_id = 417 } 	#Megara excluded
+						}
+					}
+					NOT = { owned_or_subject_owned = root }
+				}
+				add_claim = root
+			}
+		}
+	}
+}
+
+#Boeotia, Loyal Subject of Macedonia
+cde_me_mac_01.18 = {
+	type = country_event
+	title = "cde_me_mac_01.18.t"
+	desc = "cde_me_mac_01.18.desc"
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.18.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_boeotian_infantry
+			duration = 3650
+		}
+	}
+}
+
+#Patrons of Delphi in Macedonia
+cde_me_mac_01.19 = {
+	type = country_event
+	title = "cde_me_mac_01.19.t"
+	desc = "cde_me_mac_01.19.desc"
+	picture = hellenic_temple
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.19.a
+		
+		p:424 = {
+			add_province_modifier = {
+				name = cde_me_mac_macedonian_patronage
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Boeotian League Restoration
+cde_me_mac_01.20 = {
+	type = country_event
+	title = "cde_me_mac_01.20.t"
+	desc = "cde_me_mac_01.20.desc"
+	picture = greek_political_discussion
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.20.a
+		
+		custom_tooltip = 01_cde_macedonia_missions_01_task_202.tt
+		
+		hidden_effect = {
+			#Thebes as capital
+			p:426 = {
+				create_country = {
+					name = {
+						name = "BOE"
+						adjective = "BOE_ADJ"
+					}
+					change_country_tag = BOE
+					change_country_flag = BOE
+					change_country_color = boeotian_brown
+					set_primary_culture = boeotian
+					set_country_religion = roman_pantheon
+					change_government = koinon_league_gov	#League Republic
+					set_country_heritage = boeotian_heritage
+					add_treasury = 100.0
+					save_scope_as=boeotian_league_tag
+				}
+			}
+			every_province = {
+				limit = {
+					owned_or_subject_owned = root
+					is_in_area = boeotia_area
+				}
+				set_owned_by = scope:boeotian_league_tag
+			}
+		}
+		
+		make_subject = {
+			target = scope:boeotian_league_tag
+			type = client_state
+		}
+		
+		scope:boeotian_league_tag = {
+			change_government = koinon_league_gov	#League Republic, again for player to see
+			add_opinion = {
+				modifier = opinion_liberated_us
+				target = root
+			}
+		}
+	}
+}
+
+#An Offer Athens Can't Refuse - MAC starts event chain
+cde_me_mac_01.21 = {
+	type = country_event
+	title = "cde_me_mac_01.21.t"
+	desc = "cde_me_mac_01.21.desc"
+	picture = greek_political_discussion
+	
+	left_portrait = current_ruler
+	right_portrait = c:ATH.current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		save_scope_as = cde_mac_athens_demanding_power
+	}
+	
+	option = {
+		name = cde_me_mac_01.21.a
+		
+		custom_tooltip = 01_cde_macedonia_missions_01_task_203.tt
+		c:ATH = {
+			trigger_event = {
+				id = cde_me_mac_01.22		#offer extended
+			}
+		}
+	}
+}
+#An Offer Athens Can't Refuse - Received by Athens
+cde_me_mac_01.22 = {
+	type = country_event
+	title = "cde_me_mac_01.22.t"
+	desc = "cde_me_mac_01.22.desc"
+	picture = greek_political_discussion
+	
+	left_portrait = current_ruler
+	right_portrait = c:ATH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.22.a
+		
+		scope:cde_mac_athens_demanding_power = {
+			trigger_event = {
+				id = cde_me_mac_01.23		#reply YES
+				days = 1
+			}
+		}
+		
+		show_as_tooltip = {
+			scope:cde_mac_athens_demanding_power = {
+				make_subject = {
+					target = root
+					type = feudatory
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				opinion = { 
+					target = scope:cde_mac_athens_demanding_power
+					value >= 50 
+				}
+			}
+			modifier = {
+				factor = 2
+				opinion = { 
+					target = scope:cde_mac_athens_demanding_power
+					value >= 100 
+				}
+			}
+			modifier = {
+				factor = 2
+				current_ruler = {
+					has_trait = submissive
+				}
+			}
+			modifier = {
+				factor = 0.5
+				opinion = { 
+					target = scope:cde_mac_athens_demanding_power
+					value <= -30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				opinion = { 
+					target = scope:cde_mac_athens_demanding_power
+					value <= -50
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_mac_01.22.b
+		
+		scope:cde_mac_athens_demanding_power = {
+			trigger_event = {
+				id = cde_me_mac_01.24		#reply NO
+				days = 1
+			}
+		}
+		
+		show_as_tooltip = {
+			scope:cde_mac_athens_demanding_power = {
+				declare_war_with_wargoal = {
+					war_goal = conquer_wargoal
+					province = p:416	#Athenai
+					target = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				opinion = { 
+					target = scope:cde_mac_athens_demanding_power
+					value <= -30
+				}
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { 
+					target = scope:cde_mac_athens_demanding_power
+					value <= -50
+				}
+			}
+		}
+	}
+}
+#An Offer Athens Can't Refuse - Reply Sent to Macedonia - YES
+cde_me_mac_01.23 = {
+	type = country_event
+	title = "cde_me_mac_01.23.t"
+	desc = "cde_me_mac_01.23.desc"
+	picture = greek_political_discussion
+	
+	left_portrait = current_ruler
+	right_portrait = c:ATH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.23.a
+		
+		make_subject = {
+			target = c:ATH
+			type = client_state
+		}
+	}
+}
+#An Offer Athens Can't Refuse - Reply Sent to Macedonia - NO
+cde_me_mac_01.24 = {
+	type = country_event
+	title = "cde_me_mac_01.24.t"
+	desc = "cde_me_mac_01.24.desc"
+	picture = greek_political_discussion
+	
+	left_portrait = current_ruler
+	right_portrait = c:ATH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.24.a
+		
+		set_variable = {
+			name = cde_mac_athens_declined
+		}
+		
+		declare_war_with_wargoal = {
+			war_goal = conquer_wargoal
+			province = p:416	#Athenai
+			target = c:ATH
+		}
+	}
+}
+
+#Achaean Ambitions
+cde_me_mac_01.25 = {
+	type = country_event
+	title = "cde_me_mac_01.25.t"
+	desc = "cde_me_mac_01.25.desc"
+	picture = greek_marketplace
+	
+	left_portrait = current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.25.a
+		
+		custom_tooltip = cde_me_mac_01.25.tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						is_in_area = south_peleponnesos_area	#Laconia
+						is_in_area = arcadia_area
+						is_in_area = achaea_area
+					}
+					NOT = { owned_or_subject_owned = root }
+				}
+				add_claim = root
+			}
+		}
+	}
+}
+
+#Strategos Autokrator of Hellas
+cde_me_mac_01.26 = {
+	type = country_event
+	title = "cde_me_mac_01.26.t"
+	desc = "cde_me_mac_01.26.desc"
+	picture = mausoleum
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.26.a
+		
+		add_country_modifier = {
+			name = cde_me_mac_strategos_autokrator_of_hellas
+			duration = 9125
+		}
+	}
+}
+
+#Corinth - New Regional Capital
+cde_me_mac_01.27 = {
+	type = country_event
+	title = "cde_me_mac_01.27.t"
+	desc = "cde_me_mac_01.27.desc"
+	picture = greek_city
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.27.a
+		
+		p:418 = {
+			add_province_modifier = {
+				name = cde_me_mac_new_peloponnesian_capital
+				duration = 9125
+			}
+		}
+	}
+}
+
+#A New Hellenic League?
+cde_me_mac_01.28 = {
+	type = country_event
+	title = "cde_me_mac_01.28.t"
+	desc = "cde_me_mac_01.28.desc"
+	picture = successors
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_mac_01.28.a
+		
+		custom_tooltip = cde_me_mac_01.28.tt
+		hidden_effect = {
+			#Corinth as capital
+			p:418 = {
+				create_country = {
+					name = {
+						name = "HELLENIC_LEAGUE_NAME"
+						adjective = "HELLENIC_LEAGUE_ADJECTIVE"
+					}
+					change_country_flag = HELLENIC_LEAGUE_FLAG
+					change_country_color =  "helvetia_color"
+					set_primary_culture = boeotian
+					set_country_religion = roman_pantheon
+					change_government = koinon_league_gov	#League Republic
+					add_treasury = 100.0
+					save_scope_as = hellenic_league_scope
+				}
+			}
+		}
+		
+		make_subject = {
+			target = scope:hellenic_league_scope
+			type = feudatory
+		}
+		
+		hidden_effect = {
+			every_province = {
+				limit = {
+					owned_or_subject_owned = root
+					OR = {
+						is_in_area = achaea_area
+						is_in_area = arcadia_area
+						is_in_area = south_peleponnesos_area
+					}
+				}
+				set_owned_by = scope:hellenic_league_scope
+			}
+		}
+		
+		scope:hellenic_league_scope = {
+			change_government = koinon_league_gov	#League Republic, again for player to see
+			add_opinion = {
+				modifier = opinion_liberated_us
+				target = root
+			}
+			every_country_culture = {
+        		limit = {
+        			OR = {
+						is_culture = peloponnesian
+						is_culture = arcadian
+						is_culture = argolian
+						is_culture = aetolian
+					}
+				}
+				set_country_culture_right = citizen
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = cde_me_mac_01.28.b
+		
+		custom_tooltip = cde_me_mac_01.28.tt2
+		hidden_effect = {
+			#Corinth as capital
+			p:418 = {
+				create_country = {
+					name = {
+						name = "HELLENIC_LEAGUE_NAME"
+						adjective = "HELLENIC_LEAGUE_ADJECTIVE"
+					}
+					change_country_flag = HELLENIC_LEAGUE_FLAG
+					change_country_color =  "helvetia_color"
+					set_primary_culture = boeotian
+					set_country_religion = roman_pantheon
+					change_government = koinon_league_gov	#League Republic
+					add_treasury = 100.0
+					save_scope_as = hellenic_league_scope
+				}
+			}
+			every_province = {
+				limit = {
+					owned_or_subject_owned = root
+					OR = {
+						is_in_area = achaea_area
+						is_in_area = arcadia_area
+						is_in_area = south_peleponnesos_area
+						is_in_area = boeotia_area
+						is_in_area = central_greece_area	#Attica
+					}
+				}
+				set_owned_by = scope:hellenic_league_scope
+			}
+		}
+		
+		make_subject = {
+			target = scope:hellenic_league_scope
+			type = feudatory
+		}
+		
+		scope:hellenic_league_scope = {
+			change_government = koinon_league_gov	#League Republic, again for player to see
+			add_opinion = {
+				modifier = opinion_liberated_us
+				target = root
+			}
+			every_country_culture = {
+        		limit = {
+        			OR = {
+						is_culture = peloponnesian
+						is_culture = arcadian
+						is_culture = argolian
+						is_culture = aetolian
+						is_culture = athenian
+						is_culture = boeotian
+					}
+				}
+				set_country_culture_right = citizen
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = cde_me_mac_01.28.c
+		
+		add_military_experience = 10
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+

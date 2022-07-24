@@ -1,0 +1,59 @@
+﻿"PES"={
+	country="PES"
+	99={
+		first_name = "Baydad"
+		family = c:PES.fam:Wahbarzid		#Frataraka
+		birth_date=550.9.21		#204 BC
+		culture="pasargadi"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=5
+		add_charisma=4
+		add_finesse=6
+		add_zeal=7
+		no_traits=yes
+		add_trait="zealous"
+		add_trait="devout"
+		add_gold=300
+		add_popularity=70
+		c:PES = {
+			set_as_ruler=char:99
+		}
+		dna="IOog6rSgtKDal9qXAVQBVAKIAogCbwJvApcClwA/AD8E5ATkApMCkwKBAoECewJ7Ao8CjwKGAoYCsgKyAnkCeQKBAoECbAJsAoQChAJvAm8CjgKOAowCjAJqAmoCkQKRAmgCaAJoAmgCmAKYACsAKwKXApcCagJqAnACcAKGAoYCeAJ4Ao4CjgJ8AnwCfAJ8ADcANwJ7AnsCdAJ0ApECkQJoAmgDpAOkBNIE0gOdA50CkwKTAn4CfgKUApQClAKUApQClAJ4AngCiQKJAo8CjwFqAWoCkQKRAnICcgFVAVUBYgFiAm8CbwRlBGUAaQBpANgA2ACFAIUAqQCpAS0BLQCBAIEBbwFvAHIAcgLPAs8AEQARANgA2AB/AH8AcgByAGkAaQAgACAAvQC9ALEAsQFLAUsDRgNGAEwATAB/AH8BXwFfADwAPABFAEUBXwFfAUcBRwEXARcAcABwAQwBDAKMAowAOgA6ArkCuQM7AzsCvQK9AH8AfwUrBSsGZAZkAcwBzAO2A7YEBQQFAdgB2AAAAAAAAAAAAAAAAA=="
+	}
+	
+	100={
+		first_name = "Wadfradad"
+		family = c:PES.fam:Wahbarzid		#Frataraka
+		birth_date=574.5.11		#180 BC
+		culture="pasargadi"
+		religion="zoroaster"
+		father = "char:99"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=5
+		add_zeal=7
+		add_gold=200
+		add_popularity=50
+		dna="GfMZ85SflJ/h3+HfAncCdwJzAnMCcAJwAn8CfwFPAU8CgAKAAVIBUgOlA6UCeQJ5AnsCewKZApkCowKjAoUChQKZApkCiwKLACEAIQJ8AnwCbwJvAoMCgwJ0AnQCagJqAVMBUwKLAosCfAJ8AVABUAKEAoQCgAKAACQAJAJ4AngCZwJnApQClAJ3AncCjAKMApcClwKFAoUDngOeAncCdwKUApQCaAJoAo8CjwS3BLcCjQKNA64DrgKHAocDqwOrAoACgAOhA6ECkAKQAmcCZwKuAq4ClwKXAWIBYgFaAVoCewJ7ApkCmQIAAgACnQKdAIsAiwAZABkAEQARAU8BTwDjAOMBOQE5APQA9ALfAt8AigCKAMEAwQB/AH8BOQE5AqQCpADKAMoC2QLZAR8BHwC+AL4CLQItAMMAwwB/AH8BbQFtAosCiwF2AXYBewF7AQ0BDQCTAJMBXgFeAxsDGwCxALEBaQFpATgBOAB3AHcHXgdeAH8AfwUWBRYG4ga2AcwBzADTA/IEVARLAf8BdAAAAAAAAAAAAAAAAA=="
+	}
+	
+	101={
+		first_name = "Wadfradad"
+		family = c:PES.fam:Wahbarzid		#Frataraka
+		birth_date=594.1.30		#160 BC
+		culture="pasargadi"
+		religion="zoroaster"
+		father = "char:100"
+		no_stats=yes
+		add_martial=5
+		add_charisma=6
+		add_finesse=7
+		add_zeal=6
+		dna="GfoZ+p6ZnpnN7c3tAnICcgKAAoACfwJ/ApICkgJ4AngCegJ6ApMCkwKTApMCaAJoApACkAKHAocCiQKJAmsCawFYAVgCfwJ/AU8BTwKVApUCggKCAoYChgShBKECcgJyA7IDsgKGAoYCfAJ8AVABUAKGAoYCbgJuAmcCZwKYApgChAKEApUClQKMAowCmAKYAoACgAOuA64CcAJwAnoCegJrAmsCdgJ2ApICkgKPAo8CcgJyAokCiQKHAocDqgOqAnMCcwKGAoYBTQFNApcClwKqAqoCiAKIA4IDggS2BLYCjQKNAmYCZgKkAqQA1wDXAVABUABpAGkAmQCZATgBOAFdAV0AeQB5AVQBVAAlACUA3ADcAGsAawB/AH8ApQClAscCxwBiAGIBXQFdAtgC2AFFAUUB5gHmAXYBdgB/AH8AfQB9AQQBBAKoAqgAwwDDASEBIQFSAVIA3gDeAEAAQAAhACEBEAEQAX0BfQCzALMDVQNVAH8AfwUcBRwGrAasAf8B/wOMA90EeAR4AT8BUwAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+	
+}

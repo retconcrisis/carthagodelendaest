@@ -1,0 +1,300 @@
+﻿#See 00_default.txt in same folder for description.
+
+is_regional_power_aimod = {
+	trigger = {
+		rank = regional_power
+	}
+	
+	aggressive = 10
+}
+
+is_major_power_aimod = {
+	trigger = {
+		rank = major_power
+	}
+	
+	aggressive = 20
+}
+
+is_great_power_aimod = {
+	trigger = {
+		rank = great_power
+	}
+	
+	aggressive = 30
+}
+
+is_early_rome_aimod = {
+	trigger = {
+		this = c:ROM
+		manpower > 4
+	}
+	#ae_ceiling = 30		#removed ae ceiling
+	aggressive = 420
+}
+
+is_lacking_levies_pseudo_trigger = {
+	trigger = {
+		military_experience > 80
+		military_experience < 85
+		tag = ROM
+	}
+	
+	aggressive = -500
+}
+
+is_antagonist_aimod = {
+	trigger = {
+		is_antagonist = yes
+	}
+	aggressive = 100
+	trustworthy = -20
+	ae_ceiling = 10
+}
+
+is_radically_powerful_chiefdom_aimod = {
+	trigger = {
+		AND = {
+			government = tribal_chiefdom
+			num_of_provinces >= 120
+			country_culture_group = scythia
+		}
+	}
+	
+	aggressive = 750
+}
+
+is_tribal_aimod = {
+	trigger = {
+		is_tribal = yes
+	}
+	aggressive = -30
+	global_tribesmen_output = 1000
+	global_tribesmen_happyness = 1000
+}
+
+is_not_tribe_aimod = {
+	trigger = {
+		is_tribal = no
+	}
+	global_monthly_civilization = 2000
+}
+
+is_monarchy_aimod = {
+	trigger = {
+		is_monarchy = yes
+	}
+	aggressive = 15
+	ruler_popularity_gain = 2000
+}
+
+is_plutocrat_aimod = {
+	trigger = {
+		OR = {
+			government = plutocratic_republic
+			government = plutocratic_monarchy
+		}
+	}
+	aggressive = -25
+}
+
+is_diadochi_aimod = {
+	trigger = {
+		is_diadochus_trigger = yes
+		current_date <= 470.1.1
+	}
+	aggressive = 25
+	trustworthy = -20
+}
+
+is_parthia_formee_aimod = { #Also accounting for -10 tribal mod
+	trigger = {
+		country_culture_group = scythia
+		is_tribal = yes
+	}
+	aggressive = 40
+	migration_chance = -50
+}
+
+is_bactria_aimod = {
+	trigger = {
+		tag = BAC
+	}
+	aggressive = 10
+	trustworthy = -20 
+}
+
+is_axum_aimod = { #Negates -25 tribal mod
+	trigger = {
+		primary_culture = aksumite
+		is_tribal = yes
+	}
+	aggressive = 20
+}
+
+is_formed_parthia_aimod = {
+	trigger = {
+		tag = PTH
+	}
+	aggressive = 50
+}
+
+has_horde_invasion = {
+	trigger = {
+		custom_tooltip = {
+			text = "parthian_invasion_aggressiveness_tt"
+			has_variable = horde_invasion_origin
+		}
+	}
+	aggressive = 1000
+}
+
+is_arvernia_aimod = {
+	trigger = {
+		tag = AVN
+	}
+	aggressive = 15
+}
+
+mauryan_decline_aimod = {
+	trigger = {
+		heritage = mauryan_abandoned_heritage
+	}
+	
+	aggressive = -30
+}
+
+
+#NEW for CDE mod
+
+ptolemaic_decline_aimod = {
+	trigger = {
+		tag = EGY
+	}
+	
+	aggressive = -50
+}
+
+kush_nonexpansion_aimod = {
+	trigger = {
+		tag = KSH
+	}
+	
+	aggressive = -30
+}
+
+seleukid_decline_aimod = {
+	trigger = {
+		tag = SEL
+	}
+	
+	aggressive = -50
+}
+
+alexandros_balas_content_aimod = {
+	trigger = {
+		tag = AXR
+		c:AXR = {
+			current_ruler = {
+				this = char:32
+			}
+		}
+	}
+	
+	aggressive = -5
+}
+
+is_parthian_empire_aimod = {
+	trigger = {
+		tag = PAR
+	}
+	
+	aggressive = 30
+}
+
+is_yuezhi_aimod = {
+	trigger = {
+		tag = YZI
+	}
+	
+	aggressive = 30
+}
+
+is_sarmatia_aimod = { #Also accounting for -10 tribal mod
+	trigger = {
+		tag = SRM
+		tag = IAZ
+		tag = ROX
+		tag = AOR
+		tag = ALN
+		is_tribal = yes
+	}
+	
+	aggressive = 20
+}
+
+is_pergamon_aimod = {
+	trigger = {
+		tag = PRG
+	}
+	
+	aggressive = -25
+}
+
+is_teuton_cimbri_aimod = {
+	trigger = {
+		OR = {
+			tag = TIT
+			tag = CMB
+		}
+	}
+	
+	migration_chance = 30
+}
+
+is_alan_aimod = {
+	trigger = {
+		tag = ALN
+	}
+	
+	migration_chance = 30
+}
+
+anuradhapura_isolation_aimod = {
+	trigger = {
+		tag = ANU
+	}
+	
+	aggressive = -5
+}
+
+carthage_aggressive_aimod = {
+	trigger = {
+		tag = CAR
+	}
+	
+	aggressive = 125
+}
+
+buddhist_ruler_aimod = {
+	trigger = {
+		current_ruler = {
+			has_religion = buddhism
+		}
+		NOT = { tag = IGR }
+	}
+	
+	aggressive = -10
+}
+
+indo_greek_early_expansion_aimod = {
+	trigger = {
+		tag = IGR
+		current_date <= 654.1.1		#100 BC, represents expansionism under Menander despite being Buddhist
+	}
+	
+	aggressive = 30
+}
+
+
+

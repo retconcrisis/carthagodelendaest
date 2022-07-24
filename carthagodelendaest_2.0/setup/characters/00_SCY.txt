@@ -1,0 +1,28 @@
+﻿"SCY"={
+	country="SCY"
+	
+	#Skilurus, king of Scythia
+	132={
+		first_name = "Skilurus"
+		family =  c:SCY.fam:Agarid
+		birth_date=582.1.18		#172 BC
+		culture="scythian"
+		religion="indo_iranian_religion"
+		no_stats=yes
+		add_martial=8
+		add_charisma=6
+		add_finesse=6
+		add_zeal=4
+		no_traits=yes
+		add_trait="wise"
+		add_trait="assertive"
+		add_gold=350
+		add_popularity=90
+		c:SCY = {
+			set_as_ruler=char:132
+		}
+		dna="aPdo95KPko8NBw0HAn4CfgKAAoACfwJ/AmwCbAKOAo4CaAJoAmcCZwJ9An0CiQKJAoYChgKLAosClAKUAnoCegJnAmcCkQKRAV8BXwKQApACgwKDAogCiAJ2AnYCjwKPA64DrgJsAmwChAKEAAcABwJzAnMClQKVAoACgAAuAC4CbAJsAnECcQJ9An0CiQKJAnYCdgKBAoECewJ7AEcARwJ0AnQChgKGAo4CjgJ1AnUCbgJuAnICcgBjAGMCjgKOAEUARQOrA6sCbgJuApkCmQBLAEsCjAKMAmgCaAJoAmgCkwKTAoUChQJcAlwBQAFAATEBMQFkAWQApwCnASUBJQAUABQBeAF4AEIAQgBRAFEDRQNFAskCyQB/AH8A+QD5ACUAJQEPAQ8BIQEhABcAFwF9AX0AIQAhAKUApQB/AH8A2wDbAMwAzADKAMoBAQEBAG8AbwKOAo4BRQFFA0MDQwDKAMoCmQKZBJkEmQJnAmcAlQjvAH8AfwXRBdELpQufAQsBMgP9A2ALtwt5BAAEkwAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

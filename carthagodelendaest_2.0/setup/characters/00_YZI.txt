@@ -1,0 +1,23 @@
+﻿"YZI"={
+	country="YZI"
+	
+	#Guishuang/Kushana ruler of the Yuezhi
+	258={
+		family = c:YZI.fam:Guishuang	#Kushans
+		birth_date=567.8.10		#187 BC
+		culture="yuezhi"
+		religion="eastern_animism"
+		no_stats=yes
+		add_martial=10
+		add_charisma=6
+		add_finesse=8
+		add_zeal=7
+		add_gold=250
+		add_popularity=60
+		c:YZI = {
+			set_as_ruler=char:258
+		}
+		dna="FPcU97Ols6W87rzuAnwCfAJrAmsCcQJxAmoCagJxAnEChgKGAoYChgKLAosCkwKTAWIBYgKVApUCqwKrAoECgQJtAm0CdgJ2AnQCdAKBAoECcwJzAnACcAJzAnMCfQJ9AoICggKCAoIClAKUAVUBVQKZApkDqAOoAnkCeQJoAmgCbgJuAnYCdgJ7AnsCigKKAoYChgKUApQChAKEAnoCegJ5AnkCcwJzAmwCbAJ3AncCcAJwAmwCbAKEAoQCggKCAocChwKUApQDoAOgAn8CfwKoAqgCewJ7AnECcQJ0AnQClwKXA68DrwL7AvsAtQC1AUcBRwF8AXwAKQApAGwAbAAeAB4BHwEfAKIAogDOAM4DCwMLAEIAQgB/AH8AzQDNAusC6wBjAGMAyQDJAWMBYwDPAM8AGQAZAUUBRQB/AH8A9AD0ARwBHAF6AXoA8wDzAOYA5gAmACYBJwEnAxkDGQBZAFkC7QLtADUANQKOAo4JOgzqAH8AfwVuBW4MuxAbAZMBkwXMBcwNNQ2QDQAFkwAAAAAAAAAAAAAAAA=="
+	}
+	
+}

@@ -1,0 +1,66 @@
+﻿"MAU"={
+	country="MAU"
+	
+	#Baga I, previous ruler
+	158={
+		first_name = "Baga"
+		family = c:MAU.fam:Mauri
+		birth_date=509.12.29		#245 BC
+		death_date=579.3.24			#175 BC
+		culture="socossian"
+		religion="berber_religion"
+		no_stats=yes
+		add_martial=7
+		add_charisma=8
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="content"
+		add_trait="founder"
+	}
+	
+	#Baga II, fictional/placeholder current ruler
+	159={
+		first_name = "Baga"
+		family = c:MAU.fam:Mauri
+		birth_date=559.5.9		#195 BC
+		father="char:158"			#Baga I
+		culture="socossian"
+		religion="berber_religion"
+		no_stats=yes
+		add_martial=8
+		add_charisma=5
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="content"
+		add_trait="honest"
+		add_gold=250
+		add_popularity=75
+		c:MAU = {
+			set_as_ruler=char:159
+		}
+	}
+	
+	#Bocchus I, heir of current ruler who ruled c. 110 BC and fight Rome in the Jugurthine War
+	160={
+		first_name = "Bocchus"
+		family = c:MAU.fam:Mauri
+		birth_date=581.1.11		#173 BC
+		father="char:159"			#Baga II
+		culture="socossian"
+		religion="berber_religion"
+		no_stats=yes
+		add_martial=8
+		add_charisma=7
+		add_finesse=6
+		add_zeal=4
+		no_traits=yes
+		add_trait="crafty"
+		add_trait="silver_tongued"
+		add_gold=100
+		add_popularity=65
+	}
+	
+	
+}

@@ -1,0 +1,38 @@
+﻿namespace = cde_flavor_par
+
+#Coronation of the King of Kings
+cde_flavor_par.1 = {
+	type = country_event
+	title = "cde_flavor_par.1.t"
+	desc = "cde_flavor_par.1.desc"
+	picture = religious_rite
+	
+	left_portrait = current_ruler
+	right_portrait = c:PAR.fam:Suren.head_of_family
+	
+	trigger = {
+		tag = PAR
+		is_monarchy = yes
+		c:PAR.fam:Suren = {
+			NOT = { any_family_member = { is_ruler = yes } }
+			exists = head_of_family
+			head_of_family = {
+				is_alive = yes
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_par.1.a
+		
+		c:PAR.fam:Suren = { add_prestige = 5 }
+		every_character = {
+			limit = {
+				is_head_of_family = yes
+				family = c:PAR.fam:Suren
+				is_ruler = no
+			}
+			add_loyalty = loyalty_par_suren_coronation
+		}
+	}
+}

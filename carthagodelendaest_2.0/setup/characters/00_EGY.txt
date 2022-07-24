@@ -1,0 +1,222 @@
+﻿"EGY"={
+	country="EGY"
+	
+	#See Hades file for Ptolemy V
+	
+	#Ptolemy VI
+	42={		
+		first_name="Ptolemaios"
+		nickname="NICKNAME_PHILOMETOR"
+		family = c:EGY.fam:Lagid
+		birth_date=568.5.29		#May or June 186 BC
+		father="char:41"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=6
+		add_finesse=8
+		add_zeal=6
+		no_traits=yes
+		add_trait="lagids"
+		add_trait="secure"
+		add_trait="shrewd"
+		add_gold=400
+		add_popularity=40
+		c:EGY = {
+			set_as_ruler=char:42
+		}
+		dna="PN483pB8kHyxkrGSAV4BXgKIAogDrwOvApECkQJuAm4CbgJuAEwATAJ+An4DmQOZA6UDpQKHAocClgKWAm8CbwJ/An8ChQKFAm8CbwFiAWICawJrAmYCZgJuAm4CfwJ/AoICggJzAnMCeQJ5Am8CbwJzAnMCgQKBAocChwJmAmYCiAKIAoYChgKSApICkwKTA6wDrAJrAmsCaQJpApICkgJzAnMCdgJ2Ao0CjQJvAm8CfgJ+AoMCgwJpAmkCZgJmAm4CbgKRApECmQKZAoECgQKCAoIDrAOsAnICcgJwAnADqwOrAokCiQIfAh8BMgEyAH4AfgDoAOgBHAEcAOYA5gCaAJoCxQLFAqcCpwF/AX8AZgBmAugC6AB/AH8AmgCaAukC6QEuAS4AMwAzAFUAVQExATECDwIPARsBGwB/AH8AywDLAWQBZAFzAXMC4ALgAWYBZgEgASAAGwAbAOIA4gFTAVMCuwK7ASsBKwEhASEHSwrXAH8AfwINAA0FtQUuAOIA4gUhBX8CcQJ2AjoC8QAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Cleopatra II, wife and sister of Ptolemy VI
+	43={		
+		first_name="Kleopatra"
+		nickname="NICKNAME_II"
+		family = c:EGY.fam:Lagid
+		birth_date=570.1.25		#184 BC
+		female = yes
+		father="char:41"
+		marry_character="char:42"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=7
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="lagids"
+		add_trait="ambitious"
+		add_trait="cold"
+		add_gold=300
+		add_popularity=30
+		dna="H/cf942IjYi6q7qrAokCiQKUApQCjwKPA64DrgKEAoQCaAJoAo4CjgJ6AnoCjAKMApYClgJyAnICbwJvAnoCegJqAmoCoAJwApACkAObA5sClgKWAn8CfwKHAocCfgJ+AoICggFaAVoCewJ7Ao0CjQJxAnEBTAFMAVsBWwA8ADwChQKFAmYCZgKZApkCeAJ4ApECkQKSApICXQJxAnMCcwJ/An8CgQKBAFIBXwJXAmgCcwJzAm4CbgJuAm4CaAKXBOAE4AJ9An0CbgJuAmgCaAJzAnMCiQKJBOUE5QJuAm4CdwJ3AncCdwFjBDcAoQChAJoAmgEBAQEBcQFxAs0CzQB8AHwAkgCSACQAJABHAEcC6wLrAVsBWwB/AH8AWQBZAq8CrwFhAWEAtAC0AGEAYQLIAsgCbQJtAQABAAB/AH8BEgESAD4APgAvAC8AmQCZAU8BTwS2BLYC/wL/A2QDZALfAt8DFwMXBPEE8QCoAKgIKwbrAH8AfwAbABsPsQXzAIoAPwVoBWgIDgImAkICQgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Ptolemaios Eupator, deceased son of Ptolemy VI
+	60={		
+		first_name="Ptolemaios"
+		nickname="NICKNAME_EUPATOR"
+		family = c:EGY.fam:Lagid
+		birth_date=589.2.14		#165 BC
+		death_date=602.5.17		#152 BC
+		father="char:42"
+		mother="char:43"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=5
+		add_finesse=5
+		add_zeal=4
+		no_traits=yes
+		add_trait="lagids"
+	}
+	
+	#Ptolemy VII
+	61={		
+		first_name="Ptolemaios"
+		nickname="NICKNAME_NEOS_PHILOPATOR"
+		family = c:EGY.fam:Lagid
+		birth_date=591.4.5		#162 BC
+		father="char:42"
+		mother="char:43"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=5
+		add_finesse=3
+		add_zeal=7
+		no_traits=yes
+		add_trait="lagids"
+		add_trait="unnoticeable"
+		dna="Ev4S/sOBw4H/vv++ApYClgJ+An4CbAJsAnkCeQJzAnMCaAJoAnUCdQOaA5oCfQJ9Ao4CjgJyAnICiAKIAncCdwKUApQCewJ7A5oDmgFRAVECiQKJApgCmAKIAogCjAKSAmwCgQJ0AnQCjwKPAoUChQJzAnMCbgJuAVwBXAKCAoICfQJ9Am8CbwJpAmkCjAKMAnMCcwKJAokCmQKZAmoCagKIAogCbgJuApQClAOpA6kCbAJsAoACgAKQApACdgJ2Ao8CjwJtAm0ChQKFAn4CfgKSApICkwKTAoUChQJ1AnUCigKKAnECcQECBFAAbABsAUsBSwEhASEAvQC9ATEBMQB/AH8ADgAOABMAEwKxArEAGAAYAB4AHgB/AH8ANwA3AHkAeQAhACEAzwDPAHwAfADTANMCPgI+APIA8gB/AH8A8wDzAKYApgFyAXIAxQDFAqgCqADqAOoAwADAAxMDEwB5AHkBDAEMAwoDCgNPA08M2wzbAH8AfwEZARkFTQWSAPYA9gHHBccCXwJfAnECcQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Ptolemy VIII (62) rules over Cyrenaica as an independent after granted land by Rome
+	
+	#Cleopatra Thea, later became Queen of the Seleucids
+	63={		
+		first_name="Kleopatra"
+		nickname="NICKNAME_THEA"
+		family = c:EGY.fam:Lagid
+		birth_date=587.3.6		#167 BC, historically 164 BC
+		female = yes
+		father="char:42"
+		mother="char:43"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=8
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="lagids"
+		add_trait="ambitious"
+		add_trait="crafty"
+		add_popularity=20
+		add_gold=100
+		dna="ScxJzMt/y3/Z3tneAoQChAKFAoUCfAJ8A6YDpgKEAoQCdgJ2AocChwOiA6IBXgFeAoMCgwJtAm0CjQKNA64DrgJ1AnUCegJ6AnECcQAoACgBZgFmAnwCfAJoAmgCVAJqAoYChgJwAnACjAKMAowCjAJwAnACegJ6Am0CbQOkA6QCZwJnAm8CbwKGAoYChwKHAoUChQKNAo0CUQKGApUClQJqAmoCfQJ9AnECcQJrAmsCbAJsApACkAJqAmoCeAJ4BNUE1QKVApUCkgKSAnECcQKOAo4BVwFXAVABUAJsAmwClQKVAnECcQJqAmoBAwEDARYBFgD0APQCmAKYAGwAbAByAHIA7wDvAHIAcgDxAPEAYABgARYBFgB/AH8BGgEaAXkBeQAHAAcBHQEdAToBOgDMAMwC9QL1ACkAKQB/AH8AAQABAEQARACBAIEA/wD/AGUAZQBKAEoAWwBbAzQDNAAhACEBfQF9ALwAvAE3ATcEtQRqAH8AfwKSApIF4gXiAP8A0QUmBSYIXwLWArkCuQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Cleopatra III
+	64={		
+		first_name="Kleopatra"
+		family = c:EGY.fam:Lagid
+		birth_date=592.7.14		#161 BC
+		female = yes
+		father="char:42"
+		mother="char:43"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=6
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="lagids"
+		add_trait="cautious"
+		add_trait="self_controlled"
+		add_popularity=15
+		add_gold=100
+		dna="Hewd7LR+tH7p++n7AmwCbAJxAnECkAKQAokCiQFkAWQCiAKIA5kDmQKUApQChAKEAnACcAJoAmgCfAJ8AoECgQS8BLwClwKXAVgBWAKVApUCcAJwAoACgAKGAoYCcgJyAmYCZgOtA60CdgJ2AVIBUgJmAmYCigKKAoECgQOoA6gCjwKPAmcCZwKXApcCdAJ0A6cDpwKWApYBWQFMApECkQKSApICggKCAnICcgJuAm4CkwKTApgCmAJoAmgBWQFZAnwCfAJzAnMCcgJyA6QDpAJtAm0CiwKLAmwCbAKMAowCmwJsAmgCdwEhAkwBbAFsAuMC4wCAAIAAVgBWAD0APQAOAA4AnQCdADUANQLGAsYABQAFAPgA+AB/AH8AqQCpABwAHABrAGsBBAEEAPMA8wAzADMBRgFGADIAMgB/AH8CowKjAIkAiQBNAE0ABQAFAHkAeQEWARYBYQFhAEYARgAuAC4DMwMzASkBKQT8BPwHqgWiAH8AfwRqBGoPrwX6AHoAegV0BXQC3AKQArQCtAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Andromachos, governor of Cyprus
+	208={		
+		first_name="Andromachos"
+		family_name = "Andromachid"
+		birth_date=554.3.18		#200 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=7
+		add_zeal=7
+		add_gold=50
+	}
+	
+	#Seleukos Bithysid, future governor and high priest of Cyprus
+	209={		
+		first_name="Seleukos"
+		family_name = "Bithysid"
+		birth_date=567.1.15		#187 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=10
+		add_finesse=9
+		add_zeal=9
+		no_traits=yes
+		add_trait="good_natured"
+		add_trait="prominent"
+		add_popularity=30
+		add_gold=50
+		dna="Ev0S/bJ9sn3O/M78ApICkgOnA6cCbQJtAn8CfwKKAooCbAJsApECkQKOAo4CjwKPAn8CfwJoAmgBZAFkAC8ALwOhA6EChwKHA5wDnAJsAmwClgKWAmgCaAKKAooCggKCAokCiQJ6AnoCfQJ9ABoAGgKDAoMBUAFQAmkCaQKAAoACfwJ/AoMCgwJqAmoCawJrAVQBVAKKAooDnAOcAnoCegJ3AncCcgJyApQClAJyAnICawJrAoYChgJ2AnYCjwKPAVUBVQKCAoIBWgFaAnMCcwFXAVcCfwJ/ApICkgKMAowCeAJ4AocChwOKA4oAAQABAJMAkwBYAFgBJgEmABMAEwKrAqsALAAsAIUAhQAgACABJwEnAC8ALwB/AH8AgACAAScBJwKAAoAAPwA/AHwAfACpAKkAzQDNAHcAdwB/AH8AuAC4AOEA4QF1AXUCoAKgAJ0AnQShBKEBeAF4ACMAIwBAAEADOAM4A0IDQgTPBM8GxQbFAH8AfwN1A3UFDwUPAPEA8QVRBVEC7wLvAjkCOQAAAAAAAAAAAAAAAA=="
+	}
+	#Artemo, wife of Seleukos Bithysid
+	210={		
+		first_name="Artemo"
+		family_name = "Bithysid"
+		birth_date=574.9.10		#180 BC
+		female = yes
+		marry_character="char:209"
+		culture="macedonian"
+		religion="roman_pantheon"
+	}
+	#Theodoros, future governor and son of Seleukos Bithysid and Artemo
+	211={		
+		first_name="Theodoros"
+		family_name = "Bithysid"
+		birth_date=599.7.7		#155 BC
+		father="char:209"
+		mother="char:210"
+		culture="macedonian"
+		religion="roman_pantheon"
+		add_martial=1				#Buffs base states
+		add_charisma=1
+		add_finesse=1
+		add_zeal=1
+	}
+	
+	#Krokos / Crocus, future governor and ally of Ptolemy VIII
+	212={		
+		first_name="Krokos"
+		birth_date=577.9.16		#177 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=9
+		add_zeal=7
+		add_trait="prominent"
+	}
+	
+}

@@ -1,0 +1,300 @@
+﻿namespace = cde_flavor_rom_rebellions
+
+#First Servile War
+cde_flavor_rom_rebellions.1 = {
+	type = country_event
+	title = "cde_flavor_rom_rebellions.1.t"
+	desc = "cde_flavor_rom_rebellions.1.desc"
+	picture = great_work_riot
+	
+	left_portrait = scope:eunus_servile_general
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		owns = 89
+		any_owned_province = {
+			OR = {
+				is_in_area = east_sicily_area
+				is_in_area = west_sicily_area
+			}
+			any_pops_in_province = { pop_type = slaves }
+			slaves_happiness <= 0.65
+		}
+		current_date >= 618.12.1		#135 / end of 134 BC, for yearly pulse
+	}
+	
+	immediate = {
+		set_variable = { name = first_servile_war_flag }
+		
+		if = {
+			limit = {
+				owns = 89	#Enna
+			}
+			p:89 = {
+				save_scope_as = servile_rebel_start_province
+				create_country = {
+					name = {
+						name = "ENNA_NAME"
+						adjective = "ENNA_ADJECTIVE"
+					}
+					change_country_flag = ENNA_FLAG
+					change_country_color = babylonia_color
+					set_primary_culture = siculian
+					set_country_religion = roman_pantheon
+					change_government = despotic_monarchy
+					add_treasury = 500.0
+					save_scope_as = first_servile_kingdom_enna
+				}
+			}
+		}
+		
+		hidden_effect = {
+			scope:first_servile_kingdom_enna = {
+				create_character = {
+					first_name="Eunus"		#Leader of the rebels
+					family_name="Eunid"
+					culture = aramaic
+					religion = carthaginian_pantheon
+					age = 34
+					no_stats = yes
+					no_traits = yes
+					great_martial_effect = yes
+					good_finesse_trait_effect = yes
+					other_personality_trait_effects = yes
+					great_charisma_effect = yes
+					good_zeal_effect = yes
+					save_scope_as = eunus_servile_general
+				}
+			}
+			set_variable = {
+				name = eunus_servile_var
+				value = scope:eunus_servile_general
+			}
+		}
+		
+		scope:first_servile_kingdom_enna = { #This is our snowball
+			hidden_effect = {
+				set_as_ruler = scope:eunus_servile_general
+			}
+			add_country_modifier = {
+				name = "servile_revolt_fervor"
+				duration = 1825		#5 years
+			}
+			create_unit = {
+				location = scope:servile_rebel_start_province
+				set_as_commander = scope:eunus_servile_general
+				hidden_effect = {
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+					add_loyal_subunit = light_infantry
+				}
+			}
+			random_unit = {
+				limit = {
+					unit_location = scope:servile_rebel_start_province
+					unit_owner = scope:first_servile_kingdom_enna
+				}
+				set_variable = {
+					name = first_servile_army_origin
+				}
+				hidden_effect = {
+					while = { 		#One light infantry per slave
+						limit = {
+							unit_location = {
+								num_of_slaves >= 1
+							}
+						}
+						unit_location = {
+							random_pops_in_province = {
+								limit = { pop_type = slaves }
+								kill_pop = yes
+							}
+						}
+						add_subunit = light_infantry
+					}
+				}
+			}
+		}
+		scope:servile_rebel_start_province = {
+			set_owned_by = scope:first_servile_kingdom_enna
+		}
+		p:80 = {		#Messana, fort bordering tip of boot
+			set_controller = scope:first_servile_kingdom_enna
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 7839	#Capitium
+					province_id = 88	#Murgantia
+					province_id = 7838	#Centuripidae
+					province_id = 82	#Catana
+					province_id = 81	#Tauromenium
+					province_id = 7841	#Mitistratum
+				}
+			}
+			set_owned_by = scope:first_servile_kingdom_enna
+		}
+		p:89 = {
+			ordered_pops_in_province = {
+				limit = {
+					OR = {
+						pop_type = nobles
+						pop_type = citizen
+					}
+				}
+				max = 1
+				kill_pop = yes
+			}
+		}
+		
+		declare_war_with_wargoal = {
+			war_goal = conquer_wargoal
+			province = p:89		#Enna
+			target = scope:first_servile_kingdom_enna
+		}
+		
+		trigger_event = {
+			id = cde_flavor_rom_rebellions.2
+			days = 15
+		}
+	}
+	
+	option = {
+		name = cde_flavor_rom_rebellions.1.a
+		
+		add_stability = -10
+		
+	}
+}
+
+#Slaves Massacre Agrigentum Citizens! - Cleon and Comanus join the rebels
+cde_flavor_rom_rebellions.2 = {
+	type = country_event
+	title = "cde_flavor_rom_rebellions.2.t"
+	desc = "cde_flavor_rom_rebellions.2.desc"
+	picture = great_work_riot
+	
+	left_portrait = scope:cleon_servile_general
+	right_portrait = scope:comanus_servile_general
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		owns = 86		#Agrigentum
+	}
+	
+	immediate = {
+		p:86 = {
+			ordered_pops_in_province = {
+				limit = {
+					OR = {
+						pop_type = nobles
+						pop_type = citizen
+					}
+				}
+				max = 2
+				kill_pop = yes
+			}
+			set_owned_by = scope:first_servile_kingdom_enna
+		}
+		
+		hidden_effect = {
+			scope:first_servile_kingdom_enna = {
+				create_character = {
+					first_name="Cleon"		#Leader of the rebels
+					culture = cilician
+					religion = roman_pantheon
+					age = 30
+					no_stats = yes
+					no_traits = yes
+					add_martial=13
+					average_finesse_trait_effect = yes
+					other_personality_trait_effects = yes
+					average_charisma_effect = yes
+					good_zeal_effect = yes
+					save_scope_as = cleon_servile_general
+				}
+				create_character = {
+					first_name="Comanus"		#Leader of the rebels
+					culture = cilician
+					religion = roman_pantheon
+					age = 30
+					no_stats = yes
+					no_traits = yes
+					good_martial_effect = yes
+					average_finesse_trait_effect = yes
+					other_personality_trait_effects = yes
+					average_charisma_effect = yes
+					good_zeal_effect = yes
+					save_scope_as = comanus_servile_general
+				}
+				
+				create_unit = {
+					location = p:86
+					set_as_commander = scope:cleon_servile_general
+					hidden_effect = {
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+					}
+				}
+				create_unit = {
+					location = p:86
+					set_as_commander = scope:comanus_servile_general
+					hidden_effect = {
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+						add_loyal_subunit = light_infantry
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_rom_rebellions.2.a
+		
+		
+	}
+}

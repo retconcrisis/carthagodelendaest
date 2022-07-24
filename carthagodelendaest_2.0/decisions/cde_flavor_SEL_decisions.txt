@@ -1,0 +1,50 @@
+﻿country_decisions = {
+	cde_claim_seleukid_throne = {
+		potential = {
+			tag = AXR
+			NOT = {
+				OR = {
+					has_variable = axr_seleukid_formed
+					has_variable = seleukid_civil_war_alexandros_wins_flag	#start war victory
+				}
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 790  #Antiocheia
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+			has_civil_war = no
+			owns = 790  		#Antiocheia
+			c:SEL = {
+				has_land = no
+			}
+		}
+		
+		effect = {
+			set_country_heritage = seleucus_heritage
+			change_country_name = SELEUKID_EMPIRE_NAME
+			hidden_effect = {
+				change_country_adjective = SELEUKID_EMPIRE_ADJECTIVE
+				change_country_color = seleukid_empire_color
+				set_variable = {
+					name = axr_seleukid_formed
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+
+

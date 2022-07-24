@@ -1,0 +1,54 @@
+﻿"DRD"={
+	country="DRD"
+	
+	#Monunius, ruler of Dardania
+	262={
+		first_name = "Monunius"
+		family = c:DRD.fam:Dardanid		#vanilla family
+		birth_date=544.12.5		#210 BC
+		culture="dardanian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=10		#maintained neutrality between Macedon and Rome
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="wise"
+		add_trait="original_thinker"		#defeated Bastarnae invasion with clever ruse
+		add_trait="cautious"
+		add_gold=150
+		add_popularity=80
+		c:DRD = {
+			set_as_ruler=char:262
+		}
+		dna="Zt1m3ZSMlIwqdip2AnoCegJ2AnYCZwJnAVsBWwJ2AnYCZwJnAoICggKOAo4CcgJyAnACcAJtAm0BVwFXAncCdwKVApUDogOiAnICcgKAAoACcgJyAnkCeQKBAoEAWgBaAoACgAKWApYCewJ7AncCdwJmAmYCiQKJAmYCZgKYApgBWgFaAnACcAKNAo0CkwKTApMCkwKCAoICkAKQAoQChAJoAmgCZwJnAnICcgJ0AnQCiwKLAo0CjQJ6AnoCewJ7ApUClQJ9An0ChQKFAnYCdgJyAnICbQJtApQClAJ0AnQCawJrACYAJgN/A38AcABwALEAsQCdAJ0AWABYAO8A7wLUAtQAWwBbACMAIwKGAoYBPgE+AuwC7AB/AH8BaAFoAV4BXgFAAUAA2ADYAKMAowCZAJkCkQKRAOcA5wB/AH8AggCCAssCywEoASgAwwDDAXUBdQBSAFIAfgB+A0YDRgKoAqgAWQBZAzkDOQA2ADYLpQutAH8AfwDxAPEFjQV/AE4ATgW1BX0CFgPKA+gD6AAAAAAAAAAAAAAAAA=="
+	}
+	
+}
+
+"DRD_Hostages_ROM" = {
+	country="ROM"
+	
+	#Etuta, daugther of Mononius, under house arrest in Roman Republic after defeat of her husband Gentius, who would have likely died by now
+	263={		
+		first_name="Etuta"
+		family = c:DRD.fam:Dardanid		#vanilla family
+		father="char:262"			#Mononius
+		birth_date=565.2.23		#189 BC
+		female=yes
+		culture="dardanian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=9
+		add_finesse=8
+		add_zeal=8
+		no_traits=yes
+		add_trait="fair"
+		add_trait="self_controlled"
+		add_trait="hostage_trait"		#is a hostage, cannot hold major offices
+		dna="D/kP+ZGCkYLr5OvkAnkCeQJmAmYCaQJpAoACgAKCAoICmQKZApYClgJoAmgBYwFjAU8BTwJxAnECeAJ4AoICggJtAm0ChgKGAoQChATDBMMCeAJ4ApMCkwKHAocCfgJ+AnECcQKFAoUCbwJvAnQCdAKPAo8CbAJsAEMAQwJzAnMCkQKRAmkCaQJqAmoBUwFTAoACgAKJAokClAKUAn4CfgKUApQCcQJxAVQBVAJ5AnkBTwFPApUClQKSApICZwJnAmsCawKOAo4CcgJyAoUChQKVApUCfwJ/ApQClAJ2AnYCkQKRAn0CfQLJAskAwQDBAM0AzQFEAUQAVABUAF4AXgAKAAoA8QDxAVMBUwKTApMA6wDrAOIA4gB/AH8AugC6ADIAMgDQANAAQwBDAGEAYQCdAJ0DwAPAAuMC4wB/AH8BMQExAq4CrgBnAGcBMwEzALUAtQCWAJYAUwBTAOUA5QFFAUUALAAsAPYA9gDkAOQBcgFyAH8AfwK/Ar8F/QX9AGoAagWpBakDsgOyA5IDkgAAAAAAAAAAAAAAAA=="
+	}
+}
+

@@ -1,0 +1,136 @@
+﻿country_decisions = {
+	rho_restore_nesiotic_league = {
+		potential = {
+			tag = RHO
+			custom_tooltip = {
+				text = formable_not_nesioticleague_exists
+				c:DEL = {
+					has_land = no
+				}
+			}
+		}
+		allow = {
+			war = no
+			has_civil_war = no
+			is_subject = no
+			num_of_cities >= 15
+			any_owned_province = {
+				count >= 4
+				custom_tooltip = {
+					text = formable_not_nesioticleague_not_capital
+					is_in_area = aegean_islands_area
+					is_capital = no
+				}
+			}
+		}
+		effect = {
+			ordered_owned_province = {
+				limit = {
+					is_in_area = aegean_islands_area
+					is_capital = no
+				}
+				max = 1
+				order_by = total_population
+				create_country = {
+					name = {
+						name = "DEL"
+						adjective = "DEL_ADJ"
+					}
+					hidden_effect = {
+						change_country_tag = DEL
+						set_primary_culture = aegean
+						set_country_religion = roman_pantheon
+						change_country_color = nesiotic_league_color
+						change_government = koinon_league_gov	#League Republic
+					}
+					save_scope_as = new_nesiotic_country
+					add_opinion = {
+						modifier = opinion_liberated_us
+						target = root
+					}
+				}
+			}
+			custom_tooltip = formable_not_nesioticleague_spawn_in_provinces
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						AND = {
+							is_in_area = aegean_islands_area
+							is_capital = no
+						}
+					}
+					set_owned_by = scope:new_nesiotic_country
+				}
+			}
+			make_subject = {
+				target = scope:new_nesiotic_country
+				type = feudatory
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	construction_of_the_colossus = {
+		potential = {
+			num_of_cities >= 1
+			owns = 266
+			p:266 = {
+				NOR = {
+					has_province_modifier = province_improvement_colossus_1
+					has_province_modifier = province_improvement_colossus_2	
+					has_province_modifier = province_improvement_destroyed_colossus
+				}
+			}
+			NOR = {
+				has_variable = colossus_rhodes_progress
+				has_variable = colossus_rhodes_quality
+			}
+			tag = RHO
+		}
+		highlight = {
+			scope:province = {
+				province_id = 266
+			}
+		}
+		allow = {
+			treasury >= 200 
+			stability > 50
+			tag = RHO
+			religion = roman_pantheon
+		}
+		effect = {
+			add_treasury = -200
+			custom_tooltip = "dhe_colossus_tooltip"
+			hidden_effect = {
+				set_variable = {
+					name = colossus_rhodes_progress
+					value = 1
+				}
+				set_variable = {
+					name = colossus_rhodes_quality
+					value = 1
+				}
+				trigger_event = {
+					id = "dhe_colossus_of_rhodes.10"
+				}
+				trigger_event = {
+					id = "dhe_colossus_of_rhodes.1"
+					days = { 150 300 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+	
+}
+
+
+

@@ -1,0 +1,827 @@
+﻿01_cde_carthage_missions_01_carthaginian_glory = {
+    header = "mission_image_carthage"
+    icon = "cde_elephant_battle"
+
+    repeatable = no
+
+	chance = {
+		factor = 50000
+	}
+	
+	ai_chance = {
+		factor = 20
+	}					
+
+    potential = {
+        tag = CAR
+    }
+
+    abort = {
+		
+    }
+
+    on_start = {
+    	start_mission_ai_effect = yes
+		set_variable = {
+			name = 01_cde_carthage_missions_01_active_var
+		}
+    }
+
+    on_abort = {
+		add_political_influence = -10
+		remove_variable = 01_cde_carthage_missions_01_active_var
+    }
+
+    on_completion = {
+    	complete_mission_effect = yes
+    	current_ruler = {
+			add_popularity = 30
+		}
+		add_political_influence = 20
+		remove_variable = 01_cde_carthage_missions_01_active_var
+    }
+
+	01_cde_carthage_missions_01_task_1 = { # Reclaim Lost Glory
+        icon = "task_expansion"
+		
+		allow = {
+			has_civil_war = no
+			NOT = { alliance_with = c:NUM }
+		}
+		
+		duration = 180
+		
+		on_start = {
+			trigger_event = { 
+				id = cde_me_car_01.1
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.2
+			}
+			show_as_tooltip = {
+				area:africa_meridionalis_area = {
+					every_area_province = {
+						limit = {
+							NOT = { owned_or_subject_owned = root }
+						}
+						add_claim = root
+					}
+				}
+				area:tripolitania_occidentalis_area = {
+					every_area_province = {
+						limit = {
+							NOT = { owned_or_subject_owned = root }
+						}
+						add_claim = root
+					}
+				}
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 3225
+							province_id = 3226
+							province_id = 3227
+							province_id = 3161
+							province_id = 3160
+							province_id = 3150
+							province_id = 3145
+							province_id = 3144
+						}
+						NOT = { owned_or_subject_owned = root }
+					}
+					add_claim = root
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_2 = { # Punic Allies
+        icon = "task_political"
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					province_id = 3276
+					province_id = 3277
+					province_id = 3257
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			OR = {
+				c:HDR = {
+					is_subject_of = root
+					opinion = {
+						target = root
+						value >= 100
+					}
+				}
+				owns = 3276		#Hadrumetum
+			}
+			OR = {
+				c:LPT = {
+					is_subject_of = root
+					opinion = {
+						target = root
+						value >= 100
+					}
+				}
+				owns = 3277		#Leptis Minor
+			}
+			OR = {
+				c:UTC = {
+					is_subject_of = root
+					opinion = {
+						target = root
+						value >= 100
+					}
+				}
+				owns = 3257		#Utica
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.3
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_punic_allies
+					duration = 7300
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_3 = { # Push Back the Numidians
+        icon = "task_conquest"
+		
+		requires = { 01_cde_carthage_missions_01_task_1 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = africa_meridionalis_area
+					is_in_area = tripolitania_occidentalis_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			area:africa_meridionalis_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+			area:tripolitania_occidentalis_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.4
+			}
+			add_military_experience = 10
+			show_as_tooltip = {
+				area:tripolitania_centralis_area = {
+					every_area_province = {
+						limit = {
+							NOT = { owned_or_subject_owned = root }
+						}
+						add_claim = root
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_4 = { # Retake Tripolitania
+        icon = "task_athena"
+		
+		requires = { 01_cde_carthage_missions_01_task_3 }
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = tripolitania_centralis_area
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			area:tripolitania_centralis_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.5
+			}
+			show_as_tooltip = {
+				p:3303 = {	#Oea
+					define_pop = {
+						type = citizen
+						culture = root.culture
+						religion = root.religion
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_5 = { # Liberate the Punic Cities
+        icon = "task_economical"
+		
+		requires = { 01_cde_carthage_missions_01_task_1 }
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 3225	#Hippo Regius
+					province_id = 3227	#Rusicade
+					province_id = 3150	#Igilgivi
+					province_id = 3116	#Iol
+					province_id = 3108	#Cartennae
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			owns_or_subject_owns = 3225	#Hippo Regius
+			owns_or_subject_owns = 3227	#Rusicade
+			owns_or_subject_owns = 3150	#Igilgivi
+			owns_or_subject_owns = 3116	#Iol
+			owns_or_subject_owns = 3108	#Cartennae
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.6
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_trade_outposts_regained
+					duration = -1
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_6 = { # Secure Cirta
+        icon = "task_artemis"
+		
+		requires = { 01_cde_carthage_missions_01_task_1 }
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 3163	#Cirta
+					is_in_area = numidia_centralis_area
+					is_in_area = gaetulia_septentrionalis_area
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			owns_or_subject_owns = 3163	#Cirta
+			area:numidia_centralis_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+			area:gaetulia_septentrionalis_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.7
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_numidian_subjects
+					duration = 9125
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_7 = { # Dismantle the Numidian Monarchy
+        icon = "task_artemis"
+		
+		requires = { 
+			01_cde_carthage_missions_01_task_3
+			01_cde_carthage_missions_01_task_5
+			01_cde_carthage_missions_01_task_6
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = mauretania_caesariensis_orientalis_area
+					is_in_area = mauretania_caesariensis_minoris_area
+					is_in_area = mauretania_caesariensis_maioris_area
+					is_in_area = mauretania_caesariensis_centralis_area
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			area:mauretania_caesariensis_orientalis_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+			area:mauretania_caesariensis_minoris_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+			area:mauretania_caesariensis_maioris_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+			area:mauretania_caesariensis_centralis_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.8
+			}
+			custom_tooltip = 01_cde_carthage_missions_01_task_7.tt
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_8 = { # Numidian Auxiliaries
+        icon = "task_artemis"
+		
+		requires = { 01_cde_carthage_missions_01_task_7 }
+		
+		allow = {
+			any_country_culture = { 
+				is_integrated = yes
+				OR = {
+					is_culture = massylian
+					is_culture = massaesylian
+					is_culture = numidian
+					is_culture = mazices
+					is_culture = machlyes
+					is_culture = gaetulian
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.9
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_numidian_auxiliaries
+					duration = -1
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_9 = { # Cities of Mauretania
+        icon = "task_economical"
+		
+		requires = {  01_cde_carthage_missions_01_task_7 }
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 3080	#Russadir
+					province_id = 3061	#Tingis
+					province_id = 3062	#Lixus
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			owns_or_subject_owns = 3080		#Russadir
+			owns_or_subject_owns = 3061		#Tingis
+			owns_or_subject_owns = 3062		#Lixus
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.10
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_coastal_trade_monopoly
+					duration = 10950
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_10 = { # Legacy of Two Brothers
+        icon = "task_diplomatic"
+		
+		requires = {  01_cde_carthage_missions_01_task_4 }
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 3338		#Arae Philaenorum
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			treasury >= 100
+			owns_or_subject_owns = 3338		#Arae Philaenorum
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.11
+			}
+			show_as_tooltip = {
+				add_treasury = -100
+				add_country_modifier = {
+					name = cde_me_car_honored_the_philaeni
+					duration = 10950
+				}
+				p:3338 = {
+					add_province_modifier = {
+						name = cde_me_car_statue_to_the_philaeni
+						duration = -1
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_11 = { # Seize the Balearides
+        icon = "task_expansion"
+		
+		requires = {  01_cde_carthage_missions_01_task_5 }
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = balearides_area	#Baleares
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			area:balearides_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.12
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_naval_power_restored
+					duration = 9125
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_12 = { # The Pride of Carthage
+        icon = "task_expansion"
+		
+		requires = {  
+			01_cde_carthage_missions_01_task_9
+			01_cde_carthage_missions_01_task_11
+		}
+		
+		final = yes
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = mauretainia_region
+					is_in_region = numidia_region
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+		}
+		
+		allow = {
+			region:mauretainia_region = {
+    			any_region_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+			region:numidia_region = {
+    			any_region_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.13
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_carthaginian_empire
+					duration = -1
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_13 = { # Fortify Carthage
+        icon = "task_conquest"
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = carthage_area
+				}
+			}
+		}
+		
+		allow = {
+			owns = 3256
+			p:3256 = {
+				is_capital = yes
+			}
+			p:3256 = {
+				OR = {
+					has_building = fortress_ramparts_building
+					fort_level >= 3
+				}
+			}
+			custom_tooltip = {
+				text = 01_cde_carthage_missions_01_task_13.tt2
+				area:carthage_area = {
+					any_area_province = {
+						count >= 1
+						has_building = military_building
+					}
+				}
+			}
+			custom_tooltip = {
+				text = 01_cde_carthage_missions_01_task_13.tt3
+				area:carthage_area = {
+					any_area_province = {
+						count >= 1
+						has_building = barracks_building
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.14
+			}
+			custom_tooltip = 01_cde_carthage_missions_01_task_13.tt
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_14 = { # Rebuilt the Fleet
+        icon = "task_expansion"
+		
+		requires = { 
+			01_cde_carthage_missions_01_task_13
+			01_cde_carthage_missions_01_task_20
+		}
+		
+		allow = {
+			num_of_ships >= 60
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.15
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_freeman_sailors
+					duration = 10950
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_15 = { # Noble Retinues
+        icon = "task_apollo"
+		
+		requires = { 01_cde_carthage_missions_01_task_13 }
+		
+		allow = {
+			custom_tooltip = {
+				text = 01_cde_carthage_missions_01_task_15.tt
+				any_character = {		#at least one head of family
+					count >= 2
+					is_ruler = no
+					is_minor_character = no
+					is_head_of_family = yes
+					loyalty >= 70
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.16
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_noble_retinues
+					duration = 10950
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_16 = { # A New Sacred Band
+        icon = "task_conquest"
+		
+		requires = { 01_cde_carthage_missions_01_task_15 }
+		
+		allow = {
+			military_experience >= 100
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.17
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_sacred_band_of_carthage
+					duration = 10950
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_17 = { # Military Reforms
+        icon = "task_athena"
+		
+		requires = {  
+			01_cde_carthage_missions_01_task_14
+			01_cde_carthage_missions_01_task_16
+		}
+		
+		allow = {
+			war = no
+			has_civil_war = no
+			days_since_last_war <= 3650
+			invention =  discipline_inv_4	#Promotion Through Valor"
+			military_experience >= 60
+		}
+
+        on_completion = {
+			add_military_experience = -60
+			trigger_event = { 
+				id = cde_me_car_01.18
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_carthaginian_military_reforms
+					duration = -1
+				}
+			}
+			custom_tooltip = 01_cde_carthage_missions_01_task_17.tt
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_18 = { # Libyan Allies
+        icon = "task_artemis"
+		
+		requires = {  
+			01_cde_carthage_missions_01_task_13
+		}
+		
+		allow = {
+			treasury >= 50
+			any_owned_province = {
+				count >= 5
+				any_pops_in_province = {
+					OR = {
+						pop_culture = garamantic
+						pop_culture = libyan
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			add_treasury = -50
+			trigger_event = { 
+				id = cde_me_car_01.19
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_libyan_infantry
+					duration = 10950
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_19 = { # Breed War Elephants
+        icon = "task_zeus_cornucopia"
+		
+		requires = {  
+			01_cde_carthage_missions_01_task_18
+		}
+		
+		allow = {
+			num_of_unit_type = {               
+				type = warelephant
+				value >= 10
+			}
+			OR = {
+				war = yes
+				days_since_last_war <= 365
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.20
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_north_african_war_elephants
+					duration = 10950
+				}
+			}
+        }
+    }
+	
+	01_cde_carthage_missions_01_task_20 = { # Expand Punic Markets
+        icon = "task_economical"
+		
+		allow = {
+			any_owned_province = {
+				count >= 8
+				is_port = yes
+				has_building = commerce_building	#Marketplace
+			}
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_car_01.21
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_car_carthaginian_merchants
+					duration = 10950
+				}
+			}
+        }
+    }
+	
+	
+}

@@ -1,0 +1,1472 @@
+﻿####################################################
+# NEW flags for mod
+####################################################
+
+#NEW Laconia / Sparta
+SPA = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 84  0  1 }
+	color2 = rgb { 84  0  1 }
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"		#make sure if is .tga or .dds
+		color1 = "roman_gold"
+		color2 = rgb { 84  0  1 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_sparta.dds"
+		color1 = "roman_gold"
+		color2 = "roman_gold"
+		instance = { scale = { 0.75 0.75 }  }
+	}
+}
+
+#Galatia NEW (different from vanilla, based on 1st century BC coinage)
+GLT = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 79  104  69	}
+	color2 = rgb { 79  104  69	}
+
+	colored_emblem = {
+		texture = "ce_border_stars_01.dds"
+		color1 = rgb { 79  104  69	}
+		color2 = "roman_gold"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_head_02.dds"
+		color1 = "roman_gold"
+		instance = {  scale = { 1 1 } }
+	}
+}
+
+#Numidia
+NUM = {
+	pattern = "pattern_solid.tga"
+	color1 = "rust_brown"
+	color2 = "numidia_yellow"
+	
+	colored_emblem = {
+		texture = "ce_border_stars_01.dds"
+		color1 = "numidia_yellow"
+		color2 = "rust_brown"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_horse_07.dds"
+		color1 = "numidia_yellow"
+		instance = { scale = { 0.75 0.75 }  }
+	}
+}
+
+#Thessalia / Thessaly
+THS = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 198  119  0 }
+	color2 = rgb { 198  119  0 }
+
+	colored_emblem = {
+		texture = "ce_horse_07.dds"
+		color1 = "bone_white"
+	}
+}
+
+#Greco-Bactria, NEW Eucratides-specific flag
+BAC = {
+	pattern="pattern_solid.tga"
+	color1=roman_red
+	color2=pitch_black
+	color3=bone_white
+	colored_emblem={
+		color1="roman_gold"
+		texture="ce_greco_bactria.dds"
+	}
+	colored_emblem = {
+		texture = "ce_border_stars_01.dds"
+		color1 = "roman_gold"
+		color2 = "roman_gold"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Indo-Greeks start flag, based on Diodotos' caduceus crest
+IGR = {
+	pattern = "pattern_solid.tga"
+	color1 = "pitch_black"
+	color2 = rgb { 192  195  234 }
+
+	colored_emblem = {
+		texture = "ce_indo_greeks_euthydemid.dds"
+		color1 = rgb { 192  195  234 }
+		instance = { scale = { 1.2 1.1.5 } }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_03.tga"		#make sure tga or dds
+		color1 = rgb { 192  195  234 }
+		color2 = "pitch_black"
+		instance = { 
+			rotation = 90 
+			scale = { 0.95 1.0 }
+		}
+		instance = { 
+			rotation = 270 
+			scale = { 0.95 1.0 }
+		}
+		
+	}
+}
+
+
+#Indo-Greeks if embraced the Buddhist, Hindu or Jain religion
+IGR_EMBRACE_INDIAN_RELIGION = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 211  0  7 }
+	color2 = "bone_white"
+
+	colored_emblem = {
+		texture = "ce_indo_greeks.dds"
+		color1 = "bone_white"
+	}
+}
+
+#Parthia
+PAR = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 48  38  104 }
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_border_stars_01.dds"
+		color1 = "roman_gold"
+		color2 = "roman_gold"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+	
+	#bottom is in front
+	colored_emblem = {
+		texture = "ce_parthia_sun_banner.dds"		#sun banner of the Arsacids
+		color1 = "roman_gold"
+	}
+	
+}
+
+#Quadia
+QUA = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 170  28  44 }
+	color2 = rgb { 170  28  44 }
+
+	colored_emblem = {
+		texture = "ce_quadia.dds"
+		color1 = "offwhite"
+	}
+}
+
+#Euboean League
+EBO = {
+	pattern = "pattern_solid.tga"
+	color1 = "euboean_blue"
+	color2 = "offwhite"
+	
+	colored_emblem = {
+		texture = "ce_border_meander_02.tga"
+		color1 = "offwhite"
+		color2 = "euboean_blue"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_bull_03.dds"
+		color1 = "offwhite"
+		color2 = "euboean_blue"
+		instance = { scale = { -0.9 0.9 }  }
+	}
+}
+
+#Dahia/Dahae
+DHE={
+	pattern="pattern_solid.tga"
+	color1=etruscan_blue	color2=roman_gold	color3=maurya_brown	colored_emblem={
+		color1=roman_gold		color2=navy_blue		texture="ce_circle_wheel_01.dds"
+		mask={
+			1 2 3 
+		}
+		instance={
+			position={ 0.500000 0.500000 }
+			scale={ -0.750000 0.750000 }
+			depth=0.010000
+			rotation=0
+		}
+	}
+	colored_emblem={
+		color1=roman_gold		color2=navy_blue		texture="ce_border_zigzag_02.dds"
+		mask={
+			1 2 3 
+		}
+		instance={
+			position={ 0.500000 0.500000 }
+			scale={ 1.000000 1.000000 }
+			depth=0.010000
+			rotation=0
+		}
+		instance={
+			position={ 0.500000 0.500000 }
+			scale={ 1.000000 1.000000 }
+			depth=0.010000
+			rotation=180
+		}
+	}
+}
+
+#Indo-Scythia
+ISC = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 193  39  45 }
+	color2 = rgb { 216  175  75 }
+
+	colored_emblem = {
+		texture = "ce_indo_scythia.dds"
+		color1 = rgb { 216  175  75 }
+	}
+}
+
+# Alexandreia Troas
+AXT = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 198  57  60 }
+	color2 = rgb { 255  235  186 }
+
+	colored_emblem = {
+		texture = "ce_alexandreia_troas_apollo smintheus.dds"
+		color1 = rgb { 255  235  186 }
+	}
+	
+	colored_emblem={
+		color1=rgb { 255  235  186 }
+		color2=rgb { 255  235  186 }
+		texture="ce_border_triangles_02.dds"
+		mask={
+			1 2 3 
+		}
+		instance={
+			position={ 0.500000 0.500000 }
+			scale={ 1.000000 1.000000 }
+			depth=0.010000
+			rotation=90
+		}
+		instance={
+			position={ 0.500000 0.500000 }
+			scale={ 1.000000 1.000000 }
+			depth=0.010000
+			rotation=270
+		}
+	}
+}
+
+#Odrysian kingdom of Thrace
+TRE = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "pitch_black"
+
+	colored_emblem = {
+		texture = "odrysian_thrace.dds"
+		color1 = rgb { 250  161  60 }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = rgb { 250  161  60 }
+		color2 = "ck2_green"
+		instance = { rotation = 90 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Arverni
+AVN = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "ck2_green"
+
+	colored_emblem = {
+		texture = "ce_boar_01.dds"
+		color1 = rgb { 160  59  16 }
+		color2 = rgb { 255  197  86 }
+		color3 = "offwhite"
+	}
+}
+
+#Knossos, based on Minoan bull
+KNO = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "ck2_green"
+
+	colored_emblem = {
+		texture = "ce_bull_03.dds"
+		color1 = "pitch_black"
+	}
+}
+
+##Ierapetra / Hierapytna, based on the goddess Tyche fropm 2nd century BC coinage
+IEP = {
+	pattern = "pattern_solid.tga"
+	color1 = "offwhite"
+	color2 = rgb { 211  126  0 }
+
+	colored_emblem = {
+		texture = "ce__tyche_ierapetra.dds"
+		color1 = rgb { 211  126  0 }
+		color2 = rgb { 211  126  0 }
+		instance = { scale = { 1.2 1.2 }  }
+	}
+	colored_emblem={
+		color1=rgb { 211  126  0 }
+		color2=rgb { 211  126  0 }
+		texture="ce_border_triangles_02.dds"
+		mask={
+			1 2 3 
+		}
+		instance={
+			position={ 0.500000 0.500000 }
+			scale={ 1.000000 1.000000 }
+			depth=0.010000
+			rotation=90
+		}
+		instance={
+			position={ 0.500000 0.500000 }
+			scale={ 1.000000 1.000000 }
+			depth=0.010000
+			rotation=270
+		}
+	}
+}
+
+##Achaean League, based on coinage
+ACH = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 211  19  19 }
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_achaean_league.dds"
+		color1 = "offwhite"
+	}
+}
+
+##Aetolian League, based on coinage
+AET = {
+	pattern = "pattern_horizontal_split_02.tga"
+	color1 = rgb { 216  101  0 }
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_aetolian_league.dds"
+		color1 = rgb { 216  101  0 }
+		color2 = "offwhite"
+	}
+}
+
+##Colchis, lion from coinage
+COL = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 49  112  158 }
+	color2 = rgb { 239  205  141 }
+
+	colored_emblem = {
+		texture = "ce_colchis.dds"
+		color1 = rgb { 239  205  141 }
+		color2 = rgb { 168  127  52 }
+	}
+}
+
+#Alexandros Balas' Seleukid Revolt
+AXR = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 41 75 96 }
+	color2 = "frost_blue"
+
+	colored_emblem = {
+		texture = "ce_selucid_crossbow.dds"
+		color1 = "frost_blue"
+		instance = { scale = { 0.75 0.75 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_rug_01.tga"
+		color1 = "frost_blue"
+		color2 = rgb { 41 75 96 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Akarnania - Achelous, chief god of rivers
+AKR = {
+	pattern = "pattern_solid.tga"
+	color1 = "roman_red"
+	color2 = rgb { 0  86  148 }
+
+	colored_emblem = {
+		texture = "ce_akarnania_achelous.dds"
+		color1 = rgb { 0  86  148 }
+		color2 = "offwhite"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_triangles_01.dds"
+		color1 = "offwhite"
+		instance = { rotation = 0 }
+		instance = { rotation = 90 }
+		instance = { rotation = 180 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Elis - Olympia thunderbolt
+ELI = {
+	pattern = "pattern_solid.tga"
+	color1 = "offwhite"
+	color2 = "spartan_brown"
+
+	colored_emblem = {
+		texture = "ce_elis_olympia.dds"
+		color1 = "spartan_brown"
+	}
+}
+
+#Knossos, Labyrinth of Crete
+KNO = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "ck2_green"
+
+	colored_emblem = {
+		texture = "ce_knossos_labyrinth.dds"
+		color1 = "offwhite"
+	}
+}
+
+#Gortyna
+GRT = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 112 106 110 }	#darker version of country color
+	color2 = "ck2_white"
+
+	colored_emblem = {
+		texture = "ce_gortyna.dds"
+		color1 = "ck2_white"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_02.tga"
+		color1 = "ck2_white"
+		color2 = rgb { 37 68 130 }		#navy blue
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Delphi, Python around omphalos
+DLP = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 59  77  3 }
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_delphi.dds"
+		color1 = "offwhite"
+		color2 = "spartan_ocra"
+	}
+}
+
+##Scythia
+SCY = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_scythia.dds"
+		color1 = "ck2_white"
+		color2 = "roman_gold"
+		instance = { scale = { 1.1 1.1 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_stars_01.dds"
+		color1 = "roman_gold"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+		instance = { rotation = 270 }
+		instance = { rotation = 90 }
+	}
+	
+}
+
+#Thebes - Club of Herakles and Boeotian amphora
+THE = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 2  85  5 }
+	color2 = "ck2_white"
+
+	colored_emblem = {
+		texture = "ce_thebes.dds"
+		color1 = "ck2_white"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_03.tga"
+		color1 = "ck2_white"
+		color2 = rgb { 2  85  5 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Chersonesos / Chersonesus - Artemis Parthenos spearing stag
+CHS = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 37 68 130 }
+	color2 = rgb { 37 68 130 }
+
+	colored_emblem = {
+		texture = "ce_chersonesos.dds"
+		color1 = "offwhite"
+		color2 = rgb { 255 193 107 }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_stars_01.dds"
+		color1 = rgb { 255 193 107 }
+		color2 = rgb { 255 193 107 }
+		instance = { rotation = 0 }
+		instance = { rotation = 90 }
+		instance = { rotation = 180 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Tyras
+TYS = {
+	pattern = "pattern_solid.tga"
+	color1 = "theban_country_color"
+	color2 = "ck2_green"
+
+	colored_emblem = {
+		texture = "ce_tyras.dds"
+		color1 = "light_gold"
+		instance = { scale = { 0.9 0.85 }  }
+	}
+}
+
+#NEW Bosporan Kingdom
+BPK = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 107 41 130 }	#map color adjusted
+	color2 = "bone_white"
+
+	colored_emblem = {
+		texture = "ce_bosporan_kingdom.dds"
+		color1 = "bone_white"
+	}
+}
+
+#Ionia
+ION = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "ck2_green"
+
+	colored_emblem = {
+		texture = "ce_ionia_winged_boar.dds"
+		color1 = rgb { 183 92 84 }
+		color2 = "roman_gold"
+		instance = { scale = { 0.95 0.95 } }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_02.tga"
+		color1 = "roman_gold"
+		color2 = "ck2_green"
+		instance = { 
+			rotation = 0 
+			scale = { 1.0 1.0 }
+		}
+		instance = { 
+			rotation = 180 
+			scale = { 1.0 1.0 }
+		}
+	}
+}
+
+#Ilion, Confederacy / Koinon of Athena Ilias centered around Ilion
+ILN = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 255  235  186 }
+	color2 = rgb { 198  57  60 }
+
+	colored_emblem = {
+		texture = "ce_aeolia_ilion_athena_ilias.dds"
+		color1 = rgb { 198  57  60 }
+		color2 = rgb { 255  235  186 }
+		instance = { scale = { 0.95 0.95 } }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = rgb { 198  57  60 }
+		color2 = rgb { 255  235  186 }
+		instance = { 
+			rotation = 0
+		}
+		instance = { 
+			rotation = 180
+		}
+	}
+}
+
+#######################################
+# Anatolia
+#######################################
+
+#Pergamon
+PRG = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 127  26  56 }
+	color2 = rgb { 127  26  56 }
+
+	colored_emblem = {
+		texture = "ce_pergamon_asklepios_rod.dds"
+		color1 = "light_gold"
+		color2 = "light_gold"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = "light_gold"
+		color2 = rgb { 104  33  71 }
+		instance = { rotation = 90 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Kos, island near Rhodes
+KOS = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 247  226  121 }
+	color2 = rgb { 56 75 160 }		#color2 from country file darkened
+
+	colored_emblem = {
+		texture = "ce_kos_crab.dds"
+		color1 = rgb { 216  46  0 }
+		color2 = rgb { 56 75 160 }		#color2 from country file darkened
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_triangles_01.dds"
+		color1 = rgb { 56 75 160 }		#color2 from country file darkened
+		instance = { rotation = 0 }
+		instance = { rotation = 90 }
+		instance = { rotation = 180 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Astypalaia, island near Kos
+AST = {
+	pattern = "pattern_solid.tga"
+	color1 = "offwhite"
+	color2 = rgb { 1  61  50 }
+
+	colored_emblem = {
+		texture = "ce_astypalaia.dds"
+		color1 = rgb { 1  61  50 }
+		instance = { scale = { 0.75 0.75 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = rgb { 1  61  50 }
+		color2 = "offwhite"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Istros
+ISO = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_blue"
+	color2 = rgb { 46 125 204 }
+
+	colored_emblem = {
+		texture = "ce_istros_heloros_and_aktaios.dds"
+		color1 = "frost_blue"
+		color2 = rgb { 46 125 204 }
+		instance = { scale = { 1 0.9 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = "frost_blue"
+		color2 = rgb { 46 125 204 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Mesembria
+MES = {
+	pattern = "pattern_solid.tga"
+	color1 = "samnite_beige"
+	color2 = "samnite_beige"
+
+	colored_emblem = {
+		texture = "ce_mesembria_corinthian_helmet.dds"
+		color1 = "ck2_green"
+		instance = { scale = { 0.9 0.9 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_03.tga"
+		color1 = "ck2_green"
+		color2 = "samnite_beige"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Apollonia Pontica
+APL = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 153 73 0 }		#original flag color
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_apollonia_pontica.dds"
+		color1 = "roman_gold"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_02.tga"
+		color1 = "roman_gold"
+		color2 = rgb { 153 73 0 }
+		instance = { rotation = 90 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Odessos - Great God of Odessos, Derzelas
+ODS = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "ck2_green"
+
+	colored_emblem = {
+		texture = "ce_odessos_derzelas.dds"
+		color1 = "ck2_white"
+		color2 = rgb { 198 132 93 }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = "ck2_white"
+		color2 = "ck2_green"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+
+
+#######################################
+#Illyria / Dacia
+#######################################
+
+#Dacian Kingdom
+DAC = {
+	pattern = "pattern_solid.tga"
+	color1 = "dacia_color"
+	color2 = "frost_blue"
+
+	colored_emblem = {
+		texture = "ce_dacian_draco.dds"
+		color1 = "frost_blue"
+	}
+}
+
+##Dardania, based on first coinage under Monunius
+DRD = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 111 129 213 }	#country color
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_dardania.dds"
+		color1 = "offwhite"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"		#make sure if is .tga or .dds
+		color1 = "offwhite"
+		color2 = rgb { 111 129 213 }	#country color
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Getia / Getae, taken from Helmet of Cotofenesti
+GTE = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 88 107 78 }		#country color adjusted
+	color2 = rgb { 198 198 198 }
+
+	colored_emblem = {
+		texture = "ce_getia_getae.dds"
+		color1 = rgb { 198 198 198 }
+		color2 = "roman_gold"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_zigzag_02.dds"		#make sure if is .tga or .dds
+		color1 = rgb { 198 198 198 }
+		instance = { rotation = 90 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Tyrgetae
+TYG = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 130 68 125 }
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_geto_dacian_generic_4.dds"
+		color1 = "offwhite"
+		color2 = "roman_gold"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_simple_square.dds"		#make sure if is .tga or .dds
+		color1 = "offwhite"
+	}
+}
+
+#Populatensia 
+POT = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 130 68 125 }
+	color2 = rgb { 130 68 125 }
+
+	colored_emblem = {
+		texture = "ce_geto_dacian_generic_3.dds"
+		color1 = "roman_gold"
+		color2 = "ck2_white"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_simple_square.dds"		#make sure if is .tga or .dds
+		color1 = "ck2_yellow"
+	}
+}
+
+#Albocensia 
+ABN = {
+	pattern = "pattern_solid.tga"
+	color1 = "roman_gold"
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_geto_dacian_generic_2.dds"
+		color1 = rgb { 140 196 216 }
+		color2 = rgb { 105 122 158 }
+	}
+}
+
+#Saldensia 
+SLD = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 105 122 158 }
+	color2 = "ck2_white"
+
+	colored_emblem = {
+		texture = "ce_geto_dacian_generic_1.dds"
+		color1 = "ck2_white"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_simple_square.dds"		#make sure if is .tga or .dds
+		color1 = "ck2_white"
+	}
+}
+
+#Boihaemia / Boii of Bohemia
+BOA = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 24 81 0 }
+	color2 = "light_green"
+
+	colored_emblem = {
+		texture = "ce_boiihaemia.dds"
+		color1 = "spartan_brown"
+		color2 = "light_green"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_checker_01.tga"
+		color1 = "light_green"
+		color2 = rgb { 24 81 0 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Libernia / Liburna ship
+LBN = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 91 107 36 }
+	color2 = rgb { 91 107 36 }
+
+	colored_emblem = {
+		texture = "ce_liburnia.dds"
+		color1 = "roman_red"
+		color2 = "bone_white"
+		instance = { 
+			scale = { 1.2 1.2 }
+			position={ 0.50 0.46 }
+		}
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_triangles_02.dds"
+		color1 = "offwhite"
+		color2 = "roman_red"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Daorsia
+DRI = {
+	pattern = "pattern_solid.tga"
+	color1 = "spartan_rust"
+	color2 = "spartan_rust"
+
+	colored_emblem = {
+		texture = "ce_liburnia.dds"
+		color1 = "ck2_black"
+		color2 = "bone_white"
+		instance = { 
+			scale = { 1.2 1.2 }
+			position={ 0.50 0.46 }
+		}
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_zigzag_01.dds"
+		color1 = "offwhite"
+		color2 = "ck2_black"
+		instance = { rotation = 0 scale = { 1.0 0.6 } position={ 0.50 0.30 } }
+		instance = { rotation = 180 scale = { 1.0 0.6 } position={ 0.50 0.70 } }
+	}
+}
+
+
+#######################################
+# Africa / Western Mediterranean
+#######################################
+
+#Ibasim - coinage of Kabeiros from Ebusus
+IBA = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 54 42 105 }		#original flag color
+	color2 = rgb { 54 42 105 }		#original flag color
+
+	colored_emblem = {
+		texture = "ce_ibasim_ebusus.dds"
+		color1 = "offwhite"
+		color2 = rgb { 126 144 188 }
+		instance = { scale = { 1.25 1.25 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_stars_01.dds"
+		color1 = "offwhite"
+		color2 = "offwhite"
+		instance = { rotation = 0 }
+		instance = { rotation = 90 }
+		instance = { rotation = 180 }
+		instance = { rotation = 270 }
+	}
+}
+
+#NEW Kush flag - Apedemak
+KSH = {
+	pattern = "pattern_solid.tga"
+	color1 = "roman_red"
+	color2 = "samnite_beige"
+
+	colored_emblem = {
+		texture = "ce_kush_apedemak_2.dds"
+		color1 = "offwhite"
+		color2 = "samnite_beige"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_zigzag_01.dds"
+		color1 = "pitch_black"
+		color2 = "offwhite"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Dodekaschoinos - Elephant coinage of Ptolemy I for Elephantine
+DOD = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb {  0  86  148  }
+	color2 = "pitch_black"
+
+	colored_emblem = {
+		texture = "ce_dodekaschoinos_elephantine.dds"
+		color1 = "roman_gold"
+		instance = { scale = { 1.2 1.2 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_ancient_egyptian_pattern_01.dds"
+		color1 = "pitch_black"
+		color2 = "ck2_white"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Tripolitania - Leptis Magna
+TRP = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 54 42 105 }
+	color2 = rgb { 54 42 105 }
+
+	colored_emblem = {
+		texture = "ce_tripolitania.dds"
+		color1 = "bone_white"
+		color2 = "samnite_beige"
+		instance = { scale = { 1.2 1.2 }  }
+	}
+}
+
+#######################################
+# Arabia
+#######################################
+
+#Saba / Sabaeans
+SHB = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_sabaeans.dds"
+		color1 = "roman_gold"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_zigzag_01.dds"
+		color1 = "roman_gold"
+		color2 = rgb { 40 57 104 }
+		instance = { rotation = 0 }
+		instance = { rotation = 90 }
+		instance = { rotation = 180 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Qataban
+QTB = {
+	pattern = "pattern_solid.tga"
+	color1 = "roman_red"
+	color2 = "ck2_black"
+
+	colored_emblem = {
+		texture = "ce_qataban_ibex.dds"
+		color1 = "frost_blue"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_leaves_01.dds"
+		color1 = "frost_blue"
+		color2 = "ck2_black"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#Ma'in / Minaeans
+MIN = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_blue"
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_main_minean.dds"
+		color1 = "roman_gold"
+		instance = { scale = { 0.95 0.95 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_south_arabian_01.dds"
+		color1 = "roman_gold"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+#######################################
+# Syria / Mesopotamia / Persia
+#######################################
+
+#Byblos
+BYB = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 54  42  105 }
+	color2 = rgb { 54  42  105 }
+	color3 = rgb { 54  42  105 }
+
+	colored_emblem = {
+		texture = "ce_byblos_hippocamp_galley.dds"
+		color1 = rgb { 145 153 239 }
+		color2 = "samnite_beige"
+	}
+}
+
+#Sidon
+SID = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 42  60  105 }
+	color2 = rgb { 42  60  105 }
+	color3 = rgb { 42  60  105 }
+
+	colored_emblem = {
+		texture = "ce_sidon_astarte.dds"
+		color1 = "spartan_brown"
+		color2 = "offwhite"
+		instance = { scale = { 0.90 1.0 } }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_triangles_01.dds"
+		color1 = "offwhite"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_triangles_01.dds"
+		color1 = "spartan_brown"
+		instance = { rotation = 90 }
+		instance = { rotation = 270 }
+	}
+}
+
+#Arados
+ARA = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 42  60  105 }
+	color2 = rgb { 189  131  73 }
+	color3 = rgb { 42  60  105 }
+
+	colored_emblem = {
+		texture = "ce_border_simple_02.tga"
+		color1 = rgb { 189  131  73 }
+		color2 = rgb { 42  60  105 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+	
+	colored_emblem = {
+		texture = "ce_arados.dds"
+		color1 = rgb { 189  131  73 }
+		color2 = rgb { 163  232  255 }
+		instance = { scale = { 0.95 0.9 } }
+	}
+}
+
+
+#######################################
+# India
+#######################################
+
+#Anuradhapura
+ANU = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 137  19  25 }
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_border_simple_03.tga"		#make sure if is .tga or .dds
+		color1 = "roman_gold"
+		instance = { rotation = 90 }
+		instance = { rotation = 270 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+	
+	colored_emblem = {
+		texture = "ce_anuradhapura.dds"
+		color1 = "roman_gold"
+	}
+	
+}
+
+#Chola
+CHL = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 140 0 0 }
+	color2 = rgb { 140 0 0 }
+
+	colored_emblem = {
+		texture = "ce_chola_tiger.dds"
+		color1 = "roman_gold"
+		color2 = "ck2_white"
+		instance = { scale = { 0.9 0.95 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_simple_03.tga"		#make sure if is .tga or .dds
+		color1 = "roman_gold"
+		instance = { rotation = 90 }
+		instance = { rotation = 270 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+	
+}
+
+#Kalinga
+KAL = {
+	pattern = "pattern_solid.tga"
+	color1 = "roman_red"
+	color2 = "roman_red"
+
+	colored_emblem = {
+		texture = "ce_kalinga_chakreshvari.dds"
+		color1 = "offwhite"
+		color2 = "ck2_yellow"
+		instance = { scale = { 0.95 0.95 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_triangles_02.dds"		#make sure if is .tga or .dds
+		color1 = "offwhite"
+		color2 = "offwhite"
+		instance = { rotation = 0 scale = { 1.0 1.05 } }
+		instance = { rotation = 180 scale = { 1.0 1.05 } }
+	}
+	
+}
+
+#Satavahana
+SAT = {
+	pattern = "pattern_solid.tga"
+	color1 = "bone_white"
+	color2 = rgb { 7 150 107 }
+
+	colored_emblem = {
+		texture = "ce_satavahana.dds"
+		color1 = "spartan_ocra"
+		color2 = rgb { 7 150 107 }
+	}
+	
+}
+
+#Yaudheya - YDD in vanilla
+YDY = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 165 44 0 }
+	color2 = rgb { 255 231 127 }
+
+	colored_emblem = {
+		texture = "ce_yaudheya_karttikeya_peacock.dds"	#Peacock
+		color1 = rgb { 0 124 58 }	#Green
+		color2 = rgb { 0 58 107 }	#Blue
+	}
+	
+	colored_emblem = {
+		texture = "ce_yaudheya_karttikeya.dds"	#Karttikeya
+		color1 = "ck2_white"
+		color2 = "light_gold"
+		instance = { scale = { 1.0 1.0 }  }
+	}
+	
+}
+
+
+
+#######################################
+# Iberia
+#######################################
+
+#Gadir
+GAD = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 78  0  65 }
+	color2 = rgb {  122  0  110  }
+
+	colored_emblem = {
+		texture = "ce_gadir.dds"
+		color1 = "ck2_white"
+		instance = { scale = { 1.1 1.1 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_leaves_01.dds"
+		color1 = rgb { 78  0  65 }
+		color2 = "ck2_white"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+}
+
+
+#######################################
+# Ferghana / Tarim Basin / Himalayas
+#######################################
+
+#Tayuan / Dayuan
+TAY = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 165 164 144 }
+	color2 = "roman_red"
+
+	colored_emblem = {
+		texture = "ce_tayuan.dds"
+		color1 = "roman_red"
+		color2 = "ck2_black"
+		instance = { scale = { 0.9 0.95 }  }
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_meander_03.tga"		#make sure tga or dds
+		color1 = "roman_red"
+		color2 = rgb { 165 164 144 }
+		instance = { 
+			rotation = 90 
+			scale = { 0.95 1.0 }
+		}
+		instance = { 
+			rotation = 270 
+			scale = { 0.95 1.0 }
+		}
+		
+	}
+	
+}
+
+#Massagetae / Massagetia
+MSG = {
+	pattern = "pattern_solid.tga"
+	color1 = "aquitania_color"
+	color2 = "persia_color"
+
+	colored_emblem = {
+		texture = "ce_massagetae.dds"
+		color1 = "roman_gold"
+		color2 = rgb { 198  45  53 }
+		instance = { scale = { 0.9 0.95 }  }
+	}
+	
+}
+
+#Loulan
+LOL = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 0 96 175 }
+	color2 = rgb { 0 96 175 }
+
+	colored_emblem = {
+		texture = "ce_loulan.dds"
+		color1 = "bone_white"
+		color2 = "bone_white"
+	}
+	
+	colored_emblem = {
+		texture = "ce_border_tarim_basin.dds"		#new Tarim border style
+		color1 = "bone_white"
+		color2 = "bone_white"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+		
+	}
+	
+}
+
+#######################################
+# Formables / Releasables
+#######################################
+
+#India - Dharmachakra Greco-Buddhist
+INDIA_FORMABLE_SUN_DHARMACHAKRA_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 59 59 160 }
+	color2 = rgb { 59 59 160 }
+
+	colored_emblem = {
+		texture = "ce_indo_greeks.dds"
+		color1 = "bone_white"
+	}
+	
+}
+
+#Boeotian League
+BOE = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 140  13  13 }
+	color2 = rgb { 140  13  13 }
+
+	colored_emblem = {
+		texture = "ce_boeotia.dds"
+		color1 = "ck2_white"
+		color2 = "ck2_black"
+	}
+}
+
+#Macedonian League
+MCL = {
+	pattern = "pattern_solid.tga"
+	color1 = "navy_blue"
+	color2 = "navy_blue"
+
+	colored_emblem = {
+		texture = "ce_macedonian_sun.dds"
+		color1 = "roman_gold"
+	}
+}
+
+#Enna / Sicilian Servile Revolt Kingdom of First Servile War
+ENNA_FLAG = {
+	pattern = "pattern_diagonal_split_02.tga"
+	color1 = "ck2_black"
+	color2 = "roman_red"
+
+	colored_emblem = {
+		texture = "ce_siculia.dds"
+		color1 = "ck2_white"
+		color2 = "ck2_black"
+	}
+}
+

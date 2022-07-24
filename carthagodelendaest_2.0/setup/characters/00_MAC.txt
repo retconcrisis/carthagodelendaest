@@ -1,0 +1,35 @@
+﻿"MAC_Pella"={
+	country="MAC"
+	16={		#randomly generated Archon - placeholder for id 16
+		birth_date=570.1.1
+		culture="macedonian"
+		religion="roman_pantheon"
+	}
+}
+
+"MAC_antigonid_andriskos"={
+	country="REB"		#Andriscus/Andriskos in exile in Thrace
+	197={
+		first_name = "Andriskos"
+		family_name = "Antigonid"
+		birth_date=577.3.19
+		culture="macedonian"
+		religion="roman_pantheon"
+		father="char:83"			#Perseus of Macedonia
+		no_stats=yes
+		add_martial=11
+		add_charisma=8
+		add_finesse=5
+		add_zeal=6
+		no_traits=yes
+		add_trait="founder"
+		add_trait="ambitious"
+		add_trait="corrupt"
+		add_trait="antigonids"
+		add_gold=400
+		add_popularity=65
+		save_scope_as = andriskos_pretender
+		dna="YlBq2aR5pHnouOi4Ao0CjQJyAnICmQKZAocChwJvAm8CjwKPAoICggKDAoMCfQJ9AokCiQBIAEgCcgJyA5sDmwJtAm0CcgJyAo0CjQKDAoMClAKUAoYChgJnAmcCewKWAnkCbgTfBN8DqwOrAoECgQJuAm4CkQKRAocChwJ1AnUCkQKRAocChwJmAmYCawJrAo4CjgOkA6QCjQKNAnoCegFlAWUCbAJsAVYBVgJvAm8CgAKAAnsCewJ6AnoClgKWAoQChAJ+An4CkgKSApACkAJwAnACgAKAAosCiwJ7AnsCmAKYBNwE3AK3ArcAgQCBAJwAnAEqASoAOAA4AVQBVAFAAUAAcwBzAOoA6gCYAJgBKgEqABUAFQB/AH8A7gDuAQYBBgE/AT8C8QLxAKcApwBdAF0ALAAsAG8AbwB/AH8ArACsAGQAZACdAJ0ClAKUAHYAdgFWAVYAJwAnAJwAnABxAHEBLgEuATUBNQEYARgHowrOAH8AfwJnAqMFSQXFAP0AiQWNBUYCMgLbAh8CWwAAAAAAAAAAAAAAAA=="
+	}
+	
+}

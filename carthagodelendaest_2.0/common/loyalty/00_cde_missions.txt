@@ -1,0 +1,11 @@
+﻿#Events
+
+loyalty_cde_me_spa_laconian_sympathizer = { #
+	value = -10
+	yearly_decay = 1
+}
+
+loyalty_me_rom_first_african_proconsul = {
+	value = 10
+	yearly_decay = 1
+}

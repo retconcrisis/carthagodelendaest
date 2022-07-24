@@ -1,0 +1,22 @@
+﻿"ATH"={
+	country="ATH"
+	
+	#Speusippos, archon of Athens
+	268={	
+		first_name="Speusippos"
+		birth_date=554.6.24		#200 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=11
+		add_finesse=10
+		add_zeal=8
+		add_gold=100
+		add_popularity=60
+		c:ATH = {
+			set_as_ruler=char:268
+		}
+	}
+	
+}

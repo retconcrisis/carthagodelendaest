@@ -1,0 +1,52 @@
+﻿"KAL"={
+	country="KAL"
+	181={
+		first_name = "Kharavela"			#ruler of Kalinga
+		family = c:KAL.fam:Mahameghavahana
+		birth_date=550.12.22		#204 BC
+		culture="kalingan"
+		religion="jainism"
+		no_stats=yes
+		add_martial=14
+		add_charisma=10
+		add_finesse=8
+		add_zeal=12
+		no_traits=yes
+		add_trait="devout"
+		add_trait="founder"
+		add_trait="benefactor"
+		add_trait="confident"
+		add_gold=250
+		add_popularity=85
+		c:KAL = {
+			set_as_ruler=char:181
+		}
+		dna="JP0k/fmy+bL1+/X7AmkCaQKDAoMCkwKTApACkAJ2AnYEsgSyAnYCdgJsAmwE1wTXAmgCaAJsAmwCmQKZAmsCawKYApgCiQKJAmcCZwKCAoIClgKWAoACgAJsAmwAZQBlAosCiwJ6AnoCawJrAAYABgJMAkwCaQJ9ApgCmAJ7AnsCkAKQBMwEzAJpAmkBNgE2AlkCcwJtAm0CdAJ0AoYChgKGAoYCdQJ1AVsBWwKLAosCjgKOAoICggKCAoICgAKAAoMCgwJ2AnYCaQJpAnwCfAJ/An8ARwBHAnkCeQJ7AnsCdAJ0ABsAGwGAAM4ASwBLAC8ALwAxADEAogCiAC0ALQALAAsABQAFAJcAlwASABIASwBLAXsBewB/AH8A9QD1AEEAQQAlACUBIgEiAG4AbgEtAS0AUQBRAVEBUQB/AH8AYwBjAN8A3wDUANQAFQAVAH8AfwMfAx8AlgCWAMoAygDdAN0DNAM0AzsDOwCkAKQHfgOtAH8AfwYKBgoR9g1NAYEBgQj8CPwJWQoiBgAH7QAAAAAAAAAAAAAAAA=="
+	}
+	
+	182={		#queen of Kalinga
+		family = c:KAL.fam:Vajiragraha		#family of the queen
+		birth_date=570.1.27		#184 BC
+		culture="kalingan"
+		religion="jainism"
+		marry_character="char:181"
+		female = yes
+		dna="AOwA7Pyb/JvC88LzAn0CfQKZApkCiQKJAoICggJqAmoCawJrAosCiwKHAocDqQOpAnUCdQJ8AnwCfwJ/AokCiQJsAmwChgKGApICkgJ6AnoCmQKZAnUCdQJ+An4DrAOsAn4CfgKNAo0CfQJ9AT0BPQAsACwCegJ6ApQClAJ9An0ChQKFAoUChQKUApQCUQJRAoICggKXApcCkAKQAmoCagJwAnABXQFdAVgBWAKYApgCegJ6ApgCmABcAFwCgAKAAXABcAKUApQCfwJ/Am0CbQOgA6ACiQKJAncCdwJyAnICgwKDAo0CjQLIAsgAiwCLAlcCVwC1ALUABQAFAK0ArQA4ADgARQBFABEAEQF7AXsCvwK/AT4BPgB/AH8AvAC8AIcAhwBUAFQBDgEOAC0ALQKhAqEBuwG7ARUBFQB/AH8BbwFvAvkC+QAfAB8ADwAPAFEAUQAfAB8BUAFQAA8ADwBOAE4AEgASAOMA4wEfAR8HrwevAH8AfwYXBhcM9wy4AVgBWAhJCEkJ/wmtBgAGIAAAAAAAAAAAAAAAAA=="
+	}
+	
+	183={
+		first_name = "Vakradeva"		#heir
+		family = c:KAL.fam:Mahameghavahana
+		birth_date=589.7.2		#165 BC
+		culture="kalingan"
+		religion="jainism"
+		father="char:181"
+		mother="char:182"
+		no_stats=yes
+		add_martial=3
+		add_charisma=3
+		add_finesse=4
+		add_zeal=8
+	}
+	
+}

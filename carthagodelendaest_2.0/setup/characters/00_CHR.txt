@@ -1,0 +1,22 @@
+﻿"CHR"={
+	country="CHR"
+	
+	#Fictional ruler of the Chera dynasty
+	260={
+		family = c:CHR.fam:Chera
+		birth_date=564.8.12		#190 BC
+		culture="kerala"
+		religion="hindu"
+		no_stats=yes
+		add_martial=8
+		add_charisma=7
+		add_finesse=8
+		add_zeal=5
+		add_gold=350
+		add_popularity=60
+		c:CHR = {
+			set_as_ruler=char:260
+		}
+	}
+	
+}

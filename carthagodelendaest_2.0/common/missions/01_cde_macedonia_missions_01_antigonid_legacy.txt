@@ -1,0 +1,1112 @@
+﻿01_cde_macedonia_missions_01_antigonid_legacy = {
+    header = "mission_image_phrygia"	#Antigonids
+    icon = "cde_demetrius_fleet"
+
+    repeatable = no
+
+	chance = {
+		factor = 50000
+	}
+	
+	ai_chance = {
+		factor = 1
+	}					
+
+    potential = {
+        tag = MAC	#Starts as Pella, becomes Macedonia via event
+    }
+
+    abort = {
+		
+    }
+
+    on_start = {
+    	set_variable = {
+			name = me_mac_01_antigonid_legacy_active
+		}
+    }
+
+    on_abort = {
+		current_ruler = {
+			add_popularity = -20
+		}
+		remove_variable = me_mac_01_antigonid_legacy_active
+    }
+
+    on_completion = {
+    	complete_mission_effect = yes
+    	current_ruler = {
+			add_popularity = 50
+		}
+    }
+
+	01_cde_macedonia_missions_01_task_1 = { # Lost Son of the Antigonids
+        icon = "task_apollo"
+		
+		allow = {
+			has_civil_war = no
+		}
+		
+		bypass = {
+			current_ruler = {
+				this = char:197 		#Andriskos
+			}
+        }
+		
+		duration = 60
+
+        on_completion = {
+			custom_tooltip = 01_cde_macedonia_missions_01_task_1.tt
+			trigger_event = { 
+				id = cde_flavor_mac.1		#triggers by mission for player, by on_action for AI
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_2 = { # Friends in Thrace
+        icon = "task_political"
+		
+		allow = {
+			OR = {
+				alliance_with = c:TRE
+				c:TRE = {
+					opinion = { 
+						target = root 
+						value >= 100
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			custom_tooltip = 01_cde_macedonia_missions_01_task_2.tt
+			trigger_event = {
+				id = cde_me_mac_01.1
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_3 = { # Asserting Our Claims
+        icon = "task_athena"
+		
+		requires = { 01_cde_macedonia_missions_01_task_1 }
+		
+		allow = {
+			political_influence >= 10
+		}
+		
+		duration = 90
+		
+		on_start = {
+			add_political_influence = -10
+		}
+
+        on_completion = {
+			custom_tooltip = 01_cde_macedonia_missions_01_task_3.tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							is_in_area = macedonia_area
+							AND = {		#Pelagonia without Paeoni capital
+								is_in_area = upper_macedonia_area
+								NOT = { province_id = 397 }
+							}
+							is_in_area = chalkidiki_area
+							province_id = 4302
+							province_id = 497
+							province_id = 1445
+							province_id = 2264
+						}
+						NOT = { owned_or_subject_owned = root }
+					}
+					add_claim = root
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_4 = { # Root Out Republicanism
+        icon = "task_conquest"
+		
+		requires = { 01_cde_macedonia_missions_01_task_1 }
+		
+		allow = {
+			political_influence >= 10
+			stability >= 60
+			custom_tooltip = {
+				text = 01_cde_macedonia_missions_01_task_4.tt
+				any_character = {		#at least one head of family
+					count >= 1
+					is_ruler = no
+					is_minor_character = no
+					is_head_of_family = yes
+					loyalty >= 70
+				}
+			}
+		}
+		
+		duration = 90
+		
+		on_start = {
+			add_tyranny = 10
+			add_political_influence = -10
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.2
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_anti_republican_policy
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_5 = { # Seek Foreign Recognition
+        icon = "task_diplomatic"
+		
+		requires = { 01_cde_macedonia_missions_01_task_1 01_cde_macedonia_missions_01_task_2 }
+		
+		allow = {
+			custom_tooltip = {
+				text = 01_cde_macedonia_missions_01_task_5.tt
+				any_country = {
+					count >= 2
+					OR = {
+						#rank = local_power		#just for reference
+						rank = regional_power
+						rank = major_power
+						rank = great_power
+					}
+					is_tribal = no
+					OR = {
+						alliance_with = root
+						opinion = {
+							target = root 
+							value >= 100
+						}
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			add_country_modifier = {
+				name = cde_me_mac_antigonid_legitimacy
+				duration = 3650
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_6 = { # War for Unification
+        icon = "task_expansion"
+		
+		requires = { 01_cde_macedonia_missions_01_task_3 }
+		
+		bypass = {
+			c:PLG = {
+				has_land = no
+			}
+			c:TSK = {
+				has_land = no
+			}
+			c:APH = {
+				has_land = no
+			}
+		}
+		
+		allow = {
+			war = no
+			has_civil_war = no
+			manpower_percentage >= 0.60
+		}
+
+        on_completion = {
+			custom_tooltip = 01_cde_macedonia_missions_01_task_6.tt
+			trigger_event = {
+				id = cde_flavor_mac.2		#war event, for player - triggered by Andriskos appearance event for AI
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_7 = { # Unite the Four Cities
+        icon = "task_artemis"
+		
+		requires = { 01_cde_macedonia_missions_01_task_6 }
+		
+		allow = {
+			owns = 379	#Pella
+			owns = 373	#Thessalonike
+			owns = 393	#Pelagonia
+			owns = 365	#Amphipolis
+			custom_tooltip = {
+				text = 01_cde_macedonia_missions_01_task_7.tt
+				OR = {
+					c:PLG = {
+						has_land = no
+					}
+					is_subject_of = root
+				}
+				OR = {
+					c:APH = {
+						has_land = no
+					}
+					is_subject_of = root
+				}
+				OR = {
+					c:TSK = {
+						has_land = no
+					}
+					is_subject_of = root
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.3
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_united_macedonian_army
+					duration = 7300
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_8 = { # Macedonian Homeland
+        icon = "task_apollo"
+		
+		requires = { 01_cde_macedonia_missions_01_task_6 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = macedonia_area		#Emathia
+				}
+				NOT = { owner = root }
+        	}
+        }
+		
+		allow = {
+			treasury >= 75
+			area:macedonia_area = {
+    			any_area_province = {
+	    			count = all
+					owner = root		#direct ownership
+                }
+    		}
+		}
+
+        on_completion = {
+			add_treasury = -75
+			trigger_event = {
+				id = cde_me_mac_01.4
+			}
+			show_as_tooltip = {
+				p:379.state = {
+					add_state_modifier = {
+						name = cde_me_mac_capital_investments
+						duration = -1		#permanent
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_9 = { # True Basileus of Macedon
+        icon = "task_zeus_cornucopia"
+		
+		requires = { 01_cde_macedonia_missions_01_task_7 01_cde_macedonia_missions_01_task_8 }
+		
+		allow = {
+			war = no
+			has_civil_war = no
+			legitimacy >= 90
+			p:379 = {
+				is_capital = yes
+			}
+			political_influence >= 25
+		}
+		
+        on_completion = {
+			add_political_influence = -25
+			current_ruler = {
+				add_popularity = 20
+			}
+			custom_tooltip = 01_cde_macedonia_missions_01_task_9.tt
+			trigger_event = {
+				id = cde_me_mac_01.5
+			}
+			
+			custom_tooltip = 01_cde_macedonia_missions_01_task_9.tt2
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							is_in_area = thessaly_area
+							is_in_area = euboea_area
+						}
+						NOT = { owned_or_subject_owned = root }
+					}
+					add_claim = root
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_10 = { # Great Palace in Pella
+        icon = "task_athena"
+		
+		requires = { 01_cde_macedonia_missions_01_task_3 }
+		
+		allow = {
+			p:379 = {
+				is_capital = yes
+				fort_level = 2
+			}
+			treasury >= 200
+		}
+		
+		duration = 365
+		
+		on_start = {
+			add_treasury = -200
+			trigger_event = {
+				id = cde_me_mac_01.6
+			}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.7
+			}
+			show_as_tooltip = {
+				p:379 = {
+					add_province_modifier = {
+						name = cde_me_mac_antigonid_palace
+						duration = -1		#permanent
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_11 = { # Cultivate the Homeland
+        icon = "task_economical"
+		
+		requires = { 01_cde_macedonia_missions_01_task_10 }
+		
+		allow = {
+			custom_tooltip = {
+				text = 01_cde_macedonia_missions_01_task_11.tt
+				any_owned_province = {
+					count >= 3
+					owner = root
+					is_in_region = macedonia_region
+					has_building = basic_settlement_infratructure_building 	#Farming Settlement
+				}
+				any_owned_province = {
+					count >= 2
+					owner = root
+					is_in_region = macedonia_region
+					has_building = population_building 		#Granary
+				}
+			}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.8
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_breadbasket_of_macedonia
+					duration = 7300
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_12 = { # Kassandreia
+        icon = "task_athena"
+		
+		requires = { 01_cde_macedonia_missions_01_task_10 }
+		
+		allow = {
+			owns = 376
+			p:376 = {	#Kassandreia
+				num_of_port_building >= 2
+				has_building = commerce_building	#Marketplace
+				free_building_slots = 0
+			}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.9
+			}
+			show_as_tooltip = {
+				p:376 = {
+					add_province_modifier = {
+						name = cde_me_mac_designated_naval_base
+						duration = -1
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_121 = { # A New Grand Fleet
+        icon = "task_expansion"
+		
+		requires = { 01_cde_macedonia_missions_01_task_12 }
+		
+		allow = {
+			num_of_ports >= 3
+			num_of_ships >= 30
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.10
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_grand_fleet_of_macedonia
+					duration = 7300
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_13 = { # Nobles of Beroia
+        icon = "task_political"
+		
+		requires = { 01_cde_macedonia_missions_01_task_8 }
+		
+		allow = {
+			political_influence >= 10
+			owns = 381		#Beroia
+			p:381 = {
+				OR = {
+					has_building = academy_building
+					has_building = library_building
+				}
+			}
+		}
+		
+        on_completion = {
+			add_political_influence = -10
+			trigger_event = {
+				id = cde_me_mac_01.11
+			}
+			custom_tooltip = 01_cde_macedonia_missions_01_task_13.tt
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_beroian_noble_ties
+					duration = 3650
+				}
+				p:381 = {
+					define_pop = {
+						culture = macedonian
+						religion = roman_pantheon
+						type = nobles
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_14 = { # Secure Abdera
+        icon = "task_expansion"
+		
+		requires = { 01_cde_macedonia_missions_01_task_7 }
+		
+		allow = {
+			OR = {
+				owns_or_subject_owns = 362		#Abdera
+				p:362 = {
+					owner = {
+						alliance_with = root
+					}
+				}
+			}
+			custom_tooltip = {
+				text = 01_cde_macedonia_missions_01_task_14.tt
+				trigger_if = {
+					limit = {
+						p:362 = {
+							owner = {
+								is_subject_of = root
+							}
+						}
+					}
+					p:362 = {
+						owner = {
+							opinion = { 
+								target = root
+								value >= 80
+							}
+						}
+					}
+				}
+				trigger_if = {
+					limit = {
+						owns = 362
+					}
+					p:362 = {
+						has_building = commerce_building
+						is_port = yes
+					}
+				}
+			}
+		}
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					province_id = 362	#Abdera
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.12
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_thracian_trade_access
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_15 = { # Hegemonize the Koina
+        icon = "task_conquest"
+		
+		requires = { 01_cde_macedonia_missions_01_task_7 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = thessaly_area
+					province_id = 469	#Thaumakoi
+					province_id = 403
+					province_id = 7899
+					province_id = 407
+					province_id = 7901
+					province_id = 410
+					province_id = 7904
+					province_id = 409
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			#Thessaly
+			custom_tooltip = {
+				text = 01_cde_macedonia_missions_01_task_15.tt
+				area:thessaly_area = {
+					any_area_province = {
+						count = all
+						owned_or_subject_owned = root
+					}
+				}
+			}
+			owns_or_subject_owns = 469	#Thaumakoi
+			
+			#Euboea proper
+			owns_or_subject_owns = 403
+			owns_or_subject_owns = 7899
+			owns_or_subject_owns = 407
+			owns_or_subject_owns = 7901
+			owns_or_subject_owns = 410
+			owns_or_subject_owns = 7904
+			owns_or_subject_owns = 409
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.13
+			}
+			show_as_tooltip = {
+				current_ruler = {
+					add_popularity = 20
+				}
+				add_country_modifier = {
+					name = cde_me_mac_guardian_archon_of_the_leagues
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_16 = { # Zeus Eleutherios
+        icon = "task_zeus_cornucopia"
+		
+		requires = { 01_cde_macedonia_missions_01_task_15 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = thessaly_area
+				}
+				owned_or_subject_owned = root
+        	}
+        }
+		
+		allow = {
+			any_owned_province = {
+				is_in_area = thessaly_area
+				custom_tooltip = {
+					text = has_temple.tt
+					has_building = temple_building
+				}
+			}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.14
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_zeus_eleutherios
+					duration = 7300
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_17 = { # Ally the Athamanians
+        icon = "task_artemis"
+		
+		requires = { 01_cde_macedonia_missions_01_task_15 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = thessaly_area
+				}
+				owned_or_subject_owned = root
+        	}
+        }
+		
+		allow = {
+			treasury >= 30
+			any_owned_province = {
+				is_in_area = thessaly_area
+				custom_tooltip = {
+					text = has_tribal_settlement.tt
+					has_building = hill_fort 	#Tribal Settlement
+				}
+			}
+		}
+		
+        on_completion = {
+			add_treasury = -30
+			trigger_event = {
+				id = cde_me_mac_01.15
+			}
+			custom_tooltip = 01_cde_macedonia_missions_01_task_17.tt
+			show_as_tooltip = {
+				random_owned_province = {
+					limit = {
+						is_in_area = thessaly_area
+						has_building = hill_fort #Tribal Settlement
+					}
+					define_pop = {
+						culture = thessalian
+						religion = roman_pantheon
+						type = tribesmen
+					}
+				}
+				add_country_modifier = {
+					name = cde_me_mac_athamanian_auxiliaries
+					duration = 7300
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_18 = { # Mint Coinage
+        icon = "task_economical"
+		
+		requires = { 01_cde_macedonia_missions_01_task_12 }
+		
+		allow = {
+			any_owned_province = {
+				trade_goods = base_metals
+			}
+			any_owned_province = {
+				count >= 2
+				custom_tooltip = {
+					text = has_foundry.tt
+					has_building = foundry_building
+				}
+			}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.16
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_antigonid_coinage
+					duration = 7300
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_19 = { # Greek Campaign
+        icon = "task_expansion"
+		
+		requires = { 01_cde_macedonia_missions_01_task_15 }
+		
+		allow = {
+			war = no
+			has_civil_war = no
+			political_influence >= 20
+		}
+		
+		duration = 180
+		
+		on_start = {
+			add_political_influence = -20
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.17
+			}
+			custom_tooltip = 01_cde_macedonia_missions_01_task_19.tt
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_20 = { # Annex Boeotia
+        icon = "task_artemis"
+		
+		requires = { 01_cde_macedonia_missions_01_task_19 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					province_id = 402		#former Boeotian League
+					province_id = 7798
+					province_id = 468
+					province_id = 426
+					province_id = 423
+					province_id = 406
+					province_id = 424
+				}
+				owned_or_subject_owned = root
+        	}
+        }
+		
+		allow = {
+			owns_or_subject_owns = 402		#former Boeotian League
+			owns_or_subject_owns = 7798
+			owns_or_subject_owns = 468
+			owns_or_subject_owns = 426
+			owns_or_subject_owns = 423
+			owns_or_subject_owns = 406
+			owns_or_subject_owns = 424
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.18
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_boeotian_infantry
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_201 = { # Patron of Delphi
+        icon = "task_apollo"		#Apollo was deity of the oracle of Delphi
+		
+		requires = { 01_cde_macedonia_missions_01_task_20 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					province_id = 424	#Delphi
+				}
+        	}
+        }
+		
+		allow = {
+			p:424 = {	#Delphi
+				is_holy_site = yes
+				has_building = temple_building
+				OR = {
+					has_building = forum_building
+					free_building_slots = 0
+				}
+			}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.19
+			}
+			show_as_tooltip = {
+				p:424 = {
+					add_province_modifier = {
+						name = cde_me_mac_macedonian_patronage
+						duration = 9125
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_202 = { # Restore the Boeotian League
+        icon = "task_political"
+		
+		requires = { 01_cde_macedonia_missions_01_task_201 }
+		
+		allow = {
+			owns_or_subject_owns = 426		#Thebes
+			c:BOE = {
+				has_land = no
+			}
+			area:boeotia_area = {
+    			any_area_province = {
+	    			count >= 5
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.20
+			}
+			custom_tooltip = 01_cde_macedonia_missions_01_task_202.tt
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_203 = { # Athenian Negotiation
+        icon = "task_athena"
+		
+		requires = { 01_cde_macedonia_missions_01_task_19 }
+		
+		potential = {
+			c:ATH = {
+				has_land = yes
+				owns = 416	#Athenai
+				is_subject = no
+			}
+		}
+		
+		allow = {
+			political_influence >= 20
+		}
+		
+        on_completion = {
+			add_political_influence = -20
+			
+			custom_tooltip = 01_cde_macedonia_missions_01_task_203.tt
+			trigger_event = {
+				id = cde_me_mac_01.21		#event chain that includes 21, 22, 23 and 24
+			}
+			
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_204 = { # Athenian Subjugation
+        icon = "task_conquest"
+		
+		requires = { 01_cde_macedonia_missions_01_task_203 }
+		
+		potential = {
+			has_variable = cde_mac_athens_declined		#from event 23, Athens declining
+		}
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					province_id = 416		#Athenai
+				}
+        	}
+        }
+		
+		allow = {
+			owns_or_subject_owns = 416		#Athenai
+			c:ATH = {
+				OR = {
+					has_land = no
+					is_subject_of = root
+				}
+			}
+		}
+		
+        on_completion = {
+			add_political_influence = 20
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_21 = { # Achaean Question
+        icon = "task_athena"
+		
+		requires = { 01_cde_macedonia_missions_01_task_20 }
+		
+		duration = 90
+		
+		allow = {
+			has_civil_war = no
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.25		#21-24 are Athens event chain
+			}
+			custom_tooltip = cde_me_mac_01.25.tt
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_22 = { # Crush the League
+        icon = "task_conquest"
+		
+		requires = { 01_cde_macedonia_missions_01_task_21 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					AND= {
+						is_in_area = achaea_area
+						NOT = { province_id = 460 }
+					}
+					is_in_area = arcadia_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			custom_tooltip = {
+				text = 01_cde_macedonia_missions_01_task_22.tt
+				any_province = {
+					count = 10
+					NOT = { province_id = 460 }
+					is_in_area = achaea_area
+					owned_or_subject_owned = root
+				}
+			}
+			area:arcadia_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+		
+        on_completion = {
+			add_military_experience = 10
+			
+			trigger_event = {
+				id = cde_me_mac_01.26
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_mac_strategos_autokrator_of_hellas
+					duration = 9125
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_23 = { # Control Korinthos
+        icon = "task_economical"
+		
+		requires = { 01_cde_macedonia_missions_01_task_21 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					province_id = 418	#Corinth / Korinthos
+				}
+				NOT = { owner = root }
+        	}
+        }
+		
+		allow = {
+			owns = 418	#Corinth
+			p:418 = {
+				num_of_port_building >= 1
+				fort_level >= 1
+				free_building_slots = 0
+				has_construction = no
+			}
+		}
+		
+        on_completion = {
+			trigger_event = {
+				id = cde_me_mac_01.27
+			}
+			show_as_tooltip = {
+				p:418 = {
+					add_province_modifier = {
+						name = cde_me_mac_new_peloponnesian_capital
+						duration = 9125
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_macedonia_missions_01_task_24 = { # Hellenic League
+        icon = "task_political"
+		
+		requires = { 01_cde_macedonia_missions_01_task_22 01_cde_macedonia_missions_01_task_23 }
+		
+		final = yes
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = south_peleponnesos_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			political_influence >= 100
+			owns = 418	#Corinth
+			area:south_peleponnesos_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+		
+        on_completion = {
+			add_political_influence = -100
+			trigger_event = {
+				id = cde_me_mac_01.28
+			}
+			custom_tooltip = 01_cde_macedonia_missions_01_task_24.tt
+        }
+    }
+	
+	
+}

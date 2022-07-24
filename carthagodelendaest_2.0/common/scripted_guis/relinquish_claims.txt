@@ -1,0 +1,38 @@
+﻿relinquish_claims = {
+	scope = country
+
+
+	confirm_title = "relinquish_claims"
+	confirm_text = "relinquish_claims_text"
+
+	saved_scopes = {
+		target
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			scope:target = root
+		}
+	}
+
+	# is_shown = {
+	#
+	# }
+
+	effect = {
+		scope:target = {
+			every_owned_province = {
+				remove_claim = root
+			}
+			remove_opinion = {
+				modifier = opinion_they_have_casus_belli
+				target = root
+			}				
+		}
+	}
+}

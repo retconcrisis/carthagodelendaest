@@ -1,0 +1,28 @@
+﻿"MTH"={
+	country="MTH"
+	184={
+		first_name = "Gomitra"			#Gomitra II
+		family = c:MTH.fam:Mitra
+		birth_date=548.8.13		#206 BC
+		culture="shauraseni"
+		religion="hindu"
+		no_stats=yes
+		add_martial=4
+		add_charisma=7
+		add_finesse=6
+		add_zeal=6
+		add_gold=200
+		add_popularity=65
+		c:MTH = {
+			set_as_ruler=char:184
+		}
+	}
+	185={
+		first_name = "Brahmamitra"			#heir
+		family = c:MTH.fam:Mitra
+		birth_date=586.2.19		#168 BC
+		culture="shauraseni"
+		religion="hindu"
+		father="char:184"		#legitimate son of Gomitra
+	}
+}

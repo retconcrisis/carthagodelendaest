@@ -1,0 +1,6 @@
+﻿death_murdered_by_offspring = {}
+
+death_fell_from_horse = {}
+
+death_retired_from_public_life = {}
+

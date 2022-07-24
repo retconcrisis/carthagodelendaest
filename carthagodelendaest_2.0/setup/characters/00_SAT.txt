@@ -1,0 +1,83 @@
+﻿"SAT"={
+	country="SAT"
+	229={
+		family = c:SAT.fam:Satavahana
+		birth_date=450.3.22		#284 BC
+		death_date=524.12.5		#230 BC
+		culture="kuntala"
+		religion="hindu"
+	}
+	
+	230={
+		first_name = "Simuka"			#1st ruler of Shungas
+		family = c:SAT.fam:Satavahana
+		birth_date=480.3.22		#254 BC
+		death_date=584.12.5		#170 BC
+		culture="kuntala"
+		religion="hindu"
+		father="char:229"		#brother of Kanha
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=9
+		add_zeal=10
+		no_traits=yes
+		add_trait="founder"
+		add_trait="victorious"
+		add_trait="conqueror"
+	}
+	
+	231={
+		first_name = "Kanha"			#2nd ruler of Shungas
+		family = c:SAT.fam:Satavahana
+		birth_date=490.7.8		#244 BC
+		death_date=574.12.5		#160 BC
+		culture="kuntala"
+		religion="hindu"
+		father="char:229"		#brother of Simuka
+	}
+	
+	232={
+		first_name = "Satakarni"			#Current ruler, son of Simuka
+		family = c:SAT.fam:Satavahana
+		birth_date=544.2.15		#210 BC
+		father="char:230"		#Simuka
+		culture="kuntala"
+		religion="hindu"
+		no_stats=yes
+		add_martial=10
+		add_charisma=8
+		add_finesse=10
+		add_zeal=8
+		no_traits=yes
+		add_trait="founder"
+		add_trait="brave"
+		add_trait="intelligent"
+		add_gold=300
+		add_popularity=70
+		c:SAT = {
+			set_as_ruler=char:232
+		}
+	}
+	
+	233={
+		first_name = "Satakarni"			#Satakarni II, son of Satakarni I and future ruler
+		family = c:SAT.fam:Satavahana
+		birth_date=574.2.15		#180 BC
+		father="char:232"		#Satakarni
+		culture="kuntala"
+		religion="hindu"
+		no_stats=yes
+		add_martial=10
+		add_charisma=9
+		add_finesse=10
+		add_zeal=10
+		no_traits=yes
+		add_trait="assertive"
+		add_trait="original_thinker"
+		add_trait="benefactor"
+		add_gold=200
+		add_popularity=50
+	}
+	
+}

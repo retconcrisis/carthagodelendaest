@@ -1,0 +1,56 @@
+﻿"KIB"={
+	country="KIB"
+	
+	#Moagetes I, tyrant of Kibyra in 189 BC, descripted by Polybius as cruel, treacherous and greedy
+	244={
+		first_name = "Moagetes"
+		family = c:KIB.fam:Moagetid
+		birth_date=537.6.12	#217 BC
+		culture="cabalian"
+		religion="anatolian_religion"
+		no_stats=yes
+		add_martial=7
+		add_charisma=9
+		add_finesse=8
+		add_zeal=7
+		no_traits=yes
+		add_trait="cruel"
+		add_trait="deceitful"
+		add_trait="miserly"
+		add_gold=200
+		add_popularity=60
+		c:KIB = {
+			set_as_ruler=char:244
+		}
+		
+	}
+	
+	#Pancrates, father of last tyrant Moagetes II
+	245={
+		first_name = "Pankrates"
+		family = c:KIB.fam:Moagetid
+		birth_date=584.5.8		#170 BC
+		father="char:244"
+		culture="cabalian"
+		religion="anatolian_religion"
+		no_stats=yes
+		add_martial=8
+		add_charisma=7
+		add_finesse=7
+		add_zeal=7
+		add_gold=100
+	}
+	
+	#Moagetes II, last tyrant of Kibyra
+	246={
+		first_name = "Moagetes"
+		family = c:KIB.fam:Moagetid
+		birth_date=604.1.1		#150 BC
+		father="char:245"
+		culture="cabalian"
+		religion="anatolian_religion"
+		add_gold=100
+	}
+	
+	
+}

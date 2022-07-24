@@ -1,0 +1,77 @@
+﻿"CAP"={
+	country="CAP"
+
+	#Nysa Mithridatid, wife of Ariarathes V and daughter of Pharnaces of Pontus
+	73={
+		first_name="Nysa"
+		family = c:PON.fam:Mithridatid
+		birth_date=579.9.20		#175 BC, same date as her mother's death from childbirth
+		female = yes
+		father="char:66"			#Pharnaces I
+		mother="char:68"			#Nysa Seleukid
+		culture="greco_persian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=6
+		add_finesse=4
+		add_zeal=3
+		no_traits=yes
+		add_trait="cruel"		#killed almost all of her own children to control the kingdom after her husband's death
+		add_trait="gluttonous"
+		add_trait="ambitious"
+		add_trait="blood_of_mithridates"	#new trait for Mithridates bloodline
+		add_trait="seleucids"				#Seleukid mother
+		add_gold=200
+		add_popularity=25
+		dna="Jv0m/cCcwJyuia6JAVgBWAJ5AnkCdgJ2AmsCawKUApQCdQJ1AmoCagFMAUwCfgJ+AosCiwJ/An8CkAKQApYClgFWAVYCkAKQAocChwKBAoECewJ7AVsBWwFRAVECGQJmAoQCkAJ9An0CfgJ+AVcBVwJyAnIChgKGAnkCeQKFAoUCfAJ8Am8CbwOTA5MCkAKQAoMCgwKAAoADqgOqAnECcQJdApMEowJ1AogCiAJ6AnoCjQKYApcClwNoA6cCVwKNAmgCaAJ+An4CVAKJAnkCeQKBAoEChgKGAnQCdAKJAokCiQKJAoECgQLkAuQC3QLdAFoAWgKuAq4ALAAsAqoCqgAgACAAYABgARgBGAC6ALoAhQCFARgBGAB/AH8AagBqAtkC2QEVARUBWwFbAG4AbgBSAFIAvQC9AuoC6gB/AH8BRwFHAIUAhQBIAEgBCwELAHgAeAAiACIBAwEDA2IDYgCjAKMDKQMpA1ADUACZAJkG/wO2AH8AfwKnBYUGZwZFATIBqQOoA6gC8AQlAU0BTQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Ariarathes IV (deceased), previous ruler of Cappadocia
+	74={
+		first_name="Ariarathes"
+		nickname="NICKNAME_IV_EUSEBES"
+		family = c:CAP.fam:Ariarathid
+		birth_date=524.12.1		#230 BC
+		death_date=591.7.16		#163 BC
+		culture="pasargadi"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=6
+		add_finesse=4
+		add_zeal=5
+		no_traits=yes
+		add_trait="pious"
+		add_trait="silver_tongued"
+	}
+	
+	#Ariarathes V, current ruler of Cappadocia, greatest ruler of the kingdom
+	75={
+		first_name="Ariarathes"
+		nickname="NICKNAME_EUSEBES_PHILOPATOR"
+		family = c:CAP.fam:Ariarathid
+		birth_date=570.11.15		#184 BC
+		father="char:74"				#Ariarathes IV
+		marry_character="char:73"
+		culture="pasargadi"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=11
+		add_charisma=9
+		add_finesse=10
+		add_zeal=8
+		no_traits=yes
+		add_trait="righteous"
+		add_trait="scholar"
+		add_trait="pious"
+		add_gold=400
+		add_popularity=80
+		c:CAP = {
+			set_as_ruler=char:75
+		}
+		dna="JOok6suiy6LAscCxA4oDigJsAmwCiAKIAnACcAKDAoMCjAKMAm4CbgKRApECmQKZAoMCgwKVApUCmwKbAnwCfAFiAWIETQTCAnICcgKCAoICbQJtAo8CjwJsAmwCawJrAo8CjwS3BLcCkAKQACIAIgJ1AnUCkgKSAnUCdQKHAocCkAKQBN8E3wJzAnMCkwKTAlcCmQKRApECfQJ9AmsCawJrAmsChAKEAoMCgwKSApICdQJ1A7EDsQOrA6sCjQKNApECkQKVApUCggKCAmsCawF8AXwCegJ6An8CfwKUApQCkAKQA6gDqAJYAlgAFgAWAD8APwLmAuYAtgC2ApUClQLhAuEABAAEAFEAUQBiAGIBbwFvAJoAmgB/AH8ADQANASMBIwKpAqkAxQDFAK0ArQCoAKgArwCvAtAC0AB/AH8BYAFgAAAAAABWAFYCwQLBAPsA+wCZAJkCvAK8A3kDeQDxAPEBdAF0AtgC2AEdAR0DYQNhAH8AfwILBQsFVQY0AdUB1QM/AyMCEQRMAT4BnAAAAAAAAAAAAAAAAA=="
+	}
+	
+}
+	

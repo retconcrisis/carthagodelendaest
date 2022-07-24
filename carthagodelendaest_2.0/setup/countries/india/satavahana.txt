@@ -1,0 +1,7 @@
+﻿color = rgb { 187  113  99 }	#kuninda color
+#color = rgb { 145  75  10 }	#old color
+color2 = rgb { 162  161  181 }
+
+ship_names = {
+	
+}

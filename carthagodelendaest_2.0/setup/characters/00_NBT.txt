@@ -1,0 +1,40 @@
+﻿"NBT"={
+	country="NBT"
+	
+	#Aretas I, king of Nabataea
+	219={
+		first_name = "Aretas"
+		family = c:NBT.fam:Aretid
+		birth_date=555.4.6		#199 BC
+		culture="nabatean"
+		religion="arabian_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=8
+		add_finesse=9
+		add_zeal=9
+		add_trait="founder"
+		add_gold=200
+		add_popularity=80
+		c:NBT = {
+			set_as_ruler=char:219
+		}
+	}
+	
+	#Aretas II, son of current ruler and became king in 120 BC
+	220={
+		first_name = "Aretas"
+		family = c:NBT.fam:Aretid
+		birth_date=599.1.17		#155 BC
+		father="char:219"
+		culture="paphlagonian"
+		religion="anatolian_religion"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=11
+		add_zeal=7
+	}
+	
+	
+}

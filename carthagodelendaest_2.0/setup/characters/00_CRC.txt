@@ -1,0 +1,58 @@
+﻿"CRC"={
+	country="CRC"
+	
+	#Sagdodonacus, father of Hyspaosines and previous satrap of Characene
+	201={
+		first_name = "Sagdodonacus"
+		family = c:CRC.fam:Hyspaosinid
+		birth_date=537.1.10		#217 BC
+		death_date=590.12.12	#164 BC
+		culture="bactrian"			#of Bactrian descent
+		religion="zoroaster"
+	}
+	
+	#Hyspaosines, current satrap and later king of Characene
+	202={
+		first_name = "Hyspaosines"
+		family = c:CRC.fam:Hyspaosinid
+		birth_date=578.1.10		#176 BC
+		culture="bactrian"			#of Bactrian descent
+		religion="zoroaster"
+		father="char:201"
+		no_stats=yes
+		add_martial=10
+		add_charisma=11
+		add_finesse=10
+		add_zeal=5
+		no_traits=yes
+		add_trait="assertive"
+		add_trait="founder"
+		add_gold=250
+		add_popularity=60
+		c:CRC = {
+			set_as_ruler=char:202
+		}
+		dna="A+cD58uby5u15rXmAmkCaQOfA58CmAKYAVMBUwJ2AnYCmAKYApACkAJuAm4BXwFfAo4CjgJsAmwCnAKcAoECgQJvAm8CbQJtAmoCagKAAoACfQJ9AnICcgJwAmcCiQKJAmACmQKMAowCcAJwAVYBVgKGAoYCkAKQAmwCbAJqAmoClAKUApUClQJzAnMClAKUAnACcAFYAVgCjwKPAocChwKVApUCbgJuAocChwJqAmoBXQFdAm0CbQKYApgClQKVApkCmQKZApkCegJ6An4CfgKqAqoChAKEA4sDiwKCAoICewJ7AogCiAQYBBgC3QBDAPwA/ACSAJIC8ALwATgBOADvAO8CtgK2AI0AjQBMAEwA5gDmAqcCpwB/AH8BAAEAAJYAlgFFAUUClgKWApcClwDNAM0A2wDbASEBIQB/AH8BHAEcAAoACgFLAUsAgQCBAKAAoAEnAScA3gDeBL0EvQD0APQDQgNCAt4C3gAJAAkJQwmuAH8AfwWSBZIQLRBpAf8BGAUABf4NZQ3/AgUFhwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Thalassia / Talasi'asu, wife of Hyspaosines
+	203={
+		first_name = "Talasi'asu"
+		family = c:CRC.fam:Hyspaosinid
+		birth_date=584.2.10		#170 BC
+		culture="babylonian"
+		religion="zoroaster"
+		marry_character="char:202"
+		female=yes
+		no_stats=yes
+		add_martial=2
+		add_charisma=10
+		add_finesse=8
+		add_zeal=8
+		no_traits=yes
+		add_trait="assertive"
+		add_trait="shrewd"
+		add_gold=100
+		dna="V9dX17Ojs6Pv9e/1AnkCeQJoAmgCZgJmAoECgQJoAmgCkQKRAn4CfgKDAoMDpgOmAWYBZgJ+An4ChgKGAn0CfQFlAWUCaAJoApcClwJqAmoBWgFaAngCeAJzAnMBVwFXAo8CjwJpAmkDrwOvAV8BXwKCAoICkgKSAo0CjQJ0AnQCcAJwA50DnQSxBLECiwKLAocChwJ4AngCjgKOAnsCewKYApgCgwKDAnQCdAJ8AnwCcQJxAB0AHQKSApIBZwFnAmgCaAKKAooClQKVAnUCdQKoAqgCmAKYAn8CfwAxADEClQKVAngCeAKuAq4AlgCWALMAswLsAuwADgAOAFkAWQDEAMQAuQC5AEAAQADjAOMDDgMOABcAFwB/AH8A1QDVAXABcAE+AT4A2ADYAE0ATQEIAQgC0gLSAS8BLwB/AH8AgACAArUCtQCWAJYACgAKAJAAkACZAJkBbQFtBLYEtgAKAAoArACsAzkDOQDlAOUA/wRoAH8AfwV7BXsPRwaOAaoBqgOJA4kN2gSdAYkBiQAAAAAAAAAAAAAAAA=="
+	}
+}

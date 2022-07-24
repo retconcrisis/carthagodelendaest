@@ -1,0 +1,25 @@
+﻿"HYC"={
+	country="HYC"
+	
+	#Arsaces, head of Hyrcania branch of Arsacids
+	225={
+		first_name = "Arsaces"		
+		family = c:HYC.fam:Arsacid			#Hyrcania branch
+		birth_date=569.9.12		#185 BC
+		father="char:224"				#Phraates I
+		culture="parthian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=8
+		add_charisma=8
+		add_finesse=10
+		add_zeal=10
+		add_gold=200
+		add_trait="blood_of_arsaces"
+		add_popularity = 60
+		c:HYC = {
+			set_as_ruler=char:225
+		}
+	}
+	
+}

@@ -1,0 +1,28 @@
+﻿l_english:
+ #Flavor Decisions
+ declare_pax_romana: "Declare Pax Romana"
+ declare_pax_romana_desc: "Rome has conquered far and wide beyond Italia, and many different peoples now live and serve under the same banner and Roman identity. Furtheremore, we have stabilized our great empire, expanded our treasury and ensured the prosperity of patricians and plebeians alike. With nothing but auspicious signs in the earth and sky, we may finally declare Pax Romana, 'Roman Peace', and usher in a period of peace and prosperity at the cost of decreased military expansion and army sizes." 
+ end_pax_romana: "End Pax Romana"
+ end_pax_romana_desc: "When our state declared the period of Pax Romana, Rome was blessed with peace and prosperity, interrupted by civil war or major external threats. However, times have changed, and although it would hurt our nation's stability, perhaps it would be best to end the Pax Romana so we may more efficiently mobilize in preparation for the troubles to come."
+ 
+ rho_restore_nesiotic_league: "Restore the Nesiotic League"
+ rho_restore_nesiotic_league_desc: "After losing our autonomy to Rome following the Third Macedonian War, the withdrawal of Rhodian influence from the Aegean beyond Rhodes forced us to dissolve the Second Nesiotic League, which had operated under our leadership. However, by reestablishing Rhodian military presence over the Cyclades, we can establish a third Nesiotic League subject to Rhodian suzerainty." 
+ formable_not_nesioticleague_exists: "#Y Nesiotic League#! does not exist"
+ formable_not_nesioticleague_not_capital: "Is not the Capital and is in the #Y Cyclades#! Province"
+ formable_not_nesioticleague_spawn_in_provinces: "All territoies in the #Y Cyclades#! province that are not the main capital join the #Y Nesiotic League#! subject state"
+ construction_of_the_colossus: "Rebuild the Colossus"
+ construction_of_the_colossus_desc: "The Colossus of Rhodes had been destroyed as a result of a great tremor almost a century ago. The remains of the statue, though broken and strewn across the ground, is still a source of wonder for many. Although the Ptolemies had offered to rebuild the Colossus, we were dissuaded by the Oracle of Delphi, who had told us that the destruction was due to offending Helios, who we had erected the statue for. However, almost a century has passed; thus, perhaps it is time to restore the statue to its former glory to make amends with Helios."
+ 
+ ach_grant_lacedaemonian_autonomy: "Grant Lacaedaemonian Autonomy"
+ ach_grant_lacedaemonian_autonomy_desc: "After defeating the Spartan state in the Laconian War and dismantling its monarchy, the Lacedaemonian populace was integrated into the Achaean League. However, since then, we have had numerous land disputes with the Lacedaemonians, and it seems as if they can never be truly satisfied. Thus, we have the option to grant them some greater autonomy in the Achaean League - as long as they remain on a tight leash."
+ ach_grant_lacedaemonian_autonomy.tt: "Sparta becomes a semi-autonomous client state."
+ 
+ #Government Decisions
+ appoint_a_regent: "Appoint a Regent"
+ appoint_a_regent_desc: "Although the current ruler is the rightful ruler of our realm, they are still too young to rule capably on their own. Thus, perhaps it may be wise to appont a regent who can rule on their behalf in order to ensure the stability and prosperity of our realm.\n\nWhen a Regent is appointed, they will serve alongside the young monarch as the #Y Co-Ruler#! of the state, making up for any weak attributes that the child ruler possesses.\n #Y The regency will also alleviate some of the negative effects of the 'Child Ruler' modifier#!\n\n\n\n\n\n\n\n\n\n@persian_achaemenid_path_5_icon!"
+ 
+ #Modifiers
+ pax_romana_modifier: "Pax Romana"
+ 
+ 
+ 

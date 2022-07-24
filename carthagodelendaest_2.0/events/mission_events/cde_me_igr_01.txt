@@ -1,0 +1,413 @@
+﻿namespace = cde_me_igr_01
+
+#The Middle Country
+cde_me_igr_01.3 = {
+	type = country_event
+	title = "cde_me_igr_01.3.t"
+	desc = "cde_me_igr_01.3.desc"
+	picture = pataliputra
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_igr_01.3.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_madhyamika_elephants
+			duration = 3650
+		}
+	}
+}
+
+#The Mighty Yaudheyas
+cde_me_igr_01.4 = {
+	type = country_event
+	title = "cde_me_igr_01.4.t"
+	desc = "cde_me_igr_01.4.desc"
+	picture = pataliputra
+	
+	left_portrait = current_ruler
+	right_portrait = scope:yaudheya_military_advisor
+	
+	fire_only_once = yes
+	
+	immediate = {
+		custom_tooltip = cde_me_igr_01.4.tt
+		hidden_effect = {
+			create_character = {
+				culture = shauraseni
+				religion = hindu
+				female = no
+				age = 38
+				no_stats = yes
+				great_martial_effect = yes
+				average_charisma_effect = yes
+				good_finesse_effect = yes
+				bad_zeal_effect = yes
+				save_scope_as = yaudheya_military_advisor
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.4.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_yaudheya_auxiliaries
+			duration = 3650
+		}
+	}
+}
+
+#Fields of Herakles-Balarama
+cde_me_igr_01.5 = {
+	type = country_event
+	title = "cde_me_igr_01.5.t"
+	desc = "cde_me_igr_01.5.desc"
+	picture = religious_rite
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_igr_01.5.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_herakles_balarama
+			duration = 3650
+		}
+	}
+}
+
+#Avengers of the Mauryans
+cde_me_igr_01.8 = {
+	type = country_event
+	title = "cde_me_igr_01.8.t"
+	desc = "cde_me_igr_01.8.desc"
+	picture = pataliputra
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		p:4440 = {		#Pataliputra
+			define_pop = {
+				culture = greco_bactrian
+				religion = roman_pantheon
+				type = citizen
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.8.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_lord_of_magadha
+			duration = 3650
+		}
+	}
+}
+
+#Poleis in India
+cde_me_igr_01.9 = {
+	type = country_event
+	title = "cde_me_igr_01.9.t"
+	desc = "cde_me_igr_01.9.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		random_owned_province = {	#city that meets mission requirements
+			limit = {
+				OR = {
+					is_in_region = maru_region
+					is_in_region = avanti_region
+					is_in_region = madhyadesa_region
+					is_in_region = pracya_region
+				}
+				has_city_status = yes
+				total_population >= 15
+				has_building = forum_building
+				has_building = commerce_building	#Marketplace
+				has_building = theathre_building	#Grand Theater
+				num_of_used_building_slots >= 5
+			}
+			define_pop = {
+				culture = greco_bactrian
+				religion = roman_pantheon
+				type = citizen
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.9.a
+		
+		custom_tooltip = cde_me_igr_01.9.tt
+		every_owned_province = {	#city that meets mission requirements
+			limit = {
+				OR = {
+					is_in_region = maru_region
+					is_in_region = avanti_region
+					is_in_region = madhyadesa_region
+					is_in_region = pracya_region
+				}
+				has_city_status = yes
+				total_population >= 15
+				has_building = forum_building
+				has_building = commerce_building	#Marketplace
+				has_building = theathre_building	#Grand Theater
+				num_of_used_building_slots >= 5
+			}
+			add_province_modifier = {
+				name = cde_me_igr_gymnasium
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Uttarapatha Trade
+cde_me_igr_01.10 = {
+	type = country_event
+	title = "cde_me_igr_01.10.t"
+	desc = "cde_me_igr_01.10.desc"
+	picture = hellenic_marketplace
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_igr_01.10.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_uttarapatha_trade_routes
+			duration = 7300
+		}
+	}
+}
+
+#Kingdom of Heaven
+cde_me_igr_01.11 = {
+	type = country_event
+	title = "cde_me_igr_01.11.t"
+	desc = "cde_me_igr_01.11.desc"
+	picture = hellenic_temple
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		p:4437 = {		#Ayodhya
+			define_pop = {
+				culture = greco_bactrian
+				religion = roman_pantheon
+				type = citizen
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.11.a
+		
+		current_ruler = {
+			add_popularity = 5
+			add_character_modifier = {
+				name = cde_me_igr_defender_of_heaven
+				duration = 3650
+			}
+		}
+		
+	}
+}
+
+#Herakles, Protector of the Buddha
+cde_me_igr_01.12 = {
+	type = country_event
+	title = "cde_me_igr_01.12.t"
+	desc = "cde_me_igr_01.12.desc"
+	picture = greek_religious_rite
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		p:4440 = {
+			define_pop = {
+				culture = gandhari
+				religion = buddhism
+				type = citizen
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.12.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_spear_of_herakles
+			duration = 3650
+		}
+	}
+}
+
+#Temple to Athena Alkidemos
+cde_me_igr_01.13 = {
+	type = country_event
+	title = "cde_me_igr_01.13.t"
+	desc = "cde_me_igr_01.13.desc"
+	picture = hellenic_temple
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_igr_01.13.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_athena_in_the_east
+			duration = 3650
+		}
+	}
+}
+
+#Sanchi Stupa Renovated
+cde_me_igr_01.14 = {
+	type = country_event
+	title = "cde_me_igr_01.14.t"
+	desc = "cde_me_igr_01.14.desc"
+	picture = pataliputra
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		p:4470 = {
+			define_pop = {
+				culture = gandhari
+				religion = buddhism
+				type = citizen
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.14.a
+		
+		#Vidisha
+		p:4470 = {
+			add_province_modifier = {
+				name = cde_me_igr_sanchi_stupa_expanded
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Bilingual Coinage
+cde_me_igr_01.15 = {
+	type = country_event
+	title = "cde_me_igr_01.15.t"
+	desc = "cde_me_igr_01.15.desc"
+	picture = war_chest
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_igr_01.15.a
+		
+		add_country_modifier = {
+			name = cde_me_igr_bilingual_coinage
+			duration = 3650
+		}
+	}
+}
+
+#Protector of Greeks
+cde_me_igr_01.17 = {
+	type = country_event
+	title = "cde_me_igr_01.17.t"
+	desc = "cde_me_igr_01.17.desc"
+	picture = cde_event_greek_debate_crowd
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		add_country_modifier = {
+			name = cde_me_igr_savior_of_indian_greeks
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.17.a
+		
+		current_ruler = {
+			add_nickname = NICKNAME_SOTER
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.17.b
+		
+		current_ruler = {
+			add_nickname = NICKNAME_TRATARASA
+		}
+	}
+	
+	option = {
+		name = cde_me_igr_01.17.c
+		
+		custom_tooltip = cde_me_igr_01.17.tt
+	}
+}
+
+#Heir of Alexander - India formable
+cde_me_igr_01.18 = {
+	type = country_event
+	title = "cde_me_igr_01.18.t"
+	desc = "cde_me_igr_01.18.desc"
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_igr_01.18.a
+		
+		add_legitimacy = 50
+		current_ruler = {
+			family = { add_prestige = prestige_medium }
+		}
+		change_country_name = INDIA_FORMABLE_NAME
+		hidden_effect = {
+			change_country_adjective = INDIA_FORMABLE_ADJ
+			change_country_flag = INDIA_FORMABLE_SUN_DHARMACHAKRA_FLAG
+			change_country_color = "india_form_color"
+		}
+		add_3_free_province_investments = yes
+		capital_scope = {
+			capital_formable_medium_effect = yes
+			formable_capital_modifier_normal_effect = yes
+		}
+	}
+}
+

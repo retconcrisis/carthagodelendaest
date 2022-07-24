@@ -1,0 +1,382 @@
+﻿#Indo Greek Kingdom
+
+cde_me_igr_spear_of_herakles = {
+	ruler_popularity_gain = 0.1
+	happiness_for_same_religion_modifier = 0.1
+}
+
+cde_me_igr_athena_in_the_east = {
+	omen_power = 0.1
+	happiness_for_same_religion_modifier = 0.1
+}
+
+cde_me_igr_sanchi_stupa_expanded = {
+	global_freemen_happyness = 0.1
+}
+
+cde_me_igr_savior_of_indian_greeks = {
+	diplomatic_reputation = 1
+}
+
+cde_me_igr_madhyamika_elephants = {
+	warelephant_defensive = 0.1
+}
+
+cde_me_igr_yaudheya_auxiliaries = {
+	light_infantry_discipline = 0.05
+	light_infantry_desert_combat_bonus = 0.1
+}
+
+cde_me_igr_herakles_balarama = {
+	global_pop_conversion_speed_modifier = 0.1
+}
+
+cde_me_igr_legacy_of_ashoka = {
+	agressive_expansion_monthly_change = -0.03
+}
+
+cde_me_igr_lord_of_magadha = {
+	monthly_legitimacy = 0.1
+	subject_loyalty = 5
+	happiness_for_wrong_culture_group_modifier = wrong_culture_group_small
+}
+
+cde_me_igr_uttarapatha_trade_routes = {
+	global_commerce_modifier = 0.15
+}
+
+cde_me_igr_defender_of_heaven = {
+	zeal = 2
+}
+
+cde_me_igr_bilingual_coinage = {
+	integrate_speed = 0.1
+	global_pop_assimilation_speed_modifier = 0.05
+	happiness_for_wrong_culture_modifier = 0.05
+}
+
+cde_me_igr_yavanarajya = {
+	tribute_income_modifier = 0.25
+}
+
+cde_me_igr_gymnasium = {
+	local_citizen_happyness = 0.05
+	local_pop_assimilation_speed_modifier = 0.05
+}
+
+
+#Laconia / Sparta
+
+cde_me_spa_defiant_laconians = {
+	loyalty_to_overlord = -10
+	land_morale = 0.05
+}
+
+cde_me_spa_overseas_sponsors = {
+	loyalty_to_overlord = -10
+	diplomatic_reputation = 1
+}
+
+cde_me_spa_independence_faction_majority = {
+	loyalty_to_overlord = -15
+	stability_monthly_change = 0.1
+}
+
+cde_me_spa_anti_achaean_purge = {
+	global_nobles_happyness = -0.02	 	#negative
+	ruler_popularity_gain = 0.1
+}
+
+cde_me_spa_molon_labe = {
+	land_morale = 0.1
+	levy_size_multiplier = 0.1	#10% increase for 5 years
+	war_exhaustion = -0.05
+}
+
+cde_me_spa_laconian_freedom = {
+	happiness_for_same_culture_modifier = 0.1
+}
+
+
+
+#Macedonia
+
+cde_me_mac_anti_republican_policy = {
+	price_imprison_cost_modifier = -0.25
+	enact_law_cost_modifier = -0.1
+}
+cde_me_mac_antigonid_legitimacy = {
+	diplomatic_reputation = 1
+	monthly_legitimacy = 0.1
+}
+cde_me_mac_united_macedonian_army = {
+	heavy_infantry_offensive = 0.1
+	global_start_experience = 0.1
+}
+cde_me_mac_capital_investments = {		#state modifier
+	local_tax_modifier = 0.1
+	local_state_trade_routes = 1
+}
+cde_me_mac_antigonid_palace = {
+	local_building_slot = 1
+	local_monthly_civilization = 0.05
+}
+cde_me_mac_breadbasket_of_macedonia = {
+	global_monthly_food_modifier = 0.05
+	global_food_capacity = 100
+}
+cde_me_mac_designated_naval_base = {
+	local_ship_recruit_speed = 0.1
+	local_commerce_value_modifier = 0.1
+}
+cde_me_mac_grand_fleet_of_macedonia = {
+	naval_damage_done = 0.1
+	navy_maintenance_cost = -0.1
+}
+cde_me_mac_beroian_noble_ties = {
+	culture_nobles_happiness = 0.1
+}
+cde_me_mac_thracian_trade_access = {
+	global_import_commerce_modifier = 0.1
+}
+cde_me_mac_guardian_archon_of_the_leagues = {
+	global_monthly_state_loyalty = 0.04
+	subject_loyalty = 5				#additive, not multiplicative
+}
+cde_me_mac_zeus_eleutherios = {
+	omen_power = 0.1
+	happiness_for_same_religion_modifier = 0.1
+}
+cde_me_mac_athamanian_auxiliaries = {
+	light_infantry_mountain_combat_bonus = 0.1
+	light_infantry_hills_combat_bonus = 0.1
+}
+cde_me_mac_antigonid_coinage = {
+	diplomatic_reputation = 1
+}
+cde_me_mac_boeotian_infantry = {
+	heavy_infantry_maintenance_cost = -0.1
+}
+cde_me_mac_macedonian_patronage = {
+	local_migration_attraction = 1
+	local_happiness_for_same_religion_modifier = 0.1
+}
+cde_me_mac_strategos_autokrator_of_hellas = {
+	diplomatic_reputation = 1
+	monthly_legitimacy = 0.1
+	subject_loyalty = 10				#additive, not multiplicative
+}
+cde_me_mac_new_peloponnesian_capital = {
+	local_population_growth = 0.15
+	local_commerce_value_modifier = 0.2
+}
+
+
+
+#Lusitania
+
+cde_me_lst_lusitanian_fervor = {
+	land_morale = 0.1
+}
+cde_me_lst_call_to_arms = {
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.1
+}
+cde_me_lst_strengthened_fortifications = {
+	global_defensive = 0.1
+}
+cde_me_lst_total_warfare = {
+	levy_size_multiplier = 0.2
+	hostile_attrition = 1
+}
+
+
+#Pontus
+
+cde_me_pon_pontic_royal_palace = {
+	local_building_slot = 1
+	local_population_capacity_modifier = 0.1
+	local_population_happiness = 0.05
+	local_monthly_civilization = 0.05
+}
+cde_me_pon_pontic_summer_palace = {
+	local_building_slot = 1
+	local_population_capacity_modifier = 0.1
+	local_population_happiness = 0.05
+}
+cde_me_pon_pontic_shipyard = {
+	local_ship_recruit_speed = 0.3
+	local_ship_start_experience = 5
+}
+cde_me_pon_economic_hegemons = {
+	diplomatic_reputation = 2
+}
+cde_me_pon_cultural_integration = {
+	integrate_speed = 0.2
+}
+cde_me_pon_hellenistic_poleis = {
+	local_citizen_desired_pop_ratio = 0.1
+	local_migration_attraction = 2
+}
+cde_me_pon_greek_mercenary_ties = {
+	recruit_mercenary_cost_modifier = -0.2
+}
+cde_me_pon_philhellene_of_pontus = {
+	diplomatic_reputation = 1
+	omen_power = 0.1
+}
+cde_me_pon_protector_of_hellenes = {
+	diplomatic_relations = 1
+	diplomatic_reputation = 1
+}
+cde_me_pon_paphlagonian_ancestral_lands = {
+	local_monthly_state_loyalty = 0.1
+	local_freemen_happyness = 0.1
+	local_citizen_happyness = 0.1
+}
+cde_me_pon_land_of_the_golden_fleece = {
+	local_output_modifier = 0.15
+}
+cde_me_pon_developed_emporion = {
+	local_commerce_value_modifier = 0.2
+	local_population_growth = 0.05
+	local_citizen_happyness = happiness_large_svalue
+}
+cde_me_pon_tribes_appeased = {
+	local_tribesmen_happyness = happiness_large_svalue
+	local_freemen_happyness = happiness_large_svalue
+}
+cde_me_pon_pontic_protectorship = {
+	local_citizen_happyness = happiness_large_svalue
+	local_population_growth = 0.05
+}
+cde_me_pon_secure_pontic_trade = {
+	local_commerce_value_modifier = 0.3
+	local_migration_attraction = 1
+}
+cde_me_pon_pontic_neapolis = {
+	local_building_slot = 2
+}
+cde_me_pon_theodosian_trade = {
+	local_population_growth = 0.05
+	local_commerce_value_modifier = 0.25
+	local_citizen_happyness = happiness_large_svalue
+}
+cde_me_pon_scythian_nobles_disciplined = {
+	global_tribesmen_output = 0.2
+}
+cde_me_pon_dedications_to_parthenos = {
+	culture_happiness_modifier = 0.1
+}
+cde_me_pon_temples_to_local_cults = {
+	local_citizen_happyness = 0.1
+	local_freemen_happyness = 0.1
+	local_tribesmen_happyness = 0.1
+}
+cde_me_pon_scythian_champion_of_euxine_greeks = {
+	diplomatic_reputation = 2
+	subject_loyalty = 15				#additive, not multiplicative
+}
+
+
+#Carthage
+cde_me_car_punic_allies = {
+	manpower_recovery_speed = 0.1
+	subject_loyalty = 10				#additive, not multiplicative
+}
+cde_me_car_trade_outposts_regained = {
+	global_capital_trade_routes = 1
+}
+cde_me_car_numidian_subjects = {
+	integrate_speed = 0.1
+	happiness_for_wrong_culture_group_modifier = wrong_culture_group_small
+}
+cde_me_car_numidian_auxiliaries = {
+	light_cavalry_offensive = 0.1
+}
+cde_me_car_coastal_trade_monopoly = {
+	global_commerce_modifier = 0.15
+	global_ship_recruit_speed = 0.2
+	ship_cost = -0.1
+}
+cde_me_car_honored_the_philaeni = {
+	happiness_for_same_culture_modifier = 0.1
+}
+cde_me_car_statue_to_the_philaeni = {
+	local_freemen_output = 0.1
+	local_freemen_happyness = 0.1
+	local_population_growth = 0.1
+}
+cde_me_car_naval_power_restored = {
+	navy_maintenance_cost = -0.1
+	naval_morale_modifier = 0.1
+	ship_repair_at_sea = 0.1
+}
+cde_me_car_carthaginian_empire = {
+	diplomatic_reputation = 1
+	diplomatic_relations = 1
+}
+cde_me_car_carthaginian_fortifications = {
+	local_defensive = 0.2
+	supply_limit_modifier = 0.2
+}
+cde_me_car_freeman_sailors = {
+	global_freemen_happyness = 0.05
+	global_ship_start_experience = 10
+	global_ship_recruit_speed = 0.15
+}
+cde_me_car_noble_retinues = {
+	army_maintenance_cost = -0.1
+	manpower_recovery_speed = 0.05
+}
+cde_me_car_sacred_band_of_carthage = {
+	heavy_infantry_discipline = 0.1
+}
+cde_me_car_carthaginian_military_reforms = {
+	global_manpower_modifier = 0.1
+	global_start_experience = 5
+}
+cde_me_car_libyan_infantry = {
+	light_infantry_discipline = 0.1
+}
+cde_me_car_north_african_war_elephants = {
+	warelephant_discipline = 0.05
+	warelephant_maintenance_cost = -0.1
+}
+cde_me_car_carthaginian_merchants = {
+	global_commerce_modifier = 0.1
+	global_citizen_output = 0.05
+}
+
+
+
+#Rome
+
+cde_me_rom_carthago_delenda_est = {
+	happiness_for_same_culture_modifier = 0.1
+}
+
+cde_me_rom_new_african_provincia = {
+	global_commerce_modifier = 0.1
+}
+
+cde_me_rom_coloniae_in_africa = {
+	war_exhaustion = -0.05
+}
+
+cde_me_rom_bolstered_colony_garrison = {
+	local_population_happiness = 0.1
+	local_pop_assimilation_speed = 1
+}
+
+cde_me_rom_ager_publicus = {
+	local_freemen_output = 0.1
+}
+
+cde_me_rom_african_latifundia = {
+	local_slaves_output = 0.1
+}
+
+
+
+

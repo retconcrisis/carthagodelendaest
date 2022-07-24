@@ -1,0 +1,2742 @@
+﻿#Ghore
+5396=
+{
+	barbarian_power=0
+	civilization_value=2
+	culture="kharesmian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="desert"
+	trade_goods="hemp"
+	slaves=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Shenia
+5397=
+{
+	barbarian_power=0
+	civilization_value=2
+	culture="kharesmian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="desert"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+		culture="margian"
+		religion="zoroaster"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="zoroaster"
+	}
+}
+#Marakanda
+6682=
+{
+	barbarian_power=0
+	civilization_value=24
+	culture="sogdian"
+	province_rank="city"
+	religion="zoroaster"
+	terrain="hills"
+	trade_goods="earthware"
+	citizen=
+	{
+		amount=7
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=4
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=3
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	slaves=
+	{
+		amount=1
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Erbend
+6683=
+{
+	barbarian_power=0
+	civilization_value=18
+	culture="margian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="desert"
+	trade_goods="horses"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="kharesmian"
+		religion="indo_iranian_religion"
+	}
+}
+#Gazaba
+6687=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="hills"
+	trade_goods="grain"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Ikroni
+6698=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="cattle"
+	freemen=
+	{
+		amount=1
+		culture="bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=1
+		culture="bactrian"
+		religion="roman_pantheon"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Marouka
+6699=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="hemp"
+	citizen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Petra Arimazou
+6700=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="leather"
+	citizen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Petra Chorienou
+6701=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="gems"
+	citizen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=5
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Shakria
+6702=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="earthware"
+	freemen=
+	{
+		amount=1
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+}
+#Kyropolis Baktriane
+6703=
+{
+	barbarian_power=0
+	civilization_value=29
+	culture="sogdian"
+	province_rank="city"
+	religion="zoroaster"
+	terrain="hills"
+	trade_goods="cloth"
+	nobles=		
+	{
+		amount=2
+		culture="sakan"			#ruling class
+		religion="indo_iranian_religion"
+	}
+	citizen=
+	{
+		amount=3
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	citizen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=7
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=4
+	}
+	slaves=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=7
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Alexandreia Eschate
+6704=
+{
+	barbarian_power=0
+	civilization_value=42
+	culture="greco_bactrian"
+	province_rank="city"
+	religion="roman_pantheon"
+	terrain="farmland"
+	trade_goods="silk"
+	nobles=		
+	{
+		amount=2
+		culture="sakan"			#ruling class
+		religion="indo_iranian_religion"
+	}
+	nobles=
+	{
+		amount=1
+	}
+	citizen=
+	{
+		amount=3
+	}
+	citizen=
+	{
+		amount=9
+		culture="tayuan"
+		religion="eastern_animism"
+	}
+	citizen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=6
+		culture="tayuan"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=2
+		culture="sogdian"
+		religion="zoroaster"
+	}
+	slaves=
+	{
+		amount=5
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sogdian"
+		religion="zoroaster"
+	}
+	tribesmen=
+	{
+		amount=5
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Matuaspa
+6705=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="hemp"
+	citizen=
+	{
+		amount=1
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=3
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	slaves=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+}
+#Kis
+6706=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="hills"
+	trade_goods="hemp"
+	citizen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=1
+		religion="zoroaster"
+	}
+	slaves=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Tribactra
+6707=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="kharesmian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="cloth"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Amul
+6708=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="kharesmian"
+	province_rank="city"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="woad"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+		culture="sogdian"
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sogdian"
+	}
+}
+#Rapete
+6709=
+{
+	barbarian_power=0
+	civilization_value=2
+	culture="margian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="desert"
+	trade_goods="hemp"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+		culture="kharesmian"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="kharesmian"
+		religion="indo_iranian_religion"
+	}
+}
+#Xenippa
+6710=
+{
+	barbarian_power=0
+	civilization_value=18
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="desert"
+	trade_goods="cattle"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Charva
+6711=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="fur"
+	citizen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="zoroaster"
+	}
+}
+#Kaza
+6712=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=5
+		culture="yuezhi"
+	}
+	freemen=
+	{
+		amount=1
+		culture="yuezhi"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Kermine
+6713=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="earthware"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Karnab
+6714=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Naura
+6715=
+{
+	barbarian_power=0
+	civilization_value=26
+	culture="sogdian"
+	province_rank="city"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="cloth"
+	citizen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
+		amount=7
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=10
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Nautaka
+6716=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="fur"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Branchidai
+6717=
+{
+	barbarian_power=0
+	civilization_value=18
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="desert"
+	trade_goods="camel"
+	citizen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Kogon
+6718=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="kharesmian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="leather"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Petra Sisimithrou
+6719=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="hills"
+	trade_goods="leather"
+	citizen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+		religion="indo_iranian_religion"
+	}
+}
+#Drepsiana
+6721=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="leather"
+	freemen=
+	{
+		amount=1
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=5
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+}
+#Imarash
+6722=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="sogdian"
+	province_rank="settlement"
+	religion="zoroaster"
+	terrain="mountain"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=1
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Khavakand
+6730=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="tayuan"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="grain"
+	citizen=
+	{
+		amount=4
+	}
+	citizen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=1
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+		religion="roman_pantheon"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Massagetia
+6731=
+{
+	barbarian_power=0
+	civilization_value=23
+	culture="tayuan"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="farmland"
+	trade_goods="horses"			#Ferghana horses
+	citizen=
+	{
+		amount=1
+	}
+	citizen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=2
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=4
+	}
+	slaves=
+	{
+		amount=1
+		culture="sogdian"
+		religion="zoroaster"
+	}
+	slaves=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=7
+	}
+}
+#Makhram
+6732=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="tayuan"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=1
+	}
+	citizen=
+	{
+		amount=2
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	slaves=
+	{
+		amount=1
+		culture="sogdian"
+		religion="zoroaster"
+	}
+	slaves=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="roman_pantheon"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sogdian"
+		religion="zoroaster"
+	}
+}
+#Istarava
+6733=
+{
+	barbarian_power=0
+	civilization_value=17
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="fur"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Chust
+6734=
+{
+	barbarian_power=0
+	civilization_value=24
+	culture="sogdian"
+	province_rank="city"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="salt"
+	citizen=
+	{
+		amount=4
+	}
+	freemen=
+	{
+		amount=8
+	}
+	slaves=
+	{
+		amount=5
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Dawan
+6735=
+{
+	barbarian_power=0
+	civilization_value=19
+	culture="tayuan"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="grain"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Osh
+6736=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="tayuan"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="vegetables"
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Andijan
+6737=
+{
+	barbarian_power=0
+	civilization_value=23.5
+	culture="tayuan"
+	province_rank="city"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="base_metals"
+	citizen=
+	{
+		amount=11
+	}
+	freemen=
+	{
+		amount=15
+	}
+	slaves=
+	{
+		amount=10
+	}
+	tribesmen=
+	{
+		amount=9
+	}
+}
+#Namakan
+6738=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Akhsiket
+6739=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="silk"
+	citizen=
+	{
+		amount=1
+	}
+	citizen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=1
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=1
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=2
+		religion="roman_pantheon"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Shakrikhan
+6740=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="tayuan"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="silk"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Uvikat
+6777=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+	}
+}
+#Balasaghun
+6778=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="wusun"	#changed from tocharian
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="salt"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Suyab
+6779=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="wusun"	#changed from tocharian
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="base_metals"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=6
+	}
+}
+#Nevaket
+6780=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="wusun"	#changed from tocharian
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+}
+#Yul
+6781=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="wusun"	#changed from tocharian
+	province_rank="city"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="salt"
+	citizen=
+	{
+		amount=4
+	}
+	freemen=
+	{
+		amount=6
+	}
+	slaves=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=6
+	}
+}
+#Ashpara
+6782=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="wusun"	#changed from tocharian
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="cattle"
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Kulan
+6783=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="hemp"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Barskhan
+6784=
+{
+	barbarian_power=0
+	civilization_value=21.5
+	culture="sogdian"		#from tocharian
+	province_rank="city"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="fur"
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=6
+	}
+	tribesmen=
+	{
+		amount=11
+	}
+}
+#Shelji
+6785=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="cattle"
+	freemen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Tobe
+6786=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="fur"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="yuezhi"
+	}
+}
+#Narin
+6787=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="wusun"	#changed from tocharian
+	holy_site="omen_blessing_life"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="horses"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Shura
+6788=
+{
+	barbarian_power=0
+	civilization_value=20
+	culture="wusun"	#changed from tocharian
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="base_metals"
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Uskat
+6789=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="hemp"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Tunket
+6790=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="hemp"
+	freemen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="yuezhi"
+	}
+}
+#Chach
+6791=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="mountain"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+	}
+}
+#Isfijab
+6792=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="wood"
+	citizen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+	}
+}
+#Otrar
+6793=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="hemp"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Kuyruk
+6794=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="cloth"
+	citizen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Shavgar
+6795=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="hills"
+	trade_goods="fur"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Varakhsha
+6802=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="kharesmian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Burguchi
+7231=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="zoroaster"
+	}
+}
+#Nikhshapaya
+7238=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="stone"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sogdian"
+		religion="zoroaster"
+	}
+}
+#Zariaspa
+7240=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="wild_game"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Artamis
+7241=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="vegetables"
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Lebap
+7242=
+{
+	barbarian_power=0
+	civilization_value=21
+	culture="sogdian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Chinaz
+7245=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="grain"		#historically source of grain, see economy of hellenistic period map
+	citizen=
+	{
+		amount=4
+	}
+	freemen=
+	{
+		amount=6
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+}
+#Yangikent
+7246=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="wild_game"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Altinasar
+7247=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+}
+#Janaqala
+7248=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="fur"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+}
+#Akkum
+7249=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+}
+#Koga
+7250=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="wild_game"
+	freemen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Besta
+7251=
+{
+	barbarian_power=0
+	civilization_value=5
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+}
+#Maidankoga
+7261=
+{
+	barbarian_power=0
+	civilization_value=8
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="hemp"
+	freemen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Maidankuyryk
+7262=
+{
+	barbarian_power=0
+	civilization_value=8
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+}
+#Jaxartes
+7263=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+	}
+}
+#Maidanchach
+7264=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="fur"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="indo_iranian_religion"
+	}
+}
+#Zintik
+7265=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="sogdian"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="hemp"
+	citizen=
+	{ 
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="yuezhi"
+		religion="indo_iranian_religion"
+	}
+}
+#Qaram
+7266=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="vegetables"
+	tribesmen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Araq
+7267=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Osht
+7268=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Jaxartia
+7269=
+{
+	barbarian_power=0
+	civilization_value=8
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	citizen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+}
+#Kashram
+7270=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="camel"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Kush
+7271=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="wild_game"
+	citizen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Khanus
+7272=
+{
+	barbarian_power=0
+	civilization_value=8
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	citizen=
+	{
+		amount=3
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	freemen=
+	{
+		amount=3
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="yuezhi"
+		religion="eastern_animism"
+	}
+}
+#Poshkar
+7273=
+{
+	barbarian_power=0
+	civilization_value=8
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="grain"		#historically source of grain, see economy of hellenistic period map
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+}
+#Gabae
+7274=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="hills"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=5
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Shahr Jaxartha
+7275=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="camel"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+	tribesmen=
+	{
+		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Ust
+7276=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="fur"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Arcum
+7277=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="camel"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+	tribesmen=
+	{
+		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}
+#Padri
+7278=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="yuezhi"
+	province_rank="settlement"
+	religion="eastern_animism"
+	terrain="plains"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=4
+	}
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+}

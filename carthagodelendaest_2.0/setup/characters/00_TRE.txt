@@ -1,0 +1,74 @@
+﻿"TRE"={
+	country="TRE"
+	
+	#Teres III, ruler of Odrysian Thrace and possible relative of Cotys IV
+	162={
+		first_name = "Teres"
+		family = c:TRE.fam:Odrysid
+		birth_date=569.1.5		#185 BC
+		culture="odrysi"
+		religion="shamanism"
+		no_stats=yes
+		add_martial=8
+		add_charisma=8
+		add_finesse=7
+		add_zeal=7
+		no_traits=yes
+		add_trait="good_natured"		#helped Andriscus to the Macedonian throne
+		add_trait="trusting"
+		add_gold=400
+		add_popularity=70
+		c:TRE = {
+			set_as_ruler=char:162
+		}
+		dna="L+lR5LV8lIHku+S7AV4BXgOvA68CcQJxAnYCdgKQApACdgJ2AocChwJnAmcDpgOmA58DnwTTBNMCcQJxAUwBTAKaAogCawJrApQClAJ0AnQCawJrApICkgJlAocCkQKRAmoCagS1BLUCdwJ3AncCdwKGAoYCiQKJA60DrQKPAo8CmAKYApgCmAKQApACagJqApUClQKBAoECtgKRAnUCdQJHAn0CygKQApMCkwFkAWQCZwJnAnoCegKDAoMCdgJ2ApkCmQJtAm0CQwJnAm0CbQKGAoYClwKXApACkAJvAm8CkwKTAogCiAK4ArgARQBFAWUBZQFcAVwArgCuADEAMQBLAEsCigKKAFYAVgFLAUsAGwAbACYAJgB/AH8AHAAcAXcBdwCvAK8AlwCXAQUBBQFbAVsDGwMbAXQBdAB/AH8BfAF8AOEA4QAeAB4BegF6AJgAmAMIAwgBXwFfAAsACwAYABgBewF7AMsAywB/AH8MlAyUAH8AfwEEAQQFUAWTAOsAGwX/BU8CAQKHBJYCHwAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+	#163 is Alexandros of Macedon (Hades), son of Perseus and father of Alexandra
+	
+	
+	#Alexandra, wife of Teres, granddaughter of Perseus of Macedonia
+	164={
+		first_name = "Alexandra"
+		family_name = "Antigonid"	#no longer uses families id, since now starts under no tag
+		birth_date=581.2.20		#173 BC
+		female = yes
+		father="char:163"			#Alexander of Macedonia
+		marry_character="char:162"		#Teres III
+		culture="bithynian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=9
+		add_finesse=5
+		add_zeal=8
+		no_traits=yes
+		add_trait="antigonids"
+		add_trait="honest"
+		add_trait="humble"
+		add_gold=300
+		add_popularity=50
+		dna="hsqGyo+Ej4TXytfKAocChwKJAokCeQJ5Am4CbgS1BLUCeQJ5ApACkAFXAVcCigKKAoMCgwJ8AnwCjgKOAokCiQKJAokCggKCAoYChgFgAWAChQKFAoMCgwFeAV4CiAKIAmoCagJ0AnQCkgKSAmcCZwKCAoICkQKRApQClAKQApACfwJ/AocChwKGAoYCjAKMA54DngAcABwCZwJnApgCmAKFAoUCiwKLAn4CfgKUApQChAKEAnMCcwKLAosDnAOcA6kDqQJ2AnYCegJ6AooCigKOAo4DnwOfAoMCgwKUApQCmQKZAokCiQRMBEwBHAEcAoQChADhAOEAmgCaAuAC4AECAQICwgLCADcANwBqAGoBQwFDAEwATAB/AH8AEgASAGEAYQLcAtwCyALIABEAEQFRAVECgQKBAAEAAQB/AH8BGAEYAE8ATwFzAXMATwBPAR4BHgNbA1sAYABgAS8BLwC3ALcBEgESBO4E7gB1AHUDaQNpAH8AfwAPAA8F0wXTAGMAYwXHBccCUQJRAjYCtgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Barsabas, chieftain who warmly received Andriscus
+	165={
+		first_name = "Barsabas"
+		family = c:TRE.fam:Odrysid
+		birth_date=564.10.13		#190 BC
+		culture="odrysi"
+		religion="shamanism"
+		no_stats=yes
+		add_martial=6
+		add_charisma=6
+		add_finesse=5
+		add_zeal=7
+		no_traits=yes
+		add_trait="good_natured"
+		add_trait="humble"
+		add_gold=300
+		add_popularity=50
+	}
+	
+}

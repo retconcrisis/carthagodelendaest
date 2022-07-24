@@ -1,0 +1,26 @@
+﻿"PND"={
+	country="PND"
+	
+	#Pudappandiyan, ruler of Pandya, conquered Ollaiyur, near modern-day Pudukkottai
+	234={
+		first_name = "Pudappandiyan"
+		family = c:PND.fam:Pandya
+		birth_date=564.4.18		#190 BC
+		culture="pandya"
+		religion="hindu"
+		no_stats=yes
+		add_martial=8
+		add_charisma=6
+		add_finesse=5
+		add_zeal=8
+		add_gold=300
+		add_popularity=75
+		no_traits=yes
+		add_trait="founder"
+		add_trait="poet"
+		c:PND = {
+			set_as_ruler=char:234
+		}
+		dna="DvgO+MPw79rmv+a/An4CfgJyAnICkAKQAngCeAKAAoACdgJ2AocChwJxAnECeAJ4AncCdwKBAoECawJrAooCigKFAoUCdAJ0A50DnQKCAoIBUgFSAooCigKAAoABagFqAn8CfwKOAo4CeAJ4ATUBNQJUAlQCfQJ9AocChwJxAnECmQKZApECkQKXApcDegN6AokCiQKFAoUARwBHAoMCgwKEAoQCcQJxAnECcQF5AXkCZwJnAnYCdgKWApYCiwKLA54DngKUApQChwKHAV0BXQOdA50CfwJ/AnICcgKQApACjQKNAoYChgFZAVkA6QDpAIAAgACEAIQAfwB/AAcABwA2ADYAHwAfALkAuQKaApoAsQCxABAAEAB/AH8A+QD5APoA+gCaAJoA9wD3AOAA4ACvAK8AbwBvAS0BLQB/AH8A1gDWAE4ATgAdAB0ApQClATsBOwCiAKIALwAvAzsDOwDIAMgAhQCFADgAOACbAJsM1AzUAH8AfwZsBmwNdQ11AfwB/Aj/CHcKKgqkB14HhAAAAAAAAAAAAAAAAA=="
+	}
+	

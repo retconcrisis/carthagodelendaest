@@ -1,0 +1,401 @@
+﻿"Elysium_ROM"={
+	country="ROM"
+
+	#Scipio Africanus
+	4={		
+		first_name="Publius"
+		nickname="NICKNAME_SCIPIO_AFRICANUS"
+		family = c:ROM.fam:Cornelii
+		birth_date=518.12.1		#236 BC
+		death_date=571.6.1		#183 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=13
+		add_charisma=10
+		add_finesse=6
+		add_zeal=8
+		no_traits=yes
+		add_trait="brave"
+		add_trait="victorious"
+		add_trait="tactician"
+		dna="GfQZ9MJ8wnxslmyWAoMCgwJ4AngCfgJ+ApQClAOxA7ECagJqAo4CjgKVApUBVwFXAnkCeQTYBNgClAKUAoECgQFdAV0CkwKTApACkAOkA6QCagJqAngCeAJ0AnQCcgJyAmYCZgJpAmkCbAJsAngCeAFbAVsCZgJmAnICcgFbAVsCaAJoAo0CjQKMAowCjQKNAnkCeQJsAmwCgAKAA6wDrAKYApgCjgKOAnUCdQJzAnMChAKEAoICggJ1AnUCbgJuAoACgAKDAoMCcQJxAWIBYgJ0AnQCcwJzAnYCdgKDAoMCmAKYAnYCdgJaAloAQABAARUBFQLJAskBBwEHAvUC9QAmACYATQBNAG8AbwEYARgA7ADsALwAvAB/AH8ARQBFAu0C7QAJAAkAzADMAoACgADMAMwCGQIZATcBNwB/AH8BfwF/APsA+wEoASgC9gL2At8C3wNEA0QApACkApoCmgLBAsEBGAEYANEA0QTvBO8CVwJXAH8AfwSKBIoBIgFUADAAMAkHCdQBoAFwADAAMAAAAAAAAAAAAAAAAA=="
+	}
+}
+
+#Zoroastrian
+"Elysium_MAP"={
+	country="MAP"
+	
+	59={
+		first_name="Zoroaster"
+		family_name="Spitama"
+		birth_date=1.1.2
+		death_date=60.1.2
+		culture="bactrian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=5
+		add_charisma=16
+		add_finesse=10
+		add_zeal=16
+		dna="MLUm6JObk5vj5uPmAngCeAKNAo0CjgKOApcClwFaAVoDqgOqAm0CbQKJAokCbAJsAVEBUQKCAoIAVwBXApUClQA8ADwCdgJ2AngCeAJpAmkChQKFA64DrgJrAmsChgKGAnYCdgAbABsCcAJwABUAFQOjA6MCbwJvAnUCdQKZApkCdQJ1Ao8CjwJxAnECjAKMAVUBVQFZAVkCdQJ1AVMBUwJvAm8CfwJ/AoUChQKBAoECdAJ0AosCiwKKAooAYQBhAoQChAJ9An0CcgJyAo8CjwKpAqkCbwJvAVoBWgKEAoQClwKXApcClwIyAjIBFAEUANkA2QD3APcBMQExAJ8AnwALAAsAAAAAAIwAjAFGAUYA4wDjAscCxwAAAAAA8gDyAQsBCwAKAAoAqwCrAC8ALwKEAoQAlwCXADwAPAAAAAAAagBqAT8BPwAAAAAAqQCpAu4C7gFvAW8AKgAqAY0EmAK9Ar0BNQE1ATUBNQD4APgHeAd4AAAAAAU4BTgQKhAqAZMBkwWwBbAEqQ2EC14FdwAAAAAAAAAAAAAAAA=="
+	}
+}
+
+"Elysium_SEL"={
+	country="SEL"
+	
+	#Antiochus III, father of Seleukos IV and Antiochos IV
+	26={		
+		first_name="Antiochos"
+		nickname="NICKNAME_III_THE_GREAT"
+		family = c:SEL.fam:Seleukid
+		birth_date=513.5.3		#241 BC
+		death_date=567.7.9		#187 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=12
+		add_martial=12
+		add_charisma=9
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="seleucids"
+	}
+	
+	#Seleukos IV
+	27={		
+		first_name="Seleukos"
+		nickname="NICKNAME_IV_PHILOPATOR"
+		family = c:SEL.fam:Seleukid
+		birth_date=536.9.18		#218 BC
+		death_date=579.4.15		#175 BC
+		father="char:26"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=8
+		add_zeal=5
+		no_traits=yes
+		add_trait="seleucids"
+		dna="Huce5490j3TdwN3AAmYCZgJqAmoCegJ6An0CfQJ3AncCdwJ3AmoCagKOAo4CawJrApACkAA2ADYChgKGAowCjAJ1AnUDsQOxAo4CjgKRApEBTQFNAoQChAFiAWICewJ7AnoCegJoAmgCZwJnA6sDqwJmAmYCdwJ3AnUCdQJuAm4CgAKABL0EvQJ1AnUCkwKTA5oDmgJmAmYCbQJtAnECcQKBAoECeAJ4AoMCgwKEAoQCdQJ1AooCigJvAm8CgAKAAo0CjQKQApACkgKSAmsCawJ8AnwCkAKQAnYCdgKCAoICiQKJAVsBWwLLAssAsACwATsBOwFAAUAAyADIAIMAgwBpAGkADAAMADoAOgFsAWwDLgMuAQ8BDwB/AH8AygDKACgAKAEcARwA/QD9AJ8AnwAoACgCcAJwAD8APwB/AH8BDwEPAGoAagBaAFoAfQB9AVgBWAFMAUwAQABAAOwA7ABSAFIDOgM6AwoDCgCLAIsJkwmTAH8AfwR6BHoFaAVoAHsAewUABeUCOQI5AqgCqAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Antiochus IV
+	28={		
+		first_name="Antiochos"
+		nickname="NICKNAME_IV_EPIPHANES"
+		family = c:SEL.fam:Seleukid
+		birth_date=539.4.8		#215 BC
+		death_date=590.6.12		#164 BC
+		father="char:26"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=11
+		add_charisma=8
+		add_finesse=5
+		add_zeal=7
+		no_traits=yes
+		add_trait="seleucids"
+	}
+	
+	#Laodice IV, mother of Antiochus V and Demetrios I
+	29={		
+		first_name="Laodike"
+		nickname="NICKNAME_IV"
+		family = c:SEL.fam:Seleukid
+		birth_date=540.1.14		#214 BC
+		death_date=590.6.12		#164 BC
+		female = yes
+		father="char:26"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=9
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="seleucids"
+	}
+	
+	#Antiochus V, son of Antiochos IV
+	30={		
+		first_name="Antiochos"
+		nickname="NICKNAME_V_EUPATOR"
+		family = c:SEL.fam:Seleukid
+		birth_date=582.4.8		#172 BC
+		death_date=593.1.15		#161 BC
+		father="char:28"
+		mother="char:29"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=11
+		add_charisma=8
+		add_finesse=5
+		add_zeal=7
+		no_traits=yes
+		add_trait="seleucids"
+	}
+	
+	#Antiochus, prince and son of Antiochus III, father of Nysa in Pontus
+	67={
+		first_name="Antiochos"
+		family = c:SEL.fam:Seleukid
+		birth_date=544.12.3		#221 BC
+		death_date=599.6.12		#193 BC
+		father="char:26"			#Antiochus III
+		culture="macedonian"
+		religion="roman_pantheon"
+	}
+	
+}
+
+
+#Ptolemaic Cult of Alexander and the Ptolemies
+"Elysium_EGY"={
+	country="EGY"
+	
+	#Alexander the Great, deified and worshipped by Cult of Alexander in Egypt
+	44={
+		first_name="Alexander" 
+		nickname="NICKNAME_THE_GREAT"
+		family_name="Argead"
+		birth_date=398.7.1
+		death_date=431.6.1
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=16
+		add_charisma=16
+		add_finesse=6
+		add_zeal=12
+		no_traits=yes
+		add_trait="brave"
+		add_trait="victorious"
+		add_trait="ambitious"
+		add_trait="rash"
+		add_trait="argeads"
+		save_scope_as = alexander_the_great
+		dna="bHUc8ZKEooMW//PZAnICjwKjAo4CrQKDA40CjQRnApQCWwKYAFoCgQJsAmwDqQOpAmcCZwJ6AnsCggKLAmQCiQJ2AmoCawJ5BDYCkALLAoYCcAJyArsCjwJnAoYCaQJsAJcCeAJuAm4CaAKSAl8CgAGRA6YCaAJoArgCfwJ2AnYCaQJpAqACjAN7A60ApwJuArYCeAFPAVEEYwJvAl8CiAJ0AncCAAJ8AlEChAIfAnoCaAJsAnwCagLPAnQCbQKNAjYCbAKGAoYCiAKIAnQCdAKTApYCjAKPAq0CgwKKAnEE3AJuApMCmAKSAv4AowCjAOEA4QBfAF8ApADRADYANgCYAToAXQBdAjgAMQE1ADoAMgAyARwBHAAAAAAAagBqAV4BbwFCAG8AawBrAHUAkgEoASEDAAOLAWwBbAI4AAABAACeAmYBZgFAAUACngLAAvkATQDlAOUC7wC8BFYAlQDGAMYBXQFdAwEBVAQfA2gH6AudAAAAAABUAC8F/wXZAFAA9QUHBQM2ugIfAT4CHAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Ptolemy I Soter
+	36={
+		first_name="Ptolemaios"
+		nickname="NICKNAME_I_SOTER"
+		family = c:EGY.fam:Lagid
+		birth_date=386.12.1
+		death_date=472.1.22		#Janurary 282 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		dna="Pps8+4x9jH1ZhVmFAoQChAJzAnMAJAAkAnECcQJvAm8ClgKWAoUChQJwAnACdQJ1AokCiQJpAmkCdAJ0A60DrQKAAoAClAKUApUClQKUApQBVwFXAn4CfgKZApkClAKUAocChwFRAVEBUgFSApcClwJzAnMDrQOtAoECgQJrAmsChAKEApICkgKIAogCewJ7AoMCgwJnAmcCcwJzAo0CjQKZApkCjQKNAWMBYwOyA7ICcwJzAooCigOpA6kCkQKRAnoCegJtAm0CdAJ0AogCiAKPAo8ClwKXAm0CbQJ/An8ChwKHAnoCegRCBEIAegB6ALcAtwAXABcAlQCVACIAIgF5AXkAAwADAMYAxgKvAq8CxgLGAXABcAB/AH8ArgCuAGwAbADSANIABwAHAVYBVgE9AT0AggCCABAAEAB/AH8A3wDfAosCiwCXAJcBfQF9AH8AfwEiASICxwLHBMkEyQCxALEA9wD3AHsAewFiAWIGuQa5AH8AfwRxBHEFsACwAJEAoAAOAA4CZwA+Av8AkwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Berenice I
+	37={
+		first_name="Berenike"
+		nickname="NICKNAME_I"
+		family = c:EGY.fam:Magid
+		female=yes
+		birth_date=414.1.13
+		death_date=486.1.2		#268 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		dna="Z1FnUZ6HnofQ8NDwApMCkwJrAmsCfAJ8AnQCdAJ0AnQCaQJpAoQChAKVApUCZgJmAngCeAKOAo4CZwJnApkCmQJ2AnYCdAJ0A6IDogFfAV8AIgAiAosCiwJ3AncEugS6AnsCewJ9An0CagJqAmsCawJqAmoCdgJ2AnECcQJrAmsCcAJwAnYCdgJ2AnYCkAKQA6wDrAKTApMCfgJ+AnwCfAJyAnICgAKAAmwCbAKWApYDqwOrAoECgQJrAmsCZgJmAnICcgKVApUChQKFAEgASAKHAocCagJqAoMCgwFkAWQClAKUAoICggK0ArQAygDKAKEAoQFiAWIALwAvABkAGQFgAWABSAFIAtAC0AB6AHoBDQENAI0AjQAAAAAAUQBRAEcARwFJAUkAcgByANkA2QFlAWUAFAAUAvAC8AAAAAAAxADEAPsA+wBiAGIC0wLTAUgBSAByAHIAqQCpA2EDYQAYABgDNQM1AHQAdAM8AzwKbApsAAAAAASvBK8F9wX3AIIAggVzBXMCSAJIAtMC0wAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Ptolemy II Philadelphus
+	38={
+		first_name="Ptolemaios"
+		nickname="NICKNAME_II_PHILADELPHUS"
+		family = c:EGY.fam:Lagid
+		father="char:36"
+		mother="char:37"
+		birth_date=446.6.8
+		death_date=508.1.28		#28 January 268 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		dna="ONw43MCAwID/wf/BAmkCaQOZA5kCeQJ5A6oDqgJ5AnkCjAKMAncCdwJwAnACfgJ+AnoCegJxAnECewJ7BNgE2AKVApUCdQJ1ApACkAFWAVYChAKEAn8CfwOaA5oCkgKSAnACcAJ7AnsBWAFYA54DngJ0AnQCigKKAm0CbQJ4AngCgQKBApACkAJtAm0CeAJ4AnACcAKCAoICbwJvAVwBXAKHAocCegJ6ApQClAFaAVoCkwKTACcAJwJqAmoEuAS4Am8CbwJxAnECfgJ+AV4BXgFfAV8DngOeAosCiwBEAEQCcQJxA6MDowLeAt4AGQAZANkA2QFMAUwBPAE8AJgAmAK9Ar0AiwCLAPEA8QEhASEC9wL3Ao0CjQAAAAAAbgBuAVYBVgDsAOwAWwBbAP0A/QFfAV8AUwBTAAMAAwAAAAACtwK3ACQAJAKmAqYAGwAbASoBKgMtAy0AHQAdAM8AzwFrAWsBOwE7ABsAGwM7AzsE9wT3AAAAAAIwAjAFxwXHAFYAVgUFBQUCAQIBAmACYAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Ptolemy III Euergetes
+	39={
+		first_name="Ptolemaios"
+		nickname="NICKNAME_III_EUERGETES"
+		family = c:EGY.fam:Lagid
+		father="char:38"
+		birth_date=474.6.12		#280 BC
+		death_date=532.12.1		#December 222 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+	}
+	
+	#Ptolemy IV Philopator
+	40={
+		first_name="Ptolemaios"
+		nickname="NICKNAME_IV_PHILOPATOR"
+		family = c:EGY.fam:Lagid
+		father="char:39"
+		birth_date=510.5.10		#May 244 BC
+		death_date=550.7.30		#July 204 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+	}
+	
+	#Ptolemy V of Egypt
+	41={		
+		first_name="Ptolemaios"
+		nickname="NICKNAME_V_EPIPHANES"
+		family = c:EGY.fam:Lagid
+		father="char:40"
+		birth_date=544.10.9		#9 October 210 BC
+		death_date=574.9.20		#September 180 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=4
+		add_finesse=5
+		add_zeal=6
+		no_traits=yes
+		add_trait="lagids"
+		add_trait="ambitious"
+		dna="B+wH7KCAoIDQztDOAoMCgwFRAVECegJ6AoACgATHBMcBTgFOAmsCawKTApMCdgJ2ApACkAJ/An8ClQKVAn4CfgJsAmwCfAJ8AoICggOuA64BZAFkAo8CjwTaBNoCfwJ/An8CfwKHAocCigKKAmgCaAJuAm4CkQKRApkCmQKBAoECiQKJAnICcgKIAogCeQJ5ApgCmAJ/An8CfAJ8ApkCmQJsAmwCawJrAnICcgJ9An0CbwJvAoYChgKHAocCgAKAAnQCdAJuAm4ChAKEAnwCfAJ3AncChwKHA6MDowJpAmkCcQJxAowCjAC0ALQA6wDrAM0AzQDnAOcBaQFpAQ0BDQCkAKQAqQCpAMcAxwCgAKAAogCiAXYBdgB/AH8BMQExAK8ArwFeAV4AKQApAvgC+ABsAGwDgAOAAGMAYwB/AH8BEgESAKIAogD2APYADQANAWEBYQCJAIkBSAFIA3QDdAB6AHoDBQMFAs0CzQBtAG0JkAmQAH8AfwLfAt8FVwUaAP8AJgUBBdgCZwITAm0C3gAAAAAAAAAAAAAAAA=="
+	}
+	
+}
+
+"Elysium_PON"={
+	country="PON"
+	
+	#Mithridates III of Pontus
+	65={
+		first_name="Mithridates"
+		nickname="NICKNAME_III"
+		family = c:PON.fam:Mithridatid
+		birth_date=514.5.10		#240 BC
+		death_date=564.12.18		#190 BC
+		culture="greco_persian"
+		religion="roman_pantheon"
+	}
+	
+	#Pharnaces I of Pontus
+	66={
+		first_name="Pharnakes"
+		family = c:PON.fam:Mithridatid
+		birth_date=544.12.3		#210 BC
+		death_date=599.6.12		#155 BC
+		father="char:65"
+		culture="greco_persian"
+		religion="roman_pantheon"
+	}
+	
+	#67 (see above) is Antiochus, prince of the Seleukid Empire, son of Antiochus III and father of Nysa Seleukid in Pontus
+	
+	#Nysa Seleukid, wife of Pharnaces and mother of current ruler Mithridates V
+	68={
+		first_name="Nysa"
+		family = c:SEL.fam:Seleukid
+		birth_date=558.12.30	#196 BC
+		death_date=579.9.20		#c. 175 BC, died during childbirth of Nysa of Cappadocia
+		female = yes
+		father="char:67"
+		culture="macedonian"
+		religion="roman_pantheon"
+	}
+	
+	#Mithridates IV Philopator Philadelphus of Pontus
+	69={
+		first_name="Mithridates"
+		nickname="NICKNAME_IV_PHILOPATOR_PHILADELPHUS"
+		family = c:PON.fam:Mithridatid
+		birth_date=548.12.3		#206 BC
+		death_date=604.1.1		#150 BC
+		father="char:65"
+		culture="greco_persian"
+		religion="roman_pantheon"
+	}
+	
+}
+
+"Elysium_MAC"={
+	country="MAC"
+	
+	#Philip V, the second last king of Macedon
+	82={		
+		first_name="Philip"
+		nickname="NICKNAME_V_EPIPHANES"
+		family_name = "Antigonid"	#no longer uses families id, since now starts under no tag
+		birth_date=516.10.9		#238 BC
+		death_date=575.9.20		#179 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=13
+		add_charisma=10
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="antigonids"
+		add_trait="prominent"
+		add_trait="ambitious"
+		dna="hsqGyo+Ej4TXytfKAocChwKJAokCeQJ5Am4CbgS1BLUCeQJ5ApACkAFXAVcCigKKAoMCgwJ8AnwCjgKOAokCiQKJAokCggKCAoYChgFgAWAChQKFAoMCgwFeAV4CiAKIAmoCagJ0AnQCkgKSAmcCZwKCAoICkQKRApQClAKQApACfwJ/AocChwKGAoYCjAKMA54DngAcABwCZwJnApgCmAKFAoUCiwKLAn4CfgKUApQChAKEAnMCcwKLAosDnAOcA6kDqQJ2AnYCegJ6AooCigKOAo4DnwOfAoMCgwKUApQCmQKZAokCiQRMBEwBHAEcAoQChADhAOEAmgCaAuAC4AECAQICwgLCADcANwBqAGoBQwFDAEwATAB/AH8AEgASAGEAYQLcAtwCyALIABEAEQFRAVECgQKBAAEAAQB/AH8BGAEYAE8ATwFzAXMATwBPAR4BHgNbA1sAYABgAS8BLwC3ALcBEgESBO4E7gB1AHUDaQNpAH8AfwAPAA8F0wXTAGMAYwXHBccCUQJRAjYCtgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Perseus, the last king of Macedon
+	83={		
+		first_name="Perseus"
+		family_name = "Antigonid"	#no longer uses families id, since now starts under no tag
+		father="char:82"			#Philip V
+		birth_date=542.10.9		#212 BC
+		death_date=588.9.20		#166 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=4
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="antigonids"
+		add_trait="crafty"
+		add_trait="ambitious"
+	}
+	
+	
+}
+
+"Hostages_ROM" = {
+	country="ROM"
+	
+	#Alexander, son of Perseus and prince of Macedon, still alive but in exile in Italy
+	163={		
+		first_name="Alexandros"
+		family_name = "Antigonid"	#no longer uses families id, since now starts under no tag
+		father="char:83"			#Perseus
+		birth_date=562.6.9		#192 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=7
+		add_zeal=4
+		no_traits=yes
+		add_trait="antigonids"
+		add_trait="honest"
+		add_trait="humble"
+		add_trait="hostage_trait"		#in exile / is a hostage of Rome, but not imprisoned
+		dna="fLx8vId3h3fEh8SHAoMCgwFYAVgCawJrAmsCawJ0AnQCdQJ1AoACgAKSApIDoAOgAmcCZwJpAmkCkQKRAVABUAJvAm8EqwSrAnkCeQSyBLIClgKWApMCkwBDAEMClwKXAnECcQJ4AngCkgKSApMCkwJxAnECiAKIApkCmQKJAokChAKEAoICggKIAogCjQKNAooCigJvAm8CkAKQAo0CjQJ9An0CjAKMAnMCcwKDAoMCfAJ8ADgAOAJ4AngCaQJpAoMCgwKGAoYCgQKBAnECcQKLAosCkwKTAosCiwJ2AnYCjwKPApYClgLlAuUAIwAjABIAEgLVAtUA5gDmALEAsQCjAKMC7ALsAO4A7gCGAIYEmQSZAEoASgB/AH8BBgEGATYBNgCVAJUBIAEgAL8AvwLMAswDYANgAP0A/QB/AH8AsQCxAWMBYwAcABwAyQDJAWYBZgKPAo8AzQDNAGMAYwEIAQgBNwE3AKwArAMSAxIIXQhdAH8AfwDXA9cFhAWEAPAA8AWFBQ0BtgIcAv8C/wAAAAAAAAAAAAAAAA=="
+	}
+}
+
+
+

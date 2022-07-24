@@ -1,0 +1,58 @@
+﻿namespace = cde_flavor_pon
+
+#Birth of Mithridates 
+cde_flavor_pon.1 = {
+	type = country_event
+	title = "cde_flavor_pon.1.t"
+	desc = "cde_flavor_pon.1.desc"
+	picture = throneroom
+	
+	left_portrait = char:71		#Mithridates V
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PON
+		current_ruler = {
+			this = char:71		#Mithridates V
+		}
+		current_date > 619.1.1		#135 BC
+	}
+	
+	immediate = {
+		custom_tooltip = cde_flavor_pon.1.tt
+		
+		hidden_effect = {
+			create_character = {
+				first_name = "Mithridates"
+				family = c:PON.fam:Mithridatid
+				father = char:71
+				age = 0
+				birth_province = 1812    #Sinope
+				culture = greco_persian
+				religion = roman_pantheon
+				no_stats = yes
+				add_martial = 14
+				add_charisma = 12		#high charisma, won hearts in exile
+				add_finesse = 10
+				add_zeal = 7
+				add_trait="seleucids"				#Seleukid mother
+				add_trait="blood_of_mithridates"	#new trait for Mithridates bloodline
+				save_scope_as = mithridates_vi
+				dna="NeVs1a6Wnnn2/Pb8ApACkAJ4AngClwKXAq0CbQJ2ApICXgJ6AnYCdgJ3AncCiQKJAoYChgJ4AngCmAKYAoACgAKKAooDVwOoAn4CfgFgAWACjAKMAokCiQJyAnICgwKMAl0CcQOrA6sCjAKMAncCdwKSApIBUwFTAm0CbQKVApUCZwJnAo4CjgOeA54DmgOaAnYCdgKOAo4CdQJ1AnoCegKLAosBYwFjAn8CfwFZAVkCkAKQAmoCagJ1AnUCaQJpAnUCdQJoAmgCfAJ8AmwCbALTAnwCbQJtApcClwJrAmsBXgFeAn0CfQREBEQAGAAYAXIBcgE7ATsAgQCBAHEAcQFCAUIC2ALYAKgAqAEeAR4DYgNiACQAJAB/AH8AUABQAv0C/QAtAC0A6gDqAV8BXwC9AL0AYABgAFYAVgB/AH8BUwFTATwBPAKNAo0CjQKNAMoAygTLBMsA6wDrBNwE3AAcABwAVABUAEwATAEcARwHrgWuAH8AfwTgBOAFbgEBAP8A5gkYCRgCTAH8AgcAKgAAAAAAAAAAAAAAAA=="
+			}
+			set_variable = {
+				name = mithridates_vi_var
+				value = scope:mithridates_vi
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_pon.1.a
+		
+		set_variable = {
+			name = birth_of_mithridates_vi_flag
+		}
+	}
+}

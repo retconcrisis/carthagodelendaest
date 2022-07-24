@@ -1,0 +1,9 @@
+﻿color = rgb { 247 112 255 }
+
+ship_names = {
+	Emmaus Ephraim
+	Hebron
+	Jamnia Jericho
+	Lachish Lydda
+	Samaria Shechem Sepphoris
+}

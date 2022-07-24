@@ -1,0 +1,55 @@
+﻿cde_event_alexandria_lighthouse = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_alexandria_lighthouse.dds"
+}
+
+cde_event_alexandria_city = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_alexandria_city.dds"
+}
+
+cde_event_naval_battle_loading = {
+	theme = Naval
+	picture = "gfx/interface/event_window/event_naval_battle_loading.dds"
+}
+
+cde_event_tribal_raid_village = {
+	theme = Uncategorized
+	picture = "gfx/interface/event_window/event_tribal_raid_village.dds"
+}
+
+cde_event_burning_city_endgame = {
+	theme = War
+	picture = "gfx/interface/event_window/event_burning_city_endgame.dds"
+}
+
+cde_event_circus_maximus_endgame = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_circus_maximus_endgame.dds"
+}
+
+cde_event_carthage_levy = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_carthage_levy.dds"
+}
+
+cde_event_greek_debate_crowd = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_greek_debate_crowd.dds"
+}
+
+cde_event_spartan_life_wrestling = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_spartan_life_wrestling.dds"
+}
+
+cde_event_spartan_oligarchs = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_spartan_oligarchs.dds"
+}
+
+cde_event_roman_life_freemen = {
+	theme = Hubbub
+	picture = "gfx/interface/event_window/event_roman_life_freemen.dds"
+}
+

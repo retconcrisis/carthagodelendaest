@@ -1,0 +1,89 @@
+﻿namespace = cde_flavor_bactria
+
+#A Treacherous Son
+cde_flavor_bactria.1 = {
+	type = country_event
+	title = "cde_flavor_bactria.1.t"
+	desc = "cde_flavor_bactria.1.desc"
+	picture = dagger_behind_back
+	
+	left_portrait = char:118
+	right_portrait = scope:bac_treacherous_son_scope
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BAC
+		current_date >= 609.1.1		#145 BC or later
+		char:118 = {		#Eukratides I
+			is_alive = yes
+			is_ruler = yes
+			employer = root
+		}
+		OR = {
+			#Eukratides II or Heliokles I hate their father
+			char:120 = {
+				loyalty < 40
+				employer = root
+			}
+			char:121 = {
+				loyalty < 40
+				employer = root
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				char:120 = {
+					loyalty < 40
+				}
+			}
+			char:120 = {
+				save_scope_as = bac_treacherous_son_scope
+			}
+		}
+		else_if = {
+			limit = {
+				char:121 = {
+					loyalty < 40
+				}
+			}
+			char:121 = {
+				save_scope_as = bac_treacherous_son_scope
+			}
+		}
+		
+		set_as_ruler = scope:bac_treacherous_son_scope
+		
+		char:118 = {
+			death = {
+				death_reason = death_murdered_by_offspring
+				killer = scope:bac_treacherous_son_scope
+			}
+		}
+		
+	}
+	
+	option = {
+		name = cde_flavor_bactria.1.a
+		
+		add_stability = -30
+		
+		scope:bac_treacherous_son_scope = {
+			add_trait = cruel
+		}
+		
+		custom_tooltip = cde_flavor_bactria.1.tt
+		hidden_effect = {
+			every_character = {
+				limit = {
+					employer = root
+					loyalty >= 55
+				}
+				add_loyalty = loyalty_bac_killed_favored_ruler
+			}
+		}
+	}
+}

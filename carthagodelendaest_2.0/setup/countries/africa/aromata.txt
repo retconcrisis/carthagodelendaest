@@ -1,0 +1,5 @@
+﻿color = "phrygia_red"
+
+ship_names = {
+	
+}

@@ -1,0 +1,47 @@
+﻿"PAP"={
+	country="PAP"
+	
+	#Pylaemenes I, became ruler in 150 BC after his father/brother Morzios II
+	133={
+		first_name = "Pylaemenes"
+		family = c:PAP.fam:Morzioid
+		birth_date=561.5.26		#193 BC
+		culture="paphlagonian"
+		religion="anatolian_religion"
+		no_stats=yes
+		add_martial=5
+		add_charisma=6
+		add_finesse=8
+		add_zeal=7
+		no_traits=yes
+		add_trait="founder"
+		add_trait="benefactor"
+		add_gold=200
+		add_popularity=80
+		c:PAP = {
+			set_as_ruler=char:133
+		}
+	}
+	
+	#Pylaemenes II, son of current ruler and became king in 140 BC
+	134={
+		first_name = "Pylaemenes"
+		family = c:PAP.fam:Morzioid
+		birth_date=579.1.7		#175 BC
+		father="char:133"
+		culture="paphlagonian"
+		religion="anatolian_religion"
+		no_stats=yes
+		add_martial=6
+		add_charisma=4
+		add_finesse=6
+		add_zeal=7
+		no_traits=yes
+		add_trait="submissive"
+		add_trait="content"
+		add_gold=150
+		add_popularity=70
+	}
+	
+	
+}

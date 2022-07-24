@@ -1,0 +1,129 @@
+﻿l_english:
+ #NEW government types
+ 
+ #Republics
+ 
+ achaean_league_gov:0 "Achaean League"
+ achaean_league_gov_desc:0 "One of the earliest forms of federalism, the Achaean League is confederation of states that balances individual autonomy and martial unity, the league is governed by a strategos (the leading general), a boule (council) open to citizens over 30 years of age, and a synodos, an assembly of all male citizens who met four times a year. The historian Polybius noted that although the Achaean cities were smaller and less powerful than their Arcadian and Laconian neighbors, the equality and democratic political system of their league government allowed them to acquire the membership of their neighboring states."
+ achaean_league_gov_ruler:0 "Strategos"
+ 
+ koinon_league_gov:0 "League Republic"
+ koinon_league_gov_desc:0 "Known in Greek as 'koinon,' this system of government is comprised of a league or federation of semi-autonomous city-states with shared military leadership, armies and patron deities."
+ koinon_league_gov_ruler:0 "Strategos"
+ koinon_league_gov_ruler_thessalian:0 "Tagos"   #Tagus, historical name for kings, generals and leaders in Thessaly
+ koinon_league_gov_ruler_boeotian:0 "Boiotarches"   #Boeotarch, historical name for leaders in Boeotia
+ koinon_league_gov_ruler_lycian:0 "Lyciarch"    #President of Lycian League
+ 
+ 
+ #Tribal
+ 
+ tribal_monarchy:0 "Tribal Monarchy"
+ tribal_monarchy_desc:0 "A tribal monarchy is when a tribe achieves a high degree of centralization and establishes a dynastic lineage of rulers in a line of succession, but remains relatively decentralized compared to traditional monarchies, with much of the power still in the hands of the tribal nobility."
+ tribal_monarchy_ruler:0 "King"
+ tribal_monarchy_ruler_female:0 "Queen"
+ tribal_monarchy_consort:0 "Consort"
+ 
+ 
+ #Monarchies
+ 
+ despotic_monarchy_ruler:0 "King"       #missing loc in base
+ despotic_monarchy_ruler_female:0 "Queen"
+ 
+ 
+ 
+ 
+ 
+ #Regency governments - for regents that are guardians of ruler, not taking their place
+ regency_despotic_monarchy:0 "Regency"
+ regency_despotic_monarchy_desc:0 "A regent is temporarily placed in power, effectively ruling and administering the land on behalf of the de jure monarch. When the de jure ruler comes of age, then the regent shall step down and the realm shall be transferred back into their hands."
+ regency_despotic_monarchy_ruler:0 "King"
+ regency_despotic_monarchy_ruler_female:0 "Queen"
+ regency_despotic_monarchy_ruler_hellenic:0 "Basileus"          #Greek cultural name
+ regency_despotic_monarchy_ruler_female_hellenic:0 "Basilissa"
+ regency_despotic_monarchy_co_ruler:0 "Regent"
+ regency_despotic_monarchy_co_ruler_female:0 "Regent"
+ regency_despotic_monarchy_consort:0 "Consort"
+ 
+ regency_aristocratic_monarchy:0 "Regency"
+ regency_aristocratic_monarchy_desc:0 "A regent is temporarily placed in power, effectively ruling and administering the land on behalf of the de jure monarch. When the de jure ruler comes of age, then the regent shall step down and the realm shall be transferred back into their hands."
+ regency_aristocratic_monarchy_ruler:0 "King"
+ regency_aristocratic_monarchy_ruler_female:0 "Queen"
+ regency_aristocratic_monarchy_ruler_hellenic:0 "Basileus"
+ regency_aristocratic_monarchy_ruler_female_hellenic:0 "Basilissa"
+ regency_aristocratic_monarchy_co_ruler:0 "Regent"
+ regency_aristocratic_monarchy_co_ruler_female:0 "Regent"
+ regency_aristocratic_monarchy_consort:0 "Consort"
+ 
+ regency_despotic_monarchy:0 "Regency"
+ regency_despotic_monarchy_desc:0 "A regent is temporarily placed in power, effectively ruling and administering the land on behalf of the de jure monarch. When the de jure ruler comes of age, then the regent shall step down and the realm shall be transferred back into their hands."
+ regency_despotic_monarchy_ruler:0 "King"
+ regency_despotic_monarchy_ruler_female:0 "Queen"
+ regency_despotic_monarchy_ruler_hellenic:0 "Basileus"
+ regency_despotic_monarchy_ruler_female_hellenic:0 "Basilissa"
+ regency_despotic_monarchy_co_ruler:0 "Regent"
+ regency_despotic_monarchy_co_ruler_female:0 "Regent"
+ regency_despotic_monarchy_consort:0 "Consort"
+ 
+ regency_despotic_monarchy:0 "Regency"
+ regency_despotic_monarchy_desc:0 "A regent is temporarily placed in power, effectively ruling and administering the land on behalf of the de jure monarch. When the de jure ruler comes of age, then the regent shall step down and the realm shall be transferred back into their hands."
+ regency_despotic_monarchy_ruler:0 "King"
+ regency_despotic_monarchy_ruler_female:0 "Queen"
+ regency_despotic_monarchy_ruler_hellenic:0 "Basileus"
+ regency_despotic_monarchy_ruler_female_hellenic:0 "Basilissa"
+ regency_despotic_monarchy_co_ruler:0 "Regent"
+ regency_despotic_monarchy_co_ruler_female:0 "Regent"
+ regency_despotic_monarchy_consort:0 "Consort"
+ 
+ regency_stratocratic_monarchy:0 "Regency"
+ regency_stratocratic_monarchy_desc:0 "A regent is temporarily placed in power, effectively ruling and administering the land on behalf of the de jure monarch. When the de jure ruler comes of age, then the regent shall step down and the realm shall be transferred back into their hands."
+ regency_stratocratic_monarchy_ruler:0 "King"
+ regency_stratocratic_monarchy_ruler_female:0 "Queen"
+ regency_stratocratic_monarchy_ruler_hellenic:0 "Basileus"
+ regency_stratocratic_monarchy_ruler_female_hellenic:0 "Basilissa"
+ regency_stratocratic_monarchy_co_ruler:0 "Regent"
+ regency_stratocratic_monarchy_co_ruler_female:0 "Regent"
+ regency_stratocratic_monarchy_consort:0 "Consort"
+ 
+ regency_theocratic_monarchy:0 "Regency"
+ regency_theocratic_monarchy_desc:0 "A regent is temporarily placed in power, effectively ruling and administering the land on behalf of the de jure monarch. When the de jure ruler comes of age, then the regent shall step down and the realm shall be transferred back into their hands."
+ regency_theocratic_monarchy_ruler:0 "King"
+ regency_theocratic_monarchy_ruler_female:0 "Queen"
+ regency_theocratic_monarchy_ruler_hellenic:0 "Basileus"
+ regency_theocratic_monarchy_ruler_female_hellenic:0 "Basilissa"
+ regency_theocratic_monarchy_co_ruler:0 "Regent"
+ regency_theocratic_monarchy_co_ruler_female:0 "Regent"
+ regency_theocratic_monarchy_consort:0 "Consort"
+ 
+ regency_plutocratic_monarchy:0 "Regency"
+ regency_plutocratic_monarchy_desc:0 "A regent is temporarily placed in power, effectively ruling and administering the land on behalf of the de jure monarch. When the de jure ruler comes of age, then the regent shall step down and the realm shall be transferred back into their hands."
+ regency_plutocratic_monarchy_ruler:0 "King"
+ regency_plutocratic_monarchy_ruler_female:0 "Queen"
+ regency_plutocratic_monarchy_ruler_hellenic:0 "Basileus"
+ regency_plutocratic_monarchy_ruler_female_hellenic:0 "Basilissa"
+ regency_plutocratic_monarchy_co_ruler:0 "Regent"
+ regency_plutocratic_monarchy_co_ruler_female:0 "Regent"
+ regency_plutocratic_monarchy_consort:0 "Consort"
+ 
+ 
+ 
+ 
+ 
+ #New subject types - see diplomacy_l_english in vanilla for example
+ socius_subject:0 "Socii"           #modifier name to levy
+ LEAD_socius_subject:0 "#T $LIST$#!\nSocius"
+ AM_socius_subject:0 "#T $LIST$#!\nSocius of $LIST$."
+ CANCEL_socius_subjectTITLE:0 "Cancel Socius Status"
+ CANCEL_socius_subject_TOOLTIP_HEADER:0 "Cancel Socius Status"
+ CANCEL_socius_subject_DESC:0 "Stops being a Socius of Rome"
+ CANCEL_socius_subject_FLAVOR:0 "Canceling their Socius status will make them independent and end their military obligations to us, but will also mean that we no longer have to protect them."
+ 
+ foederati_subject:0 "Foederati"          #modifier name to levy
+ LEAD_foederati_subject:0 "#T $LIST$#!\nFoederatus"
+ AM_foederati_subject:0 "#T $LIST$#!\nFoederatus of $LIST$."
+ CANCEL_foederati_subjectTITLE:0 "Cancel Foederatus Status"
+ CANCEL_foederati_subject_TOOLTIP_HEADER:0 "Cancel Foederatus Status"
+ CANCEL_foederati_subject_DESC:0 "Stops being a Foederatus of Rome"
+ CANCEL_foederati_subject_FLAVOR:0 "Canceling their Foederatus status will make them independent and end their military obligations to us, but will also mean that we no longer have to protect them."
+ 
+ 
+ 

@@ -1,0 +1,80 @@
+﻿"PON"={
+	country="PON"
+
+	#Laodice of Pontus, widow of her brother Mithridates IV
+	70={
+		first_name="Laodike"
+		family = c:PON.fam:Mithridatid
+		birth_date=554.8.27		#200 BC
+		female = yes
+		father="char:65"	#Mithridates III
+		culture="greco_persian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=2
+		add_charisma=6
+		add_finesse=5
+		add_zeal=6
+		no_traits=yes
+		add_trait="loving"
+		add_trait="generous"
+		add_trait="blood_of_mithridates"	#new trait for Mithridates bloodline
+		add_gold=250
+		add_popularity=50
+		dna="EO0Q7btyu3Krt6u3AVwBXAOwA7ACjgKOAnICcgKOAo4CkQKRAmgCaAKIAogCmQKZAnMCcwKZApkCewJ7ApcClwKCAoICcgJyAmoCagOuA64CfwJ/AoICggKIAogBbgFuAmYCZgJzAnMCeQJ5An4CfgJ5AnkEyQTJApcClwJ4AngCfgJ+AmoCagKPAo8CbwJvAo0CjQJ6AnoCagJqAosCiwJzAnMCagJqAokCiQJ8AnwCiwKLAmkCaQJuAm4ClgKWA6IDogKTApMCewJ7A6sDqwKHAocCcQJxApQClAKEAoQBWgFaAmkCaQIOAg4CwwLDACMAIwFcAVwAbgBuAMkAyQBNAE0BIQEhAtAC0AACAAIAHgAeAFwAXAB/AH8AqwCrADIAMgETARMBXQFdATEBMQAeAB4AigCKAPEA8QB/AH8CkwKTANkA2QCmAKYAXwBfAPAA8ABTAFMBeQF5AIQAhACaAJoDJAMkAKgAqAEcARwMwwlsAH8AfwNbA1sFAgUcAHkAZgWKBYoNiQJuAvYC9gAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Mithridates V of Pontus
+	71={
+		first_name="Mithridates"
+		nickname="NICKNAME_EUERGETES"
+		family = c:PON.fam:Mithridatid
+		birth_date=574.8.27		#180 BC
+		father="char:66"			#Pharnaces I
+		mother="char:68"			#Nysa Seleukid
+		culture="greco_persian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=7
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="benefactor"
+		add_trait="silver_tongued"
+		add_trait="seleucids"				#Seleukid mother
+		add_trait="blood_of_mithridates"	#new trait for Mithridates bloodline
+		add_gold=400
+		add_popularity=70
+		c:PON = {
+			set_as_ruler=char:71
+		}
+		dna="LdxI3JqYoIyxwrHCAnwCfAJ+An4ChAKEAWIBYgJ/An8CbwJvAmcCZwKPAo8CbgJuAm4CbgKEAoQCfgJ+ApACkAJoAmgCgQKBAokCiQJ9An0CiwKLADQANAKOAo4CbAJsAncCdwKLAosCfwJ/AnECcQJ8AnwCdwJ3AogCiAJsAmwDsQOxA50DnQJzAnMDngOeAlsCewJ0AnQCewJ7AoQChAJ4AngCiwKLAowCjAKNAo0CegJ6An0CfQKDAoMClAKUAm4CbgKOAo4CjgKOA6QDpAKRApEClgKWAm0CbQJuAm4CgQKBApgCmAETARMAfACkAAAALQANAA0BVwFXALMAswApACkAYQBhAHEAcQEHAQcDKgMqACAAIAB/AH8A4gDiAisCnAA1ADUAuQC5AJ4AngDiAOIAmwCbAtIC0gB/AH8AEwATAWABYAEUARQAjgCOARgBGAFHAUcAmQCZAz8DPwCtAK0BbQFtAXoBegMFAwUMzQNTAKgAfwQPAA8FWgWwAAcABwV1BXUEjAKgAv8CbQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Laodice VI Seleukid
+	72={
+		first_name="Laodike"
+		nickname="NICKNAME_VI"
+		family = c:SEL.fam:Seleukid
+		birth_date=579.1.13		#175 BC
+		female = yes
+		father="char:28"			#Antiochus IV of the Seleukid Empire
+		marry_character="char:71"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=5
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="gluttonous"
+		add_trait="arbitrary"
+		add_trait="seleucids"
+		add_gold=400
+		add_popularity=40
+		dna="Ltgu2K2IrYjUutS6An8CfwOdA50CmAKYAnsCewJ0AnQCZgJmApYClgKTApMCeQJ5An4CfgKNAo0CdAJ0An8CfwKBAoEDoAOgAo8CjwFMAUwCcQJxAoACgAJ5AnkDngOeAnsCewKWApYCcgJyA6YDpgJ4AngCegJ6AmcCZwFhAWEDpgOmAnsCewJ4AngCkgKSAosCiwJvAm8CcgJyAokCiQJwAnACkgKSAnYCdgKAAoAClwKXAmcCZwJnAmcARABEAnACcAJ5AnkCaAJoAVQBVAJ3AncCbgJuApUClQS9BL0CkwKTAo0CjQItAi0CjQKNABMAEwF4AXgC3wLfARwBHACnAKcAhgCGATMBMwKBAoEANwA3ABgAGAB/AH8AjgCOAT8BPwFSAVICxgLGAM4AzgDbANsAUQBRAuwC7AB/AH8AaABoAKUApQFpAWkAbQBtAV8BXwEiASIBdgF2AL4AvgASABIAwQDBAHEAcQBTAFML/wyOAH8AfwTLBMsF/wVkAP8AegWOBY4E/wInApACkAAAAAAAAAAAAAAAAA=="
+	}
+	
+}

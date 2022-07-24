@@ -1,0 +1,24 @@
+﻿"TAY"={
+	country="TAY"
+	
+	#Mauakes, Sakan ruler of the Ionians of Tayuan
+	257={		
+		first_name="Mauakes"
+		family = c:TAY.fam:Sakkan
+		birth_date=569.4.13		#185 BC
+		culture="sakan"
+		religion="indo_iranian_religion"
+		no_stats=yes
+		add_martial=7
+		add_charisma=3
+		add_finesse=8
+		add_zeal=7
+		add_gold=300
+		add_popularity=70
+		c:TAY = {
+			set_as_ruler=char:257
+		}
+		dna="BP4E/qaipqKq1KrUAUwBTAKOAo4ChQKFAmwCbAOpA6kBXwFfAn8CfwJzAnMCkgKSAnYCdgJsAmwCmAKYAokCiQFOAU4BTwFPAmkCaQKFAoUCmAKYAmwCbAJ4AngCiQKJApcClwKEAoQChgKGAVEBUQKQApACawJrAnACcAKQApAChQKFAn4CfgJoAmgEtAS0AoACgAKVApUCfAJ8An4CfgJtAm0CcgJyAoACgAKSApIBUAFQAo4CjgKLAosCiwKLAoYChgOZA5kCfQJ9AnwCfAKuAq4DnAOcAm0CbQJ9An0CeQJ5AmwCbAIeAh4BCwELAGwAbAEcARwArwCvATgBOAF9AX0AlwCXAXYBdgANAA0ACgAKAA0ADQB/AH8AZQBlAtAC0AEzATMARgBGAOIA4gCiAKIALQAtAEgASAB/AH8AaABoAA0ADQLIAsgCvAK8AAcABwDRANEAVQBVA3ADcACpAKkDJwMnBHgEeAMrAysMeAx4AH8AfwWoBagQOhDcAeEB4QVcBVwNdg12BfwF/AAAAAAAAAAAAAAAAA=="
+	}
+	
+}

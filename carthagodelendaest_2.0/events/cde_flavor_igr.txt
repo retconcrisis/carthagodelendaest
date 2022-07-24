@@ -1,0 +1,225 @@
+﻿namespace = cde_flavor_igr
+
+#Menandros Patron of Buddhism
+cde_flavor_igr.1 = {
+	type = country_event
+	title = "cde_flavor_igr.1.t"
+	desc = "cde_flavor_igr.1.desc"
+	picture = great_work_animals
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IGR
+		is_monarchy = yes
+		current_ruler = {
+			this = char:122		#Menander
+		}
+	}
+	
+	option = {
+		name = cde_flavor_igr.1.a
+		
+		custom_tooltip = cde_flavor_igr.1.tt
+		
+		capital_scope = {
+			define_pop = {
+				culture = gandhari
+				religion = buddhism
+				type = freemen
+			}
+		}
+	}
+}
+
+#Nagasena the Buddhist Sage
+cde_flavor_igr.2 = {
+	type = country_event
+	title = "cde_flavor_igr.2.t"
+	desc = "cde_flavor_igr.2.desc"
+	picture = ascetic
+	
+	left_portrait = current_ruler
+	right_portrait = scope:nagasena_char_scope
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IGR
+		is_monarchy = yes
+		current_ruler = {
+			this = char:122		#Menander
+		}
+		current_date > 605.6.1		#149 BC
+		has_civil_war = no
+		war = no
+		NOT = { has_variable = igr_menander_buddhist_convert }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_character = {		#Nagasena spawns
+				first_name="Nagasena"
+				family_name="Thera"
+				age = 70
+				female = no
+				culture = dardic		#born in Himalayas to a Brahmin family
+				religion = buddhism
+				no_traits = yes
+				add_trait = monk_trait		#new Monk trait, cannot hold office
+				add_trait = pious
+				add_trait = devout
+				add_trait = humble
+				no_stats = yes
+				add_martial = 0
+				add_charisma = 7
+				add_finesse = 5
+				add_zeal = 25
+				dna="IfAh8M2rzau/pL+kApgCmAJ8AnwCfgJ+AocChwKYApgDpAOkAnwCfAKOAo4CcQJxAsQCmAKVApUClAKUAm0CbQJtAm0CcQJxAnMCcwKKAooCbwJvBLkEuQKUApQCkwKTAoICggJvAm8ClAKUAAwADAJiAmICbwJvAmoCagJrAmsCewJ7AosCiwOnA6cDdwN3AWYBZgTQBNACgQKBAoMCgwJ3AncClQKVAn8CfwKNAo0ChwKHAowCjAJ/An8CgQKBApgCmAKJAokCbgJuAmYCZgFsAWwCcgJyAm8CbwJ5AnkCigKKAoQChARIBEgAygDKAIgAiAD7APsBLgEuAAUABQBEAEQAeQB5AC8ALwCGAIYDdQN1ABkAGQB/AH8AQwBDAM0AzQDgAOABCAEIALYAtgLLAssBIgEiAo8CjwB/AH8BEwETAPUA9QB8AHwATgBOAQYBBgBrAGsAQQBBAE4ATgDEAMQAwwDDAxgDGADoAOgEmASYAH8AfwYgBiAFAAxgAecB5wgACNoJAAn+BoIGggAAAAAAAAAAAAAAAA=="
+				save_scope_as = nagasena_char_scope
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_igr.2.a
+		
+		custom_tooltip = cde_flavor_igr.2.tt
+		
+		trigger_event = { 
+			id = cde_flavor_igr.3
+			days = { 90 120 }
+		}
+	}
+	
+	option = {
+		name = cde_flavor_igr.2.b
+		char:122 = {
+			set_character_religion = buddhism
+			add_zeal = 1
+		}
+		
+		set_variable = {
+			name = igr_menander_buddhist_convert
+		}
+	}
+}
+
+#Menandros, Follower of the Buddha?
+cde_flavor_igr.3 = {
+	type = country_event
+	title = "cde_flavor_igr.3.t"
+	desc = "cde_flavor_igr.3.desc"
+	picture = ascetic
+	
+	left_portrait = current_ruler
+	right_portrait = scope:nagasena_char_scope
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IGR
+		is_monarchy = yes
+		current_ruler = {
+			this = char:122		#Menander
+		}
+		NOT = { has_variable = igr_menander_buddhist_convert }
+	}
+	
+	option = {
+		name = cde_flavor_igr.3.a
+		char:122 = {
+			set_character_religion = buddhism
+			add_zeal = 1
+		}
+		
+		set_variable = {
+			name = igr_menander_buddhist_convert
+		}
+		
+		ai_chance = {
+            factor = 1
+		}
+	}
+	
+	option = {
+		name = cde_flavor_igr.3.b
+		custom_tooltip = cde_flavor_igr.3.tt
+		
+		ai_chance = {
+            factor = 0	#AI will not choose
+		}
+	}
+}
+
+#Ashes of Menandros
+cde_flavor_igr.4 = {
+	type = country_event
+	title = "cde_flavor_igr.4.t"
+	desc = "cde_flavor_igr.4.desc"
+	picture = religious_rite
+	
+	left_portrait = current_ruler
+	right_portrait = char:122
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IGR
+		char:122 = {
+			is_alive = no
+		}
+		has_variable = igr_menander_buddhist_convert
+	}
+	
+	option = {
+		name = cde_flavor_igr.4.a
+		
+		custom_tooltip = cde_flavor_igr.4.a.tt
+		
+		create_country_treasure = {
+			key = "ashes_of_menandros_treasure"
+			icon = "treasure_gandharan_urn"
+			modifier = {
+				local_freemen_happyness = 0.15
+			}
+		}
+		
+		every_owned_province = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+                name = ashes_of_menander_country_capital_mod
+                duration = 3600 # 10 years
+            }
+		}
+	}
+	
+	option = {
+		name = cde_flavor_igr.4.b
+		
+		custom_tooltip = cde_flavor_igr.4.b.tt
+		
+		create_country_treasure = {
+			key = "ashes_of_menandros_treasure"
+			icon = "treasure_gandharan_urn"
+			modifier = {
+				local_freemen_happyness = 0.15
+			}
+		}
+		
+		every_owned_province = {
+			limit = {
+				is_state_capital = yes
+			}
+			add_province_modifier = {
+				name = ashes_of_menander_country_state_mod
+				duration = 3600 # 10 years
+			}
+		}
+	}
+}
+

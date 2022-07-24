@@ -1,0 +1,102 @@
+﻿"CAR"={
+	country="CAR"
+	20={
+		first_name = "Hasdrubal"
+		family_name = "Hasdrubid"
+		birth_date=569.1.12		#185 BC
+		culture="carthaginian"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=5
+		add_finesse=5
+		add_zeal=4
+		no_traits=yes
+		add_trait="disciplined"
+		add_trait="secure"
+		add_gold=100
+		add_popularity=40
+		c:CAR = {
+			set_as_ruler=char:20
+		}
+		dna="A/sD+7CWsJbP9s/2AnwCfAOaA5oBYAFgApgCmAKMAowCfQJ9ApMCkwKFAoUCkQKRAVcBVwKWApYCaAJoA6ADoAKuAq4CcgJyAnoCegJ7AnsCPgI+AsACwAJ4AngBYgFiAokCiQLKAsoCbgJuAm0CbQKHAocCeAJ4A5cDlwKZApkCdQJ1ApcClwKIAogClQKVApYClgJnAmcCaQJpA7sDuwKSApIDpQOlApQClAJ9An0CZgJmAooCigK7ArsE5wTnAm8CbwFUAVQCbwJvAmgCaATYBNgCfgJ+AVgBWAFkAWQCbwJvAnUCdQQtBC0CwQLBAIYAhgKpAqkAzADMAXcBdwFvAW8BEgESAGQAZAFqAWoC7wLvAr8CvwB/AH8AmQCZAEQARALbAtsAwQDBACwALADTANMAMQAxACcAJwB/AH8BBgEGATYBNgA/AD8AUgBSASsBKwAtAC0BFAEUA1UDVQFCAUIBEAEQAUcBRwIAAgAC4QLhAH8AfwWfBZ8ERA/RAdMBUALLBhgrHAijBf8MZAAAAAAAAAAAAAAAAA=="
+	}
+	
+	21={
+		first_name = "Himilco Phameas"
+		family_name = "Hamilcid"
+		birth_date=578.5.20
+		culture="carthaginian"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=3
+		add_zeal=5
+		no_traits=yes
+		add_trait="aggressive"
+		add_trait="proud"
+		dna="DfwN/KGPoY+q9qr2AnwCfAJyAnICiQKJAm8CbwKXApcCcQJxAmgCaABHAEcCmQKZApYClgJ9An0CdAJ0An8CfwKdAp0CcgJyA6IDogKEAoQCPgI+AqwCrAKNAo0CigKKAn8CfwPkA+QCdgJ2AnECcQKCAoICjgKOAnYCdgKMAowCjQKNAnkCeQKAAoACdQJ1Am8CbwS5BLkCgwKDA7sDuwJ1AnUCigKKAngCeAJoAmgCdQJ1AnACcAGbAZsBoAGgAm4CbgKWApYCdwJ3AnACcAKMAowCbgJuBJYElgKSApIBWQFZAmgCaAR3BHcA5wDnAGEAYQB7AHsA6gDqApwCnABxAHEAJQAlASUBJQLNAs0BKQEpAoACgAB/AH8ASwBLAGkAaQC4ALgA+gD6AUwBTACuAK4A2wDbALwAvAB/AH8BfwF/ABcAFwBNAE0AqACoAVABUADCAMIAmwCbA2oDagKAAoAClwKXAVIBUgFyAXIMfAx8AH8AfwUHBQcPTg9OAQIBAgabBpsDtgh9A/AMBwAAAAAAAAAAAAAAAA=="
+
+	}
+	
+	213={
+		first_name = "Hamilcar"
+		nickname="NICKNAME_THE_SAMNITE"
+		birth_date=547.5.5
+		culture="carthaginian"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=10
+		add_finesse=8
+		add_zeal=7
+		no_traits=yes
+		add_trait="prominent"
+		add_trait="abrasive"
+		add_trait="reckless"
+		add_gold=150
+		add_popularity=70
+		c:CAR = {
+			set_as_coruler=char:213
+		}
+		dna="ffN984WGhYaq9qr2An4CfgOiA6ICawJrAmgCaAJsAmwCfwJ/AmwCbAArACsCegJ6AoQChAKRApECsAKwAn8CfwFSAVICjwKPAVEBUQJ8AnwCfgJ+AVgBWAJ/An8AIAAgApYClgJ+An4CawJrAVMBUwKGAoYCdQJ1AokCiQS1BLUCZgJmBNEE0QKGAoYCkwKTApICkgJqAmoCfAJ8AncCdwJsAmwCagJqAmgCaAKLAosCkwKTApgCmAOuA64AUABQAm8CbwObA5sCdQJ1Am4CbgKbApsALwAvAVUBVQJyAnICgwKDAo0CjQKvAq8AcwBzAAsACwEgASAA1wDXAFEAUQBGAEYBWQFZAR0BHQBqAGoDYQNhAEQARAB/AH8AjgCOAvEC8QAkACQA5ADkAUcBRwFsAWwDqAOoAWYBZgB/AH8ALAAsAIkAiQFTAVMAhwCHAT4BPgDaANoA/wD/A3gDeAC7ALsCxgLGAwADAAMvAy8LoguiAH8AfwWaBZoEQwT4Aa4BrgL0AvQDyQPJA2sDawAAAAAAAAAAAAAAAA=="
+	}
+	
+	214={
+		first_name = "Carthalo"
+		birth_date=555.2.7
+		culture="carthaginian"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=8
+		add_finesse=8
+		add_zeal=7
+		add_gold=100
+		add_popularity=50
+	}
+	
+}
+
+"CAR_exile_in_Numidia"={
+	country="NUM"
+
+	215={
+		first_name = "Hannibal"
+		nickname="NICKNAME_THE_STARLIGHT"
+		birth_date=548.3.13
+		culture="carthaginian"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=9
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="tolerant"
+		add_trait="forgiving"
+		add_gold=100
+		dna="SOpI6oaRhpGs7KzsAn0CfQKMAowCcgJyAoMCgwKLAosDsQOxAncCdwOoA6gCewJ7Am4CbgJnAmcCgAKAAmkCaQFPAU8ClwKXApUClQKHAocClAKUApMCkwJ9An0ChAKEA6IDogJ3AncCjgKOAVcBVwOuA64DqgOqA6ADoAJnAmcCdwJ3AnQCdAJ4AngCbQJtAnsCewJvAm8CeQJ5ApcClwJwAnAChwKHAm4CbgOlA6UCmAKYA50DnQTEBMQEsgSyApYClgKRApEDowOjBCAEIAO6A7oCjwKPAnMCcwTkBOQCfgJ+AnUCdQLMAswA8QDxAHgAeADRANEBXwFfABEAEQBkAGQCvwK/AUcBRwC4ALgDewN7AQoBCgB/AH8BHAEcAFwAXACbAJsBGQEZAOYA5gBQAFAC+gL6AMEAwQB/AH8BDwEPAQABAAFUAVQABgAGAT8BPwFbAVsA0QDRA3IDcgC/AL8C9QL1BJYElgCfAJ8GYQZhAH8AfwX+Bf4EpASkAS8BLwIjAiMD/AP8A/UD9QAAAAAAAAAAAAAAAA=="
+	}
+}

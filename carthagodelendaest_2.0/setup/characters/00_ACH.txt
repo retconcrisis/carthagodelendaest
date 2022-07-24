@@ -1,0 +1,91 @@
+﻿"ACH"={
+	country="ACH"
+	
+	#Diaeus of Megalopolis
+	96={
+		first_name = "Diaeos"
+		family = c:ACH.fam:Diaeid
+		birth_date=561.12.7		#193 BC
+		culture="arcadian"		#from Arcadia
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=5
+		add_finesse=4
+		add_zeal=4
+		no_traits=yes
+		add_trait="reckless"
+		add_trait="cruel"
+		add_trait="corrupt"
+		add_gold=250
+		add_popularity=60
+		dna="JP4k/ouMi4z/tzCbAmgCaAJnAmcCiQKJAVYBVgJ4AngClgKWAm8CbwKRApEE2wTbAnACcAKCAoIAPwA/AnkCeQKOAo4CbwJvAmsCawTEBMQBTgFOAoMCgwJtAm0CawJrAn4CfgJtAm0CcQJxAmcCZwJuAm4ClQKVAnUCdQJ1AnUCmQKZAnICcgKVApUCmQKZAoUChQJuAm4BjgFaAoICggFdAV0CjAKMApkCmQA5ADkCcwJzAm8CbwKIAogCdgJ2AoACgAKKAooCdwJ3AoICggJuAm4CbQJtApUClQKIAogCkAKQApYClgKFAoUAFwAXApUClQEnAScBTwFPAP4A/gDWANYAMgAyAH4AfgC6ALoAaQBpANYA1gB/AH8ADwAPAFIAUgBeAF4C4gLiAWABYABIAEgAkACQABMAEwB/AH8A5QDlAs0CzQBjAGMCtwK3AM4AzgMYAxgAAAAAAD0APQBXAFcAlwCXAIIAggM6AzoMZwxnAH8AfwH4AfgFvwW/AA4ADgXKBYsqAAJeAoMCgwAAAAAAAAAAAAAAAA=="
+		c:ACH = {
+			set_as_ruler=char:96
+		}
+		add_party_conviction = {
+			party_type = democratic_party	#was a Populist
+			value = 100
+		}
+	}
+	
+	#Kritalaos of Megalopolis
+	97={
+		first_name = "Kritalaos"
+		family_name = "Kritalaid"
+		birth_date=562.11.21		#192 BC
+		culture="arcadian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=4
+		add_zeal=5
+		no_traits=yes
+		add_trait="reckless"
+		add_trait="proud"
+		add_gold=150
+		add_popularity=60
+		add_party_conviction = {
+			party_type = democratic_party	#was a Populist
+			value = 100
+		}
+		dna="VK5U5YqMiozF9cX1AmYCZgKUApQCkwKTAm8CbwKMAowClgKWApMCkwJ8AnwCagJqAEcARwKFAoUDnwOfAn4CfgFbAVsChgKGAnUCdQFfAV8CcAJwAoACgAJtAm0CfwJ/A5EDkQJpAmkCkgKSAo8CjwKUApQChAKEAoACgAKZApkCaQJpAmkCaQKNAo0BXQFdA6MDowJ4AngCZwJnAngCeAJ/An8CdgJ2AnwCfAKDAoMCjQKNAoUChQJ5AnkCkgKSAoYChgKGAoYCcwJzAoECgQKNAo0CcwJzApECkQKPAo8ClAKUAnMCcwK9Ar0AswCzAIgAiACKAIoCjAKMAu4C7gAUABQBEwETAMIAwgLIAsgEtwS3ApYClgB/AH8AvgC+AWEBYQDFAMUAJgAmADEAMQBrAGsAtAC0AsYCxgB/AH8AjgCOATUBNQA4ADgAVgBWAWkBaQEXARcAFwAXAxsDGwD/AP8BBQEFAMwAzANCA0ICRwL3AH8AfwHpAekFrwWvADUANQUcBRwCwQItAgACYgAAAAAAAAAAAAAAAA=="
+		give_office=office_tribune_of_the_soldiers
+	}
+	
+	#Menalkides of Sparta
+	98={
+		first_name = "Menalkides"
+		nickname="NICKNAME_OF_SPARTA"
+		family_name = "Menalkidid"
+		birth_date=560.5.22		#194 BC
+		culture="peloponnesian"		#Lacedaemonian culture
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=5
+		add_finesse=4
+		add_zeal=4
+		no_traits=yes
+		add_trait="crafty"
+		add_trait="corrupt"
+		add_trait="silver_tongued"
+		add_gold=200
+		add_popularity=60
+		dna="BO8E76ZzpnNMp2NlAoYChgKTApMDoAOgApECkQKSApICcAJwAnECcQKDAoMCagJqAosCiwKEAoQCjgKOAnkCeQKWApYChwKHACUAJQFiAWICjgKOAmcCZwKGAoYEywTLAnECcQKMAowBZgFmAnsCewKWApYCcgJyApcClwKRApECdAJ0ApECkQJrAmsCkgKSApMCkwKRApECkwKTAoQChAKGAoYCfQJ9Am0CbQJsAmwDrQOtApQClAJzAnMCjQKNAn0CfQS6BLoDnwOfA6YDpgJ9An0CcQJxAoMCgwFdAV0ChAKEAnQCdAKPAo8ATABMAIkAiQDiAOIBZgFmAUsBSwD6APoBcgFyAX4BfgAgACAAKQApAUIBQgB/AH8AGQAZAAYABgL1AvUAMAAwAMsAywDkAOQDxwPHAIQAhAB/AH8AoACgAA8ADwD8APwATgBOAPcA9wC9AL0AugC6ADsAOwD9AP0BCQEJAHwAfATCBMIBcgFyAH8AfwGsAawF0gVOAKQApAXCBcICkAKQAv4C/gAAAAAAAAAAAAAAAA=="
+		give_office=office_censor
+	}
+	
+	#Wife of Diaeos of Achaea, who the latter killed in a double-suicide when he lost to Rome
+	261={
+		family = c:ACH.fam:Diaeid
+		birth_date=574.6.24		#180 BC
+		marry_character="char:96"
+		female=yes
+		culture="arcadian"
+		religion="roman_pantheon"
+		dna="TLwd7oh0iHQCXQJdAm8CbwJ+An4CigKKAWYBZgKBAoECewJ7AVMBUwJuAm4CfgJ+AoECgQJ+An4CgQKBAoECgQKRApECcwJzAoECgQTcBNwCkQKRAo4CjgI+An8CcwJzA5YDlgKYApgDrQOtAm0CbQJ7AnsCbAJsA5wDnAKNAo0CawJrAn0CfQJ1AnUChQKFAmwCbAKDAoMBYwFSAVYBVgJgApYCkgKSAo4CjgJ3AncCbwJvACYAJgJyAnICbAJsAo0CjQJpAmkBZQFlAowCjAOsA6wCagJqAncCdwKGAoYCgAKAAoQChAJ+An4BGgEaAJ4AngF+AX4AtgC2ABkAGQCCAIIAXQBdADEAMQBCAEIBQwFDAFMAUwB/AH8AbABsAtwC3AB8AHwBbwFvAJEAkQCfAJ8DkAEfAXcBdwB/AH8BkABqASYBJgB2AHYAHgAeAqgCqACQAJABGwEbAWQBZADCAMIDDAMMBNAE0ABWAFYGmweiAH8AfwLGAsYF8gXyANsA2wUuBS4CDwJuAmICYgAAAAAAAAAAAAAAAA=="
+	}
+	
+}

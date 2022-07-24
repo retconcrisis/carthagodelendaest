@@ -1,0 +1,110 @@
+﻿"BAC"={
+	country="BAC"
+	
+	#Heliokles, father of Eucratides the Great
+	117={
+		first_name = "Heliokles"
+		family = c:BAC.fam:Diodotid
+		birth_date=514.9.8		#240 BC
+		death_date=574.6.1		#180 BC
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=3
+		add_finesse=4
+		add_zeal=5
+	}
+	
+	#Eucratides the Great, current ruler who usurped Euthydemids in 177 BC
+	118={
+		first_name = "Eukratides"
+		nickname = "NICKNAME_THE_GREAT"
+		family = c:BAC.fam:Diodotid
+		birth_date=550.2.20		#204 BC
+		father="char:117"
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=10
+		add_charisma=2
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="crafty"
+		add_trait="ambitious"
+		add_trait="founder"
+		add_gold=400
+		add_popularity=55
+		c:BAC = {
+			set_as_ruler=char:118
+		}
+		dna="PdY91sWMxYzOis6KAoICggJyAnICdQJ1An4CfgJ6AnoChAKEA6EDoQJ2AnYCaAJoAnQCdAJuAm4BUgFSApkCmQKHAocCdQJ1AncCdwKRApECeAJ4AoECgQJ9An0CbAJsAocChwJyAnICgwKDAnoCegJ7AnsCegJ6AVoBWgKSApICeQJ5AoECgQKJAokDogOiA6kDqQAZABkCgwKDAnoCegJ8AnwCdAJ0AngCeAKFAoUDqQOpA50DnQJ9An0CegJ6AnECcQKVApUDnQOdAm8CbwOdA50CdwJ3AV8BXwOiA6ICfQJ9AmcCZwRLBEsAHAAcAHEAcQFbAVsBBAEEABsAGwLBAsEAuwC7ASkBKQD4APgAJAAkAIYAhgB/AH8AaABoAIwAjAAFAAUABgAGAG0AbQD3APcD7QPtAtwC3AB/AH8CxgLGAGUAZQKuAq4CvgK+AX0BfQTiBOIBVQFVBOsE6wAnACcBLgEuAEcARwC9AL0GfApwAH8AfwE2ATYFngWmAEwATAUOBQ4CQQJXAioChAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Plato, son of Eukratides and later co-regent of Bactria in 140s BC, later took the name Diodotus III
+	119={
+		first_name = "Plato"
+		family = c:BAC.fam:Diodotid
+		birth_date=577.2.14		#177 BC
+		father="char:118"
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="pious"
+		add_trait="proud"
+		add_gold=300
+		add_popularity=50
+		dna="MeAx4KV1pXWfbJ9sAo4CjgKZApkCawJrACYAJgJ1AnUBVAFUAmYCZgKEAoQBTgFOAVUBVQKOAo4CdgJ2AmYCZgJpAmkChgKGApICkgS0BLQCgQKBAm8CbwJrAmsCcwJzAmgCaAKIAogCcwJzAooCigTXBNcBUQFRAowCjAJvAm8ClAKUAoQChAJ0AnQCcgJyAVEBUQKMAowCaAJoAnsCewJ1AnUCkQKRAn4CfgJzAnMCdAJ0AocChwJ7AnsCigKKAm4CbgJzAnMCbQJtApACkAKOAo4CdQJ1AncCdwKWApYCcgJyApkCmQRnBGcAagBqAEYARgKYApgAIwAjAJIAkgBPAE8AaQBpAB0AHQDhAOEDPQM9ABMAEwB/AH8A5ADkArgCuAK1ArUBYwFjAVwBXAAwADADVgNWAMYAxgB/AH8A2gDaAMEAwQCeAJ4AEQARAHAAcABQAFAA/AD8AEMAQwAcABwAigCKAHAAcANjA2MKPQJUAH8AfwCHAIcFaQWDAPkA+QV5BbwCPAI8AjgCOAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Eucratides II, son of Eucratides I, later murdered his father for the throne
+	120={
+		first_name = "Eukratides"
+		family = c:BAC.fam:Diodotid
+		birth_date=576.8.31		#178 BC
+		father="char:118"		#Eukratides I
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=4
+		add_finesse=2
+		add_zeal=2
+		no_traits=yes
+		add_trait="cold"
+		add_trait="selfish"
+		add_trait="ambitious"
+		add_gold=200
+		add_popularity=40
+		dna="MuJc3Z6FnoUslSyVAo4CjgJxAnECawJrAoACgAKHAocCfAJ8AoICggKWApYDsQOxAm0CbQKJAokCaQJpAncCdwJ4AngCbAJsAnQCdAJ8AnwBXgFeAoMCgwJEApICaAJoAmkCaQKYApgCjwKPAogCiAKNAo0CiQKJApMCkwJyAnICfQJ9AnoCegKBAoECjwKPAooCigKGAoYCZwJnAooCigJ4AngCigKKAo8CjwKHAocBYQFhAoYChgJnAmcCfwJ/AnACcAKVApUCdQJ1AooCigJ9An0CdgJ2AnUCdQJqAmoDqgOqAoMCgwL8AvwAUABQAM0AzQLSAtIC9AL0ADoAOgENAQ0BVgFWAMYAxgADAAMAZgBmAM4AzgB/AH8A+AD4AtgC2ADhAOEBEgESAsoCygEJAQkACQAJAJgAmAB/AH8CqgKqANUA1QKFAoUBIgEiAqUCpQM6AzoCpAKkAGcAZwARABEDEQMRA1sDWwAuAC4H2gfaAH8AfwM5AzkFSwWhAH4AOwUmBa0CFAL5ApQClAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Heliokles I, son of Eucratides I, later murdered his father for the throne
+	121={
+		first_name = "Heliokles"
+		family = c:BAC.fam:Diodotid
+		birth_date=579.5.15		#175 BC
+		father="char:118"		#Eukratides I
+		culture="greco_bactrian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=5
+		add_finesse=4
+		add_zeal=4
+		no_traits=yes
+		add_trait="deceitful"
+		add_trait="selfish"
+		add_gold=200
+		add_popularity=40
+		dna="Ws1azaqDqoP6o/qjApICkgJrAmsCewJ7AmYCZgJyAnIBVAFUAowCjAJ1AnUBZAFkAm8CbwJ6AnoCaAJoAoECgQJ2AnYClQKVAnECcQKGAoYCiwKLAncCdwKDAoMCcQJxAoYChgKQApACmQKZAn4CfgJwAnACeAJ4ApkCmQAqACoCiwKLAmkCaQKRApECaAJoAnwCfAKHAocCeQJ5AogCiAKXApcCbAJsAnwCfAFWAVYCjQKNAoYChgJzAnMCdwJ3Am8CbwJwAnACgAKAA6sDqwKXApcCigKKAmYCZgKIAogChQKFAlkCiwDaAIUAdAB0AIgAiADwAPAAAAAAAQcBBwBuAG4BNwE3ACsAKwFgAWAAbgBuAHUAdQB/AH8AzQDNAPAA8AE4ATgBMgEyAAwADAFIAUgA4gDiAGAAYAB/AH8AJQAlAOYA5gFWAVYAlgCWArACsANKA0oBJgEmACkAKQFXAVcA1wDXALsAuwE/AT8IRAxRAH8AfwC6ALoFtwWVANEA0QUiBSICFgIWAv8CLQAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

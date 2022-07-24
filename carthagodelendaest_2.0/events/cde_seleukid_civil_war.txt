@@ -1,0 +1,2596 @@
+﻿namespace = cde_seleukid_civil_war
+
+#Fight for the Seleukid Throne
+cde_seleukid_civil_war.1 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.1.t"
+	desc = "cde_seleukid_civil_war.1.desc"
+	picture = army_desert
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	fire_only_once = yes
+	
+	goto_location = 670		#Aka / Acre
+	
+	immediate = {
+		set_variable = {
+			name = seleukid_civil_war_start
+		}
+		custom_tooltip = cde_seleukid_civil_war.2.tt
+		
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.1.a 	#May the gods bless the Basileus!
+		
+		add_stability = -10
+		
+		add_country_modifier = {
+			name = cde_already_in_civil_war_mod
+			duration = 730
+		}
+		
+	}
+}
+
+#Fight for the Seleukid Throne - Alexandros' POV version
+cde_seleukid_civil_war.2 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.2.t"
+	desc = "cde_seleukid_civil_war.2.desc"
+	picture = army_desert
+	
+	fire_only_once = yes
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	immediate = {
+		set_variable = {
+			name = alexander_seleukid_civil_war_start
+		}
+		hidden_effect = {
+			create_unit = {		#12 cohorts of Alexandros mercenary army
+				save_scope_as = alexanders_army
+				location = p:670 # Aka/Acre
+				add_loyal_subunit = heavy_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_cavalry
+				add_loyal_subunit = heavy_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_cavalry
+				add_loyal_subunit = heavy_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_cavalry
+			}
+		}
+		scope:alexanders_army = {
+			set_as_commander = char:32
+		}
+		
+		add_country_modifier = {
+			name = cde_already_in_civil_war_mod
+			duration = 730
+		}
+		
+		c:SEL = {			#so that Egypt, Pergamon and Cappadocia join AXR in war
+    		declare_war_with_wargoal = {
+				war_goal = imperial_conquest_wargoal
+				target = c:AXR
+			}
+    	}
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.2.a 	#Support
+		
+		custom_tooltip = cde_seleukid_civil_war.2.tt
+		
+		#Triggers ask for help from Judea
+		c:JUD = {
+			trigger_event = { 
+				id = cde_seleukid_civil_war.6
+				days = 15
+			}
+		}
+		
+		#Triggers Cleopatra Thea marriage mini-event-chain
+		c:EGY = {
+			trigger_event = { 
+				id = cde_seleukid_civil_war.8
+			}
+		}
+	}
+}
+
+
+#Ping for Egypt, Pergamon and Cappadocia
+cde_seleukid_civil_war.3 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.3.t"
+	desc = "cde_seleukid_civil_war.3.desc"
+	picture = army_desert
+	
+	fire_only_once = yes
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	goto_location = 670		#Aka / Acre
+	
+	option = {
+		name = cde_seleukid_civil_war.3.a 	#Support
+		
+		custom_tooltip = cde_seleukid_civil_war.2.tt
+		
+	}
+}
+
+#Alexandros Victory - if SEL is an AI
+cde_seleukid_civil_war.4 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.4.t"
+	desc = "cde_seleukid_civil_war.4.desc"
+	picture = city_siege
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	fire_only_once = yes
+	
+	goto_location = 790		#Antiocheia - Antigoneia in vanilla date
+	
+	trigger = {
+		tag = AXR
+		OR = {
+			AND = {
+				is_ai = no
+				c:SEL = {
+					is_ai = yes
+				}
+			}
+			AND = {
+				is_ai = yes
+				c:SEL = {
+					is_ai = yes
+				}
+			}
+		}
+		has_variable = alexander_seleukid_civil_war_start
+		OR = {
+			c:AXR = { owns = 790 }
+			NOT = { exists = c:SEL }
+		}
+	}
+	
+	weight_multiplier = {
+		modifier = {
+			factor = 100
+			tag = AXR
+		}
+	}
+	
+	immediate = {
+		set_variable = {
+			name = seleukid_civil_war_alexandros_wins_flag
+		}
+		remove_country_modifier = cde_already_in_civil_war_mod
+		
+		char:32 = {
+			set_family = c:SEL.fam:Seleukid		#Seleukid family
+			add_gold = 100
+		}
+		
+		char:31 = {
+			death = { 
+				killer = char:32 
+				death_reason = death_battle
+			}
+		}
+		
+		if = {
+			limit = {
+				alliance_with = EGY
+			}
+			break_alliance = EGY
+		}
+		if = {
+			limit = {
+				alliance_with = PRG
+			}
+			break_alliance = PRG
+		}
+		if = {
+			limit = {
+				alliance_with = CAP
+			}
+			break_alliance = CAP
+		}
+		
+		
+		every_current_war = {				#ends the war with white peace, since SEL no longer exists
+			limit = {
+				is_war_leader = ROOT
+				is_war_leader = c:SEL
+			}
+			force_white_peace = THIS
+		}
+		
+		
+		custom_tooltip = seleukid_civil_war_annex_tt
+		hidden_effect = {
+			
+			#Elymais gains independence
+			c:SEL = {
+				release_subject = c:ELY
+			}
+			
+			#Characene gains independence
+			c:SEL = {
+				release_subject = c:CRC
+			}
+			
+			
+			#Mesopotamian dynasts rebel
+			
+			c:SEL = {
+				#Babylonia
+				p:918 = {
+					create_country = {
+						name = {
+							name = "BABYLON_NAME"
+							adjective = "BABYLON_ADJECTIVE"
+						}
+						change_country_color = babylonia_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=babylonia_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 918
+							province_id = 903 
+							province_id = 922 
+							province_id = 919 
+							province_id = 920 
+							province_id = 923
+						}
+					}
+					set_owned_by = scope:babylonia_tag
+				}
+				
+				#Seleukeia
+				p:911 = {
+					create_country = {
+						name = {
+							name = "SELEUKEIA_NAME"
+							adjective = "SELEUKEIA_ADJECTIVE"
+						}
+						change_country_color = seleukeia_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=seleukeia_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 911
+							province_id = 912 
+							province_id = 913
+						}
+					}
+					set_owned_by = scope:seleukeia_tag
+				}
+				
+				#Orchoe / Uruk
+				p:937 = {
+					create_country = {
+						name = {
+							name = "ORCHOE_NAME"
+							adjective = "ORCHOE_ADJECTIVE"
+						}
+						change_country_color = sumer_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=orchoe_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 937
+							province_id = 936 
+							province_id = 968
+						}
+					}
+					set_owned_by = scope:orchoe_tag
+				}
+				
+				#Opis
+				p:914 = {
+					create_country = {
+						name = {
+							name = "OPIS_NAME"
+							adjective = "OPIS_ADJECTIVE"
+						}
+						change_country_color = opis_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=opis_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 914
+							province_id = 924 
+							province_id = 925
+						}
+					}
+					set_owned_by = scope:opis_tag
+				}
+				
+				#Bagdata
+				p:899 = {
+					create_country = {
+						name = {
+							name = "BAGDATA_NAME"
+							adjective = "BAGDATA_ADJECTIVE"
+						}
+						change_country_color = bagdata_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=bagdata_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 899
+							province_id = 898
+						}
+					}
+					set_owned_by = scope:bagdata_tag
+				}
+				
+				#Apamaea
+				p:933 = {
+					create_country = {
+						name = {
+							name = "APAMAEA_NAME"
+							adjective = "APAMAEA_ADJECTIVE"
+						}
+						change_country_color = apamaea_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=apamaea_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 933
+							province_id = 973 
+							province_id = 961
+						}
+					}
+					set_owned_by = scope:apamaea_tag
+				}
+				
+				#Artemita
+				p:896 = {
+					create_country = {
+						name = {
+							name = "ARTEMITA_NAME"
+							adjective = "ARTEMITA_ADJECTIVE"
+						}
+						change_country_color = artemita_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=artemita_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 896
+							province_id = 897
+							province_id = 979
+						}
+					}
+					set_owned_by = scope:artemita_tag
+				}
+				
+				#Sittacene
+				p:927 = {
+					create_country = {
+						name = {
+							name = "SITTACENE_NAME"
+							adjective = "SITTACENE_ADJECTIVE"
+						}
+						change_country_color = sittacene_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=sittacene_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 927
+							province_id = 916
+							province_id = 926
+							province_id = 976
+						}
+					}
+					set_owned_by = scope:sittacene_tag
+				}
+				
+				#Dur-Kurigalzu
+				p:900 = {
+					create_country = {
+						name = {
+							name = "DUR_KURIGALZU_NAME"
+							adjective = "DUR_KURIGALZU_ADJECTIVE"
+						}
+						change_country_color = phokaian_blue
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=dur_kurigalzu_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 900
+						}
+					}
+					set_owned_by = scope:dur_kurigalzu_tag
+				}
+				
+				#Nippur
+				p:929 = {
+					create_country = {
+						name = {
+							name = "NIPPUR_NAME"
+							adjective = "NIPPUR_ADJECTIVE"
+						}
+						change_country_color = nippur_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=nippur_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 929
+							province_id = 921
+							province_id = 931
+							province_id = 960
+						}
+					}
+					set_owned_by = scope:nippur_tag
+				}
+				
+				#Naarda
+				p:909 = {
+					create_country = {
+						name = {
+							name = "NAARDA_NAME"
+							adjective = "NAARDA_ADJECTIVE"
+						}
+						change_country_color = naarda_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=naarda_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 909 
+							province_id = 901 
+							province_id = 903 
+							province_id = 910
+						}
+					}
+					set_owned_by = scope:naarda_tag
+				}
+				
+				#Kutha
+				p:915 = {
+					create_country = {
+						name = {
+							name = "KUTHA_NAME"
+							adjective = "KUTHA_ADJECTIVE"
+						}
+						change_country_color = kutha_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=kutha_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 915 
+							province_id = 917
+						}
+					}
+					set_owned_by = scope:kutha_tag
+				}
+				
+				#Kuara
+				p:930 = {
+					create_country = {
+						name = {
+							name = "KUARA_NAME"
+							adjective = "KUARA_ADJECTIVE"
+						}
+						change_country_color = kuara_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=kuara_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 930 
+							province_id = 962
+							province_id = 932
+						}
+					}
+					set_owned_by = scope:kuara_tag
+				}
+				
+				#Cossaea / Cossaei - warlike tribe
+				p:974 = {
+					create_country = {
+						name = {
+							name = "COSSAEA_NAME"
+							adjective = "COSSAEA_ADJECTIVE"
+						}
+						change_country_color = cossaea_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = tribal_kingdom
+						add_treasury = 50.0
+						save_scope_as=cossaea_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 974 
+							province_id = 928
+						}
+					}
+					set_owned_by = scope:cossaea_tag
+				}
+				
+			}
+			
+			#Alexandros Balas takes over - SEL is an AI
+			c:SEL = {
+				every_owned_province = {
+					limit = {
+						NOT = {
+							province_id = 918
+							province_id = 903 
+							province_id = 922 
+							province_id = 919 
+							province_id = 920 
+							province_id = 923
+							province_id = 900
+							province_id = 915
+							province_id = 917
+							province_id = 909 
+							province_id = 901 
+							province_id = 903 
+							province_id = 910
+						}
+					}
+					set_conquered_by = AXR
+				}
+			}
+			
+			
+		}
+		
+		set_capital = 790		#Antiocheia
+
+		c:SEL.fam:Seleukid = {		#moves Seleukid family to AXR
+			move_family = c:AXR
+			every_family_member = {
+				limit = {
+					employer = {
+						tag = SEL
+					}
+				}
+				remove_all_positions = yes
+				move_country = c:AXR
+			}
+		}
+		
+		c:AXR = {
+			set_country_heritage = seleucus_heritage
+			change_country_name = SELEUKID_EMPIRE_NAME
+			hidden_effect = {
+				change_country_adjective = SELEUKID_EMPIRE_ADJECTIVE
+				change_country_color = seleukid_empire_color
+			}
+		}
+		
+		
+		#Fires event that transfers tributaries / tribal vassals of SEL to AXR
+		every_country = {
+			limit = { 
+				is_subject_of = c:SEL
+				OR = {
+					is_subject_type = tributary
+					is_subject_type = vassal_tribe
+				}
+			}
+			trigger_event = { 
+				id = cde_seleukid_civil_war.5
+			}
+		}
+		#Fires event for client states
+		every_country = {
+			limit = { 
+				OR = {
+					tag = ELY
+					tag = CRC
+				}
+			}
+			trigger_event = { 
+				id = cde_seleukid_civil_war.12
+			}
+		}
+		
+		#Kleopatra Thea official wedding event
+		c:EGY = {
+			if = {
+				limit = {
+					char:63 = {
+						is_spouse_of = char:32
+					}
+				}
+				trigger_event = { 
+					id = cde_seleukid_civil_war.10
+					days = 15
+				}
+			}
+		}
+		
+		#Demetrios II flees to Crete event
+		trigger_event = { 
+			id = cde_seleukid_civil_war.13
+		}
+		
+		#Ping event to relevant countries
+		every_country = {
+			limit = { 
+				OR = {
+					tag = EGY
+					tag = CAP
+					tag = PRG
+					tag = JUD
+					AND = {
+						is_subject = no
+						any_neighbour_country = {
+							OR = {
+								tag = SEL
+								tag = AXR
+							}
+						}
+					}
+				}
+			}
+			trigger_event = { 
+				id = cde_seleukid_civil_war.20
+			}
+		}
+
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.4.a 	#Gain epithet Theopator
+		
+		char:32 = {
+			add_nickname = NICKNAME_THEOPATOR
+		}
+		
+	}
+}
+
+
+#Tributary transfer to Alexander event
+cde_seleukid_civil_war.5 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.5.t"
+	desc = "cde_seleukid_civil_war.5.desc"
+	picture = city_siege
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	fire_only_once = yes
+	
+	goto_location = 790		#Antiocheia - Antigoneia in vanilla date
+
+	immediate = {
+		hidden_effect = { 
+			c:SEL = {
+				release_subject = ROOT
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_tribal = no
+				}
+				c:AXR = {
+					make_subject = {
+						target = ROOT
+						type = tributary
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_tribal = yes
+				}
+				c:AXR = {
+					make_subject = {
+						target = ROOT
+						type = vassal_tribe
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.5.a 		#whatever
+		
+		show_as_tooltip = {
+			if = {
+				limit = {
+					is_tribal = no
+				}
+				c:AXR = {
+					make_subject = {
+						target = ROOT
+						type = tributary
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_tribal = yes
+				}
+				c:AXR = {
+					make_subject = {
+						target = ROOT
+						type = vassal_tribe
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#Judea allies with Alexandros
+cde_seleukid_civil_war.6 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.6.t"
+	desc = "cde_seleukid_civil_war.6.desc"
+	picture = army_desert
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	fire_only_once = yes
+	
+	goto_location = 670		#Aka / Acre
+	
+	option = {
+		name = cde_seleukid_civil_war.6.a 		#allies with AXR
+		
+		add_alliance = c:AXR
+		add_manpower = -1
+		add_treasury = -20
+		c:AXR = {
+			trigger_event = { 
+				id = cde_seleukid_civil_war.7
+			}
+		}
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.6.b 		#ignore
+		
+		trigger = {
+			is_ai = no
+		}
+	}
+	
+}
+
+#Judea alliance ping
+cde_seleukid_civil_war.7 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.7.t"
+	desc = "cde_seleukid_civil_war.7.desc"
+	picture = army_desert
+	
+	fire_only_once = yes
+	
+	immediate = {
+		show_as_tooltip = {
+			add_alliance = c:JUD
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.7.a
+		
+		add_manpower = 1	#500 men
+		add_treasury = 20
+	}
+}
+
+#Cleopatra Thea marriage initial
+cde_seleukid_civil_war.8 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.8.t"
+	desc = "cde_seleukid_civil_war.8.desc"
+	picture = great_work_celebration
+	
+	fire_only_once = yes
+	
+	left_portrait = char:63
+	right_portrait = char:32
+	
+	immediate = {
+		char:63 = {		#moves character to AXR tag to avoid Alexander being dethroned
+			move_country = c:AXR
+		}
+		char:63 = {						#Kleopatra Thea
+			marry_character = char:32		#Alexandros
+		}
+		
+		c:AXR = {
+			trigger_event = { 
+				id = cde_seleukid_civil_war.9
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.8.a
+		
+		custom_tooltip = cde_seleukid_civil_war.8.tt
+		
+	}
+}
+
+#Cleopatra Thea marriage initial Ping for AXR
+cde_seleukid_civil_war.9 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.9.t"
+	desc = "cde_seleukid_civil_war.9.desc"
+	picture = great_work_celebration
+	
+	fire_only_once = yes
+	
+	left_portrait = char:63
+	right_portrait = char:32
+	
+	immediate = {
+		show_as_tooltip = {
+			char:63 = {						#Kleopatra Thea
+				marry_character = char:32		#Alexandros
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.9.a
+		
+		custom_tooltip = cde_seleukid_civil_war.8.tt
+	}
+}
+
+#Cleopatra Thea Wedding event - after war
+cde_seleukid_civil_war.10 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.10.t"
+	desc = "cde_seleukid_civil_war.10.desc"
+	picture = great_work_celebration
+	
+	fire_only_once = yes
+	
+	left_portrait = char:63
+	right_portrait = char:32
+	
+	immediate = {
+		show_as_tooltip = {
+			char:63 = {						#Kleopatra Thea
+				marry_character = char:32		#Alexandros
+			}
+		}
+		c:AXR = {
+			trigger_event = { 
+				id = cde_seleukid_civil_war.11
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.10.a
+		
+		add_opinion = { 
+			modifier = royal_marriage_op
+			target = AXR
+		}
+	}
+}
+
+#Cleopatra Thea Wedding event Ping for AXR
+cde_seleukid_civil_war.11 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.11.t"
+	desc = "cde_seleukid_civil_war.11.desc"
+	picture = great_work_celebration
+	
+	fire_only_once = yes
+	
+	left_portrait = char:63
+	right_portrait = char:32
+	
+	immediate = {
+		show_as_tooltip = {
+			char:63 = {						#Kleopatra Thea
+				marry_character = char:32		#Alexandros
+			}
+			custom_tooltip = cde_seleukid_civil_war.11.tt
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.11.a
+		
+		add_legitimacy = 10
+		
+		add_opinion = { 
+			modifier = royal_marriage_op
+			target = EGY
+		}
+	}
+}
+
+#Client states ping - Characene Elymais
+cde_seleukid_civil_war.12 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.12.t"
+	desc = "cde_seleukid_civil_war.12.desc"
+	picture = city_siege
+	
+	fire_only_once = yes
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	immediate = {
+		hidden_effect = { 
+			c:SEL = {
+				release_subject = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.12.a		#become a tributary
+		
+		c:AXR = {
+			make_subject = {
+				target = ROOT
+				type = tributary
+			}
+		}
+		
+		ai_chance = {
+			modifier = {
+				factor = 1
+				tag = ELY
+			}
+			modifier = {
+				factor = 2
+				tag = CRC
+			}
+		}
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.12.b
+		
+		custom_tooltip = cde_seleukid_civil_war.12.tt
+		
+		ai_chance = {
+			modifier = {
+				factor = 2
+			}
+		}
+	}
+}
+
+#Demetrios II flees to Crete
+cde_seleukid_civil_war.13 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.13.t"
+	desc = "cde_seleukid_civil_war.13.desc"
+	picture = city_siege
+	
+	fire_only_once = yes
+	
+	left_portrait = char:33
+	right_portrait = char:32
+	
+	immediate = {
+		hidden_effect = {
+			char:33 = {		#moves Demetrios II character to REB tag to avoid being killed
+				move_country = c:REB
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.13.a
+		
+		custom_tooltip = cde_seleukid_civil_war.13.tt
+	}
+}
+
+#Alexandros Victory -  variant for SEL, if SEL is a player
+cde_seleukid_civil_war.14 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.14.t"
+	desc = "cde_seleukid_civil_war.14.desc"
+	picture = city_siege
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	fire_only_once = yes
+	
+	goto_location = 790		#Antiocheia - Antigoneia in vanilla date
+	
+	trigger = {
+		tag = SEL
+		is_ai = no
+		c:AXR = {
+			is_ai = yes
+		}
+		has_variable = seleukid_civil_war_start
+		c:AXR = { 
+			owns = 790
+		}
+	}
+	
+	weight_multiplier = {
+		modifier = {
+			factor = 100
+			tag = AXR
+		}
+	}
+	
+	immediate = {
+		set_variable = {
+			name = seleukid_civil_war_alexandros_wins_flag
+		}
+		remove_country_modifier = cde_already_in_civil_war_mod
+		
+		char:32 = {
+			set_family = c:SEL.fam:Seleukid		#Seleukid family
+			add_gold = 100
+			move_country = c:SEL
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				set_home_country = c:SEL
+			}
+		}
+		char:32.spouse = {		#Moves spouse and children to SEL
+			move_country = c:SEL
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				set_home_country = c:SEL
+			}
+		}
+		c:AXR = {
+			every_character = {
+				limit = {
+					OR = {
+						is_friend = char:32
+						is_child_of = char:32
+						is_close_relative = char:32
+					}
+				}
+				move_country = c:SEL
+				hidden_effect = {
+					remove_character_modifier = foreign_citizen
+					set_home_country = c:SEL
+				}
+			}
+		}
+		
+		set_as_ruler = char:32		#Alexandros becomes ruler
+		
+		char:31 = {
+			death = { 
+				killer = char:32 
+				death_reason = death_battle
+			}
+		}
+		
+		every_current_war = {				#ends the war with white peace, since AXR no longer exists
+			limit = {
+				is_war_leader = ROOT
+				is_war_leader = c:SEL
+			}
+			force_white_peace = THIS
+		}
+		
+		#SEL annexes AXR
+		c:AXR = {
+			every_owned_province = {
+				set_conquered_by = SEL
+			}
+		}
+		
+		custom_tooltip = seleukid_civil_war_annex_tt
+		
+		hidden_effect = {
+			
+			#Elymais gains independence
+			c:SEL = {
+				release_subject = c:ELY
+			}
+			
+			#Characene gains independence
+			c:SEL = {
+				release_subject = c:CRC
+			}
+			
+			
+			#Mesopotamian dynasts rebel
+			
+			c:SEL = {
+				#Babylonia
+				p:918 = {
+					create_country = {
+						name = {
+							name = "BABYLON_NAME"
+							adjective = "BABYLON_ADJECTIVE"
+						}
+						change_country_color = babylonia_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=babylonia_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 918
+							province_id = 903 
+							province_id = 922 
+							province_id = 919 
+							province_id = 920 
+							province_id = 923
+						}
+					}
+					set_owned_by = scope:babylonia_tag
+				}
+				
+				#Seleukeia
+				p:911 = {
+					create_country = {
+						name = {
+							name = "SELEUKEIA_NAME"
+							adjective = "SELEUKEIA_ADJECTIVE"
+						}
+						change_country_color = seleukeia_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=seleukeia_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 911
+							province_id = 912 
+							province_id = 913
+						}
+					}
+					set_owned_by = scope:seleukeia_tag
+				}
+				
+				#Orchoe / Uruk
+				p:937 = {
+					create_country = {
+						name = {
+							name = "ORCHOE_NAME"
+							adjective = "ORCHOE_ADJECTIVE"
+						}
+						change_country_color = sumer_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=orchoe_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 937
+							province_id = 936 
+							province_id = 968
+						}
+					}
+					set_owned_by = scope:orchoe_tag
+				}
+				
+				#Opis
+				p:914 = {
+					create_country = {
+						name = {
+							name = "OPIS_NAME"
+							adjective = "OPIS_ADJECTIVE"
+						}
+						change_country_color = opis_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=opis_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 914
+							province_id = 924 
+							province_id = 925
+						}
+					}
+					set_owned_by = scope:opis_tag
+				}
+				
+				#Bagdata
+				p:899 = {
+					create_country = {
+						name = {
+							name = "BAGDATA_NAME"
+							adjective = "BAGDATA_ADJECTIVE"
+						}
+						change_country_color = bagdata_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=bagdata_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 899
+							province_id = 898
+						}
+					}
+					set_owned_by = scope:bagdata_tag
+				}
+				
+				#Apamaea
+				p:933 = {
+					create_country = {
+						name = {
+							name = "APAMAEA_NAME"
+							adjective = "APAMAEA_ADJECTIVE"
+						}
+						change_country_color = apamaea_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=apamaea_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 933
+							province_id = 973 
+							province_id = 961
+						}
+					}
+					set_owned_by = scope:apamaea_tag
+				}
+				
+				#Artemita
+				p:896 = {
+					create_country = {
+						name = {
+							name = "ARTEMITA_NAME"
+							adjective = "ARTEMITA_ADJECTIVE"
+						}
+						change_country_color = artemita_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=artemita_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 896
+							province_id = 897
+							province_id = 979
+						}
+					}
+					set_owned_by = scope:artemita_tag
+				}
+				
+				#Sittacene
+				p:927 = {
+					create_country = {
+						name = {
+							name = "SITTACENE_NAME"
+							adjective = "SITTACENE_ADJECTIVE"
+						}
+						change_country_color = sittacene_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=sittacene_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 927
+							province_id = 916
+							province_id = 926
+							province_id = 976
+						}
+					}
+					set_owned_by = scope:sittacene_tag
+				}
+				
+				#Dur-Kurigalzu
+				p:900 = {
+					create_country = {
+						name = {
+							name = "DUR_KURIGALZU_NAME"
+							adjective = "DUR_KURIGALZU_ADJECTIVE"
+						}
+						change_country_color = phokaian_blue
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=dur_kurigalzu_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 900
+						}
+					}
+					set_owned_by = scope:dur_kurigalzu_tag
+				}
+				
+				#Nippur
+				p:929 = {
+					create_country = {
+						name = {
+							name = "NIPPUR_NAME"
+							adjective = "NIPPUR_ADJECTIVE"
+						}
+						change_country_color = nippur_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=nippur_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 929
+							province_id = 921
+							province_id = 931
+							province_id = 960
+						}
+					}
+					set_owned_by = scope:nippur_tag
+				}
+				
+				#Naarda
+				p:909 = {
+					create_country = {
+						name = {
+							name = "NAARDA_NAME"
+							adjective = "NAARDA_ADJECTIVE"
+						}
+						change_country_color = naarda_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=naarda_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 909 
+							province_id = 901 
+							province_id = 903 
+							province_id = 910
+						}
+					}
+					set_owned_by = scope:naarda_tag
+				}
+				
+				#Kutha
+				p:915 = {
+					create_country = {
+						name = {
+							name = "KUTHA_NAME"
+							adjective = "KUTHA_ADJECTIVE"
+						}
+						change_country_color = kutha_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=kutha_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 915 
+							province_id = 917
+						}
+					}
+					set_owned_by = scope:kutha_tag
+				}
+				
+				#Kuara
+				p:930 = {
+					create_country = {
+						name = {
+							name = "KUARA_NAME"
+							adjective = "KUARA_ADJECTIVE"
+						}
+						change_country_color = kuara_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=kuara_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 930 
+							province_id = 962
+							province_id = 932
+						}
+					}
+					set_owned_by = scope:kuara_tag
+				}
+				
+				#Cossaea / Cossaei - warlike tribe
+				p:974 = {
+					create_country = {
+						name = {
+							name = "COSSAEA_NAME"
+							adjective = "COSSAEA_ADJECTIVE"
+						}
+						change_country_color = cossaea_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = tribal_kingdom
+						add_treasury = 50.0
+						save_scope_as=cossaea_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 974 
+							province_id = 928
+						}
+					}
+					set_owned_by = scope:cossaea_tag
+				}
+				
+			}
+			
+			
+		}
+		
+		#Fires SEL version of event for client states
+		every_country = {
+			limit = { 
+				OR = {
+					tag = ELY
+					tag = CRC
+				}
+			}
+			trigger_event = { 
+				id = cde_seleukid_civil_war.15
+			}
+		}
+		
+		#Kleopatra Thea official wedding event
+		c:EGY = {
+			if = {
+				limit = { 
+					char:63 = {
+						is_spouse_of = char:32
+					}
+				}
+				trigger_event = { 
+					id = cde_seleukid_civil_war.10
+					days = 15
+				}
+			}
+		}
+		
+		#Demetrios II flees to Crete event
+		trigger_event = { 
+			id = cde_seleukid_civil_war.13
+		}
+		
+		#Ping event to relevant countries
+		every_country = {
+			limit = { 
+				OR = {
+					tag = EGY
+					tag = CAP
+					tag = PRG
+					tag = JUD
+					AND = {
+						is_subject = no
+						any_neighbour_country = {
+							OR = {
+								tag = SEL
+								tag = AXR
+							}
+						}
+					}
+				}
+			}
+			trigger_event = { 
+				id = cde_seleukid_civil_war.20
+			}
+		}
+
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.4.a 	#Gain epithet Theopator
+		
+		char:32 = {
+			add_nickname = NICKNAME_THEOPATOR
+		}
+		
+	}
+	
+}
+	
+#Client states ping - Characene Elymais - SEL version
+cde_seleukid_civil_war.15 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.15.t"
+	desc = "cde_seleukid_civil_war.15.desc"
+	picture = city_siege
+	
+	fire_only_once = yes
+	
+	left_portrait = char:31
+	right_portrait = char:32
+	
+	immediate = {
+		hidden_effect = { 
+			c:SEL = {
+				release_subject = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.15.a		#become a tributary
+		
+		c:SEL = {
+			make_subject = {
+				target = ROOT
+				type = tributary
+			}
+		}
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.15.b
+		
+		custom_tooltip = cde_seleukid_civil_war.12.tt
+	}
+}
+
+
+#Demetrios II Strikes Back - both SEL and AXR versions
+cde_seleukid_civil_war.16 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.16.t"
+	desc = "cde_seleukid_civil_war.16.desc"
+	picture = looting
+	
+	fire_only_once = yes
+	
+	left_portrait = char:33		#Demetrios II
+	left_portrait = scope:lasthenes_char_scope
+	right_portrait = char:32	#Alexander Balas
+	
+	trigger = {
+		OR = {
+			tag = SEL
+			tag = AXR
+		}
+		current_ruler = {
+			this = char:32		#Alexandros Balas
+		}
+		current_date > 609.1.1		#145 BC
+		has_variable = seleukid_civil_war_alexandros_wins_flag
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				tag = SEL
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_in_region = cilicia_region
+					}
+					set_conquered_by = c:AXR
+				}
+				c:AXR = {
+					change_country_color = seleukid_remnants_color
+				}
+				char:33 = {
+					set_firstname = Demetrios
+					move_country = c:AXR
+					remove_character_modifier = foreign_citizen		#so he can raise levies
+					set_home_country = c:AXR
+				}
+				c:AXR = {
+					set_as_ruler = char:33		#Demetrios II leads revolt
+				}
+			}
+			c:AXR = {
+				declare_war_with_wargoal = {
+					war_goal = imperial_conquest_wargoal
+					target = c:SEL
+				}
+			}
+			hidden_effect = {
+				c:AXR = {
+					hidden_effect = {
+						create_unit = {		#48 cohorts of Demetrios' Crete mercenaries, based on Cretan levy
+							save_scope_as = demetrios_crete_army
+							location = p:788 # Posideion
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+						}
+						scope:demetrios_crete_army = {
+							set_as_commander = char:33
+						}
+						
+						create_character = {		#Lasthenes spawns
+							first_name="Lasthenes"
+							age = 30
+							female = no
+							culture = cretan
+							religion = roman_pantheon
+							no_traits = yes
+							no_stats = yes
+							add_martial = 15
+							add_charisma = 2
+							add_finesse = 2
+							add_zeal = 3
+							add_trait = harsh
+							add_gold = 150
+							save_scope_as = lasthenes_char_scope
+						}
+						create_unit = {		#24 cohorts of Lasthenes' Crete mercenaries, based on Cretan levy
+							save_scope_as = lasthenes_crete_army
+							location = p:788 # Posideion
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+						}
+						scope:lasthenes_crete_army = {
+							set_as_commander = scope:lasthenes_char_scope
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = AXR
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_in_region = cilicia_region
+					}
+					set_conquered_by = c:SEL
+				}
+				c:SEL = {
+					change_country_color = seleukid_remnants_color
+				}
+				char:33 = {
+					set_firstname = Demetrios
+					move_country = c:SEL
+					remove_character_modifier = foreign_citizen		#so he can raise levies
+					set_home_country = c:SEL
+				}
+				c:SEL = {
+					set_as_ruler = char:33		#Demetrios II leads revolt
+				}
+			}
+			c:SEL = {
+				declare_war_with_wargoal = {
+					war_goal = imperial_conquest_wargoal
+					target = c:AXR
+				}
+			}
+			hidden_effect = {
+				c:SEL = {
+					hidden_effect = {
+						create_unit = {		#24 cohorts of Demetrios' Crete mercenaries, based on Cretan levy
+							save_scope_as = demetrios_crete_army
+							location = p:788 # Posideion
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+						}
+						scope:demetrios_crete_army = {
+							set_as_commander = char:33
+						}
+						
+						create_character = {		#Lasthenes spawns
+							first_name="Lasthenes"
+							age = 30
+							female = no
+							culture = cretan
+							religion = roman_pantheon
+							no_traits = yes
+							no_stats = yes
+							add_martial = 11
+							add_charisma = 4
+							add_finesse = 2
+							add_zeal = 3
+							add_trait = harsh
+							add_gold = 150
+							save_scope_as = lasthenes_char_scope
+						}
+						create_unit = {		#24 cohorts of Lasthenes' Crete mercenaries, based on Cretan levy
+							save_scope_as = lasthenes_crete_army
+							location = p:788 # Posideion
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = heavy_infantry
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+							add_loyal_subunit = archers
+						}
+						scope:lasthenes_crete_army = {
+							set_as_commander = scope:lasthenes_char_scope
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.16.a
+		
+		trigger_event = { 
+			id = cde_seleukid_civil_war.17		#Coele-Syria revolt event
+			days = 35
+		}
+	}
+}
+
+#Coele-Syria Defects to Demetrios
+cde_seleukid_civil_war.17 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.17.t"
+	desc = "cde_seleukid_civil_war.17.desc"
+	picture = city_siege
+	
+	fire_only_once = yes
+	
+	left_portrait = char:33
+	left_portrait = scope:apollonius_char_scope
+	right_portrait = char:32
+	
+	
+	immediate = {
+		if = {
+			limit = {
+				tag = AXR
+			}
+			every_owned_province = {
+				limit = {
+					is_in_area = syria_coele_area
+				}
+				set_conquered_by = c:SEL
+			}
+			c:SEL = {
+				create_character = {		#Apollonius spawns
+					first_name="Apollonius"
+					age = 35
+					female = no
+					culture = macedonian
+					religion = roman_pantheon
+					no_traits = yes
+					no_stats = yes
+					add_martial = 8
+					add_charisma = 6
+					add_finesse = 6
+					add_zeal = 4
+					add_gold = 150
+					save_scope_as = apollonius_char_scope
+				}
+				create_unit = {		#16 cohorts of Apollonius' army
+					save_scope_as = apollonius_army
+					location = p:738 			#in Coele-Syria
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+				}
+				scope:apollonius_army = {
+					set_as_commander = scope:apollonius_char_scope
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = SEL
+			}
+			every_owned_province = {
+				limit = {
+					is_in_area = syria_coele_area
+				}
+				set_conquered_by = c:AXR
+			}
+			c:AXR = {
+				create_character = {		#Apollonius spawns
+					first_name="Apollonius"
+					age = 35
+					female = no
+					culture = macedonian
+					religion = roman_pantheon
+					no_traits = yes
+					no_stats = yes
+					add_martial = 8
+					add_charisma = 6
+					add_finesse = 6
+					add_zeal = 4
+					add_gold = 150
+					save_scope_as = apollonius_char_scope
+				}
+				create_unit = {		#16 cohorts of Apollonius' army
+					save_scope_as = apollonius_army
+					location = p:738 			#in Coele-Syria
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+				}
+				scope:apollonius_army = {
+					set_as_commander = scope:apollonius_char_scope
+				}
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.17.a
+		
+		trigger_event = { 
+			id = cde_seleukid_civil_war.18		#Antiocheia defects
+			days = 45
+		}
+	}
+}
+
+
+#Antiocheia Defects to Demetrios II
+cde_seleukid_civil_war.18 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.18.t"
+	desc = "cde_seleukid_civil_war.18.desc"
+	picture = city_siege
+	
+	fire_only_once = yes
+	
+	left_portrait = char:33
+	right_portrait = char:32
+	
+	immediate = {
+		if = {
+			limit = {
+				tag = AXR
+			}
+			p:790 = {
+				set_owned_by = c:SEL
+			}
+			
+		}
+		if = {
+			limit = {
+				tag = SEL
+			}
+			p:790 = {
+				set_owned_by = c:AXR
+			}
+		}
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.18.a
+		
+		add_stability = -10
+	}
+}
+
+#Mesopotamia Break Away from SEL if still at war with AXR by 149 BC
+cde_seleukid_civil_war.19 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.19.t"
+	desc = "cde_seleukid_civil_war.19.desc"
+	picture = city_siege
+	
+	fire_only_once = yes
+	
+	fire_only_once = yes
+	
+	goto_location = 911
+	
+	trigger = {
+		tag = SEL
+		has_variable = alexander_seleukid_civil_war_start
+		war_with = c:AXR
+		current_date >= 605.6.1		#June 149 BC
+	}
+	
+	immediate = {
+		
+		custom_tooltip = cde_seleukid_civil_war.19.tt
+		hidden_effect = {
+			#Elymais gains independence
+			c:SEL = {
+				release_subject = c:ELY
+			}
+			
+			#Characene gains independence
+			c:SEL = {
+				release_subject = c:CRC
+			}
+			
+			
+			#Mesopotamian dynasts rebel
+			
+			every_country = {
+				limit = {
+					OR = {
+						tag = SEL
+						civil_war_with = c:SEL	#civil war tag
+					}
+				}
+				#Babylonia
+				p:918 = {
+					create_country = {
+						name = {
+							name = "BABYLON_NAME"
+							adjective = "BABYLON_ADJECTIVE"
+						}
+						change_country_color = babylonia_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=babylonia_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 918
+							province_id = 903 
+							province_id = 922 
+							province_id = 919 
+							province_id = 920 
+							province_id = 923
+						}
+					}
+					set_owned_by = scope:babylonia_tag
+				}
+				
+				#Seleukeia
+				p:911 = {
+					create_country = {
+						name = {
+							name = "SELEUKEIA_NAME"
+							adjective = "SELEUKEIA_ADJECTIVE"
+						}
+						change_country_color = seleukeia_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=seleukeia_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 911
+							province_id = 912 
+							province_id = 913
+						}
+					}
+					set_owned_by = scope:seleukeia_tag
+				}
+				
+				#Orchoe / Uruk
+				p:937 = {
+					create_country = {
+						name = {
+							name = "ORCHOE_NAME"
+							adjective = "ORCHOE_ADJECTIVE"
+						}
+						change_country_color = sumer_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=orchoe_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 937
+							province_id = 936 
+							province_id = 968
+						}
+					}
+					set_owned_by = scope:orchoe_tag
+				}
+				
+				#Opis
+				p:914 = {
+					create_country = {
+						name = {
+							name = "OPIS_NAME"
+							adjective = "OPIS_ADJECTIVE"
+						}
+						change_country_color = opis_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=opis_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 914
+							province_id = 924 
+							province_id = 925
+						}
+					}
+					set_owned_by = scope:opis_tag
+				}
+				
+				#Bagdata
+				p:899 = {
+					create_country = {
+						name = {
+							name = "BAGDATA_NAME"
+							adjective = "BAGDATA_ADJECTIVE"
+						}
+						change_country_color = bagdata_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=bagdata_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 899
+							province_id = 898
+						}
+					}
+					set_owned_by = scope:bagdata_tag
+				}
+				
+				#Apamaea
+				p:933 = {
+					create_country = {
+						name = {
+							name = "APAMAEA_NAME"
+							adjective = "APAMAEA_ADJECTIVE"
+						}
+						change_country_color = apamaea_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=apamaea_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 933
+							province_id = 973 
+							province_id = 961
+						}
+					}
+					set_owned_by = scope:apamaea_tag
+				}
+				
+				#Artemita
+				p:896 = {
+					create_country = {
+						name = {
+							name = "ARTEMITA_NAME"
+							adjective = "ARTEMITA_ADJECTIVE"
+						}
+						change_country_color = artemita_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=artemita_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 896
+							province_id = 897
+							province_id = 979
+						}
+					}
+					set_owned_by = scope:artemita_tag
+				}
+				
+				#Sittacene
+				p:927 = {
+					create_country = {
+						name = {
+							name = "SITTACENE_NAME"
+							adjective = "SITTACENE_ADJECTIVE"
+						}
+						change_country_color = sittacene_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=sittacene_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 927
+							province_id = 916
+							province_id = 926
+							province_id = 976
+						}
+					}
+					set_owned_by = scope:sittacene_tag
+				}
+				
+				#Dur-Kurigalzu
+				p:900 = {
+					create_country = {
+						name = {
+							name = "DUR_KURIGALZU_NAME"
+							adjective = "DUR_KURIGALZU_ADJECTIVE"
+						}
+						change_country_color = phokaian_blue
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=dur_kurigalzu_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 900
+						}
+					}
+					set_owned_by = scope:dur_kurigalzu_tag
+				}
+				
+				#Nippur
+				p:929 = {
+					create_country = {
+						name = {
+							name = "NIPPUR_NAME"
+							adjective = "NIPPUR_ADJECTIVE"
+						}
+						change_country_color = nippur_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=nippur_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 929
+							province_id = 921
+							province_id = 931
+							province_id = 960
+						}
+					}
+					set_owned_by = scope:nippur_tag
+				}
+				
+				#Naarda
+				p:909 = {
+					create_country = {
+						name = {
+							name = "NAARDA_NAME"
+							adjective = "NAARDA_ADJECTIVE"
+						}
+						change_country_color = naarda_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=naarda_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 909 
+							province_id = 901 
+							province_id = 903 
+							province_id = 910
+						}
+					}
+					set_owned_by = scope:naarda_tag
+				}
+				
+				#Kutha
+				p:915 = {
+					create_country = {
+						name = {
+							name = "KUTHA_NAME"
+							adjective = "KUTHA_ADJECTIVE"
+						}
+						change_country_color = kutha_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=kutha_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 915 
+							province_id = 917
+						}
+					}
+					set_owned_by = scope:kutha_tag
+				}
+				
+				#Kuara
+				p:930 = {
+					create_country = {
+						name = {
+							name = "KUARA_NAME"
+							adjective = "KUARA_ADJECTIVE"
+						}
+						change_country_color = kuara_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = despotic_monarchy
+						add_treasury = 50.0
+						save_scope_as=kuara_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 930 
+							province_id = 962
+							province_id = 932
+						}
+					}
+					set_owned_by = scope:kuara_tag
+				}
+				
+				#Cossaea / Cossaei - warlike tribe
+				p:974 = {
+					create_country = {
+						name = {
+							name = "COSSAEA_NAME"
+							adjective = "COSSAEA_ADJECTIVE"
+						}
+						change_country_color = cossaea_color
+						set_primary_culture = babylonian
+						set_country_religion = mesopotamian_religion
+						change_government = tribal_kingdom
+						add_treasury = 50.0
+						save_scope_as=cossaea_tag
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 974 
+							province_id = 928
+						}
+					}
+					set_owned_by = scope:cossaea_tag
+				}
+				
+			}
+		}
+	}
+	
+	option = {
+		name = cde_seleukid_civil_war.19.a
+		
+		add_stability = -10
+	}
+}
+
+#Ping of Alexandros victory to Egypt, Pergamon, Cappadocia, Judea, etc.
+cde_seleukid_civil_war.20 = {
+	type = country_event
+	title = "cde_seleukid_civil_war.20.t"
+	desc = "cde_seleukid_civil_war.20.desc"
+	picture = city_siege
+	
+	fire_only_once = yes
+	
+	left_portrait = char:31
+	left_portrait = c:EGY.current_ruler
+	left_portrait = c:PRG.current_ruler
+	right_portrait = char:32
+	right_portrait = c:CAP.current_ruler
+	right_portrait = c:JUD.current_ruler
+	
+	immediate = {
+		custom_tooltip = cde_seleukid_civil_war.20.tt
+	}
+
+	option = {
+		name = cde_seleukid_civil_war.20.a
+		
+		
+	}
+}
+
+

@@ -1,0 +1,116 @@
+﻿"SUN"={
+	country="SUN"
+	167={
+		first_name = "Pushyamitra"			#1st ruler of Shungas
+		family = c:SUN.fam:Shunga
+		birth_date=534.3.22		#220 BC
+		culture="magadhi"
+		religion="hindu"
+		no_stats=yes
+		add_martial=9
+		add_charisma=5
+		add_finesse=8
+		add_zeal=10
+		no_traits=yes
+		add_trait="founder"
+		add_trait="zealous"
+		add_trait="crafty"
+		add_gold=400
+		add_popularity=80
+		c:SUN = {
+			set_as_ruler=char:167
+		}
+		dna="I+0j7eys7KzYtdi1AoECgQJ0AnQChAKEAoICggJxAnEChAKEAnoCegFfAV8CbAJsAmsCawJrAmsClgKWAn0CfQJzAnMCcgJyAoACgAJ9An0ClwKXApkCmQJ3AncCgAKAAmsCawKWApYCjwKPAl4CXgSLBIsCfAJ8AVQBVAJ7AnsCbgJuAnMCcwJmAmYCTwJPA6IDogJ8AnwCRwJ6ApgCmAKhAmsC1gJ7AncCdwKQApACggKCAnYCdgKRApEChgKGAXoBegJ6AnoCfQJ9A6ADoAOvA68CgQKBAm8CbwJ4AngCewJ7A58DnwIOAg4AJwAnAUsBSwKTApMAgACAAJwAnAB5AHkALAAsANEA0QCWAJYAVQBVAGEAYQB/AH8AEgASANQA1AD4APgASQBJALIAsgC4ALgDcgNyABMAEwB/AH8BNgE2AQgBCAL1AvUApQClAI4AjgSxBLEAZgBmAwgDCACrAKsBGQEZAFcAVwDAAMAHrAesAH8AfwZ3BncMvww+Af8BxgikCLgJmgksBv8GAQAAAAAAAAAAAAAAAA=="
+	}
+	
+	168={
+		first_name = "Agnimitra"			#2nd ruler of Shungas
+		family = c:SUN.fam:Shunga
+		birth_date=557.9.18		#197 BC
+		culture="magadhi"
+		religion="hindu"
+		father="char:167"		#Pushyamitra
+		no_stats=yes
+		add_martial=8
+		add_charisma=8
+		add_finesse=8
+		add_zeal=6
+		no_traits=yes
+		add_trait="assertive"
+		add_trait="pious"
+		add_gold=250
+		add_popularity=70
+		save_scope_as = agnimitra_character
+	}
+	
+	169={							#Father of Dharini, the wife of Agnimitra
+		family = c:SUN.fam:Shunga
+		birth_date=534.3.22		#220 BC
+		death_date=600.9.18		#154 BC
+		culture="magadhi"
+		religion="hindu"
+	}
+	
+	170={
+		first_name = "Dharini"
+		family = c:SUN.fam:Shunga
+		birth_date=570.3.8		#184 BC
+		culture="magadhi"
+		religion="hindu"
+		female = yes
+		father="char:169"
+		marry_character="char:168"		#married to Agnimitra, mother of Vasumitra
+		add_gold=100
+		dna="E/8T/8uwy7D6yfrJAVwBXASyBLICjgKOAn8CfwJ5AnkCbAJsApACkAJ/An8CjQKNAmwCbAKKAooCcQJxApACkAJuAm4CggKCAmYCZgKHAocCbgJuAowCjAKTApMDqAOoAocChwJvAm8ClQKVAUIBQgJjAmMCbAJsAnwCfAJnAmcClAKUAo4CjgJ5AnkDaANoApgCmAJyAnICeAJ4AnECcQJ2AnYCbgJuAoYChgKFAoUCZwJnA6QDpAOqA6oEwQTBAokCiQOkA6QClAKUBJIEkgJ/An8BXQFdA5ADkAKTApMChwKHAoMCgwIXAhcANgA2AG0AbQAtAC0BGwEbABcAFwAYABgAwADAAosCiwCKAIoAwADAAtIC0gB/AH8A/gD+AAEAAQDAAMAAVgBWAM0AzQEZARkAKQApAGsAawB/AH8BQgFCAsUCxQAiACIATwBPAVoBWgS9BL0AAgACA0gDSABVAFUAIgAiA1sDWwBAAEAKTQpNAH8AfwbRBtEMxwzHAdMB0wgfCB8JAQlbBg0GDQAAAAAAAAAAAAAAAA=="
+	}
+	
+	171={
+		first_name = "Vasujyeshtha"			#3rd ruler of Shungas, defeated Indo-Greeks at Sindhu River
+		family = c:SUN.fam:Shunga
+		birth_date=579.12.3		#175 BC
+		culture="magadhi"
+		religion="hindu"
+		father="char:168"		#Agnimitra
+		no_stats=yes
+		add_martial=8
+		add_charisma=6
+		add_finesse=3
+		add_zeal=9
+		add_gold=250
+		add_popularity=50
+		dna="E/8T/8uwy7D6yfrJAVwBXASyBLICjgKOAn8CfwJ5AnkCbAJsApACkAJ/An8CjQKNAmwCbAKKAooCcQJxApACkAJuAm4CggKCAmYCZgKHAocCbgJuAowCjAKTApMDqAOoAocChwJvAm8ClQKVAUIBQgJjAmMCbAJsAnwCfAJnAmcClAKUAo4CjgJ5AnkDaANoApgCmAJyAnICeAJ4AnECcQJ2AnYCbgJuAoYChgKFAoUCZwJnA6QDpAOqA6oEwQTBAokCiQOkA6QClAKUBJIEkgJ/An8BXQFdA5ADkAKTApMChwKHAoMCgwIXAhcANgA2AG0AbQAtAC0BGwEbABcAFwAYABgAwADAAosCiwCKAIoAwADAAtIC0gB/AH8A/gD+AAEAAQDAAMAAVgBWAM0AzQEZARkAKQApAGsAawB/AH8BQgFCAsUCxQAiACIATwBPAVoBWgS9BL0AAgACA0gDSABVAFUAIgAiA1sDWwBAAEAKTQpNAH8AfwbRBtEMxwzHAdMB0wiuCB8J/wlbBg0GDQAAAAAAAAAAAAAAAA=="
+	}
+	
+	172={
+		first_name = "Vasumitra"			#4th ruler of Shungas
+		family = c:SUN.fam:Shunga
+		birth_date=586.7.23		#168 BC
+		culture="magadhi"
+		religion="hindu"
+		father="char:168"		#Agnimitra
+		mother="char:170"		#Dharini
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=9
+		add_zeal=8
+		add_gold=250
+		add_popularity=40
+	}
+	
+	173={
+		first_name = "Virasena"			#Brother-in-law of Dharini, wife of Agnimitra
+		family = c:SUN.fam:Shunga
+		birth_date=586.7.23		#168 BC
+		culture="magadhi"
+		religion="hindu"
+		father="char:169"		#Father of Dharini
+		no_stats=yes
+		add_martial=4
+		add_charisma=4
+		add_finesse=7
+		add_zeal=5
+		add_gold=150
+	}
+	
+}

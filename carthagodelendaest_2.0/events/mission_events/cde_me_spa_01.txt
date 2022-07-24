@@ -1,0 +1,811 @@
+﻿namespace = cde_me_spa_01
+
+#Debate for Laconian Resistance
+cde_me_spa_01.1 = {
+	type = country_event
+	title = "cde_me_spa_01.1.t"
+	desc = "cde_me_spa_01.1.desc"
+	picture = greek_political_discussion
+	
+	left_portrait = current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.1.a
+		
+		custom_tooltip = cde_me_spa_01.1.tt
+	}
+}
+
+#Defiance Against the Achaeans!
+cde_me_spa_01.2 = {
+	type = country_event
+	title = "cde_me_spa_01.2.t"
+	desc = "cde_me_spa_01.2.desc"
+	picture = cde_event_spartan_oligarchs
+	
+	left_portrait = current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.2.a
+		
+		add_country_modifier = {
+			name = cde_me_spa_defiant_laconians
+			duration = 10950
+		}
+	}
+}
+
+#Defiance Against the Achaeans!
+cde_me_spa_01.3 = {
+	type = country_event
+	title = "cde_me_spa_01.3.t"
+	desc = "cde_me_spa_01.3.desc"
+	picture = cde_event_spartan_oligarchs
+	
+	left_portrait = current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.3.a
+		
+		p:473 = {
+			add_claim = root
+		}
+		c:ACH = {
+			add_opinion = { 
+				modifier = spa_ach_claims_dispute_made
+				target = root
+			}
+		}
+	}
+}
+
+#A Delegate to Rome
+cde_me_spa_01.4 = {
+	type = country_event
+	title = "cde_me_spa_01.4.t"
+	desc = "cde_me_spa_01.4.desc"
+	picture = roman_trial
+	
+	left_portrait = current_ruler
+	right_portrait = c:ROM.current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.4.a
+		
+		c:ACH = {
+			add_opinion = { 
+				modifier = spa_ach_roman_delegate_ach
+				target = root
+			}
+		}
+		c:ROM = {
+			add_opinion = { 
+				modifier = spa_ach_roman_delegate_rom
+				target = root
+			}
+		}
+		add_opinion = {
+			modifier = spa_ach_roman_delegate_spa
+			target = c:ROM
+		}
+		add_country_modifier = {
+			name = cde_me_spa_overseas_sponsors
+			duration = 10950
+		}
+	}
+}
+
+#Pro-Independence Faction Secured
+cde_me_spa_01.5 = {
+	type = country_event
+	title = "cde_me_spa_01.5.t"
+	desc = "cde_me_spa_01.5.desc"
+	picture = cde_event_spartan_oligarchs
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.5.a
+		
+		add_country_modifier = {
+			name = cde_me_spa_independence_faction_majority
+			duration = 3650
+		}
+	}
+}
+
+#Friends in Achaea
+cde_me_spa_01.6 = {
+	type = country_event
+	title = "cde_me_spa_01.6.t"
+	desc = "cde_me_spa_01.6.desc"
+	picture = cde_event_spartan_oligarchs
+	
+	left_portrait = current_ruler
+	right_portrait = char:98		#Menalkides of Sparta
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.6.a
+		
+		c:ACH = {
+			every_character = {
+				limit = {
+					employer = c:ACH
+					is_adult = yes
+					is_minor_character = no
+					has_any_office = yes
+					any_friend = {
+						employer = c:SPA
+					}
+				}
+				add_loyalty = loyalty_cde_me_spa_laconian_sympathizer
+			}
+			char:98 = {
+				add_loyalty = loyalty_cde_me_spa_laconian_sympathizer
+			}
+			add_treasury = -20
+		}
+		add_treasury = 20
+		
+	}
+}
+
+#Purge of Achaean Sympathizers
+cde_me_spa_01.7 = {
+	type = country_event
+	title = "cde_me_spa_01.7.t"
+	desc = "cde_me_spa_01.7.desc"
+	picture = assassination
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.7.a
+		
+		add_tyranny = 10
+		current_ruler = {
+			add_popularity = 5
+		}
+		add_country_modifier = {
+			name = cde_me_spa_anti_achaean_purge
+			duration = 1825
+		}
+		every_character = {
+			limit = {
+				employer = root
+				is_adult = yes
+				is_minor_character = no
+				prisoner = no
+				loyalty < 35
+			}
+			save_scope_as = cde_me_spa_laconian_dissident
+		}
+		imprison = {
+			target = scope:cde_me_spa_laconian_dissident
+		}
+	}
+}
+
+
+#Achaean War event chain
+
+#1 - Laconia declares independence - ping for all states involved
+cde_me_spa_01.8 = {
+	type = country_event
+	title = "cde_me_spa_01.8.t"
+	desc = "cde_me_spa_01.8.desc"
+	picture = revolt
+	
+	left_portrait = c:SPA.current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				tag = ACH
+			}
+			show_as_tooltip = {
+				c:SPA = {
+					declare_war_with_wargoal = {		#other parties hear what happens
+						war_goal = independence_wargoal
+						province = c:ACH.capital_scope
+						target = c:ACH
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = ROM
+			}
+			show_as_tooltip = {
+				c:SPA = {
+					declare_war_with_wargoal = {		#other parties hear what happens
+						war_goal = independence_wargoal
+						province = c:ACH.capital_scope
+						target = c:ACH
+					}
+				}
+			}
+			trigger_event = { 
+				id = cde_me_spa_01.9	#Rome drafts demands for ACH to back down or ROM intervenes
+				days = { 240 250 }		#Takes about 8 months for ROM to help, Laconia must survive by then!
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_spa_01.8.a
+		
+		if = {
+			limit = {
+				tag = SPA
+			}
+			#Laconia declares independence
+			c:ACH = {
+				release_subject = c:SPA
+			}
+			declare_war_with_wargoal = {		#war for independence
+				war_goal = independence_wargoal
+				province = c:ACH.capital_scope
+				target = c:ACH
+			}
+			custom_tooltip = 01_cde_laconia_missions_01_task_7.tt2
+		}
+	}
+}
+
+#2 - Rome drafts demands for Achaea to back down
+cde_me_spa_01.9 = {
+	type = country_event
+	title = "cde_me_spa_01.9.t"
+	desc = "cde_me_spa_01.9.desc"
+	picture = senate_debate
+	
+	left_portrait = c:ROM.current_ruler
+	right_portrait = c:SPA.current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.9.a
+		
+		ai_chance = {
+            factor = 1
+		}
+		
+		custom_tooltip = cde_me_spa_01.9.tt
+		c:ACH = {
+			trigger_event = { 
+				id = cde_me_spa_01.10	#sends demands to Achaea
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_spa_01.9.b	#Player can choose not to intervene
+		
+		ai_chance = {
+            factor = 0
+		}
+	}
+}
+
+#3 - Achaea receives demands from Rome
+cde_me_spa_01.10 = {
+	type = country_event
+	title = "cde_me_spa_01.10.t"
+	desc = "cde_me_spa_01.10.desc"
+	picture = senate_debate
+	
+	left_portrait = c:ACH.current_ruler
+	right_portrait = c:ROM.current_ruler
+	right_portrait = c:SPA.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_spa_01.10.a	#defy the Romans
+		
+		ai_chance = {
+            factor = 8	#80% chance
+		}
+		
+		custom_tooltip = cde_me_spa_01.10.tt	#Rome joins war
+		
+		c:ROM = {
+			trigger_event = { 
+				id = cde_me_spa_01.11	#ping to Rome
+			}
+		}
+		c:SPA = {
+			trigger_event = { 
+				id = cde_me_spa_01.11	#ping to Laconia
+				
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_spa_01.10.b	#refuse
+		
+		ai_chance = {
+            factor = 2	#20% chance
+		}
+		
+		c:ROM = {
+			trigger_event = { 
+				id = cde_me_spa_01.12	#ping to Rome
+			}
+		}
+		c:SPA = {
+			trigger_event = { 
+				id = cde_me_spa_01.12	#ping to Laconia
+			}
+		}
+		
+		#ends the war with white peace
+		every_current_war = {				
+			limit = {
+				any_war_attacker = { this = c:SPA }
+				any_war_defender = { this = c:ACH }
+			}
+			force_white_peace = THIS
+		}
+		
+		
+		#Tags released from ACH as per Roman demands
+		
+		#Elis gains independence
+		c:ACH = {
+			release_subject = c:ELI
+		}
+		#Laconia gains independence
+		c:ACH = {
+			release_subject = c:SPA
+		}
+		
+		custom_tooltip = cde_me_spa_01.10.tt2
+		hidden_effect = {
+			if = {
+				limit = {
+					c:SPA = {
+						has_land = no
+					}
+				}
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 427
+							province_id = 429
+							province_id = 430
+							province_id = 450
+							province_id = 7889
+							province_id = 473	#Leuktron
+						}
+						OR = {
+							owner = c:ACH
+							owner = c:ROM
+						}
+					}
+					set_owned_by = c:SPA
+				}
+				c:SPA = {
+					set_capital = 427	#Sparta
+				}
+			}
+			
+			c:ACH = {
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 427
+							province_id = 429
+							province_id = 430
+							province_id = 450
+							province_id = 7889
+							province_id = 473	#Leuktron
+						}
+						OR = {
+							owner = c:ACH
+							owner = c:ROM
+						}
+					}
+					set_owned_by = c:SPA
+				}
+			}
+			
+			#Argos
+			p:440 = {
+				create_country = {
+					name = {
+						name = "ARG"
+						adjective = "ARG_ADJ"
+					}
+					change_country_tag = ARG
+					set_primary_culture = argolian
+					set_country_religion = roman_pantheon
+					change_country_flag = ARG
+					change_country_color = argos_color
+					change_government = oligarchic_republic
+					add_opinion = {
+						modifier = opinion_liberated_us
+						target = c:ROM
+					}
+					save_scope_as = argos_state_spa
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 7894
+						province_id = 7892
+					}
+					OR = {
+						owner = c:ACH
+						owner = c:SPA
+						owner = c:ROM
+					}
+				}
+				set_owned_by = scope:argos_state_spa
+			}
+			
+			#Messene
+			p:431 = {
+				create_country = {
+					name = {
+						name = "MSE"
+						adjective = "MSE_ADJ"
+					}
+					change_country_tag = MSE
+					set_primary_culture = peloponnesian
+					set_country_religion = roman_pantheon
+					change_country_flag = MSE
+					change_country_color = messene_color
+					change_government = oligarchic_republic
+					add_opinion = {
+						modifier = opinion_liberated_us
+						target = c:ROM
+					}
+					save_scope_as = messene_state_spa
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 432
+					}
+					OR = {
+						owner = c:ACH
+						owner = c:SPA
+						owner = c:ROM
+					}
+				}
+				set_owned_by = scope:messene_state_spa
+			}
+			
+			#Corinth
+			p:418 = {
+				create_country = {
+					name = {
+						name = "COT"
+						adjective = "COT_ADJ"
+					}
+					change_country_tag = COT
+					set_primary_culture = peloponnesian
+					set_country_religion = roman_pantheon
+					change_country_color = corinth_color
+					change_government = oligarchic_republic
+					add_opinion = {
+						modifier = opinion_liberated_us
+						target = c:ROM
+					}
+					save_scope_as = corinth_state_spa
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 417	#Megara
+					}
+					OR = {
+						owner = c:ACH
+						owner = c:SPA
+						owner = c:ROM
+					}
+				}
+				set_owned_by = scope:corinth_state_spa
+			}
+		}
+	}
+}
+
+#4 - Ping - Achaea refuses
+cde_me_spa_01.11 = {
+	type = country_event
+	title = "cde_me_spa_01.11.t"
+	desc = "cde_me_spa_01.11.desc"
+	picture = senate_debate
+	
+	left_portrait = c:ROM.current_ruler
+	left_portrait = c:SPA.current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		every_current_war = {
+			limit = {
+				any_war_defender = { this = c:ACH }
+				any_war_attacker = { this = c:SPA }
+			}
+			save_scope_as = cde_spa_achaean_war
+		}
+	}
+	
+	option = {
+		name = cde_me_spa_01.11.a
+		c:ROM = {
+			add_to_war = {
+				target = scope:cde_spa_achaean_war
+				attacker = yes
+			}
+		}
+	}
+}
+
+#5 - Ping - Achaea submits to Roman demands
+cde_me_spa_01.12 = {
+	type = country_event
+	title = "cde_me_spa_01.12.t"
+	desc = "cde_me_spa_01.12.desc"
+	picture = senate_debate
+	
+	left_portrait = c:ROM.current_ruler
+	left_portrait = c:SPA.current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		custom_tooltip = cde_me_spa_01.10.tt2
+		set_global_variable = spa_achaean_war_global_flag	#sets variable that game checks for if war is over to divide lands up
+	}
+	
+	option = {
+		name = cde_me_spa_01.12.a
+		
+	}
+}
+
+#6 - For Rome - Division of Achaea after defeat - triggers from on action
+cde_me_spa_01.13 = {
+	type = country_event
+	title = "cde_me_spa_01.13.t"
+	desc = "cde_me_spa_01.13.desc"
+	picture = senate_debate
+	
+	left_portrait = c:ROM.current_ruler
+	left_portrait = c:SPA.current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		custom_tooltip = cde_me_spa_01.10.tt2
+		#Elis gains independence
+		c:ACH = {
+			release_subject = c:ELI
+		}
+		#Laconia gains independence
+		c:ACH = {
+			release_subject = c:SPA
+		}
+		c:ACH = {
+			hidden_effect = {
+				if = {
+					limit = {
+						c:SPA = {
+							has_land = no
+						}
+					}
+					every_province = {
+						limit = {
+							OR = {
+								province_id = 427
+								province_id = 429
+								province_id = 430
+								province_id = 450
+								province_id = 7889
+								province_id = 473	#Leuktron
+							}
+							OR = {
+								owner = c:ACH
+								owner = c:ROM
+							}
+						}
+						set_owned_by = c:SPA
+					}
+					c:SPA = {
+						set_capital = 427	#Sparta
+					}
+				}
+				
+				c:ACH = {
+					every_province = {
+						limit = {
+							OR = {
+								province_id = 427
+								province_id = 429
+								province_id = 430
+								province_id = 450
+								province_id = 7889
+								province_id = 473	#Leuktron
+							}
+							OR = {
+								owner = c:ACH
+								owner = c:ROM
+							}
+						}
+						set_owned_by = c:SPA
+					}
+				}
+				
+				#Argos
+				p:440 = {
+					create_country = {
+						name = {
+							name = "ARG"
+							adjective = "ARG_ADJ"
+						}
+						change_country_tag = ARG
+						set_primary_culture = argolian
+						set_country_religion = roman_pantheon
+						change_country_flag = ARG
+						change_country_color = argos_color
+						change_government = oligarchic_republic
+						add_opinion = {
+							modifier = opinion_liberated_us
+							target = c:ROM
+						}
+						save_scope_as = argos_state_spa
+					}
+				}
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 7894
+							province_id = 7892
+						}
+						OR = {
+							owner = c:ACH
+							owner = c:SPA
+							owner = c:ROM
+						}
+					}
+					set_owned_by = scope:argos_state_spa
+				}
+				
+				#Messene
+				p:431 = {
+					create_country = {
+						name = {
+							name = "MSE"
+							adjective = "MSE_ADJ"
+						}
+						change_country_tag = MSE
+						set_primary_culture = peloponnesian
+						set_country_religion = roman_pantheon
+						change_country_flag = MSE
+						change_country_color = messene_color
+						change_government = oligarchic_republic
+						add_opinion = {
+							modifier = opinion_liberated_us
+							target = c:ROM
+						}
+						save_scope_as = messene_state_spa
+					}
+				}
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 432
+						}
+						OR = {
+							owner = c:ACH
+							owner = c:SPA
+							owner = c:ROM
+						}
+					}
+					set_owned_by = scope:messene_state_spa
+				}
+				
+				#Corinth
+				p:418 = {
+					create_country = {
+						name = {
+							name = "COT"
+							adjective = "COT_ADJ"
+						}
+						change_country_tag = COT
+						set_primary_culture = peloponnesian
+						set_country_religion = roman_pantheon
+						change_country_color = corinth_color
+						change_government = oligarchic_republic
+						add_opinion = {
+							modifier = opinion_liberated_us
+							target = c:ROM
+						}
+						save_scope_as = corinth_state_spa
+					}
+				}
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 417	#Megara
+						}
+						OR = {
+							owner = c:ACH
+							owner = c:SPA
+							owner = c:ROM
+						}
+					}
+					set_owned_by = scope:corinth_state_spa
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_spa_01.13.a
+		
+		
+	}
+}
+
+#7 - Ping for Sparta and Achaea - Division of Achaea after defeat
+cde_me_spa_01.14 = {
+	type = country_event
+	title = "cde_me_spa_01.14.t"
+	desc = "cde_me_spa_01.14.desc"
+	picture = senate_debate
+	
+	left_portrait = c:ROM.current_ruler
+	left_portrait = c:SPA.current_ruler
+	right_portrait = c:ACH.current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		custom_tooltip = cde_me_spa_01.10.tt2
+	}
+	
+	option = {
+		name = cde_me_spa_01.14.a
+		
+		
+	}
+	
+}
+

@@ -1,0 +1,172 @@
+﻿"ANU"={
+	country="ANU"
+	186={
+		first_name = "Kavan Tissa"			#father of ruler, deceased
+		family = c:ANU.fam:Vijaya
+		birth_date=529.7.8			#225 BC
+		death_date=593.9.22		#161 BC
+		culture="lankan"
+		religion="buddhism"
+		no_stats=yes
+		add_martial=8
+		add_charisma=6
+		add_finesse=12
+		add_zeal=7
+		no_traits=yes
+		add_trait="tactician"
+		add_trait="cautious"
+		add_trait="shrewd"
+	}
+	
+	187={
+		first_name = "Kelani Tissa"			#father of queen, deceased
+		family = c:ANU.fam:Malaya
+		birth_date=534.7.8			#220 BC
+		death_date=593.12.4		#161 BC
+		culture="lankan"
+		religion="buddhism"
+		no_traits=yes
+		add_trait="cruel"
+		add_trait="arbitrary"
+	}
+	
+	188={
+		first_name = "Viharamaha Devi"			#mother of ruler
+		family = c:ANU.fam:Malaya
+		birth_date=554.8.8			#200 BC
+		female=yes
+		father="char:187"
+		culture="lankan"
+		religion="buddhism"
+		no_stats=yes
+		add_martial=4
+		add_charisma=12
+		add_finesse=9
+		add_zeal=10
+		no_traits=yes
+		add_trait="brave"
+		add_trait="pious"
+		add_trait="righteous"
+		add_gold=200
+		add_popularity=80
+	}
+	
+	189={
+		first_name = "Dutthagamani Abhaya"			#ruler
+		family = c:ANU.fam:Vijaya
+		nickname = "NICKNAME_FEARLESS"
+		birth_date=564.8.18			#190 BC
+		father="char:186"		#Kavan Tissa
+		mother="char:188"	#Viharamaha Devi
+		culture="lankan"
+		religion="buddhism"
+		no_stats=yes
+		add_martial=10
+		add_charisma=5
+		add_finesse=11
+		add_zeal=9
+		no_traits=yes
+		add_trait="aggressive"
+		add_trait="reckless"
+		add_trait="founder"
+		add_trait="victorious"
+		add_gold=300
+		add_popularity=90
+		c:ANU = {
+			set_as_ruler=char:189
+		}
+		dna="H+cf5+2r7av5xfnFApkCmQJ7AnsCbgJuAn4CfgKEAoQCigKKAmYCZgJpAmkCgAKAAowCjAKGAoYCaQJpAoICggKOAo4CkgKSAncCdwFxAXECbAJsAooCigKCAoIClgKWA44DjgJ3AncCbQJtAT0BPQE8ATwCeAJ4AngCeAJmAmYBZAFkAn4CfgKCAoIBSAFIAoACgAKXApcCgwKDABwAHAJqAmoCdAJ0AVcBVwKCAoICjgKOAncCdwKPAo8ChgKGApkCmQOsA6wCZgJmAm4CbgKRApECdAJ0An8CfwKTApMCjQKNApECkQEHAQcA/AD8AQcBBwDAAMAAwwDDANUA1QDjAOMAsgCyAFMAUwDqAOoA1gDWALEAsQB/AH8AHAAcAGkAaQAOAA4BOQE5AOQA5AK4ArgARgBGAFcAVwB/AH8BQgFCAPwA/AFzAXMAcQBxANkA2QSXBJcAEgASAM0AzQBxAHEAjgCOANUA1QBNAE0CUgJSAH8Afwb8BvwMNQw1Af8B/wiyCLIJZwlnBv0G/QAAAAAAAAAAAAAAAA=="
+	}
+	
+	190={
+		first_name = "Ranmanika"			#queen
+		family = c:ANU.fam:Vijaya
+		birth_date=574.4.4			#180 BC
+		female=yes
+		marry_character="char:189"	#Dutthagamani
+		culture="lankan"
+		religion="buddhism"
+		add_gold=200
+		dna="FPcU98+mz6b08fTxAn8CfwJ6AnoCZgJmAoECgQKWApYCbwJvAooCigKAAoACbQJtAnECcQJnAmcCbQJtAo0CjQFVAVUCdAJ0AmkCaQKRApECegJ6ApgCmAKIAogDrwOvAooCigJqAmoCcQJxAB0AHQFKAUoCkwKTAoACgAJ+An4DnQOdAVoBWgKKAooDcANwBOUE5QJ4AngE2gTaAmwCbAJwAnABUgFSAVQBVAKKAooCgQKBApICkgKDAoMCjAKMApECkQKNAo0CiwKLAoYChgOoA6gCiwKLAn4CfgJ4AngCeQJ5AoUChQEnAScADgAOAUgBSABwAHAAugC6AUQBRACMAIwA2wDbAAoACgKoAqgApQClAAgACAB/AH8CcgJyAKcApwDhAOEC4wLjAt8C3wDdAN0BIQEhACIAIgB/AH8AOAA4AsACwAEiASIAFQAVAJoAmgMPAw8AEwATAIIAggCGAIYEfwR/A0ADQAAUABQDSwmOAH8AfwagBqAMlAyUAUEBQQhWCFYJCAkIBkcGRwAAAAAAAAAAAAAAAA=="
+	}
+	
+	191={
+		first_name = "Saddha Tissa"			#brother of Dutthagamani, once waged a civil war but reconciled and became a prominent general
+		family = c:ANU.fam:Vijaya
+		birth_date=570.9.18			#184 BC
+		father="char:186"		#Kavan Tissa
+		mother="char:188"	#Viharamaha Devi
+		culture="lankan"
+		religion="buddhism"
+		no_stats=yes
+		add_martial=10
+		add_charisma=9
+		add_finesse=8
+		add_zeal=6
+		no_traits=yes
+		add_trait="prominent"
+		add_trait="forgiving"
+		add_gold=200
+		add_popularity=65
+		dna="Iekh6dOv06/v1+/XAnACcAFVAVUCcAJwAoUChQJtAm0ChgKGAn8CfwKAAoACiwKLApcClwKJAokBVQFVAokCiQKDAoMCkQKRAooCigKDAoMBUwFTAosCiwKIAogCeAJ4AmwCbAKRApEClQKVAlkCWQFHAUcBTwFPAngCeAJxAnECjwKPAooCigKAAoACYgJiApQClAJ9An0CZgJmApECkQJsAmwCbwJvBMcExwJ/An8DqwOrAmgCaAKYApgDnAOcA5oDmgJwAnACbwJvADkAOQOZA5kBZQFlAWEBYQKRApECeAJ4ApACkAK7ArsAaQBpACEAIQLmAuYAJgAmACsAKwA1ADUC/AL8AFcAVwBxAHEADgAOAMsAywB/AH8ARgBGALsAuwCDAIMApQClAXABcAFDAUMDtQO1ANMA0wB/AH8AyQDJAIAAgAFBAUEAqgCqAVkBWQNLA0sAQQBBANkA2QCiAKICxgLGACwALAD6APoDUgOyAH8AfwbpBukMqAw8AdEB0QipCBUJPglMBugG6AAAAAAAAAAAAAAAAA=="
+	}
+	
+	192={
+		first_name = "Deeghabhaya"			#youngest brother of Dutthagamani
+		family = c:ANU.fam:Vijaya
+		birth_date=574.9.18			#180 BC
+		father="char:186"		#Kavan Tissa
+		mother="char:188"	#Viharamaha Devi
+		culture="lankan"
+		religion="buddhism"
+		add_trait="unnoticeable"
+		add_gold=150
+	}
+	
+	193={
+		first_name = "Mahila"			#younger sister of Dutthagamani
+		family = c:ANU.fam:Vijaya
+		birth_date=576.6.5			#178 BC
+		father="char:186"		#Kavan Tissa
+		mother="char:188"	#Viharamaha Devi
+		female=yes
+		culture="lankan"
+		religion="buddhism"
+		add_gold=100
+		dna="C+YL5r6ovqjv5e/lBNQE1AJ7AnsCfAJ8ApQClAJqAmoCkAKQAmYCZgKDAoMBYgFiAmgCaAJrAmsDpwOnBLQEtAKDAoMCiAKIAn0CfQKEAoQCfAJ8An4CfgKNAo0CfAJ8An0CfQFNAU0ChAKEAlYCVgJcAlwCfwJ/AEsASwJ5AnkCdQJ1Am4CbgKMAowBOgE6AoMCgwKSApICaAJoAU4BTgKBAoECjgKOAnQCdAKUApQCmQKZApICkgKPAo8AZABkAo0CjQKQApACgQKBAnoCegOjA6MCgQKBA5kDmQKLAosCdQJ1ApMCkwIHAgcA0gDSAM8AzwAYABgAzgDOAO0A7QAcABwCywLLAG8AbwC7ALsATgBOAUYBRgB/AH8AiQCJAEQARAD+AP4AWwBbAScBJwFgAWAB3QHdAI8AjwB/AH8BKQEpAHcAdwCdAJ0AYwBjAKoAqgNHA0cAEAAQAFgAWAEyATIBXQFdAR0BHQDwAPABaAFoAH8AfwYhBiEMAAyZAfMB8wioCKgJtQniBpUGlQAAAAAAAAAAAAAAAA=="
+	}
+	
+	194={
+		first_name = "Saliya"			#Son of Dutthagamani, later disinherited
+		family = c:ANU.fam:Vijaya
+		birth_date=584.5.7			#170 BC
+		father="char:189"		#Dutthagamani
+		mother="char:190"		#Ranmanika
+		culture="lankan"
+		religion="buddhism"
+		no_stats=yes
+		add_martial=9
+		add_charisma=5
+		add_finesse=8
+		add_zeal=7
+		no_traits=yes
+		add_trait="stubborn"
+		add_trait="reckless"
+		add_trait="unnoticeable"
+		add_gold=150
+		dna="GuYa5v2r/avKrMqsApECkQKVApUCjAKMAo4CjgKQApACmAKYAooCigJwAnACmAKYApcClwA/AD8DogOiApYClgKDAoMCagJqAowCjAJ9An0CiQKJAoQChAKDAoMC4QKEAoYChgKEAoQCkAKQAUQBRAJlAmUCfwJ/AokCiQJ8AnwCbAJsAoMCgwKJAokCVgJWAUwBTAKKAooCjQKNAmsCawKYApgCewJ7Ao0CjQKPAo8CiwKLAo0CjQKQApACgwKDA5sDmwJmAmYE4QThADwAPAOtA60EwwTDAnICcgJxAnECeQJ5AVkBWQLPAs8A4ADgACAAIAKrAqsAswCzAJ0AnQA4ADgAGgAaAKsAqwEcARwBFgEWATkBOQB/AH8ALgAuAP0A/QDaANoAowCjAJMAkwEuAS4AeQB5AV8BXwB/AH8BaAFoADMAMwE9AT0A5QDlAM8AzwN2A3YA3wDfAUkBSQAyADIAZwBnAK8ArwC7ALsM+wz7AH8AfwaDBoMMwAzAAegB6AghCGAJfQl9BvEG8QAAAAAAAAAAAAAAAA=="
+	}
+	
+	195={
+		first_name = "Abhihitha"			#daughter of Dutthagamani
+		family = c:ANU.fam:Vijaya
+		birth_date=584.5.7			#170 BC
+		father="char:189"		#Dutthagamani
+		mother="char:190"		#Ranmanika
+		female=yes
+		culture="lankan"
+		religion="buddhism"
+		add_gold=150
+		dna="DOwM7Oma6ZrAtsC2ApMCkwJrAmsCjwKPAnoCegJtAm0DqQOpAnQCdAOiA6ICawJrAngCeAKTApMBXAFcAokCiQKDAoMCjAKMAWQBZAKXApcCigKKAo4CjgKJAokCbQJtAoMCgwFSAVICgQKBAUIBQgE9AT0CbwJvAmYCZgJnAmcChwKHAVQBVAJxAnEDZgNmA5sDmwJsAmwCgQKBAn0CfQFiAWIChQKFAmkCaQKSApICeQJ5An8CfwKPAo8CjAKMApkCmQKHAocALwAvAngCeAKDAoMCgwKDAUwBTAKTApMChwKHAmcCZwLYAtgApgCmAPkA+QLbAtsAcABwAEoASgC5ALkBegF6ATMBMwEUARQAiQCJAJgAmAB/AH8A+wD7AFIAUgDCAMIBFAEUAEoASgCjAKMCTQJNAT4BPgB/AH8BfAF8APkA+QFZAVkAMgAyAFAAUACHAIcA3QDdAwEDAQJ9An0ClgKWAA4ADgCFAIUHbwdvAH8AfwYqBioMoQxqAaABoAjhCOEJwwnDBv0G/QAAAAAAAAAAAAAAAA=="
+	}
+}

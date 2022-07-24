@@ -1,0 +1,250 @@
+﻿namespace = cde_character_appearances
+
+# Gaius Marius
+cde_character_appearances.1 = {
+	type = country_event
+	title = "cde_character_appearances.1.t"
+	desc = "cde_character_appearances.1.desc"
+	
+	picture = oration
+	
+	left_portrait = scope:gaius_marius_scope
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		current_date > 620.1.1		#134 BC
+	}
+	
+	weight_multiplier = {
+		modifier = {
+			factor = 100
+			current_date > 620.1.1
+		}
+	}
+	
+	immediate = {
+		custom_tooltip = cde_character_appearances.1.tt
+		hidden_effect = {
+			create_character = {		#Gaius Marius spawns
+				first_name="Gaius"
+				family_name="Marius"
+				age = 23
+				female = no
+				culture = roman
+				religion = roman_pantheon
+				no_traits = yes
+				no_stats = yes
+				add_martial = 14
+				add_charisma = 10
+				add_finesse = 8
+				add_zeal = 6
+				add_trait = prominent
+				add_trait = ambitious
+				add_trait = original_thinker
+				add_party_conviction = {
+					party_type = populares_party
+					value = 100
+				}
+				add_gold = 150
+				save_scope_as = gaius_marius_scope
+				dna="Guoa6olwiXC4+Lj4Am0CbQKjAngAJwAnAIkCkQKUApQCfwJ/AmgCaAKHAocBYgFiAn8CfwKYApgCgAKAAocChwJtAm0CbwJvApICkgKJAokCmgKSAngCeAFHAWYChQKFA5IDkgKLAosAJgAmAo4CjgKJAokDpgOmApECkQOeA54EtQS1AoUChQJ5AnkCdQJ1Am8CbwS2BLYCVAKSApgCmAJ2AnYCawJrApUClQJ0AnQCdAJ0AogCiAKUApQCbwJvA6UDpQKBAoEChgKGACsAKwFfAV8ClAKUApQClAKRApEBXAFcAnYCdgFPANsAHQAdAQ8BFQDQANAAWQBZATkBOQBkAGQBSwFLAMcAxwFJAUkEqQSpAXgBeAB/AH8ANgA2Av4C/gKYArcA8ADwAQsBCwFoAWgDtQO1AXwBfAB/AH8BPgE+AAEAAQE3ATcANQA1ALUAtQSdBJ0AnACcAOEA4QAvAC8DPAM8AHkAeQEwATAMawzCAH8AfwFHAUcBNAEfAKQAoQkuCS4BDAEMANQAswAAAAAAAgAAAAIAAA=="
+			}
+			set_variable = {
+				name = gaius_marius_var
+				value = scope:gaius_marius_scope
+			}
+		}
+	}
+	
+	option = {
+		name = "cde_character_appearances.1.a"
+		
+		
+	}
+}
+
+# Lucius Cornelius Sulla Felix
+cde_character_appearances.2 = {
+	type = country_event
+	title = "cde_character_appearances.2.t"
+	desc = "cde_character_appearances.2.desc"
+	
+	picture = cde_event_roman_life_freemen
+	
+	left_portrait = scope:sulla_scope
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		current_date > 644.1.1		#111 BC, when Sulla is 28 he was made quaestor by Marius
+	}
+	
+	weight_multiplier = {
+		modifier = {
+			factor = 100
+			current_date > 644.3.1
+		}
+	}
+	
+	immediate = {
+		custom_tooltip = cde_character_appearances.2.tt
+		hidden_effect = {
+			create_character = {		#Sulla spawns
+				first_name="Lucius"
+				nickname="NICKNAME_SULLA"
+				family = c:ROM.fam:Cornelii		#from a fallen branch of gens Cornelii
+				age = 28
+				female = no
+				culture = roman
+				religion = roman_pantheon
+				no_traits = yes
+				no_stats = yes
+				add_martial = 15
+				add_charisma = 13
+				add_finesse = 11
+				add_zeal = 4
+				add_trait = crafty
+				add_trait = ambitious
+				add_trait = harsh
+				add_party_conviction = {
+					party_type = optimates_party
+					value = 100
+				}
+				add_gold = 100
+				save_scope_as = sulla_scope
+				dna="UVIX7Ydhh2HOus66ApcClwJzAnMCgAKAApUClQKTApMDpAOkAskCdgJuAm4ClAKUAmkCaQKSApIAPwA/An8CfwKjAocCcQJxAUwBTAKKAooCeAJ4ApcClwKMAowCaQJpAnsCewJmAmYCfQJ9AnwCfAKSApICegJ6ApQClAKLAosCgAKAAn0CfQOdA50CdwJ3A5wDnAKSApICRAKIAmYCZgKJAokCgQKBAoACgAKVApUCiwKLAnACcAJ9An0ClAKUAU4BTgKEAoQCewJ7AnACcAJyAnICcwJzAocChwKDAoMEzATMAosCiwEmASYCkAL/ARgBOQK8ArwC/wDYAEoASgK9Ar0BXgFeAs4CzgEoASgBPQE9ANUA1QB/AH8ALgAuAMAAwACtAK0BGAEYAX4BfgE8ATwAFwAXAuwC7AB/AH8ALgAuAUEBQQB3AHcCqQKpAOsA6wKMAowBMQExAX0BfQLOAs4ARQBFBI4EjgNcA1wHVQdVAH8AfwQhBCEBgAE4ANwATAkACfgpAAHPAP8AngAAAAAAAAAAAAAAAA=="
+			}
+			set_variable = {
+				name = sulla_var
+				value = scope:sulla_scope
+			}
+		}
+	}
+	
+	option = {
+		name = "cde_character_appearances.2.a"
+		
+		
+	}
+}
+
+# Tigranes II the Great
+cde_character_appearances.3 = {
+	type = country_event
+	title = "cde_character_appearances.3.t"
+	desc = "cde_character_appearances.3.desc"
+	
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = scope:arm_alani_princess
+	right_portrait = scope:tigranes_the_great_scope
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ARM
+		current_date > 614.1.1		#140 BC
+		OR = {
+			current_ruler = {
+				this = char:143 		#Artavasdes I	#may have been son or nephew
+			}
+			char:145 = {			#Tigranes I
+				is_alive = yes
+				employer = root
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		modifier = {
+			factor = 100
+			current_date > 614.1.1
+		}
+	}
+	
+	immediate = {
+		custom_tooltip = cde_character_appearances.3.tt
+		hidden_effect = {
+			create_character = {		#Alan princess, mother of Tigranes II spawns
+				age = 25
+				female = yes
+				culture = alani
+				religion = indo_iranian_religion
+				save_scope_as = arm_alani_princess
+				dna="I+wj7MmcyZy9273bAnYCdgJwAnACawJrAWYBZgKVApUCjAKMApcClwKWApYCgAKAApcClwKSApICkAKQAoECgQOJA6MChwKHABkAGQJ4AngCfQJ9AoQChAJrAmsCkgJ9Ao4CkgJ4AngCawJrAVcBVwKCAoICegJ6An8CfwKYApgClwKXAoYChgKJAokClQKVApgCkQJVAncCmAJoApECkQAmACYCfAJ8Am4CbgJpAmkCgAKAAngCeAOpA6kCgAKAAm0CbQKJAokCbwJvAokCiQKZApkCcAJwAmkCaQKJAokClwKXAoQChAFOAU4AEAAqAEMAJALBANMBEAEQAuEA3AFiAWIA+gD6AoUChQE7ATsAsQCxAFIAUgB/AH8AwgDCAVYBVgAKAAoC8ALwAEMAQwFmAWYARQBFAJYAlgB/AH8AXABcAHsAewCmAKYAHAAcAFwAXADUANQATwBPBO0E7QEWARYCoAKgAy4DLgKMAowIegbHAH8AfwUMBQwGcAYIARYBoQMCA9ECAQQiAwABbAAAAAAAAAAAAAAAAA=="
+			}
+		}
+		if = {
+			limit = {
+				current_ruler = {
+					this = char:143 		#Artavasdes I	#may have been son or nephew
+				}
+			}
+			hidden_effect = {
+				create_character = {		#Tigranes spawns
+					first_name="Tigranes"
+					family = c:ARM.fam:Artaxiad
+					father = "char:143"			#son of Artavasdes I
+					mother = scope:arm_alani_princess
+					age = 0
+					female = no
+					culture = armenian
+					religion = zoroaster
+					no_stats = yes
+					add_martial = 15
+					add_charisma = 12
+					add_finesse = 14
+					add_zeal = 10
+					save_scope_as = tigranes_the_great_scope
+					dna="I+wj7MmcyZy9273bAnYCdgJwAnACawJrAWYBZgKVApUCjAKMApcClwKWApYCgAKAApcClwKSApICkAKQAoECgQOJA6MChwKHABkAGQJ4AngCfQJ9AoQChAJrAmsCkgJ9Ao4CkgJ4AngCawJrAVcBVwKCAoICegJ6An8CfwKYApgClwKXAoYChgKJAokClQKVApgCkQJVAncCmAJoApECkQAmACYCfAJ8Am4CbgJpAmkCgAKAAngCeAOpA6kCgAKAAm0CbQKJAokCbwJvAokCiQKZApkCcAJwAmkCaQKJAokClwKXAoQChAFOAU4AEAAqAEMAJALBANMBEAEQAuEA3AFiAWIA+gD6AoUChQE7ATsAsQCxAFIAUgB/AH8AwgDCAVYBVgAKAAoC8ALwAEMAQwFmAWYARQBFAJYAlgB/AH8AXABcAHsAewCmAKYAHAAcAFwAXADUANQATwBPBO0E7QEWARYCoAKgAy4DLgKMAowIegbHAH8AfwUMBQwGcAYIARYBoQMCA9ECAQQiAwABbAAAAAAAAAAAAAAAAA=="
+				}
+				set_variable = {
+					name = tigranes_the_great_var
+					value = scope:tigranes_the_great_scope
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				char:145 = {			#Tigranes I
+					is_alive = yes
+					employer = root
+				}
+			}
+			hidden_effect = {
+				create_character = {		#Tigranes II spawns
+					first_name="Tigranes"
+					family = c:ARM.fam:Artaxiad
+					father = "char:145"			#son of Tigranes I
+					mother = scope:arm_alani_princess
+					age = 0
+					female = no
+					culture = armenian
+					religion = zoroaster
+					no_stats = yes
+					add_martial = 15
+					add_charisma = 12
+					add_finesse = 14
+					add_zeal = 10
+					save_scope_as = tigranes_the_great_scope
+					dna="I+wj7MmcyZy9273bAnYCdgJwAnACawJrAWYBZgKVApUCjAKMApcClwKWApYCgAKAApcClwKSApICkAKQAoECgQOJA6MChwKHABkAGQJ4AngCfQJ9AoQChAJrAmsCkgJ9Ao4CkgJ4AngCawJrAVcBVwKCAoICegJ6An8CfwKYApgClwKXAoYChgKJAokClQKVApgCkQJVAncCmAJoApECkQAmACYCfAJ8Am4CbgJpAmkCgAKAAngCeAOpA6kCgAKAAm0CbQKJAokCbwJvAokCiQKZApkCcAJwAmkCaQKJAokClwKXAoQChAFOAU4AEAAqAEMAJALBANMBEAEQAuEA3AFiAWIA+gD6AoUChQE7ATsAsQCxAFIAUgB/AH8AwgDCAVYBVgAKAAoC8ALwAEMAQwFmAWYARQBFAJYAlgB/AH8AXABcAHsAewCmAKYAHAAcAFwAXADUANQATwBPBO0E7QEWARYCoAKgAy4DLgKMAowIegbHAH8AfwUMBQwGcAYIARYBoQMCA9ECAQQiAwABbAAAAAAAAAAAAAAAAA=="
+				}
+				set_variable = {
+					name = tigranes_the_great_var
+					value = scope:tigranes_the_great_scope
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "cde_character_appearances.3.a"
+		
+		
+	}
+}
+

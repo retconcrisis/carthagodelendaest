@@ -1,0 +1,37 @@
+﻿"KSL"={
+	country="KSL"
+	235={		#ruler, contemporary of Pushyamitra Shunga
+		first_name = "Muladeva"			#Muladeva, ruler of Kosala / Ayodhya / Saketa
+		family = c:KSL.fam:Deva
+		birth_date=542.1.5		#212 BC
+		culture="kosala"
+		religion="hindu"
+		no_stats=yes
+		add_martial=9
+		add_charisma=10
+		add_finesse=7
+		add_zeal=11
+		add_gold=250
+		add_popularity=70
+		c:KSL = {
+			set_as_ruler=char:235
+		}
+	}
+	
+	236={		#future ruler, contemporary of Vasumitra Shunga
+		first_name = "Mitradeva"
+		family = c:KSL.fam:Deva
+		birth_date=564.9.20		#190 BC
+		culture="kosala"
+		religion="hindu"
+		father="char:235"
+		no_stats=yes
+		add_martial=7
+		add_charisma=9
+		add_finesse=11
+		add_zeal=10
+		add_gold=100
+		add_popularity=40
+	}
+	
+}

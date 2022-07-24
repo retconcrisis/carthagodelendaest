@@ -1,0 +1,740 @@
+﻿01_cde_indo_greek_missions_01_greek_india = {
+    header = "mission_image_indo_greeks"	#new
+    icon = "cde_indo_greek_2"	#new
+
+    repeatable = no
+
+	chance = {
+		factor = 50000
+	}
+	
+	ai_chance = { factor = 100 }		#Chance AI chooses
+
+    potential = {
+        tag = IGR
+		is_subject = no
+        has_civil_war = no
+    }
+
+    abort = {
+    	
+    }
+	
+	chance = {
+		factor = 3
+	}
+
+    on_start = {
+    	
+    }
+
+    on_abort = {
+    	custom_tooltip = general_mission_cooldown_tt
+		add_political_influence = -20
+    }
+
+    on_completion = {
+    	complete_mission_effect = yes
+    	
+    }
+
+    cde_indo_greek_missions_01_task_1 = { # Indian Ambition
+        icon = "task_political"
+		
+		allow = {
+			has_civil_war = no
+		}
+		
+		duration = 365	#optional - in days
+		
+		on_start = {
+			add_political_influence = -10
+		}
+
+        on_completion = {
+			custom_tooltip = cde_indo_greek_missions_01_task_1.tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							is_in_area = abhiria_area
+							is_in_area = maru_area
+							is_in_area = surasena_area
+						}
+						NOT = { owned_or_subject_owned = root }
+					}
+					add_claim = root
+				}
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_2 = { # Subdue the Abhiras
+        icon = "task_expansion"
+
+		requires = { cde_indo_greek_missions_01_task_1 }
+
+        highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = abhiria_area
+					is_in_area = maru_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			area:abhiria_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+			area:maru_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+
+        on_completion = {
+        	custom_tooltip = cde_indo_greek_missions_01_task_2.tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							is_in_area = madhyamika_area
+							is_in_area = matsya_area
+						}
+						NOT = { owned_or_subject_owned = root }
+					}
+					add_claim = root
+				}
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_3 = { # Besiege Madhyamika
+        icon = "task_athena"	#new
+
+		requires = { cde_indo_greek_missions_01_task_2 }
+
+        highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = madhyamika_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			area:madhyamika_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+
+        on_completion = {
+        	trigger_event = { 
+				id = cde_me_igr_01.3	#Madhyamika Elephants
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_4 = { # Subjugate Yaudheyas
+        icon = "task_artemis"	#new
+
+		requires = { cde_indo_greek_missions_01_task_3 }
+
+        highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = matsya_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			area:matsya_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+
+        on_completion = {
+        	trigger_event = { 
+				id = cde_me_igr_01.4	#The Mighty Yaudheyas
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_5 = { # Seize Shurasena
+        icon = "task_conquest"
+
+		requires = { cde_indo_greek_missions_01_task_1 }
+
+        highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = surasena_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			area:surasena_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+
+        on_completion = {
+        	trigger_event = { 
+				id = cde_me_igr_01.5	#Fields of Herakles-Balarama
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_6 = { # Ashokan Cities
+        icon = "task_economical"	#new
+
+		requires = { cde_indo_greek_missions_01_task_5  }
+
+        highlight = {
+        	scope:province = {
+				OR = {
+					province_id = 4470
+					province_id = 4475
+				}
+			}
+        }
+		
+		allow = {
+			p:4470 = {	#Vidisha
+    			owned_or_subject_owned = root
+    		}
+			p:4475 = {	#Ujjayini
+    			owned_or_subject_owned = root
+    		}
+		}
+
+        on_completion = {
+        	add_country_modifier = {
+				name = cde_me_igr_legacy_of_ashoka
+				duration = 3650
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_7 = { # Drive Back the Shungas
+        icon = "task_conquest"
+
+		requires = { cde_indo_greek_missions_01_task_5 }
+
+        highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = west_cedi_area
+					is_in_area = east_cedi_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			area:west_cedi_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+			area:east_cedi_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+
+        on_completion = {
+        	current_ruler = {
+				add_popularity = 10
+			}
+			add_2_free_province_investments = yes
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_8 = { # Avenge the Mauryans
+        icon = "task_expansion"
+
+		requires = { cde_indo_greek_missions_01_task_7 cde_indo_greek_missions_01_task_11 }
+
+        highlight = {
+        	scope:province = {
+				OR = {
+					province_id = 4440
+				}
+			}
+        }
+		
+		allow = {
+			p:4440 = {	#Pataliputra
+    			owner = root
+    		}
+		}
+
+        on_completion = {
+        	trigger_event = { 
+				id = cde_me_igr_01.8	#Avengers of the Mauryans
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_9 = { # Poleis in India
+        icon = "task_diplomatic"
+
+		requires = { cde_indo_greek_missions_01_task_6 }
+		
+		allow = {
+			custom_tooltip = {
+            	text = cde_indo_greek_missions_01_task_9.tt
+				any_owned_province = {
+					count >= 5
+					owner = root
+					OR = {
+						is_in_region = maru_region
+						is_in_region = avanti_region
+						is_in_region = madhyadesa_region
+						is_in_region = pracya_region
+					}
+					has_city_status = yes
+					total_population >= 15
+					has_building = forum_building
+					has_building = commerce_building	#Marketplace
+					has_building = theathre_building	#Grand Theater
+					num_of_used_building_slots >= 5
+					has_construction = no
+				}
+			}
+		}
+
+        on_completion = {
+        	
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_10 = { # Push Into Pancala
+        icon = "task_artemis"	#new
+
+		requires = { cde_indo_greek_missions_01_task_1 }
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					is_in_area = pancala_area
+					is_in_area = ahicchatra_area
+				}
+				NOT = { owned_or_subject_owned = root }
+        	}
+        }
+		
+		allow = {
+			area:pancala_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+			area:ahicchatra_area = {
+    			any_area_province = {
+	    			count = all
+					owned_or_subject_owned = root
+                }
+    		}
+		}
+		
+		on_completion = {
+        	trigger_event = { 
+				id = cde_me_igr_01.10	#Uttarapatha Trade Routes
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_11 = { # Ayodhya/Saketa, City of Heaven
+        icon = "task_zeus_cornucopia"
+
+		requires = { cde_indo_greek_missions_01_task_10 }
+		
+		highlight = {
+        	scope:province = {
+				OR = {
+					province_id = 4437
+				}
+			}
+        }
+		
+		allow = {
+			p:4437 = {	#Ayodhya
+    			owned_or_subject_owned = root
+    		}
+		}
+		
+		on_completion = {
+        	trigger_event = { 
+				id = cde_me_igr_01.11	#Kingdom of Heaven
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_12 = { # Stupa in Pataliputra
+        icon = "task_political"
+
+		requires = { cde_indo_greek_missions_01_task_8 }
+		
+		potential = {	#whether task is displayed
+			OR = {
+				religion = buddhism
+				current_ruler = {
+					has_religion = buddhism
+				}
+				AND = {
+					current_ruler = {
+						NOT = { has_religion = buddhism }
+						NOT = { has_trait = zealous }
+					}
+				}
+			}
+		}	
+		
+		highlight = {
+        	scope:province = {
+				OR = {
+					province_id = 4440
+				}
+			}
+        }
+		
+		allow = {
+			p:4440 = {
+    			owner = root
+    		}
+			p:4440 = {	#Pataliputra
+    			has_city_status = yes
+				has_building = temple_building
+    		}
+			legitimacy >= 90
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_12.tt
+				p:4440 = {
+					any_pops_in_province = {
+						count >= 15
+						pop_religion = buddhism
+					}
+				}
+			}
+		}
+		
+		on_completion = {
+			trigger_event = { 
+				id = cde_me_igr_01.12	#Herakles, Protector of the Buddha
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_13 = { # Temple to Athena Alkidemos
+        icon = "task_athena"	#new
+
+		requires = { cde_indo_greek_missions_01_task_8 }
+		
+		potential = {	#whether task is displayed
+			religion = roman_pantheon	#Hellenic state religion
+		}	
+		
+		highlight = {
+        	scope:province = {
+				OR = {
+					province_id = 4440
+				}
+			}
+        }
+		
+		allow = {
+			treasury >= 100
+			p:4440 = {
+    			owner = root
+    		}
+			p:4440 = {	#Pataliputra
+    			has_city_status = yes
+				has_building = temple_building
+    		}
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_13.tt
+				p:4440 = {
+					any_pops_in_province = {
+						count >= 10
+						pop_religion = roman_pantheon
+					}
+				}
+			}
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_13.tt2
+				any_country_state = {
+					any_state_province = {
+						OR = {
+							trade_goods = marble
+							is_importing_trade_good = marble
+						}
+					}
+				}
+			}
+		}
+		
+		duration = 360	#optional - in days
+		
+		on_start = {
+			add_treasury = -100
+		}
+		
+		on_completion = {
+			trigger_event = { 
+				id = cde_me_igr_01.13	#Temple to Athena Alkidemos
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_14 = { # Renovate Sanchi Stupa
+        icon = "task_zeus_cornucopia"
+
+		requires = { cde_indo_greek_missions_01_task_6 }
+		
+		highlight = {
+        	scope:province = {
+				OR = {
+					province_id = 4470	#Vidisha
+				}
+			}
+        }
+		
+		allow = {
+			treasury >= 50
+			p:4470 = {
+    			owner = root
+    		}
+			p:4470 = {
+    			has_city_status = yes
+				has_building = temple_building
+    		}
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_14.tt
+				p:4470 = {
+					any_pops_in_province = {
+						count >= 10
+						pop_religion = buddhism
+					}
+				}
+			}
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_14.tt2
+				any_country_state = {
+					any_state_province = {
+						OR = {
+							trade_goods = marble
+							trade_goods = stone
+							is_importing_trade_good = marble
+							is_importing_trade_good = stone
+						}
+					}
+				}
+			}
+		}
+		
+		duration = 360	#optional - in days
+		
+		on_start = {
+			add_treasury = -50
+		}
+		
+		on_completion = {
+			trigger_event = { 
+				id = cde_me_igr_01.14	#Hellenic Additions to Sanchi Stupa
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_15 = { # Bilingual Coinage
+        icon = "task_economical"
+
+		requires = { cde_indo_greek_missions_01_task_3 }
+		
+		highlight = {
+        	scope:province = {
+				owner = root
+				has_city_status = yes
+				has_building = foundry_building
+				NOT = { province_dominant_culture_group = hellenic }
+			}
+        }
+		
+		allow = {
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_15.tt
+				any_owned_province = {
+					count >= 5
+					owner = root
+					has_city_status = yes
+					has_building = foundry_building
+					NOT = { province_dominant_culture_group = hellenic }
+				}
+			}
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_15.tt2
+				any_country_culture = {
+					count >= 2
+					is_integrated = yes
+					NOT = { 
+						is_culture = greco_bactrian
+						is_culture = macedonian
+						is_culture = ionian
+					}
+				}
+
+			}
+		}
+		
+		on_completion = {
+			trigger_event = { 
+				id = cde_me_igr_01.15	#Bilingual Coinage
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_16 = { # Yavanarajya
+        icon = "task_athena"	#new
+
+		requires = { cde_indo_greek_missions_01_task_4 cde_indo_greek_missions_01_task_15 }
+		
+		allow = {
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_16.tt
+				any_subject = {
+	    			count >= 3
+					has_subject_loyalty >= 60
+					capital_scope = {
+						OR = {
+							is_in_region = maru_region
+							is_in_region = avanti_region
+							is_in_region = madhyadesa_region
+							is_in_region = pracya_region
+						}
+					}
+                }
+			}
+		}
+		
+		on_completion = {
+			add_country_modifier = {
+				name = cde_me_igr_yavanarajya
+				duration = 7300
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_17 = { # Protector of Indian Greeks
+        icon = "task_artemis"
+
+		requires = { cde_indo_greek_missions_01_task_9 }
+		
+		highlight = {
+        	scope:province = {
+				owner = root
+				has_city_status = yes
+				fort_level >= 2
+				OR = {
+					is_in_region = maru_region
+					is_in_region = avanti_region
+					is_in_region = madhyadesa_region
+					is_in_region = pracya_region
+				}
+				any_pops_in_province = {
+					count >= 5
+					pop_culture_group = hellenic
+				}
+			}
+        }
+		
+		allow = {
+			custom_tooltip = {
+				text = cde_indo_greek_missions_01_task_17.tt
+				any_owned_province = {
+					count >= 3
+					owner = root
+					has_city_status = yes
+					fort_level >= 2
+					OR = {
+						is_in_region = maru_region
+						is_in_region = avanti_region
+						is_in_region = madhyadesa_region
+						is_in_region = pracya_region
+					}
+					any_pops_in_province = {
+						count >= 5
+						pop_culture_group = hellenic
+					}
+				}
+			}
+		}
+		
+		on_completion = {
+			trigger_event = { 
+				id = cde_me_igr_01.17	#Savior of Greeks in India
+			}
+        }
+    }
+	
+	cde_indo_greek_missions_01_task_18 = { # Heir to Alexander
+        icon = "task_conquest"
+
+		requires = { cde_indo_greek_missions_01_task_17 cde_indo_greek_missions_01_task_12 }
+		
+		final = yes
+		
+		highlight = {
+        	scope:province = {
+				OR = {
+					province_id = 4440	#Pataliputra
+					province_id = 4340	#Sakala
+					province_id = 4470	#Vidisha
+					province_id = 7314	#Taxila
+				}
+			}
+        }
+		
+		allow = {
+			owns_or_subject_owns = 4440	#Pataliputra
+			owns_or_subject_owns = 4340	#Sakala
+			owns_or_subject_owns = 4470	#Vidisha
+			owns_or_subject_owns = 7314	#Taxila 
+			stability >= 60
+			country_population >= 2000
+		}
+		
+		on_completion = {
+			trigger_event = { 
+				id = cde_me_igr_01.18	#Heir of Alexander
+			}
+        }
+    }
+	
+	
+}

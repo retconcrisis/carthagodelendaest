@@ -1,0 +1,7 @@
+﻿color = rgb { 204 102 1 }		#new color, similar to Apollonia
+#color = rgb { 226  68  0 }	#old color
+color2 = rgb { 110 112 142 }
+
+ship_names = {
+	
+}

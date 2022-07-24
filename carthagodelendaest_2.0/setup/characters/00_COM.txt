@@ -1,0 +1,48 @@
+﻿"COM"={
+	country="COM"
+	
+	#Ptolemaios, Declared independence to become the first King of Commagene
+	140={
+		first_name = "Ptolemaios"
+		family = c:COM.fam:Orontid
+		birth_date=556.10.4		#198 BC
+		culture="armenian"		#Armenian culture
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=8
+		add_charisma=10
+		add_finesse=7
+		add_zeal=9
+		no_traits=yes
+		add_trait="blood_of_orontes"
+		add_trait="achaemenid"		#only start ruler with claim
+		add_trait="ambitious"
+		add_trait="founder"
+		add_gold=250
+		add_popularity=75
+		c:COM = {
+			set_as_ruler=char:140
+		}
+		dna="CfQJ9MylzKW6/rr+AU8BTwFWAVYCmQKZAU0BTQJpAmkCbwJvAngCeAJpAmkCawJrApMCkwKVApUCfwJ/AooCigObA5sChQKFAoYChgJ2AnYCaAJoAnsCewJqAmoClAKUAoQChAKOAo4CkwKTADQANAKPAo8ChgKGApECkQFcAVwCiwKLAnACcAJuAm4CcAJwAn0CfQKFAoUCdAJ0Am8CbwJ0AnQClQKVAnACcAOyA7ICZgJmA5oDmgTNBM0ChwKHApcClwOoA6gCfAJ8AooCigKwArACfwJ/AnECcQJyAnICZgJmAnACcAINAg0A2ADYAEUARQEPAQ8AowCjAQMBAwA8ADwA/wD/AFYAVgDQANADWANYASsBKwB/AH8AqgCqAEwATAEAAQACnwKfAQcBBwCzALMCVgJWAWYBZgB/AH8AvwC/AAUABQEgASABVgFWAJkAmQAYABgANgA2AyEDIQDRANEBHQEdACQAJAR0BHQA5QG+AH8AfwUiBSIGywa+AbsBuwXfA+0CFgS7AUMBvwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Samos II Theosebes Dikaios, son and heir of Ptolemaios, ruled from 130 to 105 BCE
+	141={
+		first_name = "Samos"
+		family = c:COM.fam:Orontid
+		nickname = "NICKNAME_THEOSEBES_DIKAIOS"
+		birth_date=602.1.18		#152 BC
+		father="char:140"
+		culture="armenian"		#Armenian culture
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=9
+		add_charisma=10
+		add_finesse=8
+		add_zeal=7
+		add_trait="blood_of_orontes"
+		add_trait="achaemenid"
+		dna="BPgE+KCkoKT82PzYAVABUAKBAoECfAJ8ApYClgKXApcCaAJoAoUChQFMAUwCgwKDAWUBZQJ4AngCpQKlApgCmAFeAV4ChwKHAooCigKGAoYExQTFAoECgQApACkBZgFmAm4CbgJyAnICbwJvAVMBUwOrA6sCigKKAnECcQKTApMCbAJsApQClAKDAoMCgwKDApECkQOgA6ACfQJ9ApYClgJpAmkChQKFAoYChgKFAoUCdgJ2AoQChAOcA5wCiAKIAmoCagJ8AnwCbAJsAn4CfgKYApgCewJ7AmsCawJpAmkCagJqApcClwIsAiwAtgC2AL0AvQCfAJ8A5gDmAKQApAKgAqABTgFOAHwAfAFyAXIBaQFpARsBGwB/AH8A6wDrAQoBCgARABEABgAGAU0BTQApACkAvQC9AMcAxwB/AH8CrwKvArYCtgB/AH8AGwAbATMBMwALAAsBVAFUAykDKQBqAGoCnAKcA1gDWACZAJkEfQR9AH8AfwXpBekGwQYkAdAB0AMBA+EExgTGAf8BOQAAAAAAAAAAAAAAAA=="
+	}
+	
+}

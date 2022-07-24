@@ -1,0 +1,167 @@
+﻿"PAR"={
+	country="PAR"
+	22={
+		first_name = "Priapatius"
+		family = c:PAR.fam:Arsacid
+		birth_date=519.12.10	#235 BC
+		death_date=578.9.1		#176 BC
+		culture="parthian"
+		religion="zoroaster"
+		add_trait="blood_of_arsaces"
+	}
+	23={
+		first_name = "Mithridates"
+		nickname = "NICKNAME_THE_GREAT"
+		family = c:PAR.fam:Arsacid
+		birth_date=557.8.12		#197 BC
+		father="char:22"				#Priapatius
+		culture="parthian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=14
+		add_charisma=11
+		add_finesse=10
+		add_zeal=8
+		no_traits=yes
+		add_trait="conqueror"
+		add_trait="founder"
+		add_trait="blood_of_arsaces"
+		add_gold=600
+		add_popularity=90
+		c:PAR = {
+			set_as_ruler=char:23
+		}
+		dna="A+4D7o+bj5vp1enVAmkCaQKGAoYCgAKAAU8BTwJoAmgCbgJuAWIBYgKAAoACiQKJAoICggOpA6kCsgKyApICkgBAAEADhAOvApICkgKKAooDngOeAosCiwJyAnICiQKJAnsCewJ3AncCgAKAAB4AHgKFAoUBXgFeACkAKQKTApMClQKVAEYARgOTA5MCcgJyApUClQJ8AnwE0wTTAoUChQJwAnACbQJtApgCmAJ+An4BWAFYAoUChQTCBMIDmQOZAmgCaAKDAoMCegJ6AnoCegKwArACdgJ2AVUBVQJ8AnwCkQKRBMAEwAJ2AnYC/wL/AN0A3QAqACoAeQB5AO8A7wAlACUBIAEgAHYAdgLMAswDKAMoAGcAZwB/AH8CwwLDAqgCqAEiASIA/AD8AAUABQC/AL8AgACAAO4A7gB/AH8BFgEWAHsAewDiAOIA0QDRAMIAwgLZAtkA4QDhBLsEuwCEAIQCwQLBBJYElgEOAQ4HZwZXAH8AfwIMBQwFTQZ1AfIB8gPBA8AE/wTsAf8BtwAAAAAAAAAAAAAAAA=="
+	}
+	24={
+		first_name = "Rinnu"
+		family = c:PAR.fam:Arsacid
+		birth_date=569.4.4		#185 BC
+		culture="median"			#daughter of a Median magnate
+		religion="zoroaster"
+		female = yes
+		marry_character="char:23"
+		no_stats=yes
+		add_martial=3
+		add_charisma=6
+		add_finesse=8		#one of only two Parthian rulers when she became regent
+		add_zeal=6
+		add_gold=300
+		dna="BfQF9I6bjpv8hfyFAn0CfQKQApAClgKWAn8CfwKEAoQCjgKOApACkAJ4AngCiAKIAmwCbAJoAmgCgQKBApECkQKTApMCcQJxAosCiwJ2AnYChgKGAn8CfwJxAnEClQKVBMUExQJxAnECgAKAAVsBWwKLAosCZwJnAnECcQOrA6sCggKCApUClQJvAm8ChgKGAWQBZAKZApkCbwJvAo8CjwJ8AnwCaQJpAmsCawKOAo4CfQJ9ApgCmABYAFgDoQOhAoICggKDAoMBWwFbAmkCaQKoAqgDnAOcA4gDiAKCAoICaAJoAWABYALCAsIBSQFJApgCmAAaABoBNQE1ABAAEAFFAUUAegB6AL8AvwFuAW4EigSKArsCuwB/AH8C8wLzAQsBCwLiAuIATgBOAQcBBwK4ArgC6QLpAPUA9QB/AH8AYQBhAQQBBACzALMAWABYAIQAhAA7ADsC3gLeA3kDeQAwADACxwLHAzIDMgChAKEDfwPXAH8AfwWpBakPbQYHARYBFgPuA+4E/wR6AWcBZwAAAAAAAAAAAAAAAA=="
+	}
+	25={
+		first_name = "Rhodogune"
+		family = c:PAR.fam:Arsacid
+		birth_date=589.12.20		#165 BC
+		culture="parthian"
+		religion="zoroaster"
+		female = yes
+		father="char:23"
+		mother="char:24"
+		no_stats=yes
+		add_martial=8
+		add_charisma=7
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="disciplined"
+		add_trait="assertive"
+		add_trait="blood_of_arsaces"
+		add_gold=300
+		add_popularity=60
+		dna="UuRS5HmQnpvA38DfAVABUAKOAo4CeQJ5AnMCcwKYApgDsgOyAokCiQKZApkCfAJ8Am8CbwJnAmcE3QTdAnMCcwOoA6gCeAJ4AosCiwKQApACjwKPAVwBXAJ3AncCmQKZAooCigJ/An8CZwJnAD0APQOfA58CmAKYAo0CjQJmAmYCfQJ9AnICcgJvAm8ChgKGApQClAJ+An4CaAJoApUClQJtAm0CmAKYAV0BXQOmA6YBVwFXAo4CjgKAAoACfwJ/AoMCgwKJAokCcQJxAEQARAKGAoYCbAJsAm8CbwJuAm4BVgFWAmkCaQRNBE0AeQB5AJ8AnwEGAQYA1gDWAGUAZQC3ALcBFQEVAKwArAC+AL4AagBqAPEA8QB/AH8BWwFbAqsCqwAXABcAbwBvAEsASwCeAJ4CYwJjASgBKAB/AH8BcgFyAA0ADQB7AHsBQgFCAMEAwQEMAQwAAwADACIAIgDIAMgC0wLTAW0BbQFDAUMHcAeyAH8AfwXhBeEGsQYmAcwBzANzA3MEdwQ9AUIBQgAAAAAAAAAAAAAAAA=="
+	}
+	221={
+		first_name = "Phraates"
+		family = c:PAR.fam:Arsacid
+		birth_date=604.1.1		#150 BC, historically 147 BC
+		culture="parthian"
+		religion="zoroaster"
+		father="char:23"
+		mother="char:24"
+		no_stats=yes
+		add_martial=7
+		add_charisma=5
+		add_finesse=6
+		add_zeal=6
+		no_traits=yes
+		add_trait="ambitious"
+		add_trait="stubborn"
+		add_trait="blood_of_arsaces"
+		dna="IfYh9sOiw6K/6r/qAmsCawKEAoQCaQJpAnQCdAKVApUCeQJ5ApICkgJxAnECiAKIACgAKAJ6AnoCggKCAnUCdQKOAo4AOgA6AmwCbAJ7AnsCewJ7A6MDowJsAmwCkAKQApQClAKGAoYBTAFMAVQBVAJ1AnUCdAJ0AosCiwKQApACbAJsA6QDpAJwAnACkwKTAmsCawJ+An4ClQKVAWQBZAJyAnIBWgFaAnQCdAFWAVYEzgTOAm0CbQKFAoUCgQKBAoACgAJqAmoCcQJxAoECgQKLAosCbwJvA4kDiQJrAmsCmAKYAn8CfwK7ArsAWQBZArECsQCvAK8AjACMAP8A/wKtAq0AiACIAXgBeAD8APwDZQNlALsAuwB/AH8A9gD2AL4AvgEdAR0C5gLmAFAAUAFTAVMAQQBBAKIAogB/AH8AAQABAOsA6wKhAqEAhQCFAAAAAADdAN0BbgFuA1gDWABVAFUBOwE7BIoEigJsAmwGnwafAH8AfwXIBcgFUQYNAfIB8gNEAzIEzwQMAf8BewAAAAAAAAAAAAAAAA=="
+	}
+	222={
+		first_name = "Artabanus"
+		family = c:PAR.fam:Arsacid
+		birth_date=564.2.10		#190 BC
+		father="char:22"				#Priapatius
+		culture="parthian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=6
+		add_charisma=7
+		add_finesse=8
+		add_zeal=9
+		add_gold=200
+		add_popularity=30
+		dna="HuVS5JiXnpvA38DfAVABUAKOAo4CeQJ5AnMCcwKYApgDsgOyAokCiQKZApkCfAJ8Am8CbwJnAmcE3QTdAnMCcwOoA6gCeAJ4AosCiwKQApACjwKPAVwBXAJDAncCmQKZAooCigJ/An8CZwJnAD0APQOfA58CmAKYAo0CjQJmAmYCfQJ9AnICcgJvAm8ChgKGApQClAJ+An4CaAJoApUClQJtAm0CmAKYAV0BXQOmA6YBVwFXAo4CjgKAAoACfwJ/AoMCgwKJAokCcQJxAEQARAKGAoYCbAJsAm8CbwJuAm4BVgFWAmkCaQRNBE0AeQB5AJ8AnwEGAQYA1gDWAGUAZQC3ALcBFQEVAKwArAC+AL4AagBqAPEA8QB/AH8BWwFbAqsCqwAXABcAbwBvAEsASwCeAJ4CYwJjASgBKAB/AH8BcgFyAA0ADQB7AHsBQgFCAMEAwQEMAQwAAwADACIAIgDIAMgC0wLTAW0BbQFDAUMHcAeyAH8AfwXhBeEBAAYmAcwBzAPoA3MEIQQ9Af8BQgAAAAAAAAAAAAAAAA=="
+	}
+	223={
+		first_name = "Bagasis"
+		family = c:PAR.fam:Arsacid
+		birth_date=567.2.10		#187 BC
+		father="char:22"				#Priapatius
+		culture="parthian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=9
+		add_charisma=9
+		add_finesse=10
+		add_zeal=6
+		add_gold=200
+		add_popularity=30
+		no_traits=yes
+		add_trait="good_natured"
+		add_trait="content"
+		add_trait="blood_of_arsaces"
+		dna="VtpW2sqZypnG4MbgAm8CbwKSApICZwJnAm8CbwKTApMDsQOxAn4CfgKOAo4DqgOqA58DnwJ+An4DvQO9Am4CbgFbAVsCagJqAokCiQJoAmgClAKUAngCeAJ1AnUChQKFApICkgJ8AnwCiAKIABkAGQFPAU8ChwKHAo0CjQJ7AnsCcAJwApMCkwKMAowChQKFAnYCdgKJAokCfQJ9AmkCaQJwAnAE3gTeAnECcQKWApYCewJ7ApICkgS5BLkClQKVApYClgFjAWMBYAFgAnYCdgKxArECcQJxADoAOgJqAmoCcwJzApACkAEPAQ8C0QLRADIAMgF+AX4BOQE5AJYAlgLrAusAFgAWARwBHAAGAAYCIAIgAIkAiQB/AH8ANgA2AsgCyAAFAAUBBgEGALYAtgLjAuMCIQIhADAAMAB/AH8BQgFCANAA0ABzAHMCtAK0AJIAkgLuAu4BMAEwAzQDNABgAGABLwEvAXkBeQAcABwBAQmmAH8AfwWzBbMGEAYQAdoB2gPOA84EjgSOAd0B3QAAAAAAAAAAAAAAAA=="
+	}
+	224={
+		first_name = "Phraates"		#Phraates I, older brother of Mithridates the Great and previous ruler
+		family = c:PAR.fam:Arsacid
+		birth_date=544.7.8		#210 BC
+		death_date=590.5.5		#164 BC
+		father="char:22"				#Priapatius
+		culture="parthian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=12
+		add_charisma=8
+		add_finesse=12
+		add_zeal=10
+		no_traits=yes
+		add_trait="conqueror"
+		add_trait="tactician"
+		add_trait="assertive"
+		add_trait="blood_of_arsaces"
+	}
+	
+	#225 - Arsaces, head of Hyrcania branch of Arsacids, moved to HYC file for separate tag
+	
+	226={
+		first_name = "Mithridates"		#Mithridates II the Great, son of Artabanus, ruled in 124 BC
+		family = c:PAR.fam:Arsacid
+		birth_date=600.3.20		#154 BC
+		father="char:222"				#Artabanus I
+		culture="parthian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=14
+		add_charisma=11
+		add_finesse=13
+		add_zeal=8
+		add_trait="blood_of_arsaces"
+		dna="Jvwm/Jedl53i+eL5AnUCdQKLAosCfwJ/AoECgQKOAo4CeQJ5AoACgAKQApACjwKPAnYCdgJzAnMCpgKmAn0CfQOoA6gCZwJnAnQCdAKZApkCbQJtA6oDqgIjAn4DnAOcAogCiAKWApYCkQKRAnYCdgJ6AnoCawJrA6oDqgKSApIClQKVApMCkwKDAoMCgwKDApkCmQJ7AnsCUAKYAmsCawJ0AnQC/wKDAWIBYgKWApYChQKFAo0CjQOlA6UDnAOcAVsBWwTgBOAChgKGAo8CjwKVApUCjAKMA4sDiwOwA7ABZQFlAooCigKIAogAMAAwAKoAqgBrAGsAAgACAQUBBQF8AXwCrgKuAFoAWgDGAMYDcgNyAPkA+QB/AH8AEwATAAwADACFAIUA0gDSABIAEgA2ADYBLAEsAREBEQB/AH8ADAAMAZIAzACYAJgAbwBvAAwADADVANUArQCtBKQEpADSANIBGAEYBIUEhQBvAG8Hfgd+AH8AfwU/BT8FXgafAaABdAOvA68E/wQ0BHcBaQAAAAAAAAAAAAAAAA=="
+	}
+	
+}

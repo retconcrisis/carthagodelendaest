@@ -1,0 +1,59 @@
+﻿"AVN"={
+	country="AVN"
+	
+	#Luernios, ruler of Arvernia at its peak power and wealth
+	204={		
+		first_name="Luernios"
+		family = c:AVN.fam:Luerniosid
+		birth_date=547.3.18		#207 BC
+		culture="arverni"
+		religion="druidism"
+		no_stats=yes
+		add_martial=7
+		add_charisma=10
+		add_finesse=10
+		add_zeal=6
+		no_traits=yes
+		add_trait="generous"
+		add_trait="good_natured"
+		add_trait="merciful"
+		add_gold=350		#very wealthy
+		add_popularity=98	#very popular due to generosity
+		c:AVN = {
+			set_as_ruler=char:204
+		}
+	}
+	
+	#Bituitus, son of Luernios and future ruler of Arverni, fought Rome
+	205={		
+		first_name="Bituitus"
+		family = c:AVN.fam:Luerniosid
+		birth_date=577.1.4		#177 BC
+		culture="arverni"
+		religion="druidism"
+		father="char:204"
+		no_stats=yes
+		add_martial=9
+		add_charisma=7
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="proud"
+		add_trait="assertive"
+		add_trait="honest"
+		add_gold=250
+		add_popularity=50
+	}
+	
+	#Congonnetiacus, son of Bituitus
+	206={		
+		first_name="Congonnetiacus"
+		family = c:AVN.fam:Luerniosid
+		birth_date=603.5.15		#151 BC
+		culture="arverni"
+		religion="druidism"
+		father="char:205"
+	}
+	
+	
+}

@@ -1,0 +1,173 @@
+﻿namespace = cde_flavor_egy
+
+#Ptolemy VI Falls From His Horse
+cde_flavor_egy.1 = {
+	type = country_event
+	title = "cde_flavor_egy.1.t"
+	desc = "cde_flavor_egy.1.desc"
+	picture = diadochi_seleucus_elephant
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		war = yes
+		scope:actor = {		#scope:actor is main unit on losing side in on_battle_lost_country
+			commander = char:42
+		}
+		current_ruler = {
+			this = char:42		#Ptolemy VI
+			in_command = yes
+		}
+		current_date > 608.1.1		#146 BC
+	}
+	
+	immediate = {
+		set_variable = {
+			name = ptolemy_horse_injury
+		}
+		current_ruler = {
+			force_add_trait = wounded
+		}
+	}
+	
+	option = {
+		name = cde_flavor_egy.1.a
+		
+		
+	}
+}
+
+#Ptolemaios' Physical Condition
+cde_flavor_egy.2 = {
+	type = country_event
+	title = "cde_flavor_egy.2.t"
+	desc = "cde_flavor_egy.2.desc"
+	picture = religious_rite
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		current_ruler = {
+			this = char:42		#Ptolemy VI
+		}
+		has_variable = ptolemy_horse_injury
+	}
+	
+	immediate = {
+		random_list = {
+			80 = {
+				trigger_event = {
+					id = cde_flavor_egy.3		#Death
+					days = 5
+				}
+			}
+			20 = {
+				trigger_event = {
+					id = cde_flavor_egy.4		#Paralysis
+					days = 5
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_egy.2.a
+		
+		
+	}
+}
+
+#Ptolemaios VI Succumbs to His Injuries!
+cde_flavor_egy.3 = {
+	type = country_event
+	title = "cde_flavor_egy.3.t"
+	desc = "cde_flavor_egy.3.desc"
+	picture = religious_rite
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		current_ruler = {
+			this = char:42		#Ptolemy VI
+		}
+		has_variable = ptolemy_horse_injury
+	}
+	
+	immediate = {
+		char:42 = {
+			death = {
+				death_reason = death_fell_from_horse
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_egy.3.a
+		
+		add_stability = -10
+	}
+}
+
+#Ptolemy VI Paralyzed!
+cde_flavor_egy.4 = {
+	type = country_event
+	title = "cde_flavor_egy.4.t"
+	desc = "cde_flavor_egy.4.desc"
+	picture = religious_rite
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		current_ruler = {
+			this = char:42		#Ptolemy VI
+		}
+		has_variable = ptolemy_horse_injury
+	}
+	
+	immediate = {
+		char:42 = {
+			force_add_trait = paralysis
+			remove_trait = wounded
+		}
+	}
+	
+	option = {
+		name = cde_flavor_egy.4.a
+		
+		add_stability = -5
+		
+		char:42 = {
+			death = {
+				death_reason = death_retired_from_public_life
+			}
+		}
+		
+		ai_chance = {
+			factor = 1		#AI will always allow Physcon to take over!!!
+		}
+	}
+	
+	option = {
+		name = cde_flavor_egy.4.b
+		
+		add_stability = -5
+		
+		ai_chance = {
+			factor = 0		#AI will never choose
+		}
+	}
+	
+}
+

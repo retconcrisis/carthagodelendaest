@@ -1,0 +1,785 @@
+﻿namespace = cde_me_car_01
+
+#Restore Carthaginian Glory
+cde_me_car_01.1 = {
+	type = country_event
+	title = "cde_me_car_01.1.t"
+	desc = "cde_me_car_01.1.desc"
+	picture = oration
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	right_portrait = c:NUM.current_ruler
+	right_portrait = c:ROM.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.1.a
+		
+	}
+	
+}
+
+#Preparations for War
+cde_me_car_01.2 = {
+	type = country_event
+	title = "cde_me_car_01.2.t"
+	desc = "cde_me_car_01.2.desc"
+	picture = cde_event_carthage_levy
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	right_portrait = c:NUM.current_ruler
+	right_portrait = c:ROM.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.2.a
+		
+		area:africa_meridionalis_area = {
+			every_area_province = {
+				limit = {
+					NOT = { owned_or_subject_owned = root }
+				}
+				add_claim = root
+			}
+		}
+		area:tripolitania_occidentalis_area = {
+			every_area_province = {
+				limit = {
+					NOT = { owned_or_subject_owned = root }
+				}
+				add_claim = root
+			}
+		}
+		every_province = {
+			limit = {
+				OR = {
+					province_id = 3225
+					province_id = 3226
+					province_id = 3227
+					province_id = 3161
+					province_id = 3160
+					province_id = 3150
+					province_id = 3145
+					province_id = 3144
+				}
+				NOT = { owned_or_subject_owned = root }
+			}
+			add_claim = root
+		}
+	}
+	
+}
+
+#Punic Cities Offer Support
+cde_me_car_01.3 = {
+	type = country_event
+	title = "cde_me_car_01.3.t"
+	desc = "cde_me_car_01.3.desc"
+	picture = cde_event_carthage_levy
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	left_portrait = c:HDR.current_ruler
+	right_portrait = c:LPT.current_ruler
+	right_portrait = c:UTC.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.3.a
+		
+		add_country_modifier = {
+			name = cde_me_car_punic_allies
+			duration = 7300
+		}
+	}
+	
+}
+
+#Carthaginian Cities Retaken
+cde_me_car_01.4 = {
+	type = country_event
+	title = "cde_me_car_01.4.t"
+	desc = "cde_me_car_01.4.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.4.a
+		
+		area:tripolitania_centralis_area = {
+			every_area_province = {
+				limit = {
+					NOT = { owned_or_subject_owned = root }
+				}
+				add_claim = root
+			}
+		}
+	}
+	
+}
+
+#Cities of Tripolitania
+cde_me_car_01.5 = {
+	type = country_event
+	title = "cde_me_car_01.5.t"
+	desc = "cde_me_car_01.5.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.5.a
+		
+		p:3303 = {	#Oea
+			define_pop = {
+				type = citizen
+				culture = root.culture
+				religion = root.religion
+			}
+		}
+	}
+	
+}
+
+#Coastal Cities Liberated
+cde_me_car_01.6 = {
+	type = country_event
+	title = "cde_me_car_01.6.t"
+	desc = "cde_me_car_01.6.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.6.a
+		
+		add_country_modifier = {
+			name = cde_me_car_trade_outposts_regained
+			duration = -1
+		}
+	}
+	
+}
+
+#Numidian Capital Claimed
+cde_me_car_01.7 = {
+	type = country_event
+	title = "cde_me_car_01.7.t"
+	desc = "cde_me_car_01.7.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.7.a
+		
+		add_country_modifier = {
+			name = cde_me_car_numidian_subjects
+			duration = 9125
+		}
+	}
+	
+}
+
+#Vassals in Numidia
+cde_me_car_01.8 = {
+	type = country_event
+	title = "cde_me_car_01.8.t"
+	desc = "cde_me_car_01.8.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.8.a
+		
+		add_stability = 10
+		
+		custom_tooltip = cde_me_car_01.8.tt1
+		custom_tooltip = cde_me_car_01.8.tt2
+		
+		hidden_effect = {
+			#Massaesylia released
+			ordered_owned_province = {
+				order_by = total_population
+				limit = {
+					OR = {
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					is_coastal = no
+					dominant_province_culture = massaesylian
+				}
+				max = 1
+				create_country = {
+					name = {
+						name = "MSS"
+						adjective = "MSS_ADJ"
+					}
+					change_country_color = massaesylia_color
+					set_primary_culture = massaesylian
+					set_country_religion = berber_religion
+					change_government = despotic_monarchy
+					add_treasury = 100.0
+					set_variable = massaesylia_client_variable
+					save_scope_as = massaesylia_scope
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					is_coastal = no
+					dominant_province_culture = massaesylian
+				}
+				set_owned_by = scope:massaesylia_scope
+			}
+			make_subject = {
+				target = scope:massaesylia_scope
+				type = feudatory
+			}
+			scope:massaesylia_scope = {
+				add_opinion = {
+					modifier = opinion_liberated_us
+					target = root
+				}
+			}
+			
+			#Massylia released
+			ordered_owned_province = {
+				order_by = total_population
+				limit = {
+					OR = {
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					is_coastal = no
+					dominant_province_culture = massylian
+				}
+				max = 1
+				create_country = {
+					name = {
+						name = "MSY"
+						adjective = "MSY_ADJ"
+					}
+					change_country_color = massylia_color
+					set_primary_culture = massylian
+					set_country_religion = berber_religion
+					change_government = despotic_monarchy
+					add_treasury = 100.0
+					set_variable = massylia_client_variable
+					save_scope_as = massylia_scope
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					is_coastal = no
+					dominant_province_culture = massylian
+				}
+				set_owned_by = scope:massylia_scope
+			}
+			make_subject = {
+				target = scope:massylia_scope
+				type = feudatory
+			}
+			scope:massylia_scope = {
+				add_opinion = {
+					modifier = opinion_liberated_us
+					target = root
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_car_01.8.b
+		
+		custom_tooltip = cde_me_car_01.8.tt2
+		
+		hidden_effect = {
+			#Massaesylia released
+			ordered_owned_province = {
+				order_by = total_population
+				limit = {
+					OR = {
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					is_coastal = no
+					dominant_province_culture = massaesylian
+				}
+				max = 1
+				create_country = {
+					name = {
+						name = "MSS"
+						adjective = "MSS_ADJ"
+					}
+					change_country_color = massaesylia_color
+					set_primary_culture = massaesylian
+					set_country_religion = berber_religion
+					change_government = despotic_monarchy
+					add_treasury = 100.0
+					set_variable = massaesylia_client_variable
+					save_scope_as = massaesylia_scope
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					is_coastal = no
+					dominant_province_culture = massaesylian
+				}
+				set_owned_by = scope:massaesylia_scope
+			}
+			make_subject = {
+				target = scope:massaesylia_scope
+				type = feudatory
+			}
+			scope:massaesylia_scope = {
+				add_opinion = {
+					modifier = opinion_liberated_us
+					target = root
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_car_01.8.c
+		
+		
+	}
+	
+}
+
+#Numidian Capital Claimed
+cde_me_car_01.9 = {
+	type = country_event
+	title = "cde_me_car_01.9.t"
+	desc = "cde_me_car_01.9.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.9.a
+		
+		add_country_modifier = {
+			name = cde_me_car_numidian_auxiliaries
+			duration = -1
+		}
+	}
+	
+}
+
+#Coastal Trade Fleet
+cde_me_car_01.10 = {
+	type = country_event
+	title = "cde_me_car_01.10.t"
+	desc = "cde_me_car_01.10.desc"
+	picture = ship_in_storm
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.10.a
+		
+		add_country_modifier = {
+			name = cde_me_car_coastal_trade_monopoly
+			duration = 10950
+		}
+	}
+	
+}
+
+#Coastal Trade Fleet
+cde_me_car_01.11 = {
+	type = country_event
+	title = "cde_me_car_01.11.t"
+	desc = "cde_me_car_01.11.desc"
+	picture = great_city
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.11.a
+		
+		add_treasury = -100
+		add_country_modifier = {
+			name = cde_me_car_honored_the_philaeni
+			duration = 10950
+		}
+		p:3338 = {
+			add_province_modifier = {
+				name = cde_me_car_statue_to_the_philaeni
+				duration = -1
+			}
+		}
+	}
+	
+}
+
+#Coastal Trade Fleet
+cde_me_car_01.12 = {
+	type = country_event
+	title = "cde_me_car_01.12.t"
+	desc = "cde_me_car_01.12.desc"
+	picture = ship_in_storm
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.12.a
+		
+		add_country_modifier = {
+			name = cde_me_car_naval_power_restored
+			duration = 9125
+		}
+	}
+	
+}
+
+#Carthage Rising
+cde_me_car_01.13 = {
+	type = country_event
+	title = "cde_me_car_01.13.t"
+	desc = "cde_me_car_01.13.desc"
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.13.a
+		
+		add_country_modifier = {
+			name = cde_me_car_carthaginian_empire
+			duration = -1
+		}
+	}
+	
+}
+
+#Fortifications of Carthage
+cde_me_car_01.14 = {
+	type = country_event
+	title = "cde_me_car_01.14.t"
+	desc = "cde_me_car_01.14.desc"
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.14.a
+		
+		area:carthage_area = {
+			every_area_province = {
+				limit = {
+					owned_or_subject_owned = ROOT
+				}
+				add_province_modifier = {
+					name = cde_me_car_carthaginian_fortifications
+					duration = 14600	#40 years
+				}
+			}
+		}
+	}
+	
+}
+
+#Restoration of the Grand Fleet
+cde_me_car_01.15 = {
+	type = country_event
+	title = "cde_me_car_01.15.t"
+	desc = "cde_me_car_01.15.desc"
+	picture = ship_in_storm
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.15.a
+		
+		add_country_modifier = {
+			name = cde_me_car_freeman_sailors
+			duration = 10950
+		}
+	}
+	
+}
+
+#Noble Armies
+cde_me_car_01.16 = {
+	type = country_event
+	title = "cde_me_car_01.16.t"
+	desc = "cde_me_car_01.16.desc"
+	picture = greeks_marching
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.16.a
+		
+		add_country_modifier = {
+			name = cde_me_car_noble_retinues
+			duration = 10950
+		}
+	}
+	
+}
+
+#A New Sacred Band of Carthage
+cde_me_car_01.17 = {
+	type = country_event
+	title = "cde_me_car_01.17.t"
+	desc = "cde_me_car_01.17.desc"
+	picture = greeks_marching
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.17.a
+		
+		add_country_modifier = {
+			name = cde_me_car_sacred_band_of_carthage
+			duration = 10950
+		}
+	}
+	
+}
+
+#Much-Needed Military Reforms
+cde_me_car_01.18 = {
+	type = country_event
+	title = "cde_me_car_01.18.t"
+	desc = "cde_me_car_01.18.desc"
+	picture = greeks_marching
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	right_portrait = scope:carthaginian_freemen_veteran
+	right_portrait = scope:numidian_freemen_veteran
+	right_portrait = scope:garamantic_freemen_veteran
+	
+	fire_only_once = yes
+	
+	immediate = {
+		add_country_modifier = {
+			name = cde_me_car_carthaginian_military_reforms
+			duration = -1
+		}
+		
+		hidden_effect = {
+			create_character = {
+				culture = root.current_ruler.culture
+				religion = root.current_ruler.religion
+				female = no
+				age = 36
+				good_martial_effect = yes
+				force_add_trait = brave
+				save_scope_as = carthaginian_freemen_veteran
+			}
+			create_character = {
+				culture = massylian
+				religion = berber_religion
+				female = no
+				age = 36
+				great_martial_effect = yes
+				force_add_trait = brave
+				save_scope_as = numidian_freemen_veteran
+			}
+			create_character = {
+				culture = garamantic
+				religion = berber_religion
+				female = no
+				age = 35
+				great_martial_effect = yes
+				force_add_trait = brave
+				save_scope_as = garamantic_freemen_veteran
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_car_01.18.a	#Carthaginian Freeman Veteran
+		
+		custom_tooltip = cde_me_car_01.18.att
+		
+		hidden_effect = {
+			scope:numidian_freemen_veteran = {
+				death = {
+					death_reason = death_retired_from_public_life
+				}
+			}
+			scope:garamantic_freemen_veteran = {
+				death = {
+					death_reason = death_retired_from_public_life
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_car_01.18.b	#Numidian Veteran
+		
+		custom_tooltip = cde_me_car_01.18.btt
+		
+		hidden_effect = {
+			scope:carthaginian_freemen_veteran = {
+				death = {
+					death_reason = death_retired_from_public_life
+				}
+			}
+			scope:garamantic_freemen_veteran = {
+				death = {
+					death_reason = death_retired_from_public_life
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_car_01.18.c	#Garamantian Auxiliary
+		
+		custom_tooltip = cde_me_car_01.18.ctt
+		
+		hidden_effect = {
+			scope:numidian_freemen_veteran = {
+				death = {
+					death_reason = death_retired_from_public_life
+				}
+			}
+			scope:carthaginian_freemen_veteran = {
+				death = {
+					death_reason = death_retired_from_public_life
+				}
+			}
+		}
+	}
+	
+}
+
+#Renowned Infantry of the Libyans
+cde_me_car_01.19 = {
+	type = country_event
+	title = "cde_me_car_01.19.t"
+	desc = "cde_me_car_01.19.desc"
+	picture = greeks_marching
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.19.a
+		
+		add_country_modifier = {
+			name = cde_me_car_libyan_infantry
+			duration = 10950
+		}
+	}
+	
+}
+
+#North African War Elephants
+cde_me_car_01.20 = {
+	type = country_event
+	title = "cde_me_car_01.20.t"
+	desc = "cde_me_car_01.20.desc"
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.20.a
+		
+		add_country_modifier = {
+			name = cde_me_car_north_african_war_elephants
+			duration = 10950
+		}
+	}
+	
+}
+
+#Carthaginian Merchants
+cde_me_car_01.21 = {
+	type = country_event
+	title = "cde_me_car_01.21.t"
+	desc = "cde_me_car_01.21.desc"
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_car_01.21.a
+		
+		add_country_modifier = {
+			name = cde_me_car_carthaginian_merchants
+			duration = 10950
+		}
+	}
+	
+}
+

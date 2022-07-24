@@ -1,0 +1,7 @@
+﻿color = rgb { 46  53  150 }
+color2 = rgb { 46  53  150 }
+
+gender_equality = yes	#matriarchal society
+
+ship_names = {
+}

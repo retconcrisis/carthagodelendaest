@@ -1,0 +1,179 @@
+﻿monthly_country_pulse = {
+
+	events = {
+		rel_flavor_druidic.10
+		dhe_rome.9
+		dhe_judea.2
+		dhe_judea.3
+		dhe_judea.4
+		dhe_judea.5
+		dhe_judea.7
+		family_events.1 #Rise of a Family
+		family_events.2 #Prune Family
+		family_events.5 #Rise of new Royal Dynasty
+		family_events.6 #Tribal family rise
+		family_events.7 #Tribal family fall
+		family_events.9 #Rise of Family in Republics
+		
+		##################################
+		#New CDE mod events
+		##################################
+		cde_flavor_rom.1			#Decline of Republic heritage for Rome
+		cde_character_appearances.1		#Gaius Marius appearance
+		cde_character_appearances.2		#Sulla appearance
+		cde_character_appearances.3		#Tigranes II appearance
+		cde_seleukid_civil_war.4		#Alexandros Balas victory, for AXR
+		cde_seleukid_civil_war.14		#Alexandros Balas victory, for SEL
+		cde_seleukid_civil_war.16		#Demetrios attacks Alexandros
+		cde_seleukid_civil_war.19		#Mesopotamia breaks away if first civil war lasts too long
+		
+		cde_flavor_pon.1	#Birth of Mithridates VI
+		
+		cde_flavor_bactria.1	#Treacherous Son
+		
+		cde_flavor_car.2	#Third Punic War event chain
+		
+		cde_flavor_igr.2	#Nagasena and Menandros Buddhism event chain
+		cde_flavor_igr.4	#Ashes of Menandros
+		
+		#Rename events are in on_ruler_change
+		
+		cde_regency.2	#Regency - Regent steps down
+		#cde_regency.3 	#now in on_ruler_change
+		cde_regency.4	#Regent Death
+	}
+	
+	random_events = {
+		595 = 0
+		5 = comet.4
+	}
+	
+	on_actions = {		
+		dictatorship_power_held_pulse
+		consul_conspiracy_pulse
+		delay = { days = { 1 15 } }
+		dictator_rise_pulse
+		delay = { days = { 1 15 } }
+		passover_supported_characters_pulse
+		monthly_guarantee_pulse
+	}
+
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					has_variable = me_ant_start_flag
+					has_variable = me_mac_start_flag
+					tag = EGY
+					tag = SEL
+				}
+				war_with = c:TRE
+			}
+			trigger_event = me_thrace_3_new_philhellene_policy.201
+		}
+		
+		##################################
+		#New CDE mod events
+		##################################
+		if = {
+			limit = {
+				is_monarchy = yes
+				current_ruler = {
+					is_adult = no
+				}
+				NOT = { has_country_modifier = cde_child_ruler }
+			}
+			add_country_modifier = {
+				name = cde_child_ruler		#Child ruler effects
+			}
+		}
+		if = {
+			limit = {
+				is_monarchy = yes
+				current_ruler = {
+					is_adult = yes
+				}
+				has_country_modifier = cde_child_ruler
+			}
+			remove_country_modifier = cde_child_ruler		#Removes child ruler effects
+		}
+		
+		
+		#Country-specific flavor
+		
+		if = {
+			limit = {
+				tag = AXR
+				war_with = c:SEL
+				has_variable = alexander_seleukid_civil_war_start
+				OR = {
+					c:AXR = { owns = 790 }
+					NOT = { exists = c:SEL }
+				}
+			}
+			trigger_event = cde_seleukid_civil_war.4
+		}
+		if = {
+			limit = {
+				tag = SEL
+				is_ai = no
+				c:AXR = {
+					is_ai = yes
+				}
+				has_variable = seleukid_civil_war_start
+				c:AXR = { 
+					owns = 790
+				}
+			}
+			trigger_event = cde_seleukid_civil_war.14
+		}
+		
+		#Viriathus spawns
+		if = {
+			limit = {
+				current_date >= 605.1.1		#149 BC
+				any_country = {
+					is_ai = no	#is a player
+					primary_culture = lusitanian
+				}
+			}
+			random_country = {
+				limit = {
+					is_ai = no	#is a player
+					primary_culture = lusitanian
+				}
+				save_scope_as = viriathus_spawn_nation
+			}
+		}
+		if = {
+			limit = {
+				current_date >= 605.1.1		#149 BC
+				NOT = {				#No Lusitanian Country Exists that is a player
+					any_country = {
+						primary_culture = lusitanian
+						is_ai = no
+					}
+				}
+			}
+			ordered_country = {
+				limit = {
+					primary_culture = lusitanian
+				}
+				order_by = country_population		#picks largest tag
+				max = 1							#allows only one to be picked
+				save_scope_as = viriathus_spawn_nation
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:viriathus_spawn_nation
+			}
+			scope:viriathus_spawn_nation = {
+				trigger_event = {
+					id = cde_flavor_hispania.4
+				}
+			}
+		}
+		
+	}
+}

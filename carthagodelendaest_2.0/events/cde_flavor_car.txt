@@ -1,0 +1,377 @@
+﻿namespace = cde_flavor_car
+
+#Carthago Delenda Est - for Rome
+cde_flavor_car.1 = {
+	type = country_event
+	title = "cde_flavor_car.1.t"
+	desc = "cde_flavor_car.1.desc"
+	picture = great_city
+	
+	left_portrait = char:1
+	right_portrait = char:3
+	
+	fire_only_once = yes
+	
+	goto_location = 3256		#Carthago
+	
+	option = {
+		name = cde_flavor_car.1.a
+		
+		current_ruler = {
+			add_popularity = 5
+		}
+		char:1 = {	#Cato
+			add_loyalty = loyalty_supported_carthage_policy
+		}
+		char:3 = {	#Nasica
+			add_loyalty = loyalty_opposed_carthage_policy
+		}
+		
+		ai_chance = {
+            factor = 1
+		}
+	}
+	
+	option = {
+		name = cde_flavor_car.1.b
+
+		char:1 = {	#Cato
+			add_loyalty = loyalty_opposed_carthage_policy
+		}
+		char:3 = {	#Nasica
+			add_loyalty = loyalty_supported_carthage_policy
+		}
+		
+		ai_chance = {
+            factor = 1
+		}
+	}
+}
+
+
+#Third Punic War Event Chain
+
+#Carthage Violates the Treaty - for Rome
+cde_flavor_car.2 = {
+	type = country_event
+	title = "cde_flavor_car.2.t"
+	desc = "cde_flavor_car.2.desc"
+	picture = looting
+	
+	left_portrait = current_ruler
+	right_portrait = c:CAR.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 3256		#Carthago
+	
+	trigger = {
+		tag = ROM
+		c:CAR = {
+			any_current_war = {
+				any_war_attacker = { this = c:CAR } 			#Carthage is aggressor in any war
+				any_war_defender = { NOT = { this = root } }	#Rome is not a defender
+				any_war_attacker = { NOT = { this = root } }	#Rome is not an ally of Carthage in the war
+			}
+		}
+		c:ROM = {
+			NOT = { has_variable = third_punic_war_looming }
+		}
+	}
+	
+	immediate = {
+		set_variable = {
+			name = third_punic_war_looming
+		}
+	}
+	
+	option = {
+		name = cde_flavor_car.2.a
+		
+		custom_tooltip = cde_flavor_car.2.tt
+		
+		c:CAR = {	
+			trigger_event = {
+				id = cde_flavor_car.3
+				days = 5
+			}
+		}
+		
+		ai_chance = {
+            factor = 8
+		}
+	}
+}
+
+#Rome Threatens Intervention! - For Carthage
+cde_flavor_car.3 = {
+	type = country_event
+	title = "cde_flavor_car.3.t"
+	desc = "cde_flavor_car.3.desc"
+	picture = roman_trial
+	
+	left_portrait = current_ruler
+	right_portrait = c:ROM.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 1		#Roma
+	
+	option = {
+		name = cde_flavor_car.3.a
+		
+		custom_tooltip = cde_flavor_car.3.tt1
+		
+		c:ROM = {	
+			trigger_event = {
+				id = cde_flavor_car.4
+				days = 5
+			}
+		}
+		
+		ai_chance = {
+            factor = 1
+		}
+	}
+	
+	option = {
+		name = cde_flavor_car.3.b
+
+		custom_tooltip = cde_flavor_car.3.tt2
+		
+		c:ROM = {	
+			trigger_event = {
+				id = cde_flavor_car.5
+				days = 5
+			}
+		}
+		
+		ai_chance = {
+            factor = 0
+		}
+	}
+}
+
+#Carthaginian Envoys Seek Peace - For Rome
+cde_flavor_car.4 = {
+	type = country_event
+	title = "cde_flavor_car.4.t"
+	desc = "cde_flavor_car.4.desc"
+	picture = roman_trial
+	
+	left_portrait = current_ruler
+	right_portrait = c:CAR.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 3256		#Carthago
+	
+	option = {
+		name = cde_flavor_car.4.a
+		
+		declare_war_with_wargoal = {
+			war_goal = conquer_wargoal
+			province = p:3256	#Carthago
+			target = c:CAR
+		}
+		c:CAR = {	
+			trigger_event = {
+				id = cde_flavor_car.6
+				days = 5
+			}
+		}
+		
+		ai_chance = {
+            factor = 8
+		}
+	}
+	
+	option = {
+		name = cde_flavor_car.4.b
+		
+		custom_tooltip = cde_flavor_car.4.tt
+		
+		current_ruler = {
+			add_popularity = -20
+		}
+		
+		c:CAR = {	
+			trigger_event = {
+				id = cde_flavor_car.7
+				days = 5
+			}
+		}
+		
+		ai_chance = {
+            factor = 2
+		}
+	}
+}
+
+#Carthage Refuses to Back Down - For Rome
+cde_flavor_car.5 = {
+	type = country_event
+	title = "cde_flavor_car.5.t"
+	desc = "cde_flavor_car.5.desc"
+	picture = romans_marching
+	
+	left_portrait = current_ruler
+	right_portrait = c:CAR.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 3256		#Carthago
+	
+	option = {
+		name = cde_flavor_car.5.a
+		
+		declare_war_with_wargoal = {
+			war_goal = conquer_wargoal
+			province = p:3256	#Carthago
+			target = c:CAR
+		}
+		c:CAR = {	
+			trigger_event = {
+				id = cde_flavor_car.6
+				days = 5
+			}
+		}
+		every_country = {
+			limit = {
+				war_with = CAR
+				NOT = {
+					tag = ROM
+				}
+			}
+			trigger_event = {
+				id = cde_flavor_car.8
+			}
+		}
+	}
+}
+
+#Rome Declares War - For Carthage
+cde_flavor_car.6 = {
+	type = country_event
+	title = "cde_flavor_car.6.t"
+	desc = "cde_flavor_car.6.desc"
+	picture = army_desert
+	
+	left_portrait = current_ruler
+	right_portrait = c:ROM.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 1		#Roma
+	
+	immediate = {
+		every_country = {
+			limit = {
+				war_with = CAR
+				NOT = {
+					tag = ROM
+				}
+			}
+			trigger_event = {
+				id = cde_flavor_car.8
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_car.6.a
+		
+		custom_tooltip = cde_flavor_car.6.tt
+		
+	}
+}
+
+#Rome Backs Down - For Carthage
+cde_flavor_car.7 = {
+	type = country_event
+	title = "cde_flavor_car.7.t"
+	desc = "cde_flavor_car.7.desc"
+	picture = roman_trial
+	
+	left_portrait = current_ruler
+	right_portrait = c:ROM.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 1		#Roma
+	
+	immediate = {
+		every_current_war = {				#ends all offensive wars
+			limit = {
+				any_war_attacker = { this = c:CAR }
+			}
+			force_white_peace = THIS
+		}
+		every_country = {
+			limit = {
+				war_with = CAR
+				NOT = {
+					tag = ROM
+				}
+			}
+			trigger_event = {
+				id = cde_flavor_car.9
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_car.7.a
+		
+		custom_tooltip = cde_flavor_car.7.tt
+		
+		c:ROM = {
+			remove_variable = third_punic_war_looming	#This event chain can now repeat if CAR is an aggressor again
+		}
+	}
+}
+
+#Ping for country defending against Carthage - Rome declares on CAR
+cde_flavor_car.8 = {
+	type = country_event
+	title = "cde_flavor_car.8.t"
+	desc = "cde_flavor_car.8.desc"
+	picture = army_desert
+	
+	left_portrait = c:CAR.current_ruler
+	right_portrait = c:ROM.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 1		#Roma
+	
+	option = {
+		name = cde_flavor_car.8.a
+		
+		custom_tooltip = cde_flavor_car.8.tt
+		
+	}
+}
+
+#Ping for country defending against Carthage - Rome backs down
+cde_flavor_car.9 = {
+	type = country_event
+	title = "cde_flavor_car.9.t"
+	desc = "cde_flavor_car.9.desc"
+	picture = roman_trial
+	
+	left_portrait = c:CAR.current_ruler
+	right_portrait = c:ROM.current_ruler
+	
+	#fires as many times as needed unless certain variables are met
+	
+	goto_location = 1		#Roma
+	
+	option = {
+		name = cde_flavor_car.9.a
+		
+		custom_tooltip = cde_flavor_car.9.tt
+		
+	}
+}
+

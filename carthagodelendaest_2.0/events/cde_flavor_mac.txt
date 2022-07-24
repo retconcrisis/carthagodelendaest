@@ -1,0 +1,273 @@
+﻿namespace = cde_flavor_mac
+
+#Andriscus enters Macedonia
+cde_flavor_mac.1 = {
+	type = country_event
+	title = "cde_flavor_mac.1.t"
+	desc = "cde_flavor_mac.1.desc"
+	picture = great_city
+	
+	left_portrait = char:197			#Andriscus/Andriskos
+	
+	fire_only_once = yes
+	
+	goto_location = 379		#Pella
+	
+	immediate = {
+		char:197 = {
+			move_country = c:MAC
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen		#so he can raise levies
+				set_home_country = c:MAC
+			}
+		}
+		set_as_ruler = char:197	#Andriskos becomes ruler
+		
+		change_government = aristocratic_monarchy
+		set_country_heritage = antigonid_macedonian_heritage
+		change_country_name = MACEDONIA_NAME
+		
+		hidden_effect = {
+			change_country_adjective = MACEDONIA_ADJECTIVE
+		}
+		
+		c:ROM = {
+			release_subject = c:MAC
+		}
+		
+		change_law = work_for_the_best		#personal army of Thracians under Andriskos
+		
+		if = {
+			limit = {
+				is_ai = yes		#only for AI - triggered by player via mission
+			}
+			trigger_event = { 
+				id = cde_flavor_mac.2
+				days = 15
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_mac.1.a
+		
+		add_opinion = { 
+			modifier = tre_helped_to_throne_op
+			target = TRE
+		}
+		
+		char:197 = {
+			family = {
+        		add_prestige = 300		#after becoming ruler
+        	}
+		}
+		
+	}
+}
+
+#War for Macedonian Unification
+cde_flavor_mac.2 = {
+	type = country_event
+	title = "cde_flavor_mac.2.t"
+	desc = "cde_flavor_mac.2.desc"
+	picture = throneroom
+	
+	left_portrait = char:197			#Andriscus/Andriskos
+	
+	fire_only_once = yes
+	
+	goto_location = 373		#Thessalonike
+	
+	immediate = {
+		set_variable = {
+			name = fourth_macedonian_war_start
+		}
+		
+		hidden_effect = {
+			create_unit = {		#Thracian army; historically only 200 men
+				save_scope_as = andriskos_thracian_army
+				location = p:379	#Pella
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_infantry
+				add_loyal_subunit = light_cavalry
+				add_loyal_subunit = heavy_cavalry
+				add_loyal_subunit = heavy_archers
+			}
+		}
+		scope:andriskos_thracian_army = {
+			set_as_commander = char:197
+		}
+	}
+	
+	option = {
+		name = cde_flavor_mac.2.a
+		
+		ai_chance = {
+            factor = 1
+		}
+		
+		custom_tooltip = cde_flavor_mac.2.tt
+		hidden_effect = {
+			c:ROM = {
+				release_subject = c:TSK
+				release_subject = c:APH
+				release_subject = c:PLG
+			}
+			
+			c:ROM = {
+				add_truce = {
+					target = c:PLG
+					duration = 720
+				}
+				trigger_event = { 
+					id = cde_flavor_mac.4
+				}
+			}
+			
+			c:TSK = {
+				trigger_event = { 
+					id = cde_flavor_mac.3
+				}
+			}
+			c:APH = {
+				trigger_event = { 
+					id = cde_flavor_mac.3
+				}
+			}
+			c:PLG = {
+				trigger_event = { 
+					id = cde_flavor_mac.3
+				}
+			}
+			c:ROM = {
+				add_truce = {
+					target = c:PLG
+					duration = 360
+				}
+			}
+		}
+		
+		show_as_tooltip = {
+			declare_war_with_wargoal = {
+				war_goal = conquer_wargoal
+				province = p:373		#Thessalonike
+				target = c:TSK
+			}
+			declare_war_with_wargoal = {
+				war_goal = conquer_wargoal
+				province = p:365		#Amphipolis
+				target = c:APH
+			}
+			declare_war_with_wargoal = {
+				war_goal = conquer_wargoal
+				province = p:393		#Pelagonia
+				target = c:PLG
+			}
+		}
+		
+		p:386 = {
+			set_conquered_by = c:MAC		#cities defect
+		}
+		p:497 = {
+			set_conquered_by = c:MAC
+		}
+		p:371 = {
+			set_conquered_by = c:MAC
+		}
+		p:369 = {
+			set_conquered_by = c:MAC
+		}
+		p:3175 = {
+			set_conquered_by = c:MAC
+		}
+		p:4302 = {
+			set_conquered_by = c:MAC
+		}
+		p:385 = {
+			set_conquered_by = c:MAC
+		}
+		
+	}
+	
+	#removed, since now triggered by mission via player
+	#option = {
+	#	name = cde_flavor_mac.2.b
+	#	
+	#	ai_chance = {
+    #       factor = 0		#AI will never choose
+	#	}
+	#	
+	#	char:197 = {
+	#		add_popularity = -25
+	#	}
+	#	
+	#	add_legitimacy = -40
+	#}
+}
+
+#War ping for client republics
+cde_flavor_mac.3 = {
+	type = country_event
+	title = "cde_flavor_mac.3.t"
+	desc = "cde_flavor_mac.3.desc"
+	picture = looting
+	
+	left_portrait = char:197			#Andriscus/Andriskos
+	
+	fire_only_once = yes
+	
+	goto_location = 379		#Pella
+	
+	immediate = {
+		hidden_effect = {
+			c:ROM = {
+				release_subject = ROOT
+			}
+		}
+		c:MAC = {
+			declare_war_with_wargoal = {
+				war_goal = conquer_wargoal
+				province = root.capital_scope
+				target = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_mac.3.a
+		
+		custom_tooltip = cde_flavor_mac.2.tt
+		
+		
+	}
+}
+
+#Roman reaction to revolt
+cde_flavor_mac.4 = {
+	type = country_event
+	title = "cde_flavor_mac.4.t"
+	desc = "cde_flavor_mac.4.desc"
+	picture = looting
+	
+	left_portrait = char:197			#Andriscus/Andriskos
+	
+	fire_only_once = yes
+	
+	goto_location = 379		#Pella
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = cde_flavor_mac.4.a
+		
+		add_opinion = { 
+			modifier = rom_mac_rebelled_against_rule
+			target = MAC
+		}
+	}
+}

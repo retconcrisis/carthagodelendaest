@@ -1,0 +1,555 @@
+﻿01_cde_roman_missions_01_carthago = {
+    header = "mission_image_rome"
+    icon = "cde_roman_desert_march_2"
+
+    repeatable = no
+
+	chance = {
+		factor = 50000
+	}
+	
+	ai_chance = {
+		factor = 20
+	}					
+
+    potential = {
+        tag = ROM
+    }
+
+    abort = {
+		
+    }
+
+    on_start = {
+    	start_mission_ai_effect = yes
+		set_variable = {
+			name = me_rom_01_carthago_active
+		}
+    }
+
+    on_abort = {
+		current_ruler = {
+			add_popularity = -20
+		}
+		remove_variable = me_rom_01_carthago_active
+    }
+
+    on_completion = {
+    	complete_mission_effect = yes
+    	current_ruler = {
+			add_popularity = 30
+		}
+		remove_variable = me_rom_01_carthago_active
+    }
+
+	01_cde_roman_missions_01_task_1 = { # Carthaginian Question
+        icon = "task_artemis"
+		
+		allow = {
+			has_civil_war = no
+			NOT = { alliance_with = c:CAR }
+		}
+		
+		duration = 180
+		
+		on_start = {
+			trigger_event = { 
+				id = cde_me_rom_01.1
+			}
+			
+			custom_tooltip = 01_cde_roman_missions_01_task_1.tt
+		}
+
+        on_completion = {
+			trigger_event = { 
+				id = cde_me_rom_01.2
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_101 = { # Befriend Numidia
+        icon = "task_diplomatic"
+		
+		potential = {
+			c:NUM = {
+				has_land = yes
+				is_ai = yes
+			}
+		}
+		
+		allow = {
+			NOT = { war_with = c:NUM }
+			OR = {
+				alliance_with = c:NUM
+				c:NUM = {
+					opinion = { 
+						target = root
+						value >= 70
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.3
+			}
+			show_as_tooltip = {
+				add_truce = {
+					target = c:NUM
+					duration = 1825
+				}
+				c:NUM = {
+					add_truce = {
+						target = root
+						duration = 1825
+					}
+				}
+			}
+        }
+    }
+	
+	#Conquest Tree
+	
+	01_cde_roman_missions_01_task_2 = { # Resume the Punic Wars
+        icon = "task_expansion"
+		
+		requires = { 01_cde_roman_missions_01_task_1 }
+		
+		duration = 60
+		
+		bypass = {
+			c:CAR = {
+				has_land = no
+			}
+		}
+		
+		allow = {
+			political_influence >= 10
+		}
+
+        on_completion = {
+			
+			trigger_event = {
+				id = cde_me_rom_01.4
+			}
+			
+			add_political_influence = -10
+			
+			
+			custom_tooltip = 01_cde_roman_missions_01_task_2.tt
+        }
+    }
+	
+	01_cde_roman_missions_01_task_3 = { # Punic Defectors
+        icon = "task_political"
+		
+		requires = { 01_cde_roman_missions_01_task_2 }
+		
+		bypass = {
+			NOT = {
+				any_country = {
+					is_subject_of = c:CAR
+					primary_culture = carthaginian
+				}
+			}
+		}
+		
+		allow = {
+			political_influence >= 25
+			NOT = { war_with = c:CAR }
+			
+				any_country = {
+					is_subject_of = c:CAR
+					primary_culture = carthaginian
+					opinion = { 
+						target = root
+						value >= 80
+					}
+				}
+			
+			custom_tooltip = {
+				text = 01_cde_roman_missions_01_task_3.tt
+				
+			}
+		}
+
+        on_completion = {
+			add_political_influence = -25
+			
+			custom_tooltip = 01_cde_roman_missions_01_task_3.tt2
+			
+			trigger_event = {
+				id = cde_me_rom_01.5		#Events 6-7-8-9 are pings to Punic cities, Rome and Carthage
+			}
+			
+        }
+    }
+	
+	01_cde_roman_missions_01_task_4 = { # Carthago Delenda Est
+        icon = "task_conquest"
+		
+		requires = { 01_cde_roman_missions_01_task_2 }
+		
+		allow = {
+			owns = 3256		#Carthage
+			c:CAR = {
+				has_land = no
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.10
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_rom_carthago_delenda_est
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_5 = { # Provincia of Africa
+        icon = "task_expansion"
+		
+		requires = { 01_cde_roman_missions_01_task_4 }
+		
+		allow = {
+			any_owned_province = {
+				count >= 15
+				OR = {
+					is_in_region = africa_region
+					is_in_region = numidia_region
+				}
+			}
+			custom_tooltip = {
+				text = 01_cde_roman_missions_01_task_5.tt2
+				any_governorships = {				#Any Governorship in Africa has a Governor and a Forum
+					any_governorship_state = {
+						has_governor = yes
+						any_state_province = {
+							has_building = forum_building
+							OR = {
+								is_in_region = africa_region
+								is_in_region = numidia_region
+							}
+						}
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.11
+			}
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_rom_new_african_provincia
+					duration = 3650
+				}
+			}
+			custom_tooltip = 01_cde_roman_missions_01_task_5.tt
+        }
+    }
+	
+	01_cde_roman_missions_01_task_6 = { # Punic Municipia
+        icon = "task_economical"
+		
+		requires = { 01_cde_roman_missions_01_task_4 }
+		
+		allow = {
+			any_owned_province = {
+				count >= 2
+				has_city_status = yes
+				has_construction = no
+				free_building_slots = 0
+				dominant_province_culture = carthaginian
+				OR = {
+					is_in_region = africa_region
+					is_in_region = numidia_region
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.12
+			}
+			show_as_tooltip = {
+				random_country_culture = {
+					limit = {
+						is_culture = carthaginian
+					}
+					add_country_culture_modifier = {
+						name = cde_me_rom_roman_punic_patronage
+						duration = 9125
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_7 = { # Coloniae in Africa
+        icon = "task_political"
+		
+		requires = { 01_cde_roman_missions_01_task_5 }
+		
+		allow = {
+			days_since_last_war <= 1825		#Had a War at least 5 years ago
+			any_owned_province = {
+				count >= 3
+				custom_tooltip = {
+					text = 01_cde_roman_missions_01_task_7.tt2
+					has_building = local_forum_building		#Provincial Legation
+					OR = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+					}
+				}
+			}
+		}
+		
+		duration = 365
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.13
+			}
+			custom_tooltip = 01_cde_roman_missions_01_task_7.tt
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_rom_coloniae_in_africa
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_71 = { # African Garrisons
+        icon = "task_conquest"
+		
+		requires = { 01_cde_roman_missions_01_task_7 }
+		
+		allow = {
+			custom_tooltip = {
+				text = 01_cde_roman_missions_01_task_71.tt2
+				any_owned_province = {
+					count >= 1
+					has_building = fortress_ramparts_building		#Earthworks
+					any_pops_in_province = {
+						pop_culture = root.culture
+					}
+					OR = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.14
+			}
+			custom_tooltip = 01_cde_roman_missions_01_task_71.tt
+			ordered_owned_province = {
+				limit = {
+					has_building = fortress_ramparts_building		#Earthworks
+					any_pops_in_province = {
+						pop_culture = root.culture
+					}
+					OR = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+					}
+				}
+				max = 1
+				order_by = total_population
+				add_province_modifier = {
+					name = cde_me_rom_bolstered_colony_garrison
+					duration = 5475
+				}
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_8 = { # Ager Publicus
+        icon = "task_political"
+		
+		requires = { 01_cde_roman_missions_01_task_5 }
+		
+		allow = {
+			any_owned_province = {
+				count >= 3
+				custom_tooltip = {
+					text = 01_cde_roman_missions_01_task_8.tt
+					has_building = basic_settlement_infratructure_building		#Farming Settlement
+					OR = {
+						is_in_region = africa_region
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.15
+			}
+			show_as_tooltip = {
+				region:africa_region = {
+					every_region_state = {
+						limit = {
+							owner = root
+						}
+						add_state_modifier = {
+							name = cde_me_rom_ager_publicus
+							duration = 5475
+						}
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_9 = { # African Latifundia
+        icon = "task_economical"
+		
+		requires = { 01_cde_roman_missions_01_task_5 }
+		
+		allow = {
+			any_owned_province = {
+				count >= 3
+				custom_tooltip = {
+					text = 01_cde_roman_missions_01_task_9.tt
+					has_building = latifundia_building		#Slave Estate
+					OR = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+					}
+				}
+			}
+			custom_tooltip = {
+				text = 01_cde_roman_missions_01_task_9.tt2
+				any_owned_province = {
+					count >= 1
+					OR = {
+						is_in_region = africa_region
+					}
+					exists = holding_owner
+					holding_owner = {
+						is_alive = yes
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.16
+			}
+			show_as_tooltip = {
+				region:africa_region = {
+					every_region_state = {
+						limit = {
+							owner = root
+						}
+						add_state_modifier = {
+							name = cde_me_rom_african_latifundia
+							duration = 5475
+						}
+					}
+				}
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_10 = { # Cultivate the Breadbasket
+        icon = "task_zeus_cornucopia"
+		
+		requires = { 01_cde_roman_missions_01_task_7 01_cde_roman_missions_01_task_8 01_cde_roman_missions_01_task_9 }
+		
+		allow = {
+			any_owned_province = {
+				count >= 7
+				custom_tooltip = {
+					text = 01_cde_roman_missions_01_task_10.tt
+					OR = {
+						has_building = aqueduct_building		#Aqueduct
+						has_building = workshop_building		#Mill
+						has_building = population_building		#Granary
+					}
+					OR = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.17
+			}
+			every_owned_province = {			#copied from vanilla mission task
+				limit = {
+					OR = {
+						is_in_area = carthage_area
+						is_in_area = africa_septentrionalis_area
+					}
+					trade_goods = grain
+				}
+				custom = roman_6_roman_africa_tt
+				add_province_modifier = {
+					name = roman_6_african_breadbasket_modifier		#from vanilla mission task
+					duration = -1
+				}
+			}
+        }
+    }
+	
+	01_cde_roman_missions_01_task_11 = { # Promote Romanization
+        icon = "task_athena"
+		
+		requires = { 01_cde_roman_missions_01_task_10 }
+		
+		final = yes
+		
+		allow = {
+			any_owned_province = {
+				count >= 7
+				has_city_status = yes
+				OR = {
+					is_in_region = africa_region
+					is_in_region = numidia_region
+				}
+			}
+		}
+		
+		duration = 180
+
+        on_completion = {
+			trigger_event = {
+				id = cde_me_rom_01.18
+			}
+			every_country_state = {		#copied from vanilla task
+				limit = {
+					capital_scope = {
+						OR = {
+							is_in_region = africa_region
+						}
+					}
+				}
+				custom = 01_cde_roman_missions_01_task_11.tt
+				add_state_modifier = {
+					name = rm_integration_smod
+					duration = 7300 # 20 years
+				}
+			}
+        }
+    }
+	
+	
+}

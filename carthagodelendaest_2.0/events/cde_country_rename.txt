@@ -1,0 +1,164 @@
+﻿namespace = cde_country_rename
+
+#Shunga to Magadha
+cde_country_rename.1 = {
+	type = country_event
+	title = "cde_country_rename.1.t"
+	desc = "cde_country_rename.1.desc"
+	picture = council_country
+	left_portrait = current_ruler
+	
+	trigger = {
+		tag = SUN
+		OR = {
+			is_monarchy = no
+			AND = {
+				is_monarchy = yes
+				tag = SUN
+				exists = current_ruler
+				trigger_if = {
+					limit = { exists = fam:Shunga }
+					NOT = { current_ruler.family = fam:Shunga }
+				}
+			}
+		}
+		has_civil_war = no
+		NOT = { has_variable = cde_country_rename_1_flag }
+	}
+	
+	immediate = {
+		set_variable = { name = cde_country_rename_1_flag }
+	}
+	
+	option = {
+		name = "cde_country_rename.1.a"
+		change_country_name = "MAGADHA_NAME"
+		hidden_effect = { change_country_adjective = "MAGADHA_ADJECTIVE" }
+	}
+}
+
+#Seleukid Kingdom to Syria
+cde_country_rename.2 = {
+	type = country_event
+	title = "cde_country_rename.2.t"
+	desc = "cde_country_rename.2.desc"
+	picture = council_country
+	left_portrait = current_ruler
+	
+	trigger = {
+		OR = {
+			tag = SEL
+			tag = AXR
+		}
+		OR = {
+			is_monarchy = no
+			AND = {
+				is_monarchy = yes
+				exists = current_ruler
+				trigger_if = {
+					limit = { exists = fam:Seleukid }
+					NOT = { current_ruler.family = fam:Seleukid }
+				}
+			}
+		}
+		has_civil_war = no
+		NOT = { has_variable = cde_country_rename_1_flag }
+	}
+	
+	immediate = {
+		set_variable = { name = cde_country_rename_1_flag }
+	}
+	
+	option = {
+		name = "cde_country_rename.2.a"
+		change_country_name = "SYRIA_NAME"
+		hidden_effect = { change_country_adjective = "SYRIA_ADJECTIVE" }
+	}
+}
+
+#Ptolemaic Kingdom to Egypt
+cde_country_rename.3 = {
+	type = country_event
+	title = "cde_country_rename.3.t"
+	desc = "cde_country_rename.3.desc"
+	picture = council_country
+	left_portrait = current_ruler
+	
+	trigger = {
+		tag = EGY
+		OR = {
+			is_monarchy = no
+			AND = {
+				is_monarchy = yes
+				tag = EGY
+				exists = current_ruler
+				trigger_if = {
+					limit = { exists = fam:Lagid }
+					limit = { exists = fam:Magid }
+					NOR = { 
+						current_ruler.family = fam:Lagid 
+						current_ruler.family = fam:Magid 
+					}
+				}
+			}
+		}
+		has_civil_war = no
+		NOT = { has_variable = cde_country_rename_1_flag }
+	}
+	
+	immediate = {
+		set_variable = { name = cde_country_rename_1_flag }
+	}
+	
+	option = {
+		name = "cde_country_rename.3.a"
+		change_country_name = "EGYPT_NAME"
+		hidden_effect = { change_country_adjective = "EGYPT_ADJECTIVE" }
+	}
+}
+
+#Ptolemaic dynasty Ruler name change
+cde_country_rename.4 = {
+	type = country_event
+	title = "cde_country_rename.4.t"
+	desc = "cde_country_rename.4.desc"
+	picture = council_country
+	left_portrait = current_ruler
+	
+	trigger = {
+		tag = EGY
+		is_monarchy = yes
+		exists = current_ruler
+		current_ruler = {
+			is_male = yes
+			NOT = { has_variable = took_on_regnal_name }
+		}
+		OR = { 
+			current_ruler.family = fam:Lagid 
+			current_ruler.family = fam:Magid
+		}
+		has_civil_war = no
+	}
+	
+	immediate = {
+		current_ruler = {		#character variable/flag
+			set_variable = { name = took_on_regnal_name }
+		}
+		hidden_effect = {
+			current_ruler = {
+				set_firstname = Ptolemaios
+			}
+		}
+	}
+	
+	option = {
+		name = "cde_country_rename.4.a"
+		show_as_tooltip = {
+			current_ruler = {
+				set_firstname = Ptolemaios
+			}
+		}
+	}
+}
+
+

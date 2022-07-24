@@ -1,0 +1,9 @@
+﻿
+#removed all but tribal reform - Generic Greek missions are also left in missions folder!
+
+tribal_reform_monarchy_pulse = {
+	random_events = {
+		10 = 0
+		5 = tribal_reform.2
+	}
+}

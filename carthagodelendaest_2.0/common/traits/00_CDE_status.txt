@@ -1,0 +1,136 @@
+﻿#Bloodlines
+blood_of_mithridates = {
+	type = status
+	prominence = 20
+	martial = 1
+	country = {
+		diplomatic_reputation = 1
+		global_defensive = 0.1
+	}
+	province = {
+		local_defensive = 0.1
+	}
+}
+
+blood_scipio_africanus = {
+	type = status
+	prominence = 20
+	martial = 1
+	senate_influence = 0.1
+	monthly_character_popularity = 0.05
+	ruler_popularity_gain = 0.1
+	province = {
+		local_citizen_output = 0.05
+	}
+}
+
+blood_of_masinissa = {
+	type = status
+	prominence = 20
+	finesse = 1
+	country = { 
+		global_commerce_modifier = 0.1
+	}
+	province = {
+		local_freemen_output = 0.1
+	}
+	unit = { 
+		light_cavalry_discipline = 0.05 
+	}
+}
+
+blood_of_mattathias = {
+	type = status
+	prominence = 20
+	zeal = 1
+	support_for_character_as_heir = 5
+	country = {
+		omen_power = 0.1
+	}
+	province = {
+		hostile_attrition = 0.2
+	}
+	unit = { 
+		light_infantry_morale = 0.1
+	}
+}
+
+blood_of_arsaces = {
+	type = status
+	prominence = 20
+	charisma = 1
+	country = { 
+		global_unrest = -1
+		monthly_legitimacy = 0.1
+	}
+	unit = { 
+		horse_archers_offensive = 0.05 
+	}
+}
+
+blood_of_zariadres = {
+	type = status
+	prominence = 20
+	charisma = 1
+	fertility = 0.1
+	country = { 
+		diplomatic_reputation = 1
+		monthly_legitimacy = 0.05
+	}
+}
+
+blood_of_artaxias = {
+	type = status
+	prominence = 20
+	martial = 1
+	country = { 
+		garrison_size = 0.1
+		fort_maintenance_cost = -0.1
+	}
+	province = {
+		local_defensive = 0.1
+	}
+}
+
+blood_of_orontes = {
+	type = status
+	prominence = 20
+	martial = 1
+	country = { 
+		diplomatic_reputation = 1
+		fort_maintenance_cost = -0.1
+	}
+	province = {
+		local_defensive = 0.1
+	}
+}
+
+achaemenid = {
+	type = status
+	prominence = 20
+	charisma = 1
+	country = { 
+		monthly_legitimacy = 0.1
+		war_score_cost = -0.1
+	}
+}
+
+
+
+#Other
+hostage_trait = {
+	type = status
+	
+	disallow_job = yes
+	disallow_office = yes
+	disallow_command = yes
+}
+
+monk_trait = {
+	type = status
+	character_loyalty = 100
+	disallow_job = yes
+	disallow_office = yes
+	disallow_command = yes
+}
+

@@ -1,0 +1,128 @@
+﻿country_decisions = {
+	
+	# Form Macedonian League (for Republics)
+	form_macedonian_league = {
+		
+		potential = {
+			is_republic = yes
+			num_of_cities >= 1
+			primary_culture = macedonian
+			NOR = {
+				tag = MAC
+				tag = SEL
+				tag = EGY
+			}
+			capital_scope = {
+				is_in_region = macedonia_region
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 15
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 379	#Pella
+					province_id = 373	#Thessalonike
+					province_id = 393	#Pelagonia
+					province_id = 365	#Amphipolis
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = formable_not_macedonian_league_exists
+				NOT = {
+					any_country = {
+						tag = MCL
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns = 379	#Pella
+			owns = 373	#Thessalonike
+			owns = 393	#Pelagonia
+			owns = 365	#Amphipolis
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "MCL"
+			hidden_effect = {
+				change_country_adjective = "MCL_ADJ"
+				change_country_tag = MCL
+				change_country_flag = MCL	#new
+			}
+			change_government = koinon_league_gov	#League Republic 
+			if = {
+				limit = {
+					NOT = {
+						capital_scope = {
+							province_id = 379		#Pella
+						}
+					}
+				}
+				set_capital = Pella
+				hidden_effect = {
+					p:379.state = {
+						set_state_capital = 379
+					}
+				}
+				capital_scope = {
+					establish_city_effect = yes
+				}
+			}
+			p:379 = {
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = add_macedonian_league_claims
+			hidden_effect = {
+				area:macedonia_area = {
+					every_area_province = {
+						limit = {
+							NOT = {
+								owned_or_subject_owned = root
+							}
+						}
+						add_claim = root
+					}
+				}
+				area:upper_macedonia_area = {
+					every_area_province = {
+						limit = {
+							NOT = {
+								owned_or_subject_owned = root
+							}
+						}
+						add_claim = root
+					}
+				}
+				area:chalkidiki_area = {
+					every_area_province = {
+						limit = {
+							NOT = {
+								owned_or_subject_owned = root
+							}
+						}
+						add_claim = root
+					}
+				}
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

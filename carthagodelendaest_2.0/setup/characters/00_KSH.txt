@@ -1,0 +1,43 @@
+﻿"KSH"={
+	country="KSH"
+	
+	#Queen Shanakdakhete of Kush and Meroe; r. 170-150 BC
+	138={
+		first_name = "Shanakdakhete"
+		family = c:KSH.fam:Meroid
+		birth_date=568.11.27	#186 BC
+		female = yes
+		culture="meroitic"
+		religion="egyptian_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=8
+		add_finesse=11		#construction projects
+		add_zeal=10			#built temple
+		no_traits=yes
+		add_trait="assertive"
+		add_trait="intelligent"
+		add_trait="pious"
+		add_gold=350
+		add_popularity=80
+		c:KSH = {
+			set_as_ruler=char:138
+		}
+		dna="GPwY/KLgouCq5qrmAnUCdQKVApUDrQOtAmcCZwKYApgBUQFRAmoCagJmAmYChAKEAn8CfwJ8AnwCagJqApICkgO0A7QBWwFbAmYCZgJmAmYCOwI7AqICogKSApIBZQFlApECkQGkAaQCiAKIApUClQKNAo0CbQJtAmwCbAJpAmkCkQKRAmsCawTcBNwCkwKTAmcCZwOcA5wBqgFlA8wDzAFYAVgCcgJyAnoCegJoAmgChwKHAnkCeQK+Ar4CwQLBAVUBVQJZAlkCfgJ+Am4CbgPrA+sCZgJmAowCjAKHAocCjQKNAm4CbgL2AvYAQwBDAN4A3gC7ALsAtAC0ALYAtgEWARYBaQFpAOQA5AA1ADUAwQDBAIcAhwB/AH8AVwBXAXgBeAFTAVMArwCvAGkAaQEKAQoD6QPpAV0BXQB/AH8ATwBPAQkBCQEfAR8A1QDVAtMC0wDLAMsAowCjALoAugELAQsC1ALUAwADAAEAAQAMxQV/AH8AfwBtAG0PAA4rAZUBlQajBqMIVwhCDIsMiwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Tanyidamani, heir of Shanakdakhete
+	139={
+		first_name = "Tanyidamani"
+		family = c:KSH.fam:Meroid
+		birth_date=603.5.9	#151 BC
+		mother="char:138"
+		culture="meroitic"
+		religion="egyptian_pantheon"
+		add_gold=200
+		add_popularity=40
+		dna="GPwY/KLgouCq5qrmAnUCdQKVApUDrQOtAmcCZwKYApgBUQFRAmoCagJmAmYChAKEAn8CfwJ8AnwCagJqApICkgO0A7QBWwFbAmYCZgJmAmYCOwI7AqICogKSApIBZQFlApECkQGkAaQCiAKIApUClQKNAo0CbQJtAmwCbAJpAmkCkQKRAmsCawTcBNwCkwKTAmcCZwOcA5wBqgFlA8wDzAFYAVgCcgJyAnoCegJoAmgChwKHAnkCeQK+Ar4CwQLBAVUBVQJZAlkCfgJ+Am4CbgPrA+sCZgJmAowCjAKHAocCjQKNAm4CbgL2AvYAQwBDAN4A3gC7ALsAtAC0ALYAtgEWARYBaQFpAOQA5AA1ADUAwQDBAIcAhwB/AH8AVwBXAXgBeAFTAVMArwCvAGkAaQEKAQoD6QPpAV0BXQB/AH8ATwBPAQkBCQEfAR8A1QDVAtMC0wDLAMsAowCjALoAugELAQsC1ALUAwADAAEAAQAMxQV/AH8AfwBtAG0PzQ4rAZUBlQajBqMI5AhCDP8MiwAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

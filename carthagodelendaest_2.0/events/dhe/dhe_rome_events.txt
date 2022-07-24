@@ -1,0 +1,5 @@
+﻿namespace = dhe_rome
+
+
+#removed since many are specific to 304 BC or give Rome claims that make them OP
+#can look back at vanilla events from this file for inspiration/add them back with different namespace

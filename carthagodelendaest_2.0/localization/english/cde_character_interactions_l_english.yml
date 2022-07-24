@@ -1,0 +1,8 @@
+﻿l_english:
+  
+  #Diplomatic Interactions
+  relinquish_claims:0 "Relinquish Claims"
+  relinquish_claims_text:0 "If we possess no ambitions for acquiring the lands of [target.GetName], perhaps it would be wise to relinquish our claims on their lands to avoid pointless squabbles with [target.GetName].\n\n #Y This will give up claims on all territories belonging to [target.GetName]#!" 
+  
+  
+  

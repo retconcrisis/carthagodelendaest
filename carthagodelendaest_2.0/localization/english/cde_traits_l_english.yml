@@ -1,0 +1,27 @@
+﻿l_english:
+ #Bloodlines
+ blood_of_mithridates:0 "Blood of Mithridates"
+ blood_of_mithridates_desc:0 "Mithridates I of Pontus built a kingdom from nothing, having escaped from being assassinated by the Antigonids. Uniting a kingdom of many cultures, the Mithridates' descendants continue his legacy of endurance, survival and conquest."
+ blood_scipio_africanus:0 "Blood of Scipio Africanus"
+ blood_scipio_africanus_desc:0 "Scipio Africanus was the legendary military commander and strategist of Rome who is most renowned for his victory of Carthage in the Second Punic War. Although he lived a life of humility following his victory in war, his descendants continue to wield great influence in Roman affairs thanks to his legacy."
+ blood_of_arsaces:0 "Blood of Arsaces"
+ blood_of_arsaces_desc:0 "Our dynasty's founder Arsaces drove out the Greek kings from Parthia and established the first Parthian kingdom as an equal to the Greeks. As the first Father of our country, we must continue his legacy as great and just rulers of the land. An everlasting fire continues to burn in the city of Asaak in his honor."
+ blood_of_mattathias:0 "Blood of Mattathias"
+ blood_of_mattathias_desc:0 "When the Greek Seleukids defiled the Second Temple and attempted to make a sacrifice in the Temple to their false gods, Mattathias led a great revolution against the Seleukids, and through the efforts of his sons secured and rededicated the Second Temple to the one true God." 
+ blood_of_masinissa:0 "Blood of Masinissa"
+ blood_of_masinissa_desc:0 "King Masinissa rose to power as the ruler of the Massylians, but went on to become the King of Numidia, ruler of all of the Massylians and Massaesylians alike. He turned a land that produced little to a land of plenty, cultivating fruits once thought to be impossible to grow on Numidian soil."
+ blood_of_zariadres:0 "Blood of Zariadres"
+ blood_of_zariadres_desc:0 "Zariadres revolted against Seleukid rule and established an independent Sophene kingdom. Since Zariadres was the father of both Mithrobouzanes of Sophene and Artaxias I of Armenia, our bloodline founded two great ruling dynasties. Furthermore, our bloodline is descended from the Orontid dynasty that ruled Armenia since the Achaemenids."
+ blood_of_artaxias:0 "Blood of Artaxias"
+ blood_of_artaxias_desc:0 "Artaxias I of Armenia successfully revolted alongside his father Zariadres of Sophene, taking the Armenian throne and even expanding the Armenian kingdom. Artaxias also had the blood of the Orontid dynasty that had ruled Armenia since the Achaemenids, which further legitimizes our rule."
+ blood_of_orontes:0 "Blood of Orontes"
+ blood_of_orontes_desc:0 "As direct descendents of the last Orontid ruler of Armenia, we are the last true Orontids who can trace our lineage back to Orontes I, the founder of the Orontid dynasty centuries ago and served as satraps of the Achaemenid dynasty of Persia."
+ achaemenid:0 "Blood of the Achaemenids"
+ achaemenid_desc:0 "The blood of the great Achaemenid dynasty of Persia courses through the veins of [CHARACTER.GetName]. Although the reign of the Achaemenid dynasty of Persia remains only in the annals of history, any who can trace their lineage back to the great kings Cyrus and Darius can stake claim to the throne and legacy of the Persian Empire."
+ 
+ #Other Status Traits
+ hostage_trait:0 "Hostage"
+ hostage_trait_desc:0 "Although not imprisoned and usually free to live their lives normally, this character is barred from holding high-ranking offices, and is only allowed to work in minor jobs, such as assistants or scribes of more prominent figures in society."
+ monk_trait:0 "Monk"
+ monk_trait_desc:0 "[CHARACTER.GetName] has chosen to give up all political and material ambitions to instead pursue a life dedicated to their faith. As a monk, they cannot hold any offices, though their teachings shall enlighten and inspire all followers of the faith."
+ 

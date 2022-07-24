@@ -1,0 +1,61 @@
+﻿"CYR"={
+	country="CYR"
+	
+	#Ptolemy VIII
+	62={	
+		first_name="Ptolemaios"
+		nickname="NICKNAME_PHYSCON"		#Physcon, meaning Fat
+		family = c:EGY.fam:Lagid
+		birth_date=570.12.30		#184 BC
+		father="char:41"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=3
+		add_finesse=4
+		add_zeal=5
+		no_traits=yes
+		add_trait="lagids"
+		add_trait="cruel"
+		add_trait="ambitious"
+		add_gold=400
+		add_popularity=50
+		c:CYR = {
+			set_as_ruler=char:62
+		}
+		dna="lJeUl7x8vHzAsMCwApACkAKNAo0CdwJ3ApICkgKRApEChQKFAngCeAKEAoQDpAOkAEkASQJtAm0CiwKLAnkCeQJzAnMCdAJ0AnUCdQA6ADoCewJ7AnYCdgJ9An0ChwKHAmYCZgKUApQCmAKYAngCeAFcAVwCdAJ0AEUARQJwAnAClwKXAncCdwJ1AnUCggKCAmcCZwJ9An0CcwJzAmsCawKHAocCjQKNBL8EvwKNAo0CgAKAAoUChQKNAo0ClQKVAn8CfwKAAoACdAJ0A5oDmgKUApQCfgJ+AncCdwKIAogDoAOgApQClADDAMMBKQEpAHsAewC7ALsAvwC/AOwA7ABwAHAAfgB+AqsCqwKoAqgAfgB+AGAAYAB/AH8A6wDrAV0BXQFAAUABaQFpAM4AzgCZAJkAjwCPAIIAggB/AH8AZABkAH0AfQEZARkBeAF4AOsA6wARABEAogCiAJAAkAFIAUgCnQKdAP4A/gABAAELmguaAH8AfwT2BPYFlwWXANAA0AUYBRgCkAKQAnACcAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Eirene, mistress of Ptolemy Physcon of Cyrenaica
+	266={	
+		first_name="Eirene"
+		birth_date=582.5.30		#172 BC
+		female = yes				#mistress, so not official consort
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=5
+		add_finesse=5
+		add_zeal=6
+		add_gold=100
+	}
+	
+	#Ptolemy Apion, son of Physcon and Eirene, and last king of Cyrenaica
+	267={	
+		first_name="Ptolemaios"
+		nickname="NICKNAME_APION"
+		family = c:EGY.fam:Lagid
+		birth_date=603.12.7		#149-150 BC
+		father="char:62"
+		mother="char:266"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=5
+		add_zeal=6
+	}
+}

@@ -1,0 +1,85 @@
+﻿"ARM"={
+	country="ARM"
+	
+	#Artaxias I, first and previous ruler of Artaxiad Armenia
+	142={
+		first_name = "Artaxias"
+		family = c:ARM.fam:Artaxiad
+		birth_date=561.7.4		#213 BC
+		death_date=593.9.12		#161 BC
+		father="char:137"			#Zariadres of Sophene
+		culture="armenian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=11
+		add_charisma=10
+		add_finesse=9
+		add_zeal=5
+		no_traits=yes
+		add_trait="blood_of_artaxias"
+		add_trait="ambitious"
+		add_trait="founder"
+		add_trait="victorious"
+		dna="E+cT55Ock5zN7s3uAnMCcwKZApkCcgJyAo4CjgObA5sCmAKYAn8CfwKHAocCggKCAm4CbgJuAm4BbwFvAm8CbwFhAWECkwKTApgCmAKHAocChAKEAoUChQOIA4gCcQJxApQClAJtAm0ClQKVAVoBWgJ7AnsCgAKAAnkCeQKKAooCbQJtBLQEtAJ8AnwCbgJuAoACgAJzAnMBYAFgA6wDrAKVApUCiQKJAVkBWQOtA60ChwKHApECkQBgAGABagFqAmwCbAJ+An4CbQJtA6YDpgKOAo4ChgKGAm8CbwOiA6ICdQJ1ApYClgIeAh4AygDKAFQAVAAXABcBTwFPAEsASwEIAQgBOwE7AuAC4ABKAEoDbQNtADMAMwB/AH8CnAKcAXQBdAKjAqMCjgKOAQQBBAAkACQAaQBpAvwC/AB/AH8BfQF9AUUBRQFRAVEAKAAoANkA2QBeAF4BWAFYAPkA+QDOAM4CtAK0Aw8DDwEQARAJmwmbAH8AfwUVBRUGkwYoASIBIgPcA64CjAQ6AwIBfQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Artavasdes I, current ruler of Armenia
+	143={
+		first_name = "Artavasdes"
+		family = c:ARM.fam:Artaxiad
+		birth_date=571.10.4		#183 BC
+		father = "char:142" 	#Artaxias I
+		culture="armenian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=6
+		add_charisma=4
+		add_finesse=5
+		add_zeal=6
+		no_traits=yes
+		add_trait="blood_of_artaxias"
+		add_trait="forgiving"
+		add_trait="assertive"
+		add_gold=300
+		add_popularity=70
+		c:ARM = {
+			set_as_ruler=char:143
+		}
+		dna="IfEh8Z6dnp3W0dbRAV4BXgJ+An4CegJ6AngCeAJ2AnYCjwKPAm8CbwJzAnMCcQJxApYClgJ0AnQClwKXAm4CbgFbAVsCaQJpAn4CfgJ7AnsBUAFQAmwCbAJ/An8CfAJ8Ao8CjwJ0AnQChwKHAVwBXAJwAnACjgKOApgCmAKWApYCkQKRAm8CbwKJAokCbwJvAmsCawOiA6ICfAJ8An0CfQKAAoAE3wTfAosCiwJxAnECkwKTAoACgAKBAoECgAKAAogCiAKOAo4CdgJ2AmYCZgA+AD4CigKKAmsCawKBAoECkwKTAmkCaQKrAqsAFAAUAL8AvwAxADEAHAAcACIAIgFqAWoA4QDhAGkAaQEdAR0DdAN0AU8BTwB/AH8A/QD9AHsAewFjAWMAwADAANgA2AAxADEAPgA+AMUAxQB/AH8A4wDjALwAvAA2ADYAMgAyAGYAZgDnAOcA4ADgAPsA+wFzAXMCxQLFAXgBeAATABMGZwZnAH8AfwVtBW0GfgZZAa4BrgNxA3EEggQUAvcBogAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Fictional/placeholder consort of Artavasdes, and mother of Tigranes II
+	144={
+		family = c:ARM.fam:Artaxiad
+		birth_date=574.4.20		#180 BC
+		female = yes
+		marry_character="char:143" 	#Artavasdes I
+		culture="armenian"
+		religion="zoroaster"
+		add_gold=200
+		dna="F+cX56SamaWvuK+4AVYBVgJtAm0CcAJwAmkCaQJyAnIClgKWApYClgJvAm8CiwKLAoICggOwA7ACngKeAVMBUwFdAV0CbwJvAnYCdgJqAmoCkQKRAVUBVQAuAC4CkgKSAoECgQKKAooDpAOkA6UDpQKBAoECewJ7AnkCeQKNAo0CdgJ2AmYCZgJmAmYCmAKYAogCiAKPAo8CbQJtAn0CfQAkACQChQKFAn0CfQKOAo4ChAKEApYClgFmAWYClQKVAngCeAKPAo8CbwJvAooCigKvAq8CdgJ2AnQCdAKBAoEClwKXApACkAQsBCwA5QDlALAAsAFDAUMAiACIACwALAAYABgCrwKvAE4ATgFzAXMBLwEvAEMAQwB/AH8A/QD9ALMAswClAKUAbQBtAB8AHwDrAOsBKwErANMA0wB/AH8AMAAwAuAC4AD2APYBXAFcAJcAlwA+AD4AvwC/AFUAVQK2ArYBcgFyA2MDYwMIAwgIdgjGAH8AfwLKBccGsgbVAfYB9gMAA5QE/wQeAf8BGAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Tigranes I, brother of Artavasdes and future king of Armenia
+	145={
+		first_name = "Tigranes"
+		family = c:ARM.fam:Artaxiad
+		birth_date=587.12.25		#167 BC
+		father = "char:142" 	#Artaxias I
+		culture="armenian"
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=10		#defended Armenia against the Parthians
+		add_charisma=7
+		add_finesse=8		
+		add_zeal=5
+		no_traits=yes
+		add_trait="blood_of_artaxias"
+		add_trait="founder"		#founded the capital of Armenia Artaxata, which remained as capital until the 2nd century CE
+		add_trait="wise"
+		add_popularity=40
+		dna="Jvkm+ZSjlKPn4OfgAngCeAJuAm4CewJ7AmcCZwKYApgChwKHAm0CbQOeA54CkwKTApYClgKYApgCiwKLApkCmQAzADMCaAJoAm0CbQJ0AnQCkAKQAmYCZgJmAmYCeAJ4AoQChAJmAmYDrwOvACoAKgJ4AngCeQJ5AosCiwJ2AnYCggKCAnYCdgJwAnAChgKGAVEBUQKKAooCZgJmAmsCawKXApcCkQKRAnACcAJ0AnQCjAKMAooCigKOAo4CfwJ/AmgCaAJrAmsCmQKZAowCjAKCAoICcQJxA4YDhgA/AD8BUAFQAowCjAL+Av4AxQDFATEBMQBSAFIAfgB+AJ4AngB6AHoBIAEgAFMAUwFoAWgDWQNZAVABUAB/AH8AXgBeAGkAaQEmASYAtAC0AAUABQCsAKwCCwILAVsBWwB/AH8AngCeAKQApACSAJIANgA2AoQChACmAKYAHQAdA18DXwK1ArUCuwK7AVABUAMQAxAHQQmjAH8AfwDXBdcFrwbOAeEB4QM6A+0E3QTdAf8BowAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

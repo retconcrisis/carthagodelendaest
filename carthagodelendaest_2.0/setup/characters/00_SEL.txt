@@ -1,0 +1,121 @@
+﻿"SEL"={
+	country="SEL"
+	
+	#See Hades file for predecessors of Demetrios I
+	
+	#Demetrios I, son of Seleukos IV and Laodice IV
+	31={		
+		first_name="Demetrios"
+		nickname="NICKNAME_SOTER"
+		family = c:SEL.fam:Seleukid
+		birth_date=569.4.13		#185 BC
+		father="char:27"
+		mother="char:29"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=3
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="seleucids"
+		add_trait="gluttonous"		#became unpopular due to his arrogance and drunkenness
+		add_trait="arrogant"
+		add_gold=700
+		add_popularity=20
+		c:SEL = {
+			set_as_ruler=char:31
+		}
+		dna="kreSt4l8iXz7sPuwAoACgAJ8AnwChAKEAmcCZwJ7AnsCkgKSAnUCdQKKAooDrgOuAosCiwOvA68CiQKJA6QDpAJ3AncCagJqAn0CfQKBAoEAKQApAm8CbwJnAmcCbQJtAosCiwKJAokCeQJ5Ao0CjQKCAoICjwKPApICkgKDAoMCgwKDAnsCewJ/An8CgQKBAnkCeQKGAoYCaAJoAm0CbQJ+An4CkwKTAnMCcwKCAoICagJqApMCkwKTApMClgKWA6UDpQKFAoUCgAKAA5kDmQKPAo8CZgJmAoECgQKMAowCiwKLAoICggInAicAvwC/AP0A/QELAQsA3ADcABAAEAAVABUAMAAwAK0ArQCeAJ4BRAFEAXoBegB/AH8BKgEqAQ4BDgFbAVsAiwCLARUBFQF0AXQAqwCrADsAOwB/AH8AvgC+AIwAjABtAG0BTgFOADMAMwKWApYA3gDeAQwBDAA2ADYBAAEAAQUBBQBvAG8EzwTPAH8AfwLVANUFvwW/AOsA6wUnBScCQgLyAgACYwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#32 is Alexandros Balas (now in own tag), claimed to be son of Antiochos IV and usurped Demetrios I
+	
+	
+	#Demetrios II, son of Demetrios I and later became king after defeating Alexandros Balas
+	33={		
+		first_name="Demetrios"
+		family = c:SEL.fam:Seleukid
+		birth_date=594.1.23		#160 BC
+		father="char:31"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=6
+		add_finesse=7
+		add_zeal=5
+		no_traits=yes
+		add_trait="seleucids"
+		add_trait="cruel"
+		add_gold=100
+		dna="MtEA+r2CvYJGY0ZjAmgCaAKFAoUChgKGAoICggJ2AnYCbgJuAnACcAJ0AnQCbgJuApICkgFjAWMCcwJzAmgCaAJ8AnwCkAKQAn8CfwTUBNQCkQKRAn4CfgJ+An4ChAKEAoUChQJ4AngChgKGA50DnQKDAoMCeAJ4Ao4CjgKPAo8CiwKLAnwCfAKHAocCZwJnAoQChAJxAnEChAKEApICkgFOAU4CjAKMAnQCdAKDAoMCiAKIApMCkwKMAowCaQJpAnACcAKEAoQCgQKBApQClAOtA60CdwJ3AV8BXwJrAmsCmAKYAm0CbQLfAt8AvAC8AKoAqgKNAo0A3wDfAsECwQDBAMEA5ADkACwALAACAAIDDwMPATYBNgB/AH8BPAE8AGAAYAFuAW4CmQKZAR4BHgCZAJkADQANAQYBBgB/AH8C4QLhArYCtgFIAUgBYAFgAWEBYQDbANsA1ADUALYAtgCpAKkAhQCFAyADIAF2AXYG8wbzAH8AfwAwADAFRAWIAA4ADgW4BaUCCwILAk0CwQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Antiochus VII, son of Demetrios I and later became king after Demetrios II
+	34={		
+		first_name="Antiochos"
+		family = c:SEL.fam:Seleukid
+		birth_date=595.4.17		#159 BC
+		father="char:31"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=7
+		add_finesse=8
+		add_zeal=4
+		no_traits=yes
+		add_trait="seleucids"
+		add_trait="tolerant"
+		add_gold=100
+		dna="sJOwk6h7toh0nXSdApACkAKWApYCgwKDAmwCbAKKAooCaAJoAP8AIgJtAm0DmQOZAncCdwJoAmgCfQJ9AncCdwJpAmkCfAJ8AnwCfAKEAoQCggKCAowCjAKHAocCggKCAn4CfgKAAoACbQJtAnwCfAKOAo4CjwKPBM0EzQJ+An4CZwJnApUClQKJAokCawJrAnECcQJyAnICjAKMAmcCZwKWApYCkAKQApkCmQJpAmkCcwJzAoICggKBAoECfQJ9AnACcAKKAooCmAKYAnQCdAKJAokChgKGApkCmQKBAoECfQJ9ApUClQPOA84ADQANArkCuQBiAGIC6QLpAIYAhgCVAJUA3QDdAFIAUgFDAUMBLQEtAoACgAB/AH8ApACkAXsBewDfAN8A4gDiAAQABAFsAWwCPQI9AWIBYgB/AH8A/wD/AU4BTgD3APcAgACAAIgAiAEGAQYAhgCGArwCvAB9AH0BagFqAwIDAgSXBJcCWQJZAH8AfwF8ANAFvQXCAJEAkQV5BXkNcAJiAqcCpwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Diodotos Tryphon, usurped Demetrios II as king but was later defeated by Demetrios II
+	35={		
+		first_name="Diodotos"
+		family_name = "Diodotid"
+		birth_date=576.1.16		#178 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=5
+		add_finesse=7
+		add_zeal=5
+		no_traits=yes
+		add_trait="ambitious"
+		add_trait="deceitful"
+		add_gold=100
+		dna="beFt4Zx6nHq/qb+pA64DrgKSApIChwKHAoQChAKVApUCbQJtAnkCeQKPAo8ChQKFAmkCaQKAAoACegJ6AmcCZwKKAooCbAJsAocChwFdAV0CawJrApMCkwJ1AnUCcgJyAnUCdQJvAm8CdQJ1An8CfwTdBN0AJwAnAo0CjQKGAoYChQKFAnYCdgAxADECcQJxAmsCawOjA6MDqQOpAogCiAOvA68ClQKVAn8CfwTYBNgChwKHAoMCgwJ4AngDpQOlApECkQJtAm0CjgKOAoQChAJoAmgCgAKAApACkAJzAnMChgKGAnQCdAJrAmsA3QDdAL4AvgA4ADgBHAEcADUANQK7ArsBXAFcAIYAhgBJAEkEsASwAHUAdQB/AH8BVAFUATsBOwFjAWMA6ADoAvgC+AEyATIC2QLZAPYA9gB/AH8BdQF1AL8AvwA3ADcBaAFoAM0AzQNGA0YAgQCBA3oDegLpAukAdQB1A2cDZwBzAHMMVgxWAH8AfwP/A/8IqgX/AJMAkwUwBTACyQILAvsC+wAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Laodice V, daughter of Seleukos IV, wife to Demetrios I
+	198={		
+		first_name="Laodike"
+		nickname="NICKNAME_V"
+		family = c:SEL.fam:Seleukid
+		birth_date=569.4.13		#185 BC
+		father="char:27"
+		mother="char:29"
+		marry_character="char:31"		#Demetrios
+		female = yes
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="seleucids"
+		add_trait="humble"
+		add_trait="pious"
+		add_gold=150
+		dna="kreSt4l8iXz7sPuwAoACgAJ8AnwChAKEAmcCZwJ7AnsCkgKSAnUCdQKKAooDrgOuAosCiwOvA68CiQKJA6QDpAJ3AncCagJqAn0CfQKBAoEAKQApAm8CbwJnAmcCbQJtAosCiwKJAokCeQJ5Ao0CjQKCAoICjwKPApICkgKDAoMCgwKDAnsCewJ/An8CgQKBAnkCeQKGAoYCaAJoAm0CbQJ+An4CkwKTAnMCcwKCAoICagJqApMCkwKTApMClgKWA6UDpQKFAoUCgAKAA5kDmQKPAo8CZgJmAoECgQKMAowCiwKLAoICggInAicAvwC/AP0A/QELAQsA3ADcABAAEAAVABUAMAAwAK0ArQCeAJ4BRAFEAXoBegB/AH8BKgEqAQ4BDgFbAVsAiwCLARUBFQF0AXQAqwCrADsAOwB/AH8AvgC+AIwAjABtAG0BTgFOADMAMwKWApYA3gDeAQwBDAA2ADYBAAEAAQUBBQBvAG8EzwTPAH8AfwLVANUFvwW/AOsA6wUnBScCQgLyAgACYwAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

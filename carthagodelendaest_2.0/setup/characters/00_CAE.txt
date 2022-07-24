@@ -1,0 +1,87 @@
+﻿"CAE"={
+	country="CAE"
+	
+	#Dyegilos, ruler of Caeti tribe of Thrace and SON of Cotys IV, the great king of Thrace
+	93={
+		first_name = "Dyegilos"
+		family = c:CAE.fam:Autlesbid
+		birth_date=564.4.18		#190 BC
+		culture="odrysi"
+		religion="shamanism"
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="cruel"		#known for being extremely bloodthirsty
+		add_trait="abrasive"
+		add_gold=200
+		add_popularity=35
+		c:CAE = {
+			set_as_ruler=char:93
+		}
+		dna="HOFB3I5zjnO2h7aHAnQCdAJ7AnsCkAKQAmwCbAOiA6ICZwJnApkCmQKMAowCgwKDApMCkwJ3AncCiwKLAngCeAKFAoUCAAKBAnICcgJwAnACewJ7AqkCgQNiA6cEJwS+AnoCegOnA6cCeQJ5ApMCeQKPAo8BYgFiAmsCawJ7AnsCkgKSAooCigJ7AnsCcAJwAC4ALgJ5AnkCWwKAAmoCagLDAm4CeQJ5AmcCZwJ8AnwCbQJtAnsCewKXApcCcwJzApkCmQKLAosCegJ6AnQCdAKAAoACkgKSAoUChQFkAWQCcwJzAnICcgIQAhAAkwCTAVABUABbAFsAHwAfARQBFALzAvMCiwKLARsBGwDdAN0ApACkAUUBRQB/AH8ASgBKAE8ATwDHAMcBAwEDABEAEQBFAEUDUgNSAKoAqgB/AH8AJQAlAIIAggBiAGIBDgEOAMQAxAEvAS8AawBrAP0A/QE6AToBQgFCBIQEhAAAAAAKugn9AH8AfwNGA0YEYAW6APsArwWxBYYpJgKTAwACtQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Apama, wife of Dyegilos, daughter of Prusias II of Bithynia
+	94={
+		first_name = "Apama"
+		family = c:BIT.fam:Zipoeteid
+		birth_date=569.9.27		#185 BC
+		female = yes
+		father="char:81"		#Prusias II of Bithynia
+		mother="char:84"		#Apame IV
+		marry_character="char:93"
+		culture="bithynian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=2
+		add_charisma=5
+		add_finesse=4
+		add_zeal=6
+		add_gold=100
+		add_popularity=40
+		dna="Jvom+q6KrooFcwVzAVMBUwOfA58CigKKApYClgKVApUDoAOgAoUChQOfA58CigKKAEoASgKUApQCbAJsAngCeAOfA58BTgFOA60DrQKPAo8CkAKQAoQChAJqAmoCeAJ4Am8CbwKVApUCkwKTAoYChgJ3AncChQKFApYClgJ6AnoCjwKPAoMCgwJzAnMBXAFcA50DnQJ5AnkCfQJ9ApMCkwKLAosCdAJ0BMEEwQBHAEcCiQKJAnsCewKLAosClgKWApUClQKLAosCbwJvAn0CfQJ3AncCagJqApUClQJ1AnUCcgJyApECkQCjAKMARwBHADgAOABAAEABTgFOAUABQAEZARkCswKzAKYApgAuAC4AZABkARcBFwB/AH8A4wDjAvIC8gEhASEAewB7AC0ALQCMAIwCGQIZAscCxwB/AH8BDgEOASgBKACDAIMAnQCdAPoA+gEZARkBLwEvBM0EzQBJAEkCygLKAKQApABEAEQHWwdbAH8AfwPAA8AFZwWQABsAGwVfBV8NlwKEAl4CXgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Sothimus, son of Dyegilos and Apama
+	95={
+		first_name = "Sothimus"
+		family = c:CAE.fam:Autlesbid
+		birth_date=589.1.5		#165 BC
+		father="char:93"		#Dyegilos
+		mother="char:94"		#Apama
+		culture="odrysi"
+		religion="shamanism"
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=5
+		add_zeal=5
+		add_gold=150
+		add_popularity=30
+		dna="Iegh6IKHgofi7eLtAnUCdQKJAokCdgJ2AWMBYwKJAokCbAJsAoYChgJmAmYCkgKSAmwCbAJ8AnwCbAJsAn8CfwJnAmcCegJ6An8CfwFNAU0CegJ6A5wDnAKDAoMCfAJ8AocChwKGAoYExgTGAnwCfAKGAoYCmAKYApECkQKTApMEyATIAoYChgJ4AngCkAKQAocChwKZApkCcAJwBLMEswFfAV8CggKCApUClQJoAmgCkgKSAnACcAKOAo4CaAJoAn4CfgJuAm4CcwJzAncCdwKEAoQCdwJ3AooCigOmA6YClAKUADAAMAFzAXMARgBGAMQAxAFqAWoBMwEzAAwADACsAKwAUQBRAA4ADgFoAWgE7gTuAUEBQQB/AH8A1QDVAC4ALgBLAEsAqACoAVsBWwDtAO0AqwCrAGMAYwB/AH8AUgBSAD8APwCBAIEAbwBvABoAGgFGAUYA2ADYA20DbQDgAOAADgAOAKEAoQMFAwUIqwmrAH8AfwCqAKoEWwVWAC8ALwXOBTMBpQJlAwICKgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Ziselmius, son of Dyegilos
+	161={
+		first_name = "Ziselmius"
+		family = c:CAE.fam:Autlesbid
+		birth_date=589.1.5		#165 BC
+		father="char:93"		#Dyegilos
+		culture="odrysi"
+		religion="shamanism"
+		no_stats=yes
+		add_martial=4
+		add_charisma=2
+		add_finesse=3
+		add_zeal=2
+		no_traits=yes
+		add_trait="cruel"		#known for cruel and arbitrary violence
+		add_trait="arbitrary"
+		add_gold=150
+		add_popularity=15
+	}
+	
+}

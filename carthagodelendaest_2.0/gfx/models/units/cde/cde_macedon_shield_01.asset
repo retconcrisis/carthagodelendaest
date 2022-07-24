@@ -1,0 +1,45 @@
+pdxmesh = {
+	name = "cde_macedon_shield_01_mesh"
+	file = "macedon_shield_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 4.1 }
+		lod = { index = 2 percent = 3.0 }
+	}
+
+	meshsettings = {
+		name = "macedon_shield_01_LOD0Shape"
+		index = 0
+		texture_diffuse = "macedon_weapons_01_diffuse.dds"
+		texture_normal = "macedon_weapons_01_normal.dds"
+		texture_specular = "macedon_weapons_01_properties.dds"
+		shader = "standard_usercolor"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "macedon_shield_01_LOD1Shape"
+		index = 0
+		texture_diffuse = "macedon_weapons_01_diffuse.dds"
+		texture_normal = "macedon_weapons_01_normal.dds"
+		texture_specular = "macedon_weapons_01_properties.dds"
+		shader = "standard_usercolor"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "macedon_shield_01_LOD2Shape"
+		index = 0
+		texture_diffuse = "macedon_weapons_01_diffuse.dds"
+		texture_normal = "macedon_weapons_01_normal.dds"
+		texture_specular = "macedon_weapons_01_properties.dds"
+		shader = "standard_usercolor"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cde_macedon_shield_01_entity"
+	pdxmesh = "cde_macedon_shield_01_mesh"
+	scale = 0.75		#smaller to be like telamon shield
+}

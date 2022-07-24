@@ -1,0 +1,667 @@
+﻿namespace = cde_me_rom_01
+
+#The Carthaginian Question
+cde_me_rom_01.1 = {
+	type = country_event
+	title = "cde_me_rom_01.1.t"
+	desc = "cde_me_rom_01.1.desc"
+	picture = oration
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	right_portrait = c:CAR.current_ruler
+	right_portrait = c:CAR.current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_rom_01.1.a
+		
+		custom_tooltip = 01_cde_roman_missions_01_task_1.tt
+	}
+	
+}
+
+#The Carthaginian Question - Part 2
+cde_me_rom_01.2 = {
+	type = country_event
+	title = "cde_me_rom_01.2.t"
+	desc = "cde_me_rom_01.2.desc"
+	picture = oration
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	right_portrait = c:CAR.current_ruler
+	right_portrait = c:CAR.current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_rom_01.2.a
+		
+		current_ruler = {
+			add_popularity = 10
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.2.b
+		
+		c:CAR = {
+			add_opinion = { 
+				modifier = rom_envoys_reassured
+				target = root
+			}
+		}
+	}
+	
+}
+
+#Truce with the Numidians
+cde_me_rom_01.3 = {
+	type = country_event
+	title = "cde_me_rom_01.3.t"
+	desc = "cde_me_rom_01.3.desc"
+	picture = senator_conversing
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	right_portrait = c:NUM.current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		add_truce = {
+			target = c:NUM
+			duration = 1825
+		}
+		c:NUM = {
+			add_truce = {
+				target = root
+				duration = 1825
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.3.a
+		
+	}
+	
+}
+
+#Carthage Must Be Destroyed!
+cde_me_rom_01.4 = {
+	type = country_event
+	title = "cde_me_rom_01.4.t"
+	desc = "cde_me_rom_01.4.desc"
+	picture = oration
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_rom_01.4.a
+		
+		custom_tooltip = 01_cde_roman_missions_01_task_2.tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					owner = c:CAR
+					OR = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+					}
+				}
+				add_claim = root
+			}
+		}
+	}
+	
+}
+
+#Friendship Extended to Punic Cities
+cde_me_rom_01.5 = {
+	type = country_event
+	title = "cde_me_rom_01.5.t"
+	desc = "cde_me_rom_01.5.desc"
+	picture = senator_conversing
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_rom_01.5.a
+		
+		custom_tooltip = cde_me_rom_01.5.tt
+		
+		every_country = {
+			limit = {
+				is_subject_of = c:CAR
+				primary_culture = carthaginian
+				opinion = { 
+					target = root
+					value >= 80
+				}
+			}
+			trigger_event = {
+				id = cde_me_rom_01.6		#Events 6 and 7 are pings to Punic cities and their response back to Rome
+			}
+		}
+	}
+	
+}
+#Rome Offers Friendship
+cde_me_rom_01.6 = {
+	type = country_event
+	title = "cde_me_rom_01.6.t"
+	desc = "cde_me_rom_01.6.desc"
+	picture = senator_conversing
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_rom_01.6.a
+		
+		hidden_effect = {
+			c:CAR = {
+				release_subject = root
+			}
+		}
+		
+		save_scope_as = rom_me_defecting_subject_scope
+		
+		c:ROM = {
+			make_subject = {
+				target = ROOT
+				type = tributary
+			}
+			trigger_event = {
+				id = cde_me_rom_01.7
+			}
+		}
+		
+		c:CAR = {
+			trigger_event = {
+				id = cde_me_rom_01.9
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.6.b
+		
+		c:ROM = {
+			trigger_event = {
+				id = cde_me_rom_01.8
+			}
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+}
+#Punic Subject Willingly Defects
+cde_me_rom_01.7 = {
+	type = country_event
+	title = "cde_me_rom_01.7.t"
+	desc = "cde_me_rom_01.7.desc"
+	picture = senator_conversing
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	#removed fire_only_once since may come from several nations
+	
+	immediate = {
+		show_as_tooltip = {
+			make_subject = {
+				target = scope:rom_me_defecting_subject_scope
+				type = tributary
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.7.a
+		
+	}
+	
+}
+#Punic Subject Turns Down Our Offer
+cde_me_rom_01.8 = {
+	type = country_event
+	title = "cde_me_rom_01.8.t"
+	desc = "cde_me_rom_01.8.desc"
+	picture = senator_conversing
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	#removed fire_only_once since may come from several nations
+	
+	option = {
+		name = cde_me_rom_01.8.a
+		
+	}
+	
+}
+#Punic Subject Defects to Rome! - Ping to Carthage
+cde_me_rom_01.9 = {
+	type = country_event
+	title = "cde_me_rom_01.9.t"
+	desc = "cde_me_rom_01.9.desc"
+	picture = senator_conversing
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	#removed fire_only_once since may come from several nations
+	
+	immediate = {
+		show_as_tooltip = {
+			c:ROM = {
+				make_subject = {
+					target = scope:rom_me_defecting_subject_scope
+					type = tributary
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.9.a
+		
+	}
+	
+}
+
+#Carthage Has Been Destroyed! 
+cde_me_rom_01.10 = {
+	type = country_event
+	title = "cde_me_rom_01.10.t"
+	desc = "cde_me_rom_01.10.desc"
+	picture = cde_event_burning_city_endgame
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		add_country_modifier = {
+			name = cde_me_rom_carthago_delenda_est
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.10.a
+		
+		current_ruler = {
+			add_nickname = "NICKNAME_AFRICANUS"
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.10.b
+		
+		
+	}
+	
+}
+
+#Provincia of Africa
+cde_me_rom_01.11 = {
+	type = country_event
+	title = "cde_me_rom_01.11.t"
+	desc = "cde_me_rom_01.11.desc"
+	picture = cde_event_carthage_levy
+	
+	left_portrait = scope:rom_me_africa_governor_scope
+	right_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		every_character = {
+			limit = {
+				is_governor = yes
+				any_governor_state = {
+					any_state_province = {
+						OR = {
+							is_in_region = africa_region
+							is_in_region = numidia_region
+						}
+					}
+				}
+			}
+			save_scope_as = rom_me_africa_governor_scope
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.11.a
+		
+		add_country_modifier = {
+			name = cde_me_rom_new_african_provincia
+			duration = 3650
+		}
+		custom_tooltip = 01_cde_roman_missions_01_task_5.tt
+		scope:rom_me_africa_governor_scope = {
+			add_loyalty = loyalty_me_rom_first_african_proconsul
+		}
+	}
+	
+}
+
+#Sponsorship of Punic Municipia
+cde_me_rom_01.12 = {
+	type = country_event
+	title = "cde_me_rom_01.12.t"
+	desc = "cde_me_rom_01.12.desc"
+	picture = trade_port
+	
+	left_portrait = current_ruler
+	right_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_rom_01.12.a
+		
+		random_country_culture = {
+			limit = {
+				is_culture = carthaginian
+			}
+			add_country_culture_modifier = {
+				name = cde_me_rom_roman_punic_patronage
+				duration = 9125
+			}
+		}
+	}
+	
+}
+
+#Roman Colonies in Africa
+cde_me_rom_01.13 = {
+	type = country_event
+	title = "cde_me_rom_01.13.t"
+	desc = "cde_me_rom_01.13.desc"
+	picture = slaves_working
+	
+	left_portrait = current_ruler
+	right_portrait = scope:rom_me_africa_governor_scope
+	
+	fire_only_once = yes
+	
+	immediate = {
+		every_character = {
+			limit = {
+				is_governor = yes
+				any_governor_state = {
+					any_state_province = {
+						OR = {
+							is_in_region = africa_region
+							is_in_region = numidia_region
+						}
+					}
+				}
+			}
+			save_scope_as = rom_me_africa_governor_scope
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.13.a
+		
+		add_country_modifier = {
+			name = cde_me_rom_coloniae_in_africa
+			duration = 3650
+		}
+		
+		custom_tooltip = 01_cde_roman_missions_01_task_7.tt
+		hidden_effect = {
+			ordered_owned_province = {
+				limit = {
+					has_building = local_forum_building		#Provincial Legation
+					OR = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+					}
+				}
+				max = 2
+				define_pop = {
+					type = citizen
+					culture = root.culture
+					religion = root.religion
+				}
+			}
+		}
+	}
+	
+}
+
+#Roman Garrisons in Africa
+cde_me_rom_01.14 = {
+	type = country_event
+	title = "cde_me_rom_01.14.t"
+	desc = "cde_me_rom_01.14.desc"
+	picture = army_desert
+	
+	left_portrait = current_ruler
+	right_portrait = scope:rom_me_africa_governor_scope
+	
+	fire_only_once = yes
+	
+	immediate = {
+		every_character = {
+			limit = {
+				is_governor = yes
+				any_governor_state = {
+					any_state_province = {
+						OR = {
+							is_in_region = africa_region
+							is_in_region = numidia_region
+						}
+					}
+				}
+			}
+			save_scope_as = rom_me_africa_governor_scope
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.14.a
+		
+		custom_tooltip = 01_cde_roman_missions_01_task_71.tt
+		ordered_owned_province = {
+			limit = {
+				has_building = fortress_ramparts_building		#Earthworks
+				any_pops_in_province = {
+					pop_culture = root.culture
+				}
+				OR = {
+					is_in_region = africa_region
+					is_in_region = numidia_region
+				}
+			}
+			max = 1
+			order_by = total_population
+			add_province_modifier = {
+				name = cde_me_rom_bolstered_colony_garrison
+				duration = 5475
+			}
+		}
+	}
+	
+}
+
+#Ager Publicus in Africa
+cde_me_rom_01.15 = {
+	type = country_event
+	title = "cde_me_rom_01.15.t"
+	desc = "cde_me_rom_01.15.desc"
+	picture = farming
+	
+	left_portrait = current_ruler
+	right_portrait = scope:rom_me_africa_governor_scope
+	
+	fire_only_once = yes
+	
+	immediate = {
+		every_character = {
+			limit = {
+				is_governor = yes
+				any_governor_state = {
+					any_state_province = {
+						OR = {
+							is_in_region = africa_region
+							is_in_region = numidia_region
+						}
+					}
+				}
+			}
+			save_scope_as = rom_me_africa_governor_scope
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.15.a
+		
+		region:africa_region = {
+			every_region_state = {
+				limit = {
+					owner = root
+				}
+				add_state_modifier = {
+					name = cde_me_rom_ager_publicus
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+}
+
+#African Latifundia
+cde_me_rom_01.16 = {
+	type = country_event
+	title = "cde_me_rom_01.16.t"
+	desc = "cde_me_rom_01.16.desc"
+	picture = slaves_working
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_rom_01.16.a
+		
+		region:africa_region = {
+			every_region_state = {
+				limit = {
+					owner = root
+				}
+				add_state_modifier = {
+					name = cde_me_rom_african_latifundia
+					duration = 5475
+				}
+			}
+		}
+	}
+	
+}
+
+#Breadbasket of Africa
+cde_me_rom_01.17 = {
+	type = country_event
+	title = "cde_me_rom_01.17.t"
+	desc = "cde_me_rom_01.17.desc"
+	picture = slaves_working
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		show_as_tooltip = {
+			every_owned_province = {			#copied from vanilla mission task
+				limit = {
+					OR = {
+						is_in_area = carthage_area
+						is_in_area = africa_septentrionalis_area
+					}
+					trade_goods = grain
+				}
+				custom = roman_6_roman_africa_tt
+				add_province_modifier = {
+					name = roman_6_african_breadbasket_modifier		#from vanilla mission task
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.17.a
+		
+		
+	}
+	
+}
+
+#Romanization of Africa
+cde_me_rom_01.18 = {
+	type = country_event
+	title = "cde_me_rom_01.18.t"
+	desc = "cde_me_rom_01.18.desc"
+	picture = great_work_writing
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		show_as_tooltip = {
+			every_owned_province = {			#copied from vanilla mission task
+				limit = {
+					OR = {
+						is_in_area = carthage_area
+						is_in_area = africa_septentrionalis_area
+					}
+					trade_goods = grain
+				}
+				custom = roman_6_roman_africa_tt
+				add_province_modifier = {
+					name = roman_6_african_breadbasket_modifier		#from vanilla mission task
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_me_rom_01.18.a
+		
+		
+	}
+	
+}
+

@@ -1,0 +1,224 @@
+﻿namespace = cde_me_lst_01
+
+#Lusitanian Unity
+cde_me_lst_01.1 = {
+	type = country_event
+	title = "cde_me_lst_01.1.t"
+	desc = "cde_me_lst_01.1.desc"
+	picture = celtic_diplomacy
+	
+	left_portrait = c:PAE.current_ruler
+	left_portrait = c:EBL.current_ruler
+	left_portrait = c:TPL.current_ruler
+	left_portrait = c:IGD.current_ruler
+	right_portrait = c:LCC.current_ruler
+	right_portrait = c:AVA.current_ruler
+	right_portrait = c:TLS.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_lst_01.1.a
+		
+		add_country_modifier = {
+			name = cde_me_lst_lusitanian_fervor
+			duration = 7300
+		}
+		custom_tooltip = 01_cde_lusitania_missions_01_task_1.tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					primary_culture = lusitanian
+				}
+				add_country_modifier = {
+					name = cde_me_lst_lusitanian_fervor
+					duration = 7300
+				}
+			}
+		
+		}
+	}
+}
+
+#Call for Retribution
+cde_me_lst_01.2 = {
+	type = country_event
+	title = "cde_me_lst_01.2.t"
+	desc = "cde_me_lst_01.2.desc"
+	picture = celtic_chiefs
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_lst_01.2.a
+		
+		add_country_modifier = {
+			name = cde_me_lst_call_to_arms
+			duration = 7300
+		}
+	}
+}
+
+#Lusitanian Unification
+cde_me_lst_01.3 = {
+	type = country_event
+	title = "cde_me_lst_01.3.t"
+	desc = "cde_me_lst_01.3.desc"
+	picture = celtic_chiefs
+	
+	left_portrait = c:PAE.current_ruler
+	left_portrait = c:EBL.current_ruler
+	left_portrait = c:TPL.current_ruler
+	left_portrait = c:IGD.current_ruler
+	right_portrait = var:viriathus_var
+	right_portrait = c:LCC.current_ruler
+	right_portrait = c:AVA.current_ruler
+	right_portrait = c:TLS.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_lst_01.3.a
+		
+		custom_tooltip = 01_cde_lusitania_missions_01_task_3.tt
+		
+		if = {
+			limit = {
+				var:viriathus_var = {
+					is_alive = yes
+				}
+			}
+			set_as_ruler = var:viriathus_var	#variable instead of scope, since scopes cannot be used outside of direct event chains
+			var:viriathus_var = {
+				add_popularity=90
+			}
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { tag = PAE }
+					c:PAE = {
+						has_land = yes
+					}
+				}
+				c:PAE = {
+					every_owned_province = {
+						set_owned_by = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = EBL }
+					c:EBL = {
+						has_land = yes
+					}
+				}
+				c:EBL = {
+					every_owned_province = {
+						set_owned_by = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = TPL }
+					c:TPL = {
+						has_land = yes
+					}
+				}
+				c:TPL = {
+					every_owned_province = {
+						set_owned_by = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = IGD }
+					c:IGD = {
+						has_land = yes
+					}
+				}
+				c:IGD = {
+					every_owned_province = {
+						set_owned_by = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = LCC }
+					c:LCC = {
+						has_land = yes
+					}
+				}
+				c:LCC = {
+					every_owned_province = {
+						set_owned_by = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = AVA }
+					c:AVA = {
+						has_land = yes
+					}
+				}
+				c:AVA = {
+					every_owned_province = {
+						set_owned_by = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = TLS }
+					c:TLS = {
+						has_land = yes
+					}
+				}
+				c:TLS = {
+					every_owned_province = {
+						set_owned_by = root
+					}
+				}
+			}
+		}
+		
+		change_country_name = "LUSITANIA_NAME"
+		tribal_formable_government_change_effect = yes 		#If they are tribal and not a tribal federation, they will become one
+		hidden_effect = {
+			change_country_adjective = "LUSITANIA_ADJECTIVE"
+			change_country_color =  "lusitania_color"
+			change_country_tag = LST
+			change_country_flag = LUSITANIA_FLAG
+		}
+	}
+}
+
+#Strengthened Fortifications
+cde_me_lst_01.4 = {
+	type = country_event
+	title = "cde_me_lst_01.4.t"
+	desc = "cde_me_lst_01.4.desc"
+	picture = celtic_chiefs
+	
+	left_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_me_lst_01.4.a
+		
+		add_country_modifier = {
+			name = cde_me_lst_strengthened_fortifications
+			duration = 7300
+		}
+	}
+}
+

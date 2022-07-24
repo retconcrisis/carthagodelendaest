@@ -1,0 +1,51 @@
+﻿namespace = cde_flavor_tribal
+
+#Sitones Female Ruler election
+cde_flavor_tribal.1 = {
+	type = country_event
+	title = "cde_flavor_tribal.1.t"
+	desc = "cde_flavor_tribal.1.desc"
+	picture = religious_rite
+	
+	left_portrait = scope:new_sitones_matriarch
+	right_portrait = scope:former_ruler
+	
+	trigger = {
+		tag = STN
+	}
+	
+	immediate = {
+		ordered_character = {
+			limit = {
+				is_female = yes
+				is_alive = yes
+				age >= 16
+				is_minor_character = no
+				is_ruler = no
+				prisoner = no
+				employer = root
+			}
+			order_by = prominence
+			max = 1
+			check_range_bounds = no
+			save_scope_as = new_sitones_matriarch
+		}
+	}
+	
+	option = {
+		name = cde_flavor_tribal.1.a
+		
+		c:STN = {
+			set_as_ruler = scope:new_sitones_matriarch
+			
+			set_variable = { 
+				name = sitones_new_matriarch_variable
+				days = 1		#removes itself in 1 day
+			}
+			
+			trigger_event = {
+				id = succession_crisis.7	#Succession crisis event, so does not have advantage over other tribes
+			}
+		}
+	}
+}

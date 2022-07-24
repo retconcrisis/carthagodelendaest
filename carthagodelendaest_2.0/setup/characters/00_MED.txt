@@ -1,0 +1,26 @@
+﻿"MED"={
+	country="MED"
+	228={		#Cleomenes, satrap of Media who resisted Parthians despite cut off from Demetrios of Seleukids
+		first_name = "Kleomenes"
+		family = c:MED.fam:Kleomenid
+		birth_date=567.2.22		#187 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=10
+		add_charisma=5
+		add_finesse=9
+		add_zeal=7
+		no_traits=yes
+		add_trait="stubborn"
+		add_trait="assertive"
+		add_trait="brave"
+		add_gold=200
+		add_popularity=70
+		c:MED = {
+			set_as_ruler=char:228
+		}
+		dna="FOoU6oJ3gnfrtuu2AnACcAKNAo0CeQJ5Ao4CjgKCAoICcwJzAoACgAKHAocCdgJ2Am0CbQKHAocCagJqAmsCawJ7AnsChAKEAD0APQKKAooCawJrAowCjAJ+An4CcQJxAnMCcwKJAokCjwKPAoECgQJyAnIChQKFAnICcgJtAm0CjwKPAoECgQKKAooCiQKJAoACgAJ8AnwCbAJsAnwCfAKTApMDpQOlAnUCdQJtAm0CkgKSAnoCegAdAB0CcQJxAmoCagKAAoACkgKSAo0CjQKEAoQChwKHAU4BTgKMAowCggKCAncCdwJnAmcBeAF4AT4BPgDOAM4AbwBvAKsAqwA/AD8AxgDGAD8APwEGAQYDHgMeAWkBaQB/AH8AHwAfArkCuQL4AvgAGQAZAREBEQBbAFsBRAFEAIYAhgB/AH8AEQARAWcBZwF7AXsClAKUAQYBBgMqAyoAYQBhBJgEmAAcABwAhgCGAPkA+QMdAx0L+Av4AH8AfwT2BPYFyAXIAGkAaQUmBS8NLwI+AigCzgAAAAAAAAAAAAAAAA=="
+	}
+	
+}

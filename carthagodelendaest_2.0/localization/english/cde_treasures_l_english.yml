@@ -1,0 +1,12 @@
+﻿l_english:
+ #Starting treasures
+ treasure_buddha_begging_bowl:0 "Begging Bowl of Buddha"
+ treasure_buddha_begging_bowl_desc:0 "This relic is the begging bowl of Buddha. The begging bowl symbolizes the balance between austerity and attachment. The Buddha, while meditating under the Bodhi tree before reaching enlightenment, received an offering of rice in a golden bowl from a woman named Sujata; this allowed the Buddha to realize that complete austerity was not the path to enlightenment, and that one must practice a balance. Thus, the Buddha ate what was needed to live and complete his meditation, and then discarded the rest including the bowl once they were no longer necessary. Buddhist monks continue to use the begging bowl as a way to live off of what is given to them by the common people, preventing monks from straying to extreme austerity and isolation from the lay people."
+ treasure_kataragama_sword:0 "Sword of Kataragama Deviyo"
+ treasure_kataragama_sword_desc:0 "This sword was said to have been gifted to King Dutthagamani by the guardian deity of Sri Lanka, Kataragama deviyo, to use in his war against the Chola invaders who controlled northern Lanka. Dutthagamani defeated the Chola prince Elara in single combat in the Battle of Vijithapura, displaying to all that Dutthagamani had the backing of the guardian deity in every swing of his blade."
+ 
+ #Spawned treasures via events/missions/decisions
+ ashes_of_menandros_treasure:0 "Ashes of Menandros"
+ ashes_of_menandros_treasure_desc:0 "Inside this Gandharan stone urn resides the ashes of the great Indo-Greek king Menandros I. A benevolent ruler and the follower of the Dharma, his ashes are treasured as a relic by those who loved him. Many of his subjects even believed that Menandros had achieved the status of arhat, one who has become enlightened about the true nature of existence and has therefore achieved nirvana."
+ 
+ 

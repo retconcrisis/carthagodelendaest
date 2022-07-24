@@ -1,0 +1,38 @@
+﻿"SMA"={
+	country="SMA"
+	
+	#Jair IV, 43rd High Priest of Samaria / Samaritans
+	247={
+		first_name = "Jair"
+		family = c:SMA.fam:Aaronid
+		birth_date=539.6.5	#215 BC
+		culture="hebrew"
+		religion="judaism"
+		no_stats=yes
+		add_martial=4
+		add_charisma=7
+		add_finesse=8
+		add_zeal=11
+		no_traits=yes
+		add_trait="pious"
+		add_trait="humble"
+		add_gold=200
+		add_popularity=80
+		c:SMA = {
+			set_as_ruler=char:247
+		}
+		
+	}
+	
+	#Netaniel II, 44th High Priest of Samaria / Samaritans
+	248={
+		first_name = "Netaniel"
+		family = c:SMA.fam:Aaronid
+		birth_date=604.1.1	#150 BC
+		father="char:247"
+		culture="hebrew"
+		religion="judaism"
+		add_zeal=5
+	}
+	
+}

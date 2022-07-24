@@ -1,0 +1,98 @@
+﻿"SHB"={
+	country="SHB"
+	
+	#Wahab El Yahiz II, previous ruler of Saba
+	249={
+		first_name = "Wahab El Yahiz"
+		family = c:SHB.fam:Karibi
+		nickname = "NICKNAME_II"
+		birth_date=539.6.5	#215 BC
+		death_date=594.7.19	#160 BC
+		culture="sheban"
+		religion="arabian_pantheon"
+		
+	}
+	
+	#Karabil Watar Yuhan'em I, current ruler
+	250={
+		first_name = "Karabil Watar Yuhan'em"
+		family = c:SHB.fam:Karibi
+		birth_date=564.8.15	#190 BC
+		father="char:249"	#Wahab El Yahiz II
+		culture="sheban"
+		religion="arabian_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=5
+		add_finesse=7
+		add_zeal=9
+		add_gold=300
+		add_popularity=70
+		c:SHB = {
+			set_as_ruler=char:250
+		}
+		
+	}
+	
+	#Anmar Yuha'man II, brother of current ruler, who he may have co-ruled with
+	251={
+		first_name = "Anmar Yuha'man"
+		family = c:SHB.fam:Karibi
+		birth_date=574.6.5	#180 BC
+		father="char:249"	#Wahab El Yahiz II
+		culture="sheban"
+		religion="arabian_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=8
+		add_zeal=9
+		add_gold=300
+		add_popularity=50
+	}
+	
+	#Yarim Aymin, usurped the throne from Karabil Watar Yuhan'em I
+	252={
+		first_name = "Yarim Aymin"
+		family = c:SHB.fam:Awsalat
+		birth_date=564.6.5	#190 BC
+		culture="sheban"
+		religion="arabian_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=6
+		add_finesse=5
+		add_zeal=8
+		no_traits=yes
+		add_trait="deceitful"
+		add_trait="arrogant"
+		add_gold=100
+	}
+	
+	#Alhan Nahfan, son of Yarim Aymin and became ruler after father
+	253={
+		first_name = "Alhan Nahfan"
+		family = c:SHB.fam:Awsalat
+		birth_date=584.6.5	#160 BC
+		father="char:252"	#Yarim Aymin
+		culture="sheban"
+		religion="arabian_pantheon"
+		
+	}
+	
+	#Far'am Yanhab, managed to partially regain the usurped throne from 130-125 BC
+	254={
+		first_name = "Far'am Yanhab"
+		family = c:SHB.fam:Karibi
+		birth_date=584.6.5	#160 BC
+		culture="sheban"
+		religion="arabian_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=7
+		add_finesse=7
+		add_zeal=8
+	}
+	
+	
+}

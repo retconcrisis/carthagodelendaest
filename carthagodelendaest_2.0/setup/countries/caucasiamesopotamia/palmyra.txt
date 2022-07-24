@@ -1,0 +1,6 @@
+﻿color = rgb { 86  58  165 }
+
+gender_equality = yes		#women held administrative positions in some cases
+
+ship_names = {
+}

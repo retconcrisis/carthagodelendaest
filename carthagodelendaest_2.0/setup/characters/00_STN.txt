@@ -1,0 +1,14 @@
+﻿"STN"={
+	country="STN"
+	
+	#Female ruler of Sitones, to ensure game starts with female ruler
+	227={
+		female = yes
+		culture="suiones"
+		religion="germanic_religion"
+		c:STN = {
+			set_as_ruler=char:227
+		}
+	}
+	
+}

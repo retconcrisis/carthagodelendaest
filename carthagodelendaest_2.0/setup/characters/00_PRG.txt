@@ -1,0 +1,206 @@
+﻿"PRG"={
+	country="PRG"
+
+	#Attalus I Soter (Hades), father of previous and current king of Pergamon
+	76={
+		first_name="Attalos"
+		nickname="NICKNAME_SOTER"
+		family = c:PRG.fam:Attalid
+		birth_date=458.7.11		#269 BC
+		death_date=557.5.25		#197 BC
+		culture="aeolian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=9
+		add_finesse=7
+		add_zeal=4
+		no_traits=yes
+		add_trait="loving"
+		add_trait="tactician"
+		dna="buBu4I2KjYrlseWxApkCmQJyAnIChgKGAoQChAJ6AnoBWwFbAmICjwJ1AnUEvAS8AoUChQKTApMClAKUAn4CfgJsAmwCmwJwAm0CbQKYApgCjAKMAoYChgJxAnECgwKDAnsCewA2ADYCjAKMAoACgAJ7AnsCcAJwAncCdwOtA60CdQJ1ApUClQJ/An8CpQKDAmgCiQJ8AnwCqQJ+AooCigObA5sCkAKQApICkgJvAm8CggKCAn0CfQJnAmcCcwJzA5oDmgJsApMCeAJ4AnUCdQKLAosCbgJuAnwCfAJ0Ao4CbwJvAmsCawLPAs8A0QDRACEAIQLSAtIAFAAUATgBOABIAEgAwQDBALwAvAFbAVsDPQM9ADkAOQB/AH8AuwC7AIYAhgKMAowAMQAxATMBMwCjAKMBFQEVAS0BLQB/AH8BbwFvAXEBcQEPAQ8ACQAJADwAPANtA20BYgFuBNIE0gCnAKcBFAEUAAsACwF8AXwH6gfqAH8AfwQcBBwF/wXDAJkAmQUfBfECOALmAq4CrgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Eumenes II (Hades), previous king of Pergamon
+	77={
+		first_name="Eumenes"
+		nickname="NICKNAME_II_SOTER"
+		family = c:PRG.fam:Attalid
+		birth_date=532.1.3		#222 BC
+		death_date=595.5.25		#159 BC
+		father="char:76"				#Attalus I
+		culture="aeolian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=5
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="loving"
+		add_trait="shrewd"
+		add_trait="founder"
+		dna="IPkg+b2MvYyur66vAo0CjQKPAo8CcAJwBMsEywJ+An4CkQKRAnsCewJ0AnQCmAKYBMEEwQJ0AnQClQKVAnICcgKBAoECaQJpApECkQKWApYChAKEApYClgJ5AnkBawFrAogCiAJ7AnsCmQKZA54DngJxAnEClAKUAVMBUwKSApICjwKPAoYChgKWApYCbAJsAV8BXwJ5AnkCigKKAoECgQKYApgCaAJoApkCmQJtAm0CggKCApYClgJsAmwCagJqApQClAKCAoICkwKTAnECcQJoAmgCaQJpAnMCcwJ4AngCjQKNA6YDpgLrAusBKAEoAGEAYQKaApoA6wDrAScBJwElASUA1QDVAKoAqgCbAJsC+gL6ACYAJgB/AH8AqgCqAGYAZgKfAp8BRQFFAWMBYwDvAO8ASABIAugC6AB/AH8BEQERAW4BbgAJAAkAYABgAEcARwAvAC8BdAF0AOIA4gFBAUEAQgBCAJwAnABVAFUFTABeAH8AfwDXANcFhAViANwA3AUBBasCOwKyAjwCPAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Attalus II, King of Pergamon
+	78={
+		first_name="Attalos"
+		nickname="NICKNAME_PHILADELPHUS"
+		family = c:PRG.fam:Attalid
+		birth_date=534.5.14		#220 BC
+		father="char:76"				#Attalus I
+		culture="aeolian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=7
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="loving"
+		add_trait="just"
+		add_trait="barren"	#so doesn't have more kids, since would be ahistorical and unrealistic
+		add_gold=500
+		add_popularity=75
+		c:PRG = {
+			set_as_ruler=char:78
+		}
+		dna="EesR65uDm4PhheGFApUClQJ9An0CkQKRApMCkwSFBMkCdwJ3ApICkgJvAm8CcAJwAnwCfAJ4AngCkAKQAnACcAJyAnICpQKTAn0CfQThBOECjQKMA4cDoAJeAn0CcAJuAncCggKWApYCZgJmAooCigJ4AngCbQJtAVwBXAKCAoICgwKDAn4CfgKJAokChgKGAm0CbQOnA6cCcgJyAo8CjwJ9An0CdwJ3AmsCawJ5AnkCgAKAA6kDqQKNAo0DpAOkAnkCeQJiAmgCggKCApkCmQKQApACmAKYApECkQOdA50CeQJ5An0CfQKYApgAZgBmAIQAhAFBAUEC6ALoAXIBcgA7ADsCwgLCAJUClQCvAK8AiwCLAM0CmAD4AH8ArgDBASEBIQFWAVYARABEADoAOgB0AHQDjQONAVsBWwB/AH8ApQClAO4A7gEXARcAAwADAXMBcwI6AToBdQF1AMkAyQB3AHcDNAM0AU0BTQCMAIwGJgJ6AH8AfwSqBKoFegV6ACIAWgVNBU0CbQJxAl4C3QAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Stratonike Ariarathid, wife of current ruler Attalus II, widow of previous ruler Eumenes II, and sister of Cappadocia's ruler
+	79={
+		first_name="Stratonike"
+		family = c:CAP.fam:Ariarathid
+		birth_date=565.9.2		#189 BC
+		female = yes
+		father="char:74"			#Ariarathes IV of Cappadocia
+		marry_character="char:78"
+		culture="pasargadi"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=5
+		add_finesse=5
+		add_zeal=7
+		no_traits=yes
+		add_trait="pious"
+		add_trait="loving"
+		add_trait="good_natured"
+		add_gold=200
+		add_popularity=75
+		dna="DPkM+XujjJ61nrWeAmYCZgJrAmsCgwKDAmsCawKMAowCcQJxAoACgAJ4AngCaQJpApcClwKFAoUDswOzAo0CjQOcA5wCfQJ9AoICggJuAm4CjgKOAm8CbwFmAWYChAKEA6EDoQAnACcCeQJ5AAYABgKKAooCawJrA6cDpwTjBOMCjwKPAnYCdgJoAmgCmQKZAn8CfwJnAmcCggKCAowCjAKOAo4CbAJsA6EDoQJ1AnUCaQJpAnsCewOmA6YCggKCAnsCewJ4AngCfgJ+AmYCZgKAAoACigKKAncCdwJrAmsCbwJvAowCjALHAscAhQCFALMAswAUABQA6gDqADcANwBXAFcADwAPAAEAAQERARECMAIwAAQABAB/AH8CvAK8AN8A3wBhAGEAXwBfARMBEwDjAOMDMwMzAHoAegB/AH8AaABoAQgBCAAdAB0CnQKdAIYAhgEhASEARgBGAHQAdAAiACIBSQFJAVoBWgDnAOcA4gfjAH8AfwXjBeMF/wYRAbABsAO6A7oC0gRtAf8BQwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Attalus III, son of Eumenes II and Stratonike
+	80={
+		first_name="Attalos"
+		nickname="NICKNAME_PHILOMETOR_EUERGETES"
+		family = c:PRG.fam:Attalid
+		birth_date=584.8.22		#170 BC
+		father="char:77"				#Eumenes II
+		mother="char:79"				#Stratonike
+		culture="aeolian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=5
+		add_finesse=4
+		add_zeal=5
+		no_traits=yes
+		add_trait="benefactor"
+		add_trait="submissive"
+		add_trait="scholar"
+		add_gold=300
+		add_popularity=55
+		dna="Qrhw2KyKrIri+uL6Am0CbQKKAooCcAJwAm8CbwKQApACgQKBAokCiQJzAnMCegJ6ApcClwJqAmoCgQKBAoMCgwKRApECYAJrAD8APwKCAoIChAKEAnwCfAJ7AnsCewJ7AmkCaQJ5AnkCkQKRApcClwJ5AnkChwKHAnUCdQJ6AnoClgKWAo4CjgJwAnACjAKMA7ADsAKQApACbwJvAnACcAKJAokCdAJ0ApQClAKEAoQCcAJwAnECcQKEAoQCmAKYAm8CbwJ+An4CfAJ8AnUCdQJsAmwCawJrApUClQKEAoQCdAJ0AncCdwKGAoYAzADMAA8ADwAbABsAnACcAHgAeADgAOABIwEjAE4ATgFPAU8AqwCrAFcAVwB/AH8BUAFQAIIAggD8APwCpAKkAFMAUwC9AL0BKwErAF8AXwB/AH8BFAEUAq8CrwEjASMAOAA4AR8BHwFxAXEAgACAAxIDEgE2ATYBSgFKAyoDKgBVAFUKaAPZAH8AfwLcAtwFtgXCAP8A1gUABYcC/wL/AqoCqgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Athenais, daughter of Attalus III, later married Sothimus of Thrace
+	92={
+		first_name="Athenais"
+		family = c:PRG.fam:Attalid
+		birth_date=603.10.20		#151 BC
+		father="char:80"				#Attalus III
+		female = yes
+		culture="aeolian"
+		religion="roman_pantheon"
+		dna="H/gf+LCAsIDqreqtAmwCbAJ8AnwCawJrAnoCegKPAo8CcwJzAowCjAKYApgDogOiAoYChgKEAoQCkwKTAogCiAKEAoQDmQOZAocChwOZA5kDmgOaAoQChAJ4AngCaAJoAoQChAJsAmwDrgOuAmgCaAKKAooCggKCAnECcQObA5sCkAKQAowCjAJ4AngCaAJoApMCkwJ9An0CggKCAmkCaQKRApEClwKXAm8CbwJxAnECfQJ9AmsCawJoAmgCaAJoAocChwJ0AnQCewJ7AnwCfAKLAosCdwJ3ApACkAKOAo4CggKCA68DrwK7ArsABQAFAEkASQE0ATQBMQExAXgBeADQANAAhQCFAIYAhgFlAWUAFwAXASsBKwB/AH8A5QDlAQwBDACOAI4BEQERAq0CrQCdAJ0D+QP5AVwBXAB/AH8AfAB8AM0AzQExATEAmQCZAGQAZAEjASMAKwArAKoAqgAnACcAtwC3BLQEtAMFAwUBuwG7AH8AfwKZApkB/QVkAAUABQXjBeMC2gLWAhoCGgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Andronikos, diplomat of Pergamon who later supported Nicomedes II against his father Prusias II of Bithynia
+	255={
+		first_name="Andronikos"
+		family_name = "Andronikid"
+		birth_date=564.11.6		#190 BC
+		culture="aeolian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=11
+		add_finesse=7
+		add_zeal=6
+		no_traits=yes
+		add_trait="silver_tongued"
+		add_trait="energetic"
+		add_gold=50
+		give_office=office_foreign_minister
+	}
+	
+	#Philopoemen, chief minister of Pergamon who Attalos II relied on to govern in his old age
+	256={
+		first_name="Philopoemen"
+		family_name = "Philopoemenid"
+		birth_date=562.6.9		#192 BC
+		culture="aeolian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=7
+		add_finesse=9
+		add_zeal=6
+		no_traits=yes
+		add_trait="assertive"
+		add_trait="intelligent"
+		add_gold=50
+		give_office=office_steward		#Chief Minister
+	}
+	
+	#Athenaios, 4th and youngest brother of Attalos II who participated in Third Macedonian War and accompanied L. Aemilianus Paullus in his journey across Greece in 168 BC
+	264={
+		first_name="Athenaios"
+		family = c:PRG.fam:Attalid
+		birth_date=539.7.2		#215 BC
+		father="char:76"				#Attalus I
+		culture="aeolian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=5
+		add_finesse=4
+		add_zeal=5
+		add_gold=250
+	}
+	
+	#Kallippa, former concubine of Perseus of Macedonia, now married to Athenaios; supported Andriscus
+	265={
+		first_name="Kallippa"
+		family_name = "Hippostratid-Kallipid"		#from noble family Hippostratoi-Kallippoi from Beroia
+		birth_date=566.12.8		#188 BC			#concubine of Perseus, met Athenaios during 168 BC expedition
+		marry_character="char:264"			#Athenaios
+		female = yes
+		culture="macedonian"		#from Beroia in Macedonia
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=9
+		add_finesse=6
+		add_zeal=8
+		no_traits=yes
+		add_trait="good_natured"	#sympathized with Andriscus
+		add_trait="assertive"		#gave Andriscus support as a private individual separate from the Attalids
+		add_gold=250
+	}
+	
+}

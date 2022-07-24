@@ -1,0 +1,75 @@
+﻿country_decisions = {
+	
+	# Form Daa'mat / D'mt / Daamot
+	form_daamat = {
+		
+		potential = {
+			primary_culture = aksumite
+			NOT = { tag = AXM }		#not Aksum tag
+			NOR = {
+				is_tier_1_formable_trigger = yes
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 7505	#Yeha
+					province_id = 7513
+					province_id = 7504
+					province_id = 7503
+					province_id = 7507
+					province_id = 7502
+				}
+			}
+			custom_tooltip = {
+				text = daamat_not_exists
+				NOT = {
+					any_country = {
+						tag = DMT
+					}
+				}
+			}
+		}
+		
+		allow = {
+			can_form_nation_trigger = yes
+			owns = 7505		#Yeha
+			owns = 7513
+			owns = 7504
+			owns = 7503
+			owns = 7507
+			owns = 7502
+		}
+		
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			change_country_name = "DMT"
+			hidden_effect = {
+				change_country_adjective = "DMT_ADJ"
+				change_country_tag = DMT
+				change_country_color = albion_color
+			}
+			if = {
+				limit = {
+					is_tribal = yes
+				}
+				tribal_formable_government_change_effect = yes 		#Since Daa'mat was a confederation, if root is tribal, becomes a tribal federation
+			}
+			capital_scope = {
+				capital_formable_small_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			add_political_influence = influence_large
+			add_1_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

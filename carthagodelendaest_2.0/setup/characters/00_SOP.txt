@@ -1,0 +1,85 @@
+﻿"SOP"={
+	country="SOP"
+	
+	#First king of Sophene, also father of Artaxias I of Armenia
+	137={
+		first_name = "Zariadres"
+		family = c:SOP.fam:Orontid
+		birth_date=524.3.3		#250 BC
+		death_date=566.1.12		#188 BC
+		culture="armenian"		#Armenian culture
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=9
+		add_zeal=8
+		no_traits=yes
+		add_trait="blood_of_zariadres"
+		add_trait="ambitious"
+		add_trait="founder"
+		add_trait="victorious"
+	}
+	
+	#Second king and younger brother of Artaxias I, preserved independence
+	216={
+		first_name = "Mithrobouzanes"
+		family = c:SOP.fam:Orontid
+		birth_date=564.5.4		#210 BC
+		death_date=592.2.24		#162 BC
+		father="char:137"
+		culture="armenian"		#Armenian culture
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=6
+		add_charisma=10
+		add_finesse=7
+		add_zeal=6
+		add_trait="blood_of_zariadres"
+		add_trait="silver_tongued"
+		add_trait="benefactor"
+	}
+	
+	#Current ruler
+	217={
+		first_name = "Arkathias"
+		family = c:SOP.fam:Orontid
+		birth_date=577.3.30	#177 BC
+		father="char:216"
+		culture="armenian"		#Armenian culture
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=9
+		add_zeal=8
+		add_trait="humble"
+		add_trait="founder"
+		add_gold=250
+		add_popularity=80
+		add_trait="blood_of_zariadres"
+		c:SOP = {
+			set_as_ruler=char:217
+		}
+		dna="CP0I/aCjoKP4hfiFAnICcgJ4AngCbAJsAowCjAKFAoUCmAKYAmgCaAKYApgBTwFPAn0CfQKQApACqQKpAn4CfgFiAWICBgKWAoYChgAfAB8CfgJ+AnICcgJvAm8CewJ7AmoCagJ2AnYCZwJnABwAHAKQApACkQKRAVkBWQKEAoQCdgJ2AmsCawKDAoMEvQS9AocChwOuA64CaQJpA7ADsAKIAogCaQJpAoACgAJwAnACiwKLAmsCawObA5sClAKUA54DngKYApgCgQKBAnoCegAzADMCjwKPA4MDgwJtAm0BWgFaAn4CfgIlAiUAmQCZAQgBCAF1AXUA8gDyALkAuQEzATMBaAFoAMAAwAE9AT0EsASwAKMAowB/AH8AHwAfAt0C3QCeAJ4BXwFfANkA2QAJAAkAowCjAWABYAB/AH8AyADIASgBKAAfAB8BbgFuAVIBUgAeAB4AugC6A0oDSgBkAGQBJAEkAp4CngMBAwEKAQrpAH8AfwWnBacGPQY0AbQBtAMAA3MEtgS+Av8BgwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Future and final ruler of Sophene
+	218={
+		first_name = "Arsakes"
+		family = c:SOP.fam:Orontid
+		birth_date=592.2.24	#162 BC
+		father="char:217"
+		culture="armenian"		#Armenian culture
+		religion="zoroaster"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=9
+		add_zeal=8
+		add_trait="blood_of_zariadres"
+		dna="Au8C75edl52+pb6lAm0CbQJ7AnsCkwKTAoUChQJ7AnsCgQKBAnACcAJ8AnwBXgFeAoICggKHAocCjwKPAn4CfgFQAVACkgKSAo4CjgJyAnICjAKMAnYCdgFjAWMCcAJwAnwCfAKCAoICcgJyAn0CfQKFAoUCawJrAooCigJzAnMCmAKYAnMCcwJpAmkClAKUAngCeAJ1AnUCdwJ3AoICggJ1AnUCdAJ0AngCeAKFAoUBWQFZAm8CbwKDAoMChQKFAnMCcwKFAoUCbgJuAngCeAKRApECagJqAmkCaQKBAoEChAKEAV4BXgKTApMA4wDjAP0A/QAoACgAmwCbARgBGAD8APwBJwEnAKgAqADkAOQBdAF0AWcBZwB/AH8BIwEjAPAA8ABZAFkCmgKaANoA2gD8APwCoAKgAGUAZQB/AH8C/wL/AKUApQB9AH0AZABkABgAGACIAIgBFgEWA2YDZgD1APUCsgKyBI4EjgBSAFIAiQCJAH8AfwVvBW8G1gbWAasBqwMCAzYEowSjAvUB9QAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

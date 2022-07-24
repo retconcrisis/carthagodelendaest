@@ -1,0 +1,762 @@
+﻿#NEW Heritages in CDE mod
+
+
+#New Roman Republic starting heritage
+roman_republic_heritage = {
+	modifier = {
+		#good
+		diplomatic_range_modifier = 0.05
+		integrate_speed = 0.05
+		
+		#bad
+		happiness_for_wrong_culture_group_modifier = negative_wrong_culture_group_large
+		agressive_expansion_impact = 0.15
+	}
+	
+	trigger = {
+		tag = ROM
+	}
+}
+
+
+#########################################
+#Africa
+#########################################
+
+#Carthage, NEW for mod
+carthaginian_heritage_cde = {
+	modifier = {
+		#good
+		global_export_commerce_modifier = 0.1
+		global_defensive = 0.1
+		max_mercenary_stacks = 1
+		
+		#bad
+		diplomatic_reputation = -1
+	}
+	
+	trigger = {
+		tag = CAR
+	}
+}
+
+#Numidia
+numidian_heritage = {
+	modifier = {
+		#good
+		light_cavalry_offensive = 0.1
+		global_population_growth = 0.05
+		
+		#bad
+		naval_morale_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = NUM
+	}
+}
+
+#Mauretania
+mauretanian_heritage = {
+	modifier = {
+		#good
+		light_cavalry_morale = 0.1
+		global_defensive = 0.1
+		
+		#bad
+		diplomatic_reputation = -1
+	}
+	
+	trigger = {
+		tag = MAU
+	}
+}
+
+#Gaetulia
+gaetulian_heritage = {
+	modifier = {
+		#good
+		light_cavalry_morale = 0.1
+		land_unit_attrition = -0.1
+		
+		#bad
+		diplomatic_reputation = -2
+	}
+	
+	trigger = {
+		OR = {
+			tag = GAE
+			primary_culture = gaetulian
+		}
+	}
+}
+
+
+#########################################
+#Greek world
+#########################################
+
+#Achaean League
+achaean_league_heritage = {		#different from vanilla "achaean_heritage"
+	modifier = {
+		#good
+		integrate_speed = 0.1
+		global_freemen_happyness = happiness_large_svalue
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = ACH
+	}
+}
+
+#Antigonid Macedonia
+antigonid_macedonian_heritage = {			#new Macedonian heritage under Andriscus
+	modifier = {
+		#good
+		levy_size_multiplier = 0.025
+		mercenary_land_maintenance_cost = -0.1
+		
+		#bad
+		diplomatic_reputation = -1
+	}
+	
+	trigger = {
+		always = no 	#obtainable via event in which Pella becomes Macedonia
+	}
+}
+
+#Thessaly / Thessalian League
+thessalian_league_heritage = {
+	modifier = {
+		#good
+		global_citizen_happyness = happiness_large_svalue
+		stability_cost_modifier = -0.1
+		
+		#bad
+		global_defensive = -0.1
+	}
+	
+	trigger = {
+		tag = THS
+	}
+}
+
+#Laconia (Sparta start heritage)
+laconian_heritage = {
+	modifier = {
+		#good
+		loyalty_to_overlord = -10
+		enslavement_efficiency = 0.05
+		discipline = 0.05
+		
+		#bad
+		global_pop_promotion_speed_modifier = -0.10 	#more difficult for slaves and freemen to be promoted
+	}
+	
+	trigger = {
+		OR = {
+			tag = SPA
+			primary_culture = peloponnesian
+		}
+	}
+}
+
+#Trojan / Ilion Heritage
+trojan_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.1
+		diplomatic_reputation = 2
+		
+		#bad
+		global_defensive = -0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = ILN
+			primary_culture = troan
+		}
+	}
+}
+
+#########################################
+# Thrace / Dacia / Getia
+#########################################
+
+#Odrysian kingdom of Thrace
+odrysian_thrace_heritage = {
+	modifier = {
+		#good
+		land_morale_recovery = 0.05
+		light_cavalry_morale = 0.1
+		
+		#bad
+		governor_loyalty = -10
+	}
+	
+	trigger = {
+		OR = {
+			tag = TRE
+			primary_culture = odrysi
+		}
+	}
+}
+
+#Celts of Tylis
+tylis_heritage = {
+	modifier = {
+		#good
+		light_infantry_discipline = 0.1
+		enslavement_efficiency = 0.1
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = TYL
+	}
+}
+
+#Abdera
+abderan_heritage = {
+	modifier = {
+		#good
+		global_capital_trade_routes = 2
+		global_import_commerce_modifier = 0.2
+		
+		#bad
+		global_tribesmen_happyness = negative_happiness_small_svalue
+	}
+	
+	trigger = {
+		tag = ABD
+	}
+}
+
+
+#########################################
+# Scythia / Caucasus / Taurica
+#########################################
+
+#Scythian Kingdom
+scythian_kingdom_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		tribute_income_modifier = 0.15
+		
+		#bad
+		fortress_building_cost = 0.1
+	}
+	
+	trigger = {
+		tag = SCY
+	}
+}
+
+#Scythia Minor
+scythia_minor_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		happiness_for_wrong_culture_group_modifier = wrong_culture_group_large
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.10
+	}
+	
+	trigger = {
+		tag = SCM
+	}
+}
+
+#Roxolania
+roxolani_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		levy_size_multiplier = 0.025
+		
+		#bad
+		enslavement_efficiency = -0.1
+	}
+	
+	trigger = {
+		tag = ROX
+	}
+}
+
+#Iazygia / Iazyges
+iazygia_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		start_migration_cost_modifier = -0.1
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.10
+	}
+	
+	trigger = {
+		tag = IAZ
+	}
+}
+
+#Siraces / Siracia
+siraci_heritage = {
+	modifier = {
+		#good
+		land_morale_modifier = 0.05
+		happiness_for_wrong_culture_group_modifier = wrong_culture_group_large
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = SCE
+	}
+}
+
+#Sarmatia / Sauromatia
+sauromatae_heritage = {
+	modifier = {
+		#good
+		horse_archers_discipline = 0.05
+		movement_speed_if_no_road = 0.2
+		
+		#bad
+		price_found_city_cost_modifier = 0.15
+	}
+	
+	trigger = {
+		NOT = {
+			tag = IAZ
+		}
+		NOT = {
+			tag = ROX
+		}
+		OR = {
+			tag = SRM
+			primary_culture = sarmatian
+		}
+	}
+}
+
+#Tauri / Tauros
+tauri_heritage = {
+	modifier = {
+		#good
+		stability_cost_modifier = -0.1
+		mercenary_naval_maintenance_cost = -0.1		#pirate fleet
+		
+		#bad
+		diplomatic_reputation = -1
+	}
+	
+	trigger = {
+		OR = {
+			tag = TAO
+			primary_culture = tauri
+		}
+	}
+}
+
+#Chersonesus
+chersonese_heritage = {
+	modifier = {
+		#good
+		global_citizen_happyness = happiness_large_svalue
+		global_defensive = 0.1
+		
+		#bad
+		enact_law_cost_modifier = 0.1
+	}
+	
+	trigger = {
+		tag = CHS
+	}
+}
+
+#Upper Aorsia
+upper_aorsi_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		global_commerce_modifier = 0.15
+		
+		#bad
+		diplomatic_relations = -1
+	}
+	
+	trigger = {
+		tag = UAO
+	}
+}
+
+#Aorsia
+aorsi_heritage = {
+	modifier = {
+		#good
+		land_morale_recovery = 0.05
+		global_commerce_modifier = 0.1
+		
+		#bad
+		omen_power = -0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = AOR
+			AND = {
+				NOT = { tag = UAO }
+				primary_culture = aorsi
+			}
+		}
+	}
+}
+
+
+#########################################
+#Syria / Mesopotamia / Persia / Anatolia
+#########################################
+
+#Parthian Empire
+parthian_empire_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		happiness_for_wrong_culture_group_modifier = wrong_culture_group_large
+		
+		#bad
+		naval_morale_modifier = -0.1
+	}
+	
+	trigger = {
+		tag = PAR
+	}
+}
+
+#Persia / Persis - Frataraka
+persian_frataraka_heritage = {
+	modifier = {
+		#good
+		heavy_cavalry_offensive = 0.1
+		omen_power = 0.05
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.10
+	}
+	
+	trigger = {
+		tag = PES
+	}
+}
+
+#Maccabean Heritage - Judea start
+maccabee_heritage = {
+	modifier = {
+		#good
+		land_morale_modifier = 0.05
+		religious_tech_investment = 0.1
+		
+		#bad
+		global_pop_conversion_speed_modifier = -0.25
+	}
+	
+	trigger = {
+		tag = JUD
+	}
+}
+
+#Corduene Heritage
+corduene_heritage = {
+	modifier = {
+		#good
+		siege_ability = 0.1
+		build_cost = -0.1
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+	}
+	
+	trigger = {
+		tag = CRD
+	}
+}
+
+#Characenean Heritage
+characene_heritage = {
+	modifier = {
+		#good
+		global_capital_trade_routes = 2
+		navy_maintenance_cost = -0.1
+		naval_range = 0.1
+		
+		#bad
+		loyalty_to_overlord = 15
+	}
+	
+	trigger = {
+		tag = CRC
+	}
+}
+
+#Elymaean / Elymais Heritage
+elymais_heritage = {
+	modifier = {
+		#good
+		horse_archers_discipline = 0.1
+		omen_power = 0.1
+		
+		#bad
+		diplomatic_reputation = -1
+	}
+	
+	trigger = {
+		OR = {
+			tag = ELY
+			primary_culture = elamite
+		}
+	}
+}
+
+#Commagenean Heritage
+commagene_heritage = {
+	modifier = {
+		#good
+		diplomatic_reputation = 2
+		global_commerce_modifier = 0.1
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+	}
+	
+	trigger = {
+		tag = COM
+	}
+}
+
+#Heritage of Ariarathes - Cappadocia
+cappadocia_ariarathes_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.15
+		happiness_for_wrong_culture_group_modifier = wrong_culture_group_small
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+	}
+	
+	trigger = {
+		tag = CAP
+	}
+}
+
+#Galatian Heritage
+galatian_heritage = {
+	modifier = {
+		#good
+		light_infantry_offensive = 0.1
+		enslavement_efficiency = 0.1
+		num_of_clan_chiefs = 1
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = GLT
+			primary_culture = galatian
+		}
+	}
+}
+
+
+##############################################
+#Bactria / Himalaya / Ferghana / Tarim Basin
+##############################################
+
+#Indo-Greeks
+indo_greek_euthydemos_heritage = {
+	modifier = {
+		#good
+		happiness_for_wrong_culture_group_modifier = wrong_culture_group_large
+		religious_tech_investment = 0.1
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.10
+	}
+	
+	trigger = {
+		tag = IGR
+	}
+}
+
+#Greco-Bactria
+greco_bactrian_diodotos_heritage = {
+	modifier = {
+		#good
+		happiness_for_wrong_culture_group_modifier = wrong_culture_group_large
+		price_found_city_cost_modifier = -0.15
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = BAC
+	}
+}
+
+#Kharesmia / Khwarezmia
+khwarezmian_heritage = {
+	modifier = {
+		#good
+		price_found_city_cost_modifier = -0.15
+		fort_limit = 2
+		
+		#bad
+		diplomatic_reputation = -1
+	}
+	
+	trigger = {
+		tag = KRZ
+	}
+}
+
+#Yuezhi
+yuezhi_heritage = {
+	modifier = {
+		#good
+		manpower_recovery_speed = 0.1
+		land_morale_recovery = 0.05
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = YZI
+			primary_culture = yuezhi
+		}
+	}
+}
+
+
+#########################################
+#Gaul
+#########################################
+
+#Venetia
+veneti_heritage = {		#Veneti tribe of Gaul; uniquely has 3 positives
+	modifier = {
+		#good
+		naval_range = 0.25
+		naval_damage_taken = -0.05
+		global_commerce_modifier = 0.1
+		
+		#bad
+		global_manpower_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = VTN
+	}
+}
+
+
+#########################################
+#India
+#########################################
+
+#Anuradhapura, also for Lankan culture nations
+anuradhapura_lankan_heritage = {
+	modifier = {
+		#good
+		religious_tech_investment = 0.1
+		global_defensive = 0.1
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = ANU
+			primary_culture = lankan
+		}
+	}
+}
+
+#Shunga Empire
+shunga_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.1
+		oratory_tech_investment = 0.1
+		
+		#bad
+		governor_loyalty = -10
+	}
+	
+	trigger = {
+		tag = SUN
+	}
+}
+
+#Abhiras Heritage
+abhira_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.1
+		religious_tech_investment = 0.1
+		
+		#bad
+		build_cost = 0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = ABH
+			primary_culture = abhira
+		}
+	}
+}
+
+
+##################################################################
+# Event Heritages - gained through events
+##################################################################
+decline_of_roman_republic_heritage = {
+	modifier = {
+		#good
+		diplomatic_range_modifier = 0.05
+		integrate_speed = 0.1
+		
+		#bad
+		happiness_for_wrong_culture_group_modifier = negative_wrong_culture_group_large
+		monthly_corruption = 0.05
+		global_unrest = 1
+		civil_war_threshold = -0.1
+	}
+	
+	trigger = {
+		always = no
+	}
+}
+
+
+
+
+
+
+
+

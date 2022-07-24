@@ -1,0 +1,4 @@
+﻿color = "dahae_color"
+
+ship_names = {
+}

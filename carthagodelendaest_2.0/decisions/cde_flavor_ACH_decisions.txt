@@ -1,0 +1,65 @@
+﻿country_decisions = {
+	ach_grant_lacedaemonian_autonomy = {
+		potential = {
+			tag = ACH
+		}
+		allow = {
+			war = no
+			has_civil_war = no
+			num_of_provinces >= 4
+			owns = p:427	#Sparta
+			NOT = {
+				any_country = {
+					tag = SPA
+				}
+			}
+			p:427 = {
+				is_capital = no
+			}
+		}
+		effect = {
+			custom_tooltip = ach_grant_lacedaemonian_autonomy.tt
+			every_owned_province = {
+				limit = { 
+					owner = root
+					OR = {
+						province_id = 427
+						province_id = 429
+						province_id = 430
+						province_id = 450
+						province_id = 7889
+					}
+				}
+				set_owned_by = c:SPA
+			}
+			make_subject = {
+				target = c:SPA
+				type = feudatory
+			}
+			hidden_effect = {
+				c:SPA = {
+					set_capital = p:427
+					change_government = oligarchic_republic
+					set_primary_culture = peloponnesian
+					set_country_religion = roman_pantheon
+					set_country_heritage = spartan_heritage
+					add_treasury = 100
+				}
+			}
+			c:SPA = {
+				add_country_modifier = {
+					name = "granted_spartan_autonomy_modifier"
+					duration = 3600
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+}
+
+
+

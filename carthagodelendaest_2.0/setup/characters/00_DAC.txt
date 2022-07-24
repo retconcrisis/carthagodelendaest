@@ -1,0 +1,28 @@
+﻿"DAC"={
+	country="DAC"
+	
+	#Oroles, ruler of Dacian confederation
+	166={
+		first_name = "Oroles"
+		family = c:DAC.fam:Rubobosticus
+		birth_date=555.12.29		#198 BC
+		culture="caucoensi"
+		religion="shamanism"
+		no_stats=yes
+		add_martial=9
+		add_charisma=6
+		add_finesse=8
+		add_zeal=5
+		no_traits=yes
+		add_trait="disciplined"		#disciplined soldiers so they would defeat Bastarnae
+		add_trait="founder"		#further uniting the tribes into a tighter confederacy after Rubobostes
+		add_trait="plain_speaking"
+		add_gold=300
+		add_popularity=80
+		c:DAC = {
+			set_as_ruler=char:166
+		}
+		dna="LPhC7ZSMlIzQ39DfAVABUAJqAmoCgwKDAmkCaQKBAoECaQJpAoECgQJ1AnUCgwKDApACkAJ6AnoClQKVAooCigFcAVwClgKWAokCiQJ7AnsCZgJmAnECcQJ6AnoCawJrAn8CfwKSApICZgJmACcAJwKTApMClQKVAmkCaQKCAoIClwKXAosCiwKHAocCjwKPAmkCaQJ6AnoCZwJnAm4CbgKDAoMCcgJyAocChwJyAnICbgJuApgCmAOwA7AChgKGA50DnQObA5sCZwJnAnICcgO2A7YCegJ6AnQCdAJrAmsCcAJwApECkQRXBFcA7gDuAH4AfgL7AvsAegB6AIQAhAA4ADgA1ADUAQsBCwA1ADUBAAEAASkBKQB/AH8AYABgAB4AHgA2ADYBeAF4ArkCuQFzAXMDigOKArkCuQB/AH8AngCeABQAFABGAEYAcgByAMoAygAIAAgCuQK5A0YDRgBtAG0CnAKcAO4A7gEFAQUGXQRxAH8AfwUJBQkIsQSgAUsBSwLbAqsw/wO6Bf8DVwAAAAAAAAAAAAAAAA=="
+	}
+	
+}

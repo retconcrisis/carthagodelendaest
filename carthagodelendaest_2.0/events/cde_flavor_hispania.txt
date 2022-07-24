@@ -1,0 +1,182 @@
+﻿namespace = cde_flavor_hispania
+
+#Galba's Treachery
+cde_flavor_hispania.1 = {
+	type = country_event
+	title = "cde_flavor_hispania.1.t"
+	desc = "cde_flavor_hispania.1.desc"
+	picture = crucifixion
+	
+	right_portrait = current_ruler
+	left_portrait = char:196		#Servius Sulpicius Galba
+	
+	fire_only_once = yes
+	
+	immediate = {
+		set_variable = {
+			name = galba_treachery_against_lusitanians
+		}
+	}
+	
+	option = {
+		name = cde_flavor_hispania.1.a
+		
+		if = {
+			limit = {
+				primary_culture = lusitanian
+			}
+			add_opinion = { 
+				modifier = lus_betrayed_and_massacred_our_people
+				target = ROM
+			}
+		}
+		c:ROM = {
+			trigger_event = { 
+				id = cde_flavor_hispania.2
+			}
+		}
+	}
+}
+
+#Galba's Treachery Ping for Rome
+cde_flavor_hispania.2 = {
+	type = country_event
+	title = "cde_flavor_hispania.2.t"
+	desc = "cde_flavor_hispania.2.desc"
+	picture = crucifixion
+	
+	left_portrait = char:196		#Servius Sulpicius Galba
+	
+	fire_only_once = yes
+	
+	immediate = {
+		show_as_tooltip = {
+			every_country = {
+				if = {
+					limit = {
+						primary_culture = lusitanian
+					}
+					add_opinion = { 
+						modifier = lus_betrayed_and_massacred_our_people
+						target = ROM
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_hispania.2.a
+		
+		custom_tooltip = cde_flavor_hispania.2.tt
+		
+		trigger_event = {
+			id = cde_flavor_hispania.3
+			days = 30
+		}
+	}
+}
+
+#Galba's Trial
+cde_flavor_hispania.3 = {
+	type = country_event
+	title = "cde_flavor_hispania.3.t"
+	desc = "cde_flavor_hispania.3.desc"
+	picture = roman_trial
+	
+	left_portrait = char:196		#Servius Sulpicius Galba
+	right_portrait = char:1			#Cato the Elder
+	right_portrait = char:239		#Lucius Scribonius Libo
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cde_flavor_hispania.3.a
+		imprison = {
+			target = char:196
+		}
+		char:196 = {
+			add_loyalty = imprisoned_l
+		}
+		char:239 = {
+			add_loyalty = loyalty_galba_trial_justice
+		}
+	}
+	
+	option = {
+		name = cde_flavor_hispania.3.b
+		
+		current_ruler = {
+			add_corruption = corruption_large
+			add_gold = 100
+		}
+		char:196 = {
+			add_loyalty = loyalty_galba_trial_bribed
+		}
+		char:1 = {
+			add_loyalty = loyalty_galba_trial_justice_denied
+		}
+		char:239 = {
+			add_loyalty = loyalty_galba_trial_justice_denied
+		}
+	}
+}
+
+#Viriathus of Lusitania
+cde_flavor_hispania.4 = {
+	type = country_event
+	title = "cde_flavor_hispania.4.t"
+	desc = "cde_flavor_hispania.4.desc"
+	picture = celtic_chiefs
+	
+	left_portrait = scope:viriathus_scope
+	right_portrait = current_ruler
+	
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			create_character = {		#Viriathus spawns
+				first_name="Viriathus"
+				family_name="Viriathid"
+				age = 28
+				female = no
+				culture = lusitanian
+				religion = druidism
+				no_traits = yes
+				no_stats = yes
+				add_martial = 15
+				add_charisma = 14
+				add_finesse = 8
+				add_zeal = 8
+				add_trait = just
+				add_trait = honest
+				add_trait = tactician
+				add_trait = original_thinker
+				add_gold = 100
+				save_scope_as = viriathus_scope
+				dna="clRyVHpiemK4sbixAmcCZwKIAogCbQJtAogCiAKTApMCaQJpAowCjAJuAm4CfwJ/AokCiQJrAmsCdQJ1AnoCegJ2AnYCdwJ3AosCiwKRApECiwKLApACkAJ3AncBMAFqAnoCgwKKAooAJQAlAogCiAOyA7ICdQJ1AmcCZwJyAnICegJ6A64DrgJnAmcCkwKTA54DngKBAoEBOwFYAosCiwJyAnICcgJyAmgCaAKLAosCaQJpAooCigJtAm0CewJ7AmcCZwKKAooBXgFeApACkAFTAVMCbwJvAn0CfQKOAo4CdQJ1AWYBZgJBAkEAWwBbAQ0BDQFaAVoCpgKmALoAugF4AXgBEQERAQ4BDgBHAEcAiQCJAV4BXgB/AH8ATgBOACoAKgDsAOwA6wDrABwAHAEIAQgA2gDaANAA0AB/AH8AeAB4AHYAdgFlAWUACQAJAV4BXgCFAIUBUAFQBIcEhwClAKUAXgBeANcA1wEMAQwB5AF2AH8AfwHwAfAIwgjCAP0ASATXBCIGmAavCQAJGQAAAAAAAAAAAAAAAA=="
+			}
+			set_variable = {
+				name = viriathus_var
+				value = scope:viriathus_scope
+			}
+		}
+		
+		set_global_variable = {
+			name = viriathus_spawn_flag
+		}
+	}
+	
+	option = {
+		name = cde_flavor_hispania.4.a
+		
+		custom_tooltip = cde_flavor_hispania.4.tt
+		
+		set_as_ruler = scope:viriathus_scope
+		scope:viriathus_scope = {
+			add_popularity=90
+		}
+	}
+}
+

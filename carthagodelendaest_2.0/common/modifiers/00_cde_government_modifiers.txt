@@ -1,0 +1,7 @@
+﻿
+cde_child_ruler = {
+	stability_cost_modifier = 0.25
+	monthly_corruption = 0.1
+	max_loyalty = -10
+}
+

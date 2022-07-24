@@ -1,0 +1,37 @@
+﻿l_english:
+  
+  #Opinion modifiers
+  rome_carthage_war_enemies_op: "Longtime War Enemies"
+  tre_helped_to_throne_op: "Helped Claim Macedonian Throne"
+  rom_mac_rebelled_against_rule: "Revolted Against Roman Rule"
+  rom_punic_war_allies: "Punic War Allies"
+  royal_marriage_op: "Royal Marriage with Family Member"
+  family_ties_op: "Family Ties Between Rulers"
+  lus_betrayed_and_massacred_our_people: "Massacred Our People"
+  
+  #Loyalty modifiers
+  loyalty_par_suren_coronation: "Given the honor of crowning the new ruler"
+  loyalty_bac_killed_favored_ruler: "Killed Favored Ruler"
+  loyalty_supported_carthage_policy: "Supported Carthaginian Policy"
+  loyalty_opposed_carthage_policy: "Opposed Carthaginian Policy"
+  loyalty_galba_trial_justice: "Justice in Galba's Trial"
+  loyalty_galba_trial_justice_denied: "Justice Denied in Galba's Trial"
+  loyalty_galba_trial_bribed: "Accepted Bribe for Acquittal"
+  
+  #Decision modifiers
+  pax_romana_modifier: "Pax Romana"
+  granted_spartan_autonomy_modifier: "Granted Lacedaemonian Autonomy"
+  
+  #Event modifiers
+  ashes_of_menander_country_capital_mod: "Capital Stupa of Menandros' Ashes"
+  ashes_of_menander_country_state_mod: "Stupa of Menandros' Ashes"
+  
+  servile_revolt_fervor: "Servile Revolt Fervor"
+  
+  #Other
+  cde_child_ruler: "Child Ruler"
+  desc_cde_child_ruler: "With a child ruler on the throne, it is much more difficult to maintain stability, root out corruption and ensure the loyalty of the court. Even those who favor the child ruler would question their loyalties should the state ever face the risk of collapse.\n\n #Y This issue will disappear once the ruler becomes an adult#!"
+  
+  cde_already_in_civil_war_mod: "Already in Civil War"
+  
+  

@@ -1,0 +1,1140 @@
+﻿"ROM"={
+	country="ROM"
+	0={
+		first_name = "Titus"
+		nickname = "NICKNAME_FLAMININIUS"
+		family_name = "Quinctius"
+		birth_date=554.10.8
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=6
+		add_finesse=5
+		add_zeal=4
+		add_gold=400
+		add_popularity=65
+		c:ROM = {
+			set_as_ruler=char:0
+		}
+		dna="PNs8279iv2LEnMScAmsCawKSApICiQKJAnICcgKOAo4CeAJ4AmsCawJtAm0CeQJ5A60DrQJ3AncCdwJ3AVsBWwKEAoQCkAKQAWYBZgKLAosCdwJ3AoECgQKHAocCfAJ8AooCigJzAnMCgAKAAo0CjQJuAm4ClQKVApQClAJ5AnkCbQJtAmoCagJuAm4CigKKAncCdwJ9An0CmQKZAmcCZwKDAoMClwKXAosCiwJ6AnoCawJrAm8CbwJ3AncCjgKOA5sDmwKCAoICbQJtAn8CfwJ/An8CmAKYApMCkwKUApQCmAKYAocChwJ3AncALwAvAD4APgFrAWsA7wDvACEAIQLVAtUBZwFnAHQAdACKAIoDKgMqAUABQAB/AH8A0gDSALgAuAA/AD8BQgFCAAUABQB3AHcDJAMkAMkAyQB/AH8AugC6AIsAiwCnAKcBGAEYAXABcAT/BP8BAQEBAyIDIgBhAGEDVwNXApYClgBUAFQMwgzCAH8AfwDsAOwBegF6AGkAaQlOCU4B9QH1AAEAPQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Cato the Elder
+	1={		
+		first_name= "Marcus"
+		nickname= "NICKNAME_CATO_SAPIENS"
+		family_name= "Porcius"
+		birth_date=520.6.20
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=8
+		add_finesse=10
+		add_zeal=9
+		no_traits=yes
+		add_trait="scholar"
+		add_trait="orator"
+		add_trait="wise"
+		add_gold=150
+		add_popularity=50
+		dna="h4uHi4lkiWQGaAZoAmoCagKLAosDoAOgAm8CbwJrAmsCfgJ+AnUCdQOmA6YCeQJ5AmsCawJzAnMCZgJmApMCkwKXApcCfgJ+AogCiAFaAVoEywTLAnMCcwJ1AnUChgKGAokCiQKQApACbgJuAo8CjwKPAo8CjQKNAoECgQJxAnECdAJ0AoMCgwOdA50CdgKXAo4CjgKTApMCbAJsAnoCegKIAnwClAKUAo0CjQKOAo4CmAKYApgCmAJ6AnoCmQKZAoQChAKNAo0CggKCApACkAKBAoECjAKMAmkCaQTkBOQCiAKIAnoCegLmAuYAVgBWAOsA6wC4ALgCsgKyARsBGwEtAS0AMAAwAHAAcAA8ADwAMAAwAq4CrgB/AH8A2wDbASkBKQFmAWYAVwBXAKQApABnAGcDnwOfAGAAYAB/AH8AXQBdAQIBAgAjACMC0wLTADgAOAC/AL8A0gDSAOsA6wAjACMAAAAAAIUAhQCcAJwBcAjlAH8AfwOTA5MB/wE4ALwA+gkDCQMBLwFTAKoARAAAAAAAAAAAAAAAAA=="
+	}
+	
+	2={
+		first_name= "Manius"
+		nickname= "NICKNAME_ACILIUS"
+		family_name= "Balbus"
+		birth_date=559.4.24
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=4
+		add_finesse=5
+		add_zeal=5
+		add_gold=400
+		add_popularity=65
+		c:ROM={
+			set_as_coruler=char:2
+		}
+		dna="IPsg+55tnm2u/67/AmkCaQFjAWMChgKGAoICggKUApQCagJqAnUCdQJ7AnsBXgFeApQClAJ1AnUCjgKOApYClgFZAVkCeQJ5AnoCegJsAmwBYwFjAnoCegJ1AnUCfgJ+AnMCcwKRApEAJgAmAnUCdQJpAmkCcwJzAoMCgwJ3AncCdQJ1AEsASwKFAoUCfwJ/Ao0CjQKKAooCbwJvAmcCZwFOAU4CdQJ1AmoCagJrAmsChAKEAn0CfQJxAnEDmwObAnkCeQJxAnEChQKFAUwBTAJ1AnUCaAJoAmoCagJvAm8CeAJ4AnYCdgLnAucA/QD9AsECwQKJAokBCgEKAWkBaQErASsBcAFwAEAAQAD8APwADgAOAtIC0gB/AH8CyALIAPgA+ACSAJIBPwE/ATcBNwBFAEUCIAIgAVkBWQB/AH8A8wDzAEcARwBkAGQAGQAZAK0ArQAIAAgC2wLbASMBIwC1ALUAUgBSAOYA5gATABMDtQO1AH8AfwNgA2AB7wHvAO0A7QkVCRUBMQExAAIAvQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Pontifex Maximus, Publius Cornelius Scipio Nasica Corculum
+	3={		
+		first_name="Publius"
+		nickname="NICKNAME_SCIPIO_NASICA_CORCULUM"
+		family = c:ROM.fam:Cornelii
+		birth_date=548.8.17
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=8
+		add_finesse=7
+		add_zeal=8
+		no_traits=yes
+		add_trait="prominent"
+		add_trait="plain_speaking"
+		add_trait="assertive"
+		add_gold=400
+		add_popularity=70
+		give_office=office_pontifex
+	}
+	
+	#4 is Scipio Africanus, in Hades file
+	
+	#Cornelia Africana Major, First Daughter of Scipio Africanus
+	5={		
+		family = c:ROM.fam:Cornelii
+		nickname="NICKNAME_AFRICANA_MAJOR"
+		birth_date=550.5.15
+		culture="roman"
+		religion="roman_pantheon"
+		female = yes
+		father="char:4"
+		marry_character="char:3"
+		no_stats=yes
+		add_martial=3
+		add_charisma=6
+		add_finesse=4
+		add_zeal=5
+		no_traits=yes
+		add_trait="humble"
+		add_trait="generous"
+		add_trait="blood_scipio_africanus"
+		add_gold=250
+		add_popularity=50
+		dna="op+in4d9h30OZw5nAooCigJ5AnkCigKKAnkCeQJqAmoCfwJ/An0CfQJ3AncCcwJzAoACgAJoAmgCcwJzApUClQJ0AnQCdQJ1AnICcgFfAV8ClQKVApUClQJmAmYClwKXAoYChgJ2AnYCdwJ3AnECcQJoAmgCegJ6ApICkgKOAo4CcwJzAnoCegKKAooCewJ7AVEBUQJ7AnsCkQKRApkCmQKTApMCbgJuAokCiQJrAmsCjQKNAm0CbQKKAooCiwKLAoYChgOsA6wCeAJ4AnACcAKAAoACagJqAoUChQJzAnMCjwKPAncCdwEEAQQAawBrAsMCwwFKAUoAggCCAKUApQEYARgAVABUAOEA4QDqAOoDBgMGAt8C3wB/AH8CkAKQAT4BPgDHAMcBEQERAGMAYwC4ALgAxQDFAq8CrwB/AH8AHwAfAvgC+AEAAQAAQQBBADEAMQKiAqIAnACcATsBOwBYAFgAxADEAD4APgF2AXYMtwzEAH8AfwRiBGIBcQERAAUABQnTCdMBQQFBADYATQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#6 is Masinissa of Numidia
+	#7 is Micipsa of Numidia
+	#8 is Gulussa of Numidia
+	#9 is Mastanbal of Numidia
+	#10 is Adherbal of Numidia
+	#11 is Hiempsal of Numidia
+	#12 is Jugurtha of Numidia
+	
+	#Scipio Aemilianus
+	13={
+		first_name="Publius"
+		nickname="NICKNAME_SCIPIO_AEMILIANUS"
+		family = c:ROM.fam:Cornelii
+		birth_date=569.11.6
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=12
+		add_charisma=8
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="good_natured"
+		add_trait="scholar"
+		add_trait="assertive"
+		add_gold=400
+		add_popularity=70
+		dna="Jusm65ZllmXpnOmcAmcCZwJnAmcCiQKJAoICggJ4AngChQKFAoQChAJpAmkDpQOlAmkCaQJ4AngCmQKZAmYCZgKJAokCaQJpAn0CfQFSAVICgQKBAnECcQJ6AnoCjwKPAmwCbAOaA5oCkAKQAoYChgKQApACgwKDAoQChAJ2AnYCiAKIAooCigJ8AnwCdQJ1AnMCcwFPAU8CawJrAnICcgKEAoQCjwKPAnYCdgJmAmYCjgKOAoYChgJ9An0ChAKEAmcCZwJqAmoClQKVAoUChQJ3AncCZgJmAnoCegKSApICkQKRAnACcAKBAoEAsQCxAWcBZwFUAVQAOQA5ArQCtACNAI0AZABkANYA1gCxALEBYgFiAp8CnwB/AH8AKgAqAIQAhALaAtoAhgCGAR4BHgEdAR0AiwCLAVMBUwB/AH8BTAFMABEAEQFGAUYApQClAOkA6QFyAXIBRAFEA2kDaQDcANwBXAFcABoAGgCiAKIFnAWcAH8AfwQwBDABgwGDAF4AzQlXCVcB/QGFAnQATwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Quintus Caecilius Metellus Macedonicus, would defeat Andriscus in Fourth Macedonian War, and fought with success in the Achaean and Numantine wars
+	14={
+		first_name="Quintus"
+		nickname="NICKNAME_METELLUS"
+		family_name = "Caecilius"
+		birth_date=566.2.24
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=10
+		add_charisma=8
+		add_finesse=8
+		add_zeal=7
+		no_traits=yes
+		add_trait="proud"
+		add_trait="assertive"
+		add_gold=300
+		add_popularity=65
+	}
+	
+	15={
+		first_name="Lucius"
+		family_name = "Mummius"
+		birth_date=554.5.14
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=8
+		add_finesse=5
+		add_zeal=4
+		no_traits=yes
+		add_trait="submissive"
+		add_trait="original_thinker"
+		add_gold=300
+		add_popularity=65
+		dna="Zddl16x+rH7IzsjOApgCmAJwAnABYgFiAnACcAJrAmsCigKKAosCiwKNAo0CkgKSAo8CjwJoAmgCdwJ3AV0BXQFTAVMCcwJzAmsCawKCAoIChwKHA60DrQJ+An4CdAJ0AnUCdQJ/An8BXgFeAnQCdAKPAo8CgwKDAm0CbQJ1AnUCZwJnAoYChgKWApYClgKWAoICggKWApYCfwJ/AnQCdAJ+An4CkgKSAnwCfAJ1AnUCfQJ9ApgCmAAlACUCaQJpAn4CfgKKAooCeAJ4ApQClAJ3AncCgAKAApICkgJ6AnoCmAKYAmoCagJAAkABBQEFApgCmAFaAVoAcABwAT4BPgA3ADcC6QLpAuQC5AEOAQ4AQgBCALUAtQB/AH8BdwF3ASYBJgFAAUAAvAC8ACIAIgApACkANQA1AMYAxgB/AH8AqgCqAGwAbADnAOcAuwC7ADwAPAKhAqEAWQBZAK4ArgLbAtsAzQDNAHYAdgFjAWMGLAKtAH8AfwFhAWEBnAHOAFcAVwnWCTQpLwEvAP8A0QAAAAAAAAAAAAAAAA=="
+	}
+	
+	#16 is randomly generated Archon of Pella
+	
+	#Gaius Livius Drusus, Praetor
+	17={	
+		first_name="Gaius"
+		nickname="NICKNAME_DRUSUS"
+		family_name = "Livius"
+		birth_date=562.8.26		#192 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=6
+		add_finesse=7
+		add_zeal=5
+		no_traits=yes
+		add_trait="scholar"
+		add_gold=300
+		add_popularity=70
+		give_office=office_praetor
+	}
+	
+	#Son of the Praetor of the same name; was blind, yet became a successful jurist
+	18={	
+		first_name="Gaius"
+		nickname="NICKNAME_DRUSUS"
+		family_name = "Livius"
+		birth_date=586.7.13
+		father="char:17"
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=2
+		add_charisma=6
+		add_finesse=9
+		add_zeal=7
+		no_traits=yes
+		add_trait="scholar"
+		add_trait="blind"		#Blind either young or since birth
+		add_gold=300
+		add_popularity=60
+		dna="O6cb+59mn2aQhpCGAn0CfQFQAVAChQKFAnsCewJ+An4BUgFSA6ADoAFRAVECbQJtAoUChQKNAo0ChQKFAmcCZwJnAmcDcQOnAmkCaQJqAmoCagJqAnkCeQJ0AnQCfwJ/AnYCdgOnA6cClwKXAowCjAJpAmkCiAKIAnMCcwJwAnACkAKQAmsCawKKAooCfwJ/AnwCfAJtAm0CcwJzAoMCgwKDAoMCcgJyAnUCdQKEAoQCdgJ2AnsCewJ3AncCigKKAm0CbQKWApYChQKFAnQCdAJuAm4CdAJ0A6cDpwJ7AnsCkQKRAnACcALSAtIAvwC/AXABcAD4APgALAAsAIoAigDDAMMABwAHAWYBZgDRANEAMAAwACIAIgB/AH8A2gDaArYCtgF8AXwANgA2AJEAkQCoAKgAPAA8AKkAqQB/AH8ADQANAQsBCwF0AXQAnwCfArwCvATdBN0C6QLpA24DbgB0AHQA6gDqAN0A3QDHAMcJCglmAH8AfwLKAsoBWgExAL0AvQkWCRYBygE5AE8AlQEAAAAAAAAAAAAAAA=="
+	}
+	
+	#Censor
+	19={	
+		first_name="Marcus"
+		nickname="NICKNAME_MESSALLA"
+		family = c:ROM.fam:Valerii		#Valerius gens
+		birth_date=548.8.26		#206 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=8
+		add_finesse=5
+		add_zeal=4
+		no_traits=yes
+		add_trait="scholar"
+		add_gold=300
+		add_popularity=55
+		give_office=office_censor
+	}
+	
+	#20 is Hasdrubal of Carthage
+	#21 is Himilco Phameas of Carthage
+	
+	#22 is Priapatius of Parthia (Deceased)
+	#23 is Mithridates I “the Great” of Parthia
+	#24 is Rinnu of Parthia
+	#25 is Rhodogune of Parthia
+	
+	#26 is Antiochos III the Great (Hades)
+	#27 is Seleukos IV Philopator (Hades)
+	#28 is Antiochos IV Epiphanes (Hades)
+	#29 is Laodice IV (Hades)
+	#30 is Antiochos V Eupator (Hades)
+	#31 is Demetrios I Eupator of the Seleukid Empire
+	#32 is Alexandros Balas of the Seleukid Empire
+	#33 is Demetrios II of the Seleukid Empire
+	#34 is Antiochus VII of the Seleukid Empire
+	#35 is Diodotos of the Seleukid Empire
+	
+	### Deities / Omens ###
+	#44 is Alexander the Great Argead (Deified)
+	#45-56 are Jewish Omens in "heaven" file (Moses, Ezra, Ezekiel, etc.)
+	#57 is the Buddha, Siddhartha Gautama, the Buddhist deified omen ("nirvana" file)
+	#58 is Mahavira, the Jain deified omen ("nirvana" file)
+	#59 is Zoroaster, the Zoroastrian omen (in "Hades" file)
+	
+	#36 is Ptolemy I (Deity for EGY)
+	#37 is Berenice I (Deity for EGY)
+	#38 is Ptolemy II (Deity for EGY)
+	#39 is Ptolemy III (Deity for EGY)
+	#40 is Ptolemy IV (Deity for EGY)
+	#41 is Ptolemy V (Deity for EGY)
+	
+	#42 is Ptolemy VI of Egypt
+	#43 is Cleopatra II of Egypt
+	#60 is Ptolemaios Eupator of Egypt, deceased son of Ptolemy VI
+	#61 is Ptolemy VII of Egypt
+	#62 is Ptolemy VIII of Cyrenaica (CYR); brother of Ptolemy VI, later returned to Egypt as Ruler
+	#63 is Cleopatra Thea of Egypt
+	#64 is Cleopatra III of Egypt
+	
+	#65 is Mithridates III (Hades) of Pontus
+	#66 is Pharnaces I (Hades) of Pontus
+	#67 is Antiochus (Hades), prince of the Seleukids (son of Antiochus III, father of Nysa Seleukid)
+	#68 is Nysa Seleukid (Hades) of Pontus
+	#69 is Mithridates IV (Hades) of Pontus
+	#70 is Laodice of Pontus
+	#71 is Mithridates V of Pontus
+	#72 is Laodike VI Seleukid of Pontus
+	
+	#73 is Nysa Mithridatid of Cappadocia
+	#74 is Ariarathes IV (Hades) of Cappadocia
+	#75 is Ariarathes V of Cappadocia
+	
+	#76 is Attalus I Soter (Hades) of Pergamon
+	#77 is Eumenes II Soter (Hades) of Pergamon
+	#78 is Attalus II, King of Pergamon
+	#79 is Stratonike Ariarathid of Pergamon
+	#80 is Attalus III of Pergamon
+	
+	#81 is Prusias II of Bithynia
+	#82 is Philip V (Hades) of Macedon
+	#83 is Perseus (Hades), the last king of Macedon
+	#84 is Apame IV Antigonid of Bithynia (daughter of Philip V, wife of Prusias II)
+	#85 is Nicomedes II of Bithynia
+	#86 is the Unnamed Child of Prusias II from his second wife, which led to Prusias' succession plot against his eldest son Nicomedes II
+	
+	
+	#Cornelia Africana Minor, Second Daughter of Scipio Africanus
+	87={		
+		family = c:ROM.fam:Cornelii
+		nickname="NICKNAME_AFRICANA_MINOR"
+		birth_date=562.6.10		#192 BC
+		culture="roman"
+		religion="roman_pantheon"
+		female = yes
+		father="char:4"
+		no_stats=yes
+		add_martial=2
+		add_charisma=7
+		add_finesse=5
+		add_zeal=7
+		no_traits=yes
+		add_trait="righteous"
+		add_trait="pious"
+		add_trait="chaste"
+		add_trait="blood_scipio_africanus"
+		add_gold=250
+		add_popularity=65
+		dna="aacm0LJusW7y6PLoAnMCcwKYApgClgKWAngCeAKQApACkQKRAo4CjgKCAoICgAKAAm0CbQKXApcBVAFUAnUCdQKVApUCagJqAokCiQKFAoUClQKVAn0CfQKRApECiwKLAnoCegKXApcCjgKOApECkQJzAnMCkAKQAnwCfAKIAogCfgJ+A5kDmQJtAm0BYAFgAncCdwKBAoEClQKVAokCiQFNAU0BZgFmA6ADoAKKAooCfQJ9AowCjAJ1AnUCgwKDAnUCdQKXApcCaAJoAngCeAKWApYCfAJ8ApcClwKWApYCbgJuAnQCdAFPAU8CtgK2AskCyQFLAUsBbQFtAIEAgQKDAoMA0gDSAFEAUQBfAF8DBQMFAKsAqwB/AH8AVQBVAsYCxgApACkBXwFfAGAAYACxALEAhgCGAXMBcwB/AH8BFAEUAQcBBwE+AT4BPgE+AS0BLQADAAMBOgE6AIAAgABYAFgCjAKMArcCtwD+AP4DWwiRAH8AfwAoACgBaAHjALoAugn3CfcCAQG8AAIAQwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Tiberius Gracchus the Elder, deceased father of Gracchi brothers
+	88={		
+		first_name="Tiberius"
+		family_name = "Sempronius"
+		nickname="NICKNAME_GRACCHUS_THE_ELDER"
+		birth_date=537.2.16		#217 BC
+		death_date=600.8.19		#154 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=6
+		add_finesse=4
+		add_zeal=4
+		no_traits=yes
+		add_trait="prominent"
+		add_trait="victorious"
+	}
+	
+	#Tiberius Gracchus, elder of the Gracchi brothers
+	89={		
+		first_name="Tiberius"
+		family_name = "Sempronius"
+		nickname="NICKNAME_GRACCHUS"
+		birth_date=591.2.25		#163 BC
+		culture="roman"
+		religion="roman_pantheon"
+		father="char:87"		#Tiberius Gracchus the Elder
+		mother="char:88"		#Cornelia Africana Minor
+		no_stats=yes
+		add_martial=9
+		add_charisma=10
+		add_finesse=9
+		add_zeal=4
+		no_traits=yes
+		add_trait="disciplined"
+		add_trait="silver_tongued"
+		add_trait="benefactor"
+		add_trait="blood_scipio_africanus"
+		dna="DO4A9qJ9on3c19zXAoUChQKIAogChAKEAoECgQJqAmoCeAJ4ArUCfgJsAokCvAKUAnICcgJ+An4ChAKEAnYCdgKgApEClgKWAmcCZwTLBMsAOAA4AWEBYQJ6AnoCdgJ2AowCjAKVApUCcQJxAnICcgJ9An0ClAKUAocChwJmAmYCfQJ9ApcClwJ6AnoCcwJzAYwBYwKXApcCcQJrApICkgKOAo4DrAOsApICkgKPAo8ChgKGAn8CfwJwAnACfAJ8Ao8CjwKFAoUAMQAxAo8CjwJ9An0ANQA1AokCiQJmAmYCfwJ/AnECcQLFAsUBcAFwAN0A3QLgAuAAWwBbAAsACwDeAN4C/wL/ALIAsgBbAFsAogCiAqkCqQB/AH8AxQDFAEMAQwCUAJQAVgBWAGEAYQCDAIMAbwBvAp4CngB/AH8AWwBbAWsBawEeAR4CrwKvAQoBCgExATEBfwF/BNME0wDRANEAEgASAVABUACYAJgDAAP6AH8AfwIyAjIBXQGYAK0Aggl/CX8BMgGgAFAAhQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Gaius Gracchus, younger of the Gracchi brothers
+	90={		
+		first_name="Gaius"
+		family_name = "Sempronius"
+		nickname="NICKNAME_GRACCHUS"
+		birth_date=600.1.4		#154 BC
+		culture="roman"
+		religion="roman_pantheon"
+		father="char:87"		#Tiberius Gracchus the Elder
+		mother="char:88"		#Cornelia Africana Minor
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=9
+		add_zeal=6
+		no_traits=yes
+		add_trait="benefactor"
+		add_trait="honest"
+		add_trait="blood_scipio_africanus"
+		dna="Q9tD261erV7Q89DzBNYE1gFMAUwClQKVAkkChQKYApgCgAKAAoICggJoAo0AmAA/AIMASgJyAoUCkwKTAmoCagJrAmsDcQOiAo0CjQOkA6QClwKXApACkAJ1AnUCcgJyAowCjAJoAmgCjQKNApACkAJtAm0ClAKUAnMCcwKJAokClQKVAmcCZwJoAmgCYwJrAFQARAJxAnECUQKZAo8CjwOlA6UBVQFVAo0CjQJ2AnYCfwJ/AVEBUQFfAV8CcAJwA6MDowJ/An8CkAKQAm8CbwJoAmgCdQJ1AnUCdQJoAmgCcgJyBOIE4gRuBH8BDAEMAK8ArwCIAIgAXABcAMAAwACHAIcAzgDOAXwBfAAoACgDEQMRAV4BXgB/AH8BeAF4ACYAJgB/AH8CogKiAooCigEXARcAugC6AocChwB/AH8BRAFEAR0BHQAfAB8AUwBTAv4C/gF8AXwBOQE5AA4ADgAYABgAMgAyAzsDOwE2ATYAXAtcAH8AfwSFBIUBYgF0AKQAVgkQCRABJwERAEkASQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Sempronia, daughter of Cornelia Africana Minor and Sister of the Gracchi brothers; later married Scipio Aemilianus
+	91={
+		family_name = "Sempronia"
+		birth_date=584.11.20		#170 BC
+		culture="roman"
+		religion="roman_pantheon"
+		female = yes
+		father="char:87"		#Tiberius Gracchus the Elder
+		mother="char:88"		#Cornelia Africana Minor
+		no_stats=yes
+		add_martial=1
+		add_charisma=5
+		add_finesse=4
+		add_zeal=6
+		no_traits=yes
+		add_trait="barren"
+		add_trait="humble"
+		add_trait="blood_scipio_africanus"
+		add_gold=100
+		dna="RMME/Mpvym/G98b3ADsAOwJ7AnsCjgKOAmUCkQKUApQCcgJyAokCiQJ+An4BVQFVAoYChgJ3AncCagJqAngCeAKEAoQCaQJpAn0CfQJ/An8ClgKWAoUChQJvAm8CiwKLAm0CbQJ9An0CbQJtAnwCfAKDAoMCcgJyAn0CfQJ5AnkCewJ7ApYClgKUApQClgKWAVwBXAJxAnECYgJ0Ao0CjQKDAoMCeAJ4ApUClQKJAokCbQJtAm0CbQKCAoICkgKSAocChwJnAmcDsAOwAmoCagFNAU0CdAJ0A5kDmQJ+An4CdgJ2AnACcAIWAhYALAAsAJMAkwAiACIA/wD/ATkBOQBfAF8AXwBfAF0AXQAXABcAnwCfASUBJQB/AH8AHAAcANIA0gK/Ar8AuAC4ATYBNgD9AP0AyQDJAp4CngB/AH8BOgE6AoYChgB5AHkC1ALUAHgAeATrBOsBNAE0AE0ATQA2ADYCfwJ/AQcBBwE7ATsC/wvkAH8AfwBqAGoBIQHFAEAAQAnOCc4BCgEUAGgAEQAAAAAAAAAAAAAAAA=="
+	}
+
+	#92 is Athenais of Pergamon
+	#93 is Dyegilos of the Odrysian kingdom of Thrace
+	#94 is Apama Zipoeteid, wife of Dyegilos of Thrace
+	#95 is Sothimus of Thrace
+	
+	#96 is Diaeus of Megalopolis, strategos of the Achaean League
+	#97 is Kritalaos of Megalopolis, of the Achaean League
+	#98 is Menalkides of Sparta, of the Achaean League
+	
+	#99 is Baydad Frataraka of Persia
+	#100 is Wadfradad I Frataraka of Persia
+	#101 is Wadfradad II Frataraka of Persia
+	
+	
+	#Publius Cornelius Scipio Nasica Serapio, rival of Tiberius Gracchus
+	102={		
+		first_name="Publius"
+		nickname="NICKNAME_SCIPIO_NASICA_SERAPIO"
+		family = c:ROM.fam:Cornelii
+		birth_date=569.8.17
+		father="char:3"		#Publius Cornelius Scipio Nasica Corculum
+		mother="char:5"		#Cornelia Africana Major
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=5
+		add_finesse=4
+		add_zeal=6
+		no_traits=yes
+		add_trait="cruel"
+		add_trait="narrowminded"
+		add_trait="blood_scipio_africanus"
+		add_gold=300
+		add_popularity=50
+		dna="KMoi8rFasVqojKiMAowCjAJ2AnYAOwA7AnYCdgJuAm4CigKKA7ADsAJuAm4DmwObAosCiwJmAmYCaQJpAm0CbQKXApcDpAOkAVsBWwKLAosCewJ7AoECgQJzAnMCmAKYAnkCeQKAAoACjAKMAV0BXQJoAmgCjQKNAnUCdQJ6AnoCZwJnApECkQKYApgChQKFAo8CjwJ3AncCZgJmAogCiAJyAnIClwKXApYClgJmAmYCkQKRAogCiAKFAoUCjgKOAn8CfwJ+An4CiwKLAngCeATWBNYCdgJ2AnMCcwJ6AnoCmQKZAoMCgwIkAiQBFQEVAE8ATwBaAFoA9gD2AJcAlwAPAA8BFQEVAKoAqgECAQIBVAFUAKoAqgB/AH8APAA8AAIAAgErASsALwAvALEAsQDKAMoAggCCAOcA5wB/AH8AQABAAHQAdADxAPEAOAA4AtMC0wAHAAcC2ALYAHoAegCRAJEDHwMfARIBEgFfAV8FAAVOAH8AfwJrAmsBggGCAP4A/gkYCRgBPwFUAFEAugAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Appius Claudius Pulcher, father-in-law and ally of Tiberius Gracchus
+	103={		
+		first_name="Appius"
+		nickname="NICKNAME_PULCHER"
+		family = c:ROM.fam:Claudii
+		birth_date=568.2.22		#186 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=7
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="proud"
+		add_trait="prominent"
+		add_trait="assertive"
+		add_gold=300
+		add_popularity=50
+	}
+	
+	#Antistia, wife of Appius Claudius
+	104={
+		family_name = "Antistia"
+		birth_date=572.5.30		#182 BC
+		marry_character="char:103"			#Appius Claudius
+		female = yes
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=5
+		add_finesse=4
+		add_zeal=5
+		add_gold=100
+	}
+	
+	#Claudia Vestal, elder daughter of Appius Claudius
+	105={
+		nickname="NICKNAME_VESTAL"
+		family = c:ROM.fam:Claudii
+		birth_date=591.4.12		#163 BC
+		father = "char:103"			#Appius Claudius
+		mother = "char:104"			#Antistia
+		female = yes
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=4
+		add_finesse=3
+		add_zeal=6
+		add_trait="devout"
+		add_trait="good_natured"
+	}
+	
+	#Claudia Minor, daughter of Appius, future wife of Tiberius Gracchus
+	106={
+		nickname="NICKNAME_MINOR"
+		family = c:ROM.fam:Claudii
+		birth_date=591.4.12		#161 BC
+		father = "char:103"			#Appius Claudius
+		mother = "char:104"			#Antistia
+		female = yes
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=6
+		add_finesse=2
+		add_zeal=6
+		no_traits=yes
+		add_trait="pious"
+		add_trait="devout"
+		add_trait="loving"
+	}
+	
+	#Appius Claudius Pulcher, son of the same name
+	107={
+		first_name="Appius"
+		nickname="NICKNAME_PULCHER"
+		family = c:ROM.fam:Claudii
+		birth_date=593.1.4		#159 BC
+		father = "char:103"			#Appius Claudius
+		mother = "char:104"			#Antistia
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=6
+		add_zeal=6
+	}
+	
+	#Claudia Tertia, third daughter of Appius
+	108={
+		nickname="NICKNAME_TERTIA"
+		family = c:ROM.fam:Claudii
+		birth_date=595.12.27		#157 BC
+		father = "char:103"			#Appius Claudius
+		mother = "char:104"			#Antistia
+		female = yes
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=1
+		add_charisma=4
+		add_finesse=6
+		add_zeal=5
+	}
+	
+	#Polybius, famed Historian and friend of Scipio Aemilianus
+	109={	
+		first_name="Polybius"
+		family_name = "Lycortid"	#Son of the noble Lycortas
+		birth_date=554.3.20			#200 BC
+		culture="arcadian"			#from Achaean League
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=7
+		add_finesse=9
+		add_zeal=8
+		no_traits=yes
+		add_trait="scholar"
+		add_trait="good_natured"
+		add_trait="hostage_trait"		#is a hostage, cannot hold major offices
+		add_gold=200
+		dna="LeEt4caHxofunu6eAngCeAJtAm0CiQKJAngCeAJtAm0CbAJsAowCjAJ2AnYAGgAaApUClQJ0AnQChwKHAqkCdQKWApYCagJqAmgCaAJqAmoCiAKIAo0CjQKZApkCbwJvAm0CbQKWApYCfwJ/ApECkQJyAnIChgKGApgCmAKLAosCjAKMA60DrQKLAosChAKEAmsCawJ2AnYCdwJ3AmoCagKHAocCjwKPAn0CfQKAAoAClgKWAVwBXAKBAoECiQKJAmcCZwKCAoICfgJ+AngCeAKEAoQCjAKMAo8CjwJxAnEChAKEAn0CfQD8APwArACsAIEAgQCYAJgAKAAoARcBFwDmAOYC6QLpAUsBSwAvAC8BNgE2AMYAxgB/AH8BewF7AsgCyADBAMECrgKuAUABQALBAsEARQBFANUA1QB/AH8BKgEqAT8BPwD7APsBMAEwAFEAUQLMAswAtwC3AFoAWgCzALMA4ADgABAAEANWA1YMVwxXAH8AfwPIA8gFNAXAALsAHAXOBaUCjALWAFEC6wAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Publius Cornelius Scipio Nasica, son of Nasica Serapio
+	110={		
+		first_name="Publius"
+		nickname="NICKNAME_SCIPIO_NASICA_SERAPIO"
+		family = c:ROM.fam:Cornelii
+		birth_date=600.2.13			#154 BC
+		father="char:102"		#Publius Cornelius Scipio Nasica Serapio
+		culture="roman"
+		religion="roman_pantheon"
+		add_trait="blood_scipio_africanus"
+	}
+	
+	#Gnaeus Cornelius Scipio Hispanus, is Tribune of the Treasury - Quaestor
+	111={		
+		first_name="Gnaeus"
+		nickname="NICKNAME_SCIPIO_HISPANUS"
+		family = c:ROM.fam:Cornelii
+		birth_date=574.9.7			#180 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=5
+		add_finesse=6
+		add_zeal=5
+		add_gold=250
+		add_popularity=50
+		give_office=office_tribune_of_the_treasury
+	}
+	
+	#Marcus Claudius Marcellus, three-time consul, last in 152 BC
+	112={		
+		first_name="Marcus"
+		nickname="NICKNAME_MARCELLUS"
+		family = c:ROM.fam:Claudii
+		birth_date=545.1.10			#209 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=8
+		add_finesse=7
+		add_zeal=5
+		no_traits=yes
+		add_trait="prominent"
+		add_trait="founder"
+		add_trait="original_thinker"
+		add_gold=300
+		add_popularity=60
+		dna="SeVJ5ZRvlG/3uve6AnECcQKUApQCfAJ8AoECgQJvAm8CjQKNAnwCfAJ4AngCaQJpAoYChgKMAowCiwKLApMCkwKBAoECbgJuAn0CfQKZApkCggKCA6gDqAJzAnMCawJrAnUCdQKDAoMCkgKSAm4CbgJ3AncDmgOaAoECgQKIAogCjAKMAoECgQJ5AnkBZQFlAooCigJ5AnkCewJ7AnwCfAKYApgCcAJwAngCeAJ4AngCaAJoA64DrgJuAm4CegJ6AnQCdAKIAogCfwJ/ApECkQFbAVsChQKFApMCkwKVApUCewJ7AmcCZwI4AjgAiQCJAWsBawL5AvkBGAEYAVQBVAEpASkCnQKdAHEAcQDhAOEBWAFYADwAPAB/AH8AyADIAAAAAACVAJUAoACgAp8CnwDIAMgBnwGfAO4A7gB/AH8BGQEZANIA0gBKAEoA9wD3ARgBGACCAIIArACsAHcAdwL1AvUBGgEaBPUE9QBIAEgMpgymAH8AfwHjAeMBYAH+AL4AvgkmCbYBAQEBAHcAbgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Salonia, second wife of Cato the Elder
+	113={
+		family_name = "Salonia"
+		birth_date=578.1.4			#176 BC
+		culture="roman"
+		religion="roman_pantheon"
+		marry_character="char:1"	#Cato the Elder
+		female=yes
+		no_stats=yes
+		add_martial=1
+		add_charisma=3
+		add_finesse=2
+		add_zeal=5
+		no_traits=yes
+		add_trait="submissive"
+		add_trait="content"
+		add_gold=100
+	}
+	
+	#Marcus Porcius Cato Salonianus, son of Cato the Elder
+	114={		
+		first_name= "Marcus"
+		nickname= "NICKNAME_CATO_SALONIANUS"
+		family_name= "Porcius"
+		birth_date=600.4.15		#154 BC
+		father="char:1"			#Cato the Elder
+		mother="char:113"			#Salonia
+		culture="roman"
+		religion="roman_pantheon"
+	}
+	
+	#Marcus Claudius Marcellus the Younger, son of man of the same name
+	115={		
+		first_name="Marcus"
+		nickname="NICKNAME_MARCELLUS"
+		family = c:ROM.fam:Claudii
+		birth_date=564.6.22		#188 BC
+		father="char:112"			#Marcus Claudius Marcellus
+		culture="roman"
+		religion="roman_pantheon"
+		add_popularity=35
+	}
+	
+	#Tiberius Claudius Nero, ancestor of 2nd Roman emperor Tiberius
+	116={		
+		first_name="Tiberius"
+		nickname="NICKNAME_NERO"
+		family = c:ROM.fam:Claudii
+		birth_date=574.6.22		#180 BC
+		culture="roman"
+		religion="roman_pantheon"
+		add_popularity=35
+	}
+	
+	
+	#117 is Heliokles (Hades) of Greco-Bactria
+	#118 is Eucratides the Great of Greco-Bactria, current ruler
+	#119 is Plato, brother of Eukratides and later co-regent
+	#120 is Eucratides II, son of Eucratides I
+	#121 is Heliokles II, son of Eucratides I
+	
+	#122 is Menander I, current ruler of Indo-Greek Kingdom, at its greatest extent
+	#123 is Agathokleia Theotropos, wife of Menander I
+	#124 is Zoilos, either ruled after Menander or was a rival king
+	#125 is Lysias, became king after Menander and Zoilos
+	#126 is Antialkidas, Indo-Greek King in Taxila c. 130-120 BC
+	
+	#127 is Leukon II, great grandfather of current ruler (Hades)
+	#128 is Alkathoe, wife of Leukon and mother of Pairisades III (Hades)
+	#129 is Spartakos V, son of Leukon and brother of  Pairisades III (Hades)
+	#130 is Pairisades III (Hades) of the Bosporan Kingdom
+	#131 is Kamasarye II Philoteknos, wife of late king Pairisades III
+	#current ruler of BPK and later are id240 onwards
+	
+	#132 is Skilurus, king of Scythia
+	
+	#133 is Pylaemenes I of Paphlagonia
+	#134 is Pylaemenes II of Paphlagonia
+	
+	#135 is Abdissares of Adiabene
+	#136 is the Fictional Heir of Abdissares of Adiabene
+	
+	#137 is Zariadres of Sophene
+	
+	#138 is Queen Shanakdakhete of Kush
+	#139 is Tanyidamani, heir of Shanakdakhete
+	
+	#140 is Ptolemaios of Commagene
+	#141 is Samos II Theosebes Dikaios of Commagene
+	
+	#142 is Artaxias I (Hades) of Armenia
+	#143 is Artavasdes I, current ruler of Armenia
+	#144 is the fictional/placeholder consort of Artavasdes, and mother of Tigranes I
+	#145 is Tigranes I of Armenia
+	
+	#146 is Mirvan I of Iberia
+	#147 is Saurmag, previous ruler of Pharnavazid dynasty
+	#148 is the daughter of Saurmag and consort of Mirvan I of Iberia
+	
+	
+	#149 is Mattathias Hasmonean (Heaven) of Judea
+	#150 is Judah Maccabeus (Heaven), previous leader who was KIA
+	
+	#151 is Jonathan Appus, CURRENT RULER of Judea and leader of the Maccabee rebellion
+	#152 is Johanan (Heaven), eldest of the Maccabees and KIA
+	#153 is Eleazar Avaran (Heaven), fourth of the Maccabees and KIA
+	
+	#154 is Simon Thassi, the second of the Maccabees and HEIR to Judea
+	#155 is John Hyrcanus, third son and later successor of Simon Thassi
+	#156 is Mattathias, eldest son of Simon Thassi
+	#157 is Judah, eldest son of Simon Thassi
+	
+	#158 is Baga I (Hades) of Mauretania
+	#159 is Baga II, fictional/placeholder current ruler of Mauretania
+	#160 is Bocchus I of Mauretania
+	
+	#Servius Sulpicius Galba, praetor of Hispania who treacherously massacred the Lusitanians
+	196={		
+		first_name="Servius"
+		nickname="NICKNAME_GALBA"
+		family_name= "Sulpicius"
+		birth_date=564.3.2		#190 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=10				#oratory had great power, though was old-fashioned as noted by Cicero
+		add_finesse=2
+		add_zeal=2
+		no_traits=yes
+		add_trait="miserly"
+		add_trait="cruel"
+		add_trait="jealous"
+		add_trait="corrupt"
+		add_gold=200
+		dna="BvQG9J+Hn4fA98D3AoACgAKOAo4CjwKPApUClQJ0AnQCeAJ4AnMCcwAmACYCcQJxAnYCdgJyAnICjwKPA6YDpgOjA6MCdQJ1ApMCkwJ3AncCeAJ4AnsCewJ0AnQCfgJ+AmYCZgJuAm4CggKCAn8CfwJ3AncCgAKAApACkATBBMECbwJvAnkCeQOeA54CdwJ3AVwBXAJtAm0CdgJ2ApYClgKLAosChgKGAmgCaAJvAm8CkAKQApgCmAKHAocCfgJ+A7ADsAKYApgBXgFeAmkCaQJnAmcCiAKIAnUCdQKZApkChQKFApQClAKRApECnAKcARMBEwEbARsAegB6AJcAlwB9AH0BMAEwArMCswD4APgA/wD/ALYAtgB/AH8BGQEZAEoASgCNAI0BaQFpARcBFwACAAIBzwHPAK0ArQB/AH8AfwB/ADYANgLDAsMAWwBbAsACwAN+A34AigCKA3IDcgDNAM0ALwAvAQYBBgAIAAgGvga+AH8AfwEFAQUF1gXWAO4A7gXGBcYCEQIRABkCCQAAAAAAAAAAAAAAAA=="
+	}
+	
+	#197 is new id for Andriscus/Andriskos
+	#198 is Laodice V, queen of Demetrios I Seleukid
+	
+	#199 is Kamnaskires I, satrap of Elymais
+	#200 is Kamnaskires II
+	
+	#201 is Sagdodonacus, father of Hyspaosines of Characene
+	#202 is Hyspaosines, satrap of Characene
+	#203 is Thalassia / Talasi'asu, wife of Hyspaosines
+	
+	#204 is Luernios of the Arverni
+	#205 is Bituitus of the Arverni
+	#206 is Congonnetiacus, son of Bituitus
+	
+	#207 is Herakleides, ambassador and general of Alexandros Balas
+	
+	#208 is Andromachos, governor of Ptolemaic Cyprus
+	#209 is Seleukos Bithysid, future governor of Cyprus
+	#210 is Artemo, wife of Seleukos Bithysid and mother of their child Theodoros
+	#211 is Theodoros, future governor of Cyprus and son of Seleukos and Artemo
+	#212 is Krokos, future governor of Cyprus and strategos autokrator
+	
+	#213 is Hamilcar the Samnite of Carthage
+	#214 is Carthalo of Carthage
+	#215 is Hannibal the Starlight of Carthage, in exile in Numidia
+	
+	#216 is Mithrobouzanes of Sophene
+	#217 is Arkathias of Sophene
+	#218 is Arsakes of Sophene
+	
+	#219 is Aretas I of Nabataea
+	#220 is Aretas II of Nabataea
+	
+	#221 is Phraates II of Parthia
+	#222 is Artabanus I of Parthia
+	#223 is Bagasis of Parthia
+	#224 is Phraates I (Heaven) of Parthia
+	#225 is Arsaces, head of Hyrcania branch and son of Phraates I; is the ruler of Hyrcania tag HYC
+	#226 is Mithridates II of Parthia, son of Artabanus I
+	
+	#227 is female ruler of Sitones
+	#228 is Kleomenes / Cleomenes, satrap of Media
+	
+	#229 is father of Simuka and Kanha
+	#230 is Simuka Satavahana
+	#231 is Kanha Satavahana
+	#232 is Satakarni I Satavahana, current ruler
+	#233 is Satakarni II Satavahana, future ruler
+	
+	#234 is Pudappandiyan of Pandya
+	
+	#235 is Muladeva of Kosala
+	#236 is Mitradeva of Kosala
+	
+	#237 is Nandou Mi, previous ruler of Wusun
+	#238 is Liejiao Mi of Wusun
+	
+	#Lucius Scribonius Libo, tribune in 149 who charged Galba and consecrated Puteal Scribonianum
+	239={		
+		first_name="Servius"
+		nickname="NICKNAME_LIBO"
+		family_name= "Scribonius"
+		birth_date=562.3.2		#192 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=7
+		add_finesse=7
+		add_zeal=7
+		no_traits=yes
+		add_trait="righteous"
+		add_trait="pious"
+		add_gold=50
+		dna="TNBM0L14vXjS/NL8Am4CbgJzAnMChAKEAoICggJtAm0CdQJ1ApkCmQJoAmgBZAFkApQClAJ2AnYAMQAxAmsCawJoAmgCjAKMAmgCaAFSAVICagJqAowCjAKSApIClQKVAnYCdgKUApQCfgJ+AVUBVQKTApMCawJrAnoCegJ/An8CZwJnAmkCaQKCAoICdAJ0ACQAJAJqAmoCaQJpAVUBVQJ/An8CeAJ4An8CfwBHAEcDmQOZApACkAJyAnICjwKPAmkCaQKIAogClgKWApkCmQJ0AnQCdAJ0AoYChgOuA64CfQJ9ApkCmQJdAl0AEwATAJQAlACLAIsBWgFaAvcC9wCNAI0AbQBtAFUAVQDLAMsE2wTbAHsAewB/AH8AzwDPALIAsgAtAC0A7ADsAscCxwEZARkB7gHuAH0AfQB/AH8AYABgAqwCrACzALMAxgDGAMoAygKlAqUAFQAVAzADMADmAOYBVgFWAzADMAKZApkM6gzqAH8AfwKNAo0FuAW4APYA9gUKBQoBAwJFApgCmAAAAAAAAAAAAAAAAA=="
+		give_office = office_plebeian_aedile	#Tribune of the Plebs
+	}
+	
+	#240 is Pairisades IV, current ruler of the Bosporan Kingdom
+	#241 is Pairisades V, younger brother of Pairisades IV of the Bosporan Kingdom
+	#242 is Spartokos VI, probable member of ruling family of the Bosporan Kingdom
+	#243 is Argotes, Scythian prince who married queen mother Kamasarye before 160 BC
+	
+	#244 is Moagetes I, tyrant of Kibyratia
+	#245 is Pancrates, father of Moagetes II
+	#246 is Moagetes II, future and last tyrant of Kibyratia
+	
+	#247 is Jair IV, 43rd High Priest of Samaria / Samaritans
+	#248 is Netaniel II, 44th High Priest of Samaria / Samaritans
+	
+	#249 is Wahab El Yahiz II, previous ruler of Saba
+	#250 is Karabil Watar Yuhan'em I, current Sabaean ruler, ruled 160-145 BC
+	#251 is Anmar Yuha'man II, Son of Wahab El Yahiz II
+	#252 is Yarim Aymin, Became ruler by USURPING the throne from Karabil Watar Yuhan'em I
+	#253 is Alhan Nahfan, Son of Yarim Aymin, became ruler after father
+	#254 is Far'am Yanhab, managed to partially regain the usurped throne from 130-125 BC
+	
+	#255 is Andronikos of Pergamon, diplomat to Rome and supporter of Nicomedes II of Bithynia
+	#256 is Philopoemen, chief minister of Pergamon who Attalos II relied on to govern in his old age
+	
+	#257 is Mauakes, Sakan ruler of the Ionians of Tayuan
+	#258 is fictional Guishuang/Kushana ruler of the Yuezhi
+	
+	#259 is fictional Chola ruler
+	#260 is fictional Chera ruler
+	
+	#261 is the wife of Diaeos of Achaea, who the latter killed in a double-suicide when he lost to Rome
+	
+	#262 is Monunius of Dardania
+	#263 is Etuta, daugther of Mononius, under house arrest in Roman Republic after defeat of her husband Gentius, who would have likely died by now
+	
+	#264 is Athenaios, younger brother of Attalos II
+	#265 is Kallippa, former concubine of Perseus of Macedonia, now married to Athenaios; supported Andriscus
+	
+	#266 is Eirene, mistress of Ptolemy Physcon of Cyrenaica
+	#267 is Ptolemy Apion son of Physcon and Eirene, and last king of Cyrenaica
+	
+	#268 is Speusippos, archon of Athens
+	
+	#269 is Arsacid dynasty branch ruler in Amardia
+	
+	
+	#Manius Manilius, next consul in 149 and an orator of the Scipionic Circle
+	270={		
+		first_name="Manius"
+		family_name= "Manilius"
+		birth_date=552.9.12		#202 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=11
+		add_finesse=9
+		add_zeal=7
+		no_traits=yes
+		add_trait="orator"
+		add_trait="scholar"
+		add_trait="good_natured"
+		add_gold=100
+	}
+	
+	#Lucius Marcius Censorinus, next consul in 149
+	271={		
+		first_name="Lucius"
+		nickname="NICKNAME_CENSORINUS"
+		family_name= "Marcius"
+		birth_date=549.2.1		#205 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=7
+		add_finesse=9
+		add_zeal=8
+		add_gold=100
+	}
+	
+	#Marcus Octavius, was friend of Tiberius Gracchus but continually vetoed his reform attempts due to optimate allegiance
+	272={		
+		first_name="Marcus"
+		family_name= "Octavius"
+		birth_date=584.12.11		#170 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=10
+		add_finesse=10
+		add_zeal=7
+		no_traits=yes
+		add_trait="orator"
+		add_trait="cautious"
+		add_trait="stubborn"
+		add_gold=50
+	}
+	
+	#Gaius Hostilius Mancinus - Defeated by the Numantines so bad that the Romans handed him over to them naked
+	273={		
+		first_name="Gaius"
+		family_name= "Hostilius"
+		nickname="NICKNAME_MANCINUS"
+		birth_date=574.5.2		#180 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=3
+		add_charisma=2
+		add_finesse=6
+		add_zeal=5
+		no_traits=yes
+		add_trait="incapable"
+		add_trait="coward"
+		add_gold=50
+	}
+	
+	#Lucius Furius Philus, part of Scipionic Circle, consul in 135, style of speeches was praised by Cicero
+	274={		
+		first_name="Lucius"
+		family_name= "Furius"
+		nickname="NICKNAME_PHILUS"
+		birth_date=584.5.2		#170 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=9
+		add_charisma=10
+		add_finesse=9
+		add_zeal=7
+		no_traits=yes
+		add_trait="proud"		#Appointed two of his rivals as subordinates just so he could receive praise from them 
+		add_trait="orator"
+		add_gold=100
+	}
+	
+	#Sextus Julius Caesar, in 157 was first Caesar to be a consul, sent in 147 as ambassador to Achaea
+	275={		
+		first_name="Sextus"
+		family_name= "Julius"
+		nickname="NICKNAME_CAESAR"
+		birth_date=554.4.14		#200 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=11
+		add_finesse=9
+		add_zeal=7
+		add_trait="prominent"
+		add_gold=150
+	}
+	
+	#Gaius Julius Caesar, grandfather of the famed dictator
+	276={		
+		first_name="Gaius"
+		family_name= "Julius"
+		nickname="NICKNAME_CAESAR"
+		birth_date=579.7.10		#175 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=9
+		add_finesse=9
+		add_zeal=8
+		add_trait="prominent"
+		add_gold=100
+		dna="a9Zr1sZuxm4AnACcApcClwKLAosCdAJ0Am8CbwKQApAClAKUApACkAKLAosDpwOnAngCeAKMAowCaQJpAm0CbQOfA58ChQKFAmkCaQKVApUDpAOkAnsCewJ5AnkCfwJ/AoYChgKSApICbQJtAo0CjQJ1AnUCfgJ+AmwCbAFfAV8CegJ6AoQChAFlAWUCdgJ2AmwCbAKOAo4EdgTMAoECgQJ0AnQCdQJ1ApACkAJ9An0DpQOlAnsCewJ7AnsCawJrAoMCgwKGAoYCcgJyAngCeAKBAoECegJ6AnACcAFmAWYBXwFfAm0CbQL/Av8A9wD3AXgBeAFBAUEAHwAfAPEA8QEcARwBLgEuARgBGAD2APYBKwErAUABQAB/AH8AgQCBAAMAAwLkAuQCgAKAAIwAjAFKAUoB6QHpANwA3AB/AH8AWgBaAEAAQABjAGMBKAEoARsBGwDrAOsCgAKAABYAFgDqAOoClQKVALsAuwDFAMUEXQCpAH8AfwRuBK0BRAHxAEMA1wmJCYkB/wG0AF0AdAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Titus Manlius Torquatus, well respected and ordered his own son's suicide when his son was found of corruption
+	277={		
+		first_name="Titus"
+		family_name= "Manlius"
+		nickname="NICKNAME_TORQUATUS"
+		birth_date=546.5.5		#208 BC, died after 133 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=10
+		add_finesse=10
+		add_zeal=10
+		no_traits=yes
+		add_trait="cold"
+		add_trait="self_controlled"
+		add_trait="proud"
+		add_gold=150
+	}
+	
+	#son of father of same name, forced to commit suicide by father when found guilty of corruption
+	278={		
+		first_name="Titus"
+		family_name= "Manlius"
+		nickname="NICKNAME_TORQUATUS"
+		birth_date=579.2.15		#175 BC, died after 133 BC
+		father="char:277"
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=6
+		add_finesse=4
+		add_zeal=5
+		no_traits=yes
+		add_trait="corrupt"
+		add_trait="gluttonous"
+		add_gold=100
+	}
+	
+	#Marcus Livius Drusus, second son of Gaius Livius Drusus; defeated Scordisci during campaigns in Thrace as a consul
+	279={		
+		first_name="Marcus"
+		family_name= "Livius"
+		nickname="NICKNAME_DRUSUS"
+		birth_date=599.2.15		#155 BC
+		father="char:17"
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=8
+		add_charisma=8
+		add_finesse=7
+		add_zeal=7
+	}
+	
+	#Marcia, wife of dictator Caesar's grandfather
+	280={		
+		family_name= "Marcia"
+		birth_date=584.7.10		#170 BC
+		female=yes
+		marry_character="char:276"
+		culture="roman"
+		religion="roman_pantheon"
+		dna="cd1x3aZvpm/jieOJAo8CjwJ6AnoCgQKBApUClQJ3AncClgKWApYClgKWApYBVgFWAo4CjgKGAoYCdgJ2ApECkQJ7AnsCagJqAnwCfAKSApICjAKMAogCiAJ9An0CjgKOAngCeAFdAV0CfQJ9AosCiwJqAmoCjgKOAo8CjwKCAoICZwJnApQClAKHAocCeQJ5A6YDpgKDAoMCkgKSAmsCawFTAVMClgKWAmsCawJsAmwCeQJ5AnkCeQKBAoEBWwFbAnICcgKFAoUCkQKRApACkAFfAV8CcgJyAokCiQOZA5kCbgJuAnoCegFsAWwACQAJAP8A/wAJAAkAzADMAHgAeAFbAVsAlQCVAVwBXAEwATABIgEiAPYA9gB/AH8BUQFRAsYCxgD7APsCpQKlAuEC4QLhAuEA2gDaAqYCpgB/AH8AxQDFAC4ALgKHAocCgQKBApkCmQEfAR8AbgBuAxcDFwAnACcDSwNLAVoBWgA5ADkDYwNjAIUAfwKUApQBagFqAHoAcQkUCRQB7wHEAP0AawAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Decimus Junius Brutus, consul who conquered Gallaeci (later earned cognomen Callaicus for defeating Gallaeci)
+	281={		
+		first_name="Decimus"
+		family_name= "Junius"
+		nickname="NICKNAME_BRUTUS"
+		birth_date=574.5.5		#180 BC, died after 133 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=10
+		add_charisma=6
+		add_finesse=10
+		add_zeal=8
+		no_traits=yes
+		add_trait="self_controlled"
+		add_trait="founder"		#founded cities and buildings
+		add_trait="prominent"
+		add_gold=100
+	}
+	
+	#Quintus Servilius Caepio, later consul who bribed Viriathus' followers to kill him
+	282={		
+		first_name="Quintus"
+		family_name= "Servilius"
+		nickname="NICKNAME_CAEPIO"
+		birth_date=571.8.2		#183 BC
+		culture="roman"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=9
+		add_finesse=5
+		add_zeal=6
+		no_traits=yes
+		add_trait="harsh"
+		add_trait="silver_tongued"
+		add_gold=100
+	}
+	
+	
+}
+	

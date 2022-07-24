@@ -1,0 +1,37 @@
+﻿namespace = cde_flavor_rom
+
+#Decline of the Republic
+cde_flavor_rom.1 = {
+	type = country_event
+	title = "cde_flavor_rom.1.t"
+	desc = "cde_flavor_rom.1.desc"
+	picture = great_work_writing
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		OR = {
+			government = dictatorship
+			AND = {
+				tyranny >= 40
+				OR = {
+					government = oligarchic_republic
+					government = aristocratic_republic
+					government = plutocratic_republic
+					government = theocratic_republic
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		set_country_heritage = decline_of_roman_republic_heritage
+	}
+	
+	option = {
+		name = cde_flavor_rom.1.a
+		
+		add_stability = -5
+	}
+}

@@ -1,0 +1,146 @@
+﻿"NUM"={
+	country="NUM"
+	6={
+		first_name = "Masinissa"
+		family = c:NUM.fam:Madghid
+		birth_date=516.9.9
+		culture="massylian"
+		religion="berber_religion"
+		no_stats=yes
+		add_martial=11
+		add_charisma=9
+		add_finesse=12
+		add_zeal=5
+		no_traits=yes
+		add_trait="founder"
+		add_trait="ambitious"
+		add_trait="blood_of_masinissa"	#new bloodline
+		add_gold=400
+		add_popularity=90
+		c:NUM = {
+			set_as_ruler=char:6
+		}
+		dna="B/gH+HuVe5X9rf2tAosCiwKOAo4CiAKIAnYCdgKPAo8BUwFTAnACcAKZApkClQKVAosCiwJuAm4CgwKDA6oDqgGVAZUCfwJ/A7IDsgJ2AnYCPgI+A9QD1AOeA54ANQA1BM4EzgGpAakChgKGAnUCdQJqAmoCkgKSAnECcQKGAoYBYgFiAoYChgKBAoECfQJ9AnsCewKDAoMAOAA4ArACsAKAAoAChwKHAn8CfwJ0AnQCgAKAAn0CfQLGAsYCtQK1AmcCZwKAAoACggKCAm0CbQKjAqMCjgKOADwAPAKVApUCcQJxAVgBWAFTAVMAMAAwAB4AHgKSApIBZwFnAL0AvQC5ALkAegB6AKwArAClAKUC9wL3ALMAswB/AH8A7QDtAQMBAwLRAtEAKQApAUEBQQEuAS4DWANYAUMBQwB/AH8BKQEpAIAAgADjAOMAfgB+AtAC0ADTANMAgACAA24DbgBfAF8BPgE+AtwC3AMyAzICvQK9AH8AfwXTBdMERg/AAUQBRAnUBvIDbAiFAxUMyAAAAAAAAAAAAAAAAA=="
+	}
+	
+	7={
+		first_name = "Micipsa"
+		family = c:NUM.fam:Madghid
+		birth_date=556.9.9
+		culture="massylian"
+		religion="berber_religion"
+		father="char:6"
+		no_stats=yes
+		add_martial=8
+		add_charisma=9
+		add_finesse=8
+		add_zeal=6
+		add_trait="blood_of_masinissa"	#new bloodline
+		add_gold=200
+		add_popularity=60
+		dna="B/gH+HuVe5X9rf2tAosCiwKOAo4CiAKIAHYCdgKPAo8BUwFTAnACcAKZApkClQKVAosCiwJuAm4CgwKDA6oDqgGVAZUCfwJ/A7IDsgJ2AnYCPgI+A9QD1AOeA54ATwA1BJwEzgGpAakChgKGAnUCdQJqAmoCkgKSAnECcQKGAoYBYgFiAoYChgKBAoECfQJ9AnsCewKDAoMAOAA4ArACsAKAAoAChwKHAn8CfwJ0AnQCgAKAAn0CfQLGAsYCtQK1AmcCZwKAAoACggKCAm0CbQJ5AqMCjgKOAHQAPAKVApUCcQJxAVgBWAFTAVMAMAAwAB4AHgKSApIBZwFnAL0AvQC5ALkAegB6AKwArAClAKUC9wL3ALMAswB/AH8A7QDtAQMBAwLRAtEAKQApAUEBQQEuAS4DWANYAUMBQwB/AH8BKQEpAIAAgADjAOMAfgB+AtAC0ADTANMAfgCAA24DbgBfAF8BPgE+ASQC3AJSAzIFUAK9AH8AfwXTBdMFUQ/AAZABRAnUBvIDNgiFAxUMyAAAAAAAAAAAAAAAAA=="
+	}
+	
+	8={
+		first_name = "Gulussa"
+		family = c:NUM.fam:Madghid
+		birth_date=557.9.9
+		culture="massylian"
+		religion="berber_religion"
+		father="char:6"
+		no_stats=yes
+		add_martial=10			#achieved success during Third Punic War even when Rome struggled
+		add_charisma=6
+		add_finesse=5
+		add_zeal=6
+		add_trait="blood_of_masinissa"	#new bloodline
+		add_gold=200
+		add_popularity=60
+		dna="E/oT+lOUU5Tf/t/+AoICggKQApAAVwAoArICiAOgA6ACaQJpA5oDmgJtAm0ClgKWApICkgTCBMICfAJ8AnYCdgKgAqACcgJyAn4CfgKUApQCSgJKAsgCyAJ1AnUCZgJmAnkCeQK2ArYCfwJ/AC0ALQFkAWQBZQFlAnwCfAJ+An4CaQJpAmgCaAKBAoECcQJxAnMCcwKBAoEChAKEA7QDtAKOAo4DngOeAoMCgwJ9An0CcAJwApgCmAK+Ar4CvwK/AmgCaAKYAmsCmQKZAo4CjgKiAqIClgKWAWIBYgKCAoICbgJuAosCiwFRAVECYgFVAOYA5gEiASIApQClAWABYADAAMAAsQCxAHcAdwElASUCSQJJAGkAaQB/AH8C6ALoAUQBRACHAIcAQwBDABcAFwC8ALwBQQFBAO4A7gB/AH8AzwDPAQ4BDgCWAJYAcgByAWQBZAKiAqIBAgECAMEAwQBLAEsBbwFvAFoAWgNUA1QFhQKuAH8AfwVlBWUDuw/RAfAB8AXFBrkILQixA2MMKgAAAAAAAAAAAAAAAA=="
+	}
+	
+	9={
+		first_name = "Mastanabal"
+		family = c:NUM.fam:Madghid
+		birth_date=559.9.9
+		culture="massylian"
+		religion="berber_religion"
+		father="char:6"
+		no_stats=yes
+		add_martial=7
+		add_charisma=4
+		add_finesse=5
+		add_zeal=5
+		add_trait="blood_of_masinissa"	#new bloodline
+		add_trait="lustful"				#had illegitimate son Jugurtha
+		add_gold=200
+		add_popularity=60
+		dna="CesJ61yYXJi54LngAoUChQKPAo8CdQJ1AngCeAKPAo8BZQFlAoYChgOdA50CfAJ8ApkCmQKKAooCdwJ3AoMCgwGOAY4CHwKPAnoCegFfAV8CTAJMAq4CrgJpAmkBUwFTAoECgQLEAsQCkQKRAooCigJ5AnkClgKWAnMCcwJsAmwCdgJ2Am4CbgKXApcCigKKAnsCewJsAmwCngKCA8UDxQFcAVwCbQJtAnkCeQJ8AnwCfgJ+Ao8CjwKyArICvQK9ApcClwJ5AnkCcQJxApkCmQKQApACkwKTAn0CfQJ/An8CjgKOApcClwJVAlUBNAE0AWwBbAATABMBbgFuADMAMwFZAVkBLgEuAREBEQEdAR0A/QD9APUA9QB/AH8BPAE8AU4BTgF8AXwAFwAXAPcA9AAyADICVwJXAQABAAB/AH8CtwK3AL0AvQLRAtEAmgCaABAAEALSAtIBCQEJAxcDFwCwALADTANMAvAC8ABgAGAEXgReAH8AfwUeBR4PWw8RAbQBtAXIBqoIHQgdDDIMQwAAAAAAAAAAAAAAAA=="
+	}
+	
+	10={
+		first_name = "Adherbal"
+		family = c:NUM.fam:Madghid
+		birth_date=602.11.23		#considerably younger than Jugurtha
+		culture="massylian"
+		religion="berber_religion"
+		father="char:7"
+		no_stats=yes
+		add_martial=6
+		add_charisma=6
+		add_finesse=7
+		add_zeal=5
+		no_traits=yes
+		add_trait="cautious"
+		add_trait="honest"
+		add_trait="blood_of_masinissa"	#new bloodline
+		add_gold=200
+		add_popularity=60
+		dna="BvsG+6iYqJj40fjRApACkAJnAmcCjgKOAmoCagJ6AnoASwBLAooCigKNAo0CfAJ8AogCiAKOAo4DqwOrAnECcQKhAqECjgKOApUClQJwAnACQAJAAq8CrwJtAm0CbgJuAmgCaAK5ArkCcQJxApQClAJvAm8CaAJoAmYCZgKGAoYCbgJuAWUBZQKEAoQCgQKBAnoCegKZApkDoAOgBOEE4QJ2AnYCbAJsApICkgKHAocCdgJ2ApUClQLFAsUCtwK3AnUCdQKZApkCkAKQBIUEhQKMAowDowOjADkAOQAjACMCfgJ+AngCeALPAs8BRAFEANUA1QKDAoMAUQBRACAAIAFkAWQAGQAZAWIBYgEsASwAlACUAOAA4AB/AH8AzADMAKIAogCgAKABDwEPApwCnACJAIkD9QP1AOYA5gB/AH8AXQBdAocChwA1ADUAWQBZAr0CvQE7ATsCJgImBNkE2QA4ADgC5wLnAxQDFAAyADIHoAegAH8AfwUvBS8PVg8MATIBGAXNBhoIAAipA5wMBAAAAAAAAAAAAAAAAA=="
+	}
+	
+	11={
+		first_name = "Hiempsal"
+		family = c:NUM.fam:Madghid
+		birth_date=603.4.19		#considerably younger than Jugurtha
+		culture="massylian"
+		religion="berber_religion"
+		father="char:7"
+		no_stats=yes
+		add_martial=5
+		add_charisma=6
+		add_finesse=5
+		add_zeal=5
+		no_traits=yes
+		add_trait="reckless"
+		add_trait="proud"
+		add_trait="blood_of_masinissa"	#new bloodline
+		add_gold=200
+		add_popularity=60
+		dna="E/cT95eQl5DihOKEAoQChAJ3AncCZwJnAmYCZgJ7AnsBTgFOAooCigOqA6oClwKXAnUCdQKUApQCbgJuApICkgKIAqYCjAKMAmYCZgJ9An0DZgNmAqECoQKMAowENgTJAncCiAPYA9gCaQJpAogCiAKOAo4CiQKJAmsCawJ3AncCkQKRAngCeAKHAocCjgKOApECkQKAAoACjwKPA8EDwQKUApQCgAKAApMCkwJwAnACmAKYAnwCfAK5ArkCzALMAmcCZwJwAnAChQKFA6EDoQPFA8UCZgJmAmYCZgJqAmoE0gTSAngCeALsAuwAlgCWAEAAQADjAOMAjwCPAVcBVwCPAI8APgA+AGIAYgATABMAyQDJARcBFwB/AH8AowCjAscCxwCeAJ4ACAAIANEA0QEXARcCvgK+ARkBGQB/AH8A1wDXAXwBfAFrAWsA0wDTAUUBRQA0ADQARgBGBIQEhAFCAUIC1gLWAUEBQQD5APkBVgzWAH8AfwX1BfUPPQ8UAf8BwQb/BrQIAAiuA3UMRwAAAAAAAAAAAAAAAA=="
+	}
+	
+	12={
+		first_name = "Jugurtha"
+		family = c:NUM.fam:Madghid
+		birth_date=594.4.19		#historically born around 160 BC
+		culture="massylian"
+		religion="berber_religion"
+		father="char:9"
+		no_stats=yes
+		add_martial=12
+		add_charisma=12
+		add_finesse=7
+		add_zeal=4
+		no_traits=yes
+		add_trait="ambitious"
+		add_trait="crafty"
+		add_trait="prominent"
+		add_trait="blood_of_masinissa"	#new bloodline
+		add_gold=200
+		add_popularity=60
+		dna="EOgQ6LKVspXjhuOGAnYCdgKXApcCaQJpBMkEyQOqA6oCbgJuAnkCeQKWApYCgwKDAn0CfQKVApUClAKUAmYCZgJfA7YCgAKAAn0CfQJ8AnwCSgJKApwCnAJuAoMCSAKDAnECkALKAsoANQA1ApICkgJtAm0CaQOeA4YDhgOkA6QCaAJoAnoCegKEAoQCgAKAAmkCaQJ1AnUCpAKTApsCmwJxA6UCcgKNAnECcQKlAm4CLQJ0ApACkAKhArUCnALLAooCigJ2AnYCTwJzAncCdwJ/An8CjAKMAngCeAKBAoECmQKZBMAEwAJuAnIAcABwAMcAxwCuAK4BcwFzARcBFwB6AHoA0wDTAD8APwAKAAoAZABkAvQC9AB/AH8AlACUAHYAdgFsAMkAxgDGAFMAUwEZARkBvgG+AAUABQB/AH8BbQFtAJ8AnwBwAHAC8ALwAWMBYwCvAK8CLwIvAz8DPwKWApYBAgECAssCywBSAFIHawqkAH8AfwQjBVoFXw9IAP8B+AYABikCjAjwAwAMaAAAAAAAAAAAAAAAAA=="
+	}
+	
+	
+}

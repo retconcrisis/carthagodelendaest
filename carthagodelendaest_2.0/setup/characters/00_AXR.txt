@@ -1,0 +1,52 @@
+﻿"AXR"={
+	country="AXR"
+	
+	#Alexandros Balas (now in EGY), claimed to be son of Antiochos IV and usurped Demetrios I
+	32={		
+		first_name="Alexandros"
+		family = c:SEL.fam:Seleukid
+		birth_date=571.7.8		#183 BC
+		father="char:28"
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=7
+		add_finesse=2
+		add_zeal=6
+		no_traits=yes
+		add_trait="seleucids"
+		add_trait="ambitious"
+		add_trait="crafty"
+		add_gold=150
+		save_scope_as = alexandros_balas
+		add_popularity=70
+		c:AXR = {
+			set_as_ruler=char:32
+		}
+		dna="XrcC+cJ9wn3czNzMApUClQJ6AnoCigKKAn4CfgJtAm0ClwKXApACkAKMAowCaAJoAmYCZgKWApYCjQKNAowCjAJvAm8CUAKVAn8CfwJ2AnYCcQJxAnsCewKHAncDdwOoAoUChQKGAoYDngOeA6wDrAJ1AnUBXQFdAnMCcwJ5AnkCfwJ/AnQCdAKHAocBXAFcA64DrgKRApECiAJ2AnUCdQKKAooCZgJmAoYChgKHAocChQKFAowCjAJqAmoCiQKJA5sDmwKQApACagJqAn0CfQJ/An8ChAKEAoYChgJnAmcCbwJvAncCdwItAi0AlwCXASYBJgExATEAWABYAtIC0gFeAV4CwALAASABIACxALEBSQFJAv8C/wB/AH8AVgBWAC8ALwFVAVUA9QD1ArwCvAEVARUAqACoAR0BHQB/AH8BQgFCASkBKQKEAoQCnAKcALEAsQKUApQAzgDOAMgAyAL1AvUCqgKqAMgAyAFcAVwGWgZaAH8AfwKsAqwF/wWeABcAFwUFBckCMQIUAgACUAAAAAAAAAAAAAAAAA=="
+	}
+
+	#Herakleides, brother of Timarchus who won Rome's support for Alexandros to avenge his brother
+	207={		
+		first_name="Herakleides"
+		family_name = "Herakleidid"
+		birth_date=554.7.12		#200 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=9
+		add_finesse=8
+		add_zeal=5
+		no_traits=yes
+		add_trait="silver_tongued"
+		add_trait="vengeful"
+		add_gold=100
+		add_popularity=20
+		dna="I+Uj5Y93j3cQhxCHAn0CfQKTApMCjQKNAoICggKPAo8CcwJzAooCigJ6AnoEvAS8AosCiwKXApcBYAFgAm8CbwJqAmoCdgJ2AnUCdQJqAmoClgKWAnECcQJ4AngCRgJ7AqACewJ0AnQCbQJtAnYCdgKZApkChAKEAn8CfwJpAmkCcAJwAmgCaAKRApECkQKRA7EDsQKOAo4CFgJ5AnoCegKeAoMChAKEAnQCdAJwAnACagJqAmYCZgKJAokCaAJoAnkCeQJrAmsCkgKSAngCeAJ8AnwExQTFAmkCaQJvAm8CgQKBA5oDmgI9Aj0APgA+AIAAgAFuAW4AGAAYAv4C/gDeAN4AZQBlAI8AjwChAKEAFQAVAIAAgAB/AH8CtQK1An8CfwLCAsIBRAFEApkCmQApACkDUANQASMBIwB/AH8AVABUANIA0gCJAIkBfwF/AVkBWQE0ATQBGwEbA0QDRAAAAAAAdgB2AD0APQNHA0cHogeiAH8AfwKTApMFxQVoAP0A/QWHBYctAgIqAqkCqQAAAAAAAAAAAAAAAA=="
+	}
+
+
+	
+}

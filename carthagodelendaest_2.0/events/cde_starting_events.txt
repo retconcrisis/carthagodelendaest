@@ -1,0 +1,203 @@
+﻿namespace = cde_starting_events
+
+# ROM Rome starting event
+cde_starting_events.1 = {
+	type = country_event
+	title = "cde_starting_events.1.t"
+	desc = "cde_starting_events.1.desc"
+	
+	picture = oration
+	
+	left_portrait = current_ruler
+	left_portrait = current_co_ruler
+	right_portrait = c:CAR.current_ruler
+	right_portrait = char:197	#Andriskos
+	
+	fire_only_once = yes
+	
+	immediate = {
+		#Governor assignments
+		hidden_effect = {
+		
+			p:1029 = {		#Sagantum
+				set_as_governor = char:196		#Galba
+			}
+			
+			p:1278 = {		#Portus Magnus
+				set_as_governor = char:15		#Lucius Mummius
+			}
+			
+			c:SUN = {
+				p:4470 = {		#Vidisha
+					set_as_governor = char:168		#Agnimitra Shunga
+				}
+			}
+			
+			c:EGY = {
+				p:331 = {		#Salamis in Cyprus
+					set_as_governor = char:208		#Andromachos
+				}
+			}
+			
+			c:PAR = {
+				p:4991 = {		#Rey in Media
+					set_as_governor = char:223		#Bagasis
+				}
+			}
+			
+		}
+	}
+	
+	option = {
+		name = "cde_starting_events.1.a"
+		
+	}
+}
+
+# MAC Macedonian client republics starting event
+cde_starting_events.2 = {
+	type = country_event
+	title = "cde_starting_events.2.t"
+	desc = "cde_starting_events.2.desc"
+	
+	picture = great_city
+	
+	left_portrait = c:ROM.current_ruler
+	right_portrait = char:197			#Andriscus/Andriskos
+	right_portrait = c:TRE.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "cde_starting_events.2.a"
+		
+	}
+}
+
+# IGR Indo-Greeks
+cde_starting_events.3 = {
+	type = country_event
+	title = "cde_starting_events.3.t"
+	desc = "cde_starting_events.3.desc"
+	
+	picture = throneroom
+	
+	left_portrait = c:IGR.current_ruler
+	right_portrait = c:BAC.current_ruler
+	right_portrait = c:SUN.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "cde_starting_events.3.a"
+		
+	}
+}
+
+# BAC Bactria
+cde_starting_events.4 = {
+	type = country_event
+	title = "cde_starting_events.4.t"
+	desc = "cde_starting_events.4.desc"
+	
+	picture = throneroom
+	
+	left_portrait = c:BAC.current_ruler
+	right_portrait = c:IGR.current_ruler
+	right_portrait = c:PAR.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "cde_starting_events.4.a"
+		
+	}
+}
+
+# CAR Carthage
+cde_starting_events.5 = {
+	type = country_event
+	title = "cde_starting_events.5.t"
+	desc = "cde_starting_events.5.desc"
+	
+	picture = cde_event_carthage_levy
+	
+	left_portrait = c:CAR.current_ruler
+	left_portrait = c:CAR.current_co_ruler
+	right_portrait = c:ROM.current_ruler
+	right_portrait = c:NUM.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "cde_starting_events.5.a"
+		
+		custom_tooltip = cde_starting_events.5.tt
+	}
+}
+
+# NUM Numidia
+cde_starting_events.6 = {
+	type = country_event
+	title = "cde_starting_events.6.t"
+	desc = "cde_starting_events.6.desc"
+	
+	picture = throneroom
+	
+	left_portrait = c:NUM.current_ruler
+	left_portrait = c:ROM.current_ruler
+	right_portrait = c:CAR.current_ruler
+	right_portrait = c:CAR.current_co_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "cde_starting_events.6.a"
+		
+		custom_tooltip = cde_starting_events.6.tt
+	}
+}
+
+# PAR Parthia
+cde_starting_events.7 = {
+	type = country_event
+	title = "cde_starting_events.7.t"
+	desc = "cde_starting_events.7.desc"
+	
+	picture = throneroom
+	
+	left_portrait = c:PAR.current_ruler
+	left_portrait = c:AMD.current_ruler
+	left_portrait = c:HYC.current_ruler
+	right_portrait = c:SEL.current_ruler
+	right_portrait = c:BAC.current_ruler
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "cde_starting_events.7.a"
+	}
+}
+
+# JUD Judea
+cde_starting_events.8 = {
+	type = country_event
+	title = "cde_starting_events.8.t"
+	desc = "cde_starting_events.8.desc"
+	
+	picture = throneroom
+	
+	left_portrait = char:151		#Jonathan, current ruler
+	left_portrait = char:154		#Simon
+	left_portrait = char:152		#Johanan, heaven
+	right_portrait = char:149		#Mattathias, heaven
+	right_portrait = char:150		#Judah Maccabee, heaven
+	right_portrait = char:153		#Eleazar, heaven
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "cde_starting_events.8.a"
+	}
+}
+

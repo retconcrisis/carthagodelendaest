@@ -1,0 +1,92 @@
+﻿"BIT"={
+	country="BIT"
+	
+	#Prusias II, King of Bithynia
+	81={
+		first_name="Prusias"
+		family = c:BIT.fam:Zipoeteid
+		birth_date=534.1.20		#220 BC
+		culture="bithynian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=6
+		add_finesse=5
+		add_zeal=4
+		no_traits=yes
+		add_trait="reckless"
+		add_trait="benefactor"
+		add_gold=500
+		add_popularity=50
+		c:BIT = {
+			set_as_ruler=char:81
+		}
+		dna="UUdJOMqHxnvUf9R/AoUChQJzAnMCfAJ8An0CfQKYApgCigKKAnACcAKSApICigKKAWQBZAKRApECfwJ/An0CfQOaA5oCZwJnAooCigJtAm0CcwJzAo4CjgThBOECbQJtAoMCgwKWApYCbQJtApQClAKYApgClgKWAogCiAOvA68AGwAbA6wDrAKQApACjgKOAm4CbgJ5AnkCbwJvAm4CbgJ1AnUCcgJyAooCigKFAoUChQKFAmgCaAJpAmkCagJqApgCmAKAAoACdAJ0ApUClQJoAmgCdAJ0AnsCewOnA6cCdAJ0Am0CbQTKBEEBbAFsAX4BfgEqASoAEgASAvUC9QCpAKkAkQCRAIAAgAD7APsCjwKPARUBFQB/AH8AJwAnASwBLAE2ATYADgAOAP0A/QDjAOMCMAIwAEEAQQB/AH8ARABEARgBGAFzAXMAbwBvAJ4AngDQANACwgLCAJEAkQByAHIApQClAXsBewMrAysIXgheAH8AfwCLAIsFYgViANUA1QUHBQcCcAJwAgACZgAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Apame IV Antigonid, daughter of Philip V of Macedon
+	84={		
+		first_name="Apame"
+		nickname="NICKNAME_IV"
+		family_name = "Antigonid"
+		birth_date=544.8.19		#210 BC
+		father="char:82"			#Philip V
+		marry_character="char:81"
+		female = yes
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=2
+		add_charisma=6
+		add_finesse=4
+		add_zeal=6
+		no_traits=yes
+		add_trait="antigonids"
+		add_trait="trusting"
+		add_gold=300
+		add_popularity=50
+		dna="YoAY6J9/n39Nd013ApMCkwAcABwCdQJ1AmkCaQJ/An8CdQJ1ApkCmQJyAnIBYAFgApYClgJ3AncChwKHApACkAJwAnACeQJ5AmkCaQKDAoMChAKEAngCeAJnAmcCawJrAnsCewS1BLUCZwJnACAAIAKYApgCkAKQApkCmQKVApUChQKFAoMCgwJrAmsCbQJtApkCmQJ4AngCbAJsAoICggJ2AnYCdgJ2ApkCmQJ8AnwCfwJ/AnECcQJ2AnYCkAKQAnUCdQKWApYCiAKIAm8CbwKMAowCaAJoA6YDpgKDAoMCjQKNAnQCdAI7AjsBWQFZAEYARgC1ALUBVwFXALoAugEWARYAVQBVAXwBfADmAOYBQAFAAUABQAB/AH8ADQANASwBLADbANsBXwFfAGcAZwFBAUECrgKuAOIA4gB/AH8A+gD6AJgAmAFaAVoAywDLAToBOgN1A3UBJAEkA3wDfAD3APcCwwLDAJoAmgN9A30G3QjdAH8AfwI6AjoF0wXTANkA2QVHBUcC/wK3Am8CbwAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Nicomedes II, highly popular son of Prusias II, so much so his father tried to assassinate him
+	85={		
+		first_name="Nikomedes"
+		family = c:BIT.fam:Zipoeteid
+		father="char:81"			#Prusias II
+		mother="char:84"			#Apame IV
+		birth_date=577.4.16		#177 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=7
+		add_charisma=14			#Gained favor from the Roman Senate
+		add_finesse=6
+		add_zeal=4
+		no_traits=yes
+		add_trait="antigonids"		#Has Antigonid bloodline from mother
+		add_trait="prominent"
+		add_trait="ambitious"
+		add_gold=300
+		add_popularity=95		#He was so popular with the people that his father sent him to Rome to limit his influence
+		dna="o76jvpF4kXjWrNasApYClgJ/An8CcgJyAowCjAKZApkCcwJzAnsCewKDAoMBXwFfACoAKgJnAmcCdAJ0AnUCdQJ7AnsCkAKQA5oDmgS5BLkCcQJxAowCjAJzAnMCiQKJAoMCgwJ1AnUCZgJmAnUCdQJrAmsCmAKYAoUChQJ6AnoCeQJ5AnYCdgKYApgCfwJ/AooCigKWApYCfQJ9ApACkAJxAnECagJqAn4CfgJuAm4CegJ6AoYChgJnAmcCbgJuApQClAJ6AnoCgQKBA6kDqQFNAU0DowOjAoQChAKQApACaQJpAV8BXwBuANkAdAB0AEQARAAgACABEwETAEQARACeAJ4BGgEaAVMBUwKJAokBbwFvAXEBcQB/AH8AygDKADgAOALMAswACQAJAFUAVQFiAWIALAAsAX0BfQB/AH8AVQBVAE8ATwC7ALsAPQA9AKcApwDuAO4AaQBpATABMAAMAAwDRANEAVkBWQB0AHQJWwnlAH8AfwHpAekFcQVxAL0AvQV2BXYCDAJYAkACQAAAAAAAAAAAAAAAAA=="
+	}
+	
+	#Unnamed Child of Prusias II from his second wife, who Prusias' wanted to succeed him
+	86={
+		first_name="Prusias"
+		family = c:BIT.fam:Zipoeteid
+		father="char:81"			#Prusias II, but NOT son of Apame
+		birth_date=590.3.9		#164 BC
+		culture="macedonian"
+		religion="roman_pantheon"
+		no_stats=yes
+		add_martial=5
+		add_charisma=7
+		add_finesse=5
+		add_zeal=5
+		add_gold=200
+		add_popularity=30
+		dna="Ut9S38xzzHMCeAJ4AoQChAJqAmoCiQKJAnQCdAKEAoQChQKFAmoCagJ3AncChQKFApgCmAKVApUCewJ7AU4BTgOlA6UCkAKQAnQCdAJ5AnkCbAJsApkCmQJ1AnUCcwJzAm4CbgFiAWICjgKOAmoCagOaA5oCcQJxAm4CbgJ1AnUCfAJ8ApECkQKCAoIClwKXAVkBWQS7BLsCcgKPAoQChAKXApcBTwFPApECkQKQApACiAKIAnMCcwJ2AnYDrgOuApgCmAKHAocClQKVAn8CfwKQApACkQKRAnYCdgFVAVUDrgOuBMoEygLGAsYBRwFHAPkA+QA5ADkC5wLnAFwAXAF9AX0C/wL/AQkBCQE+AT4E7QTtABcAFwB/AH8A3QDdAuMC4wA2ADYAnQCdADQANAKhAqEBRAFEAGoAagB/AH8BdgF2AIMAgwE9AT0CvQK9AKIAogT5BPkASABIA00DTQK0ArQAOwA7Ay0DLQA/AD8IXAhcAH8AfwRVBFUFwwVVAOwA7AVCBUICzwLPAvsC+wAAAAAAAAAAAAAAAA=="
+	}
+	
+}

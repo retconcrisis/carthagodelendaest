@@ -1,0 +1,9 @@
+﻿
+pax_romana_modifier = {
+	global_unrest = -1
+	stability_cost_modifier = -0.1
+	monthly_tyranny = -0.1
+	happiness_for_wrong_culture_modifier = 0.1
+	army_maintenance_cost = 0.2
+	war_exhaustion = 0.15
+}

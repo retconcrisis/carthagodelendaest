@@ -1,0 +1,38 @@
+﻿"WUS"={
+	country="WUS"
+	
+	#Nandou Mi, father of Liejiao who was ruler before killed by Yuezhi
+	237={
+		first_name = "Nandou"
+		family = c:WUS.fam:Mi
+		birth_date=539.12.5		#215 BC
+		death_date=581.6.20		#173 BC
+		culture="wusun"
+		religion="eastern_animism"
+	}
+	
+	#Liejiao Mi, famed ruler of the Wusun
+	238={
+		first_name = "Liejiao"
+		family = c:WUS.fam:Mi
+		birth_date=581.3.15		#173 BC
+		father=char:237
+		culture="wusun"
+		religion="eastern_animism"
+		no_stats=yes
+		add_martial=15		#defeated Yuezhi and Xiongnu so badly he was considered supernatural
+		add_charisma=15		#adopted by Xiongnu Chanyu after being saved from hunger by she-wolf and fed meat by ravens when he was left in the forest as a baby
+		add_finesse=10
+		add_zeal=8
+		no_traits=yes
+		add_trait="vengeful"		#avenged his father against Yuezhi
+		add_trait="brave"
+		add_trait="assertive"
+		add_gold=200
+		add_popularity=90
+		c:WUS = {
+			set_as_ruler=char:238
+		}
+		dna="NNtZ1KKaoprWhtaGAWMBYwKMAowCegJ6AosCiwKYApgChwKHAo8CjwKVApUBZgFmAVEBUQJmAmYCigKKAn8CfwAaABoClwKXBNYE1gKKAooCZwJnAn8CfwInAnYCdAJ0AooCigJ9An0BYgFiAB8AHwJyAnICiQKJAn4CfgKTApMChwKHAmgCaAJrAmsCkwKTAo8CjwFTAVMDoAOgAo4CjgNaA50CewJ7Ao8CjwJtAm0CdgJ2AocChwKZApkBfAF8ApICkgKRApECgAKAAn4CfgKcApwCcgJyAEQARAJ3AncEugS6An8CfwJOAk4AOAA4AB4AHgEjASMAuAC4AKoAqgAAAAABewF7AMwAzAA7ADsDGQMZAWUBZQB/AH8AQABAAMkAyQEpASkBbgFuATUBNQLlAuUA7wDvApoCmgB/AH8A3QDdArICsgDgAOABKAEoAD0APQDgAOAAxgDGAL0AvQDaANoEdQR1Ao0CjQAdAB0I6AylAAcAfwV6BXoQrBBeAeEB4QXWBWswcA0rDUQFeQAAAAAAAAAAAAAAAA=="
+	}
+}

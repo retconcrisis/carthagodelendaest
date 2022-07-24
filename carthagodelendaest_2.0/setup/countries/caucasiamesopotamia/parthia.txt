@@ -1,0 +1,5 @@
+﻿color = { 188  157  88 }	#Saturated ET colors - was "parthia_color"
+color2 = rgb { 48  38  104 }	#flag color
+
+ship_names = {
+}

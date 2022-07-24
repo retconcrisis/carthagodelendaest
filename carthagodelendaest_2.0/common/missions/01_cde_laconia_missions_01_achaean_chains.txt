@@ -1,0 +1,358 @@
+﻿01_cde_laconia_missions_01_achaean_chains = {
+    header = "mission_image_sparta"
+    icon = "sparta_2"
+
+    repeatable = no
+
+	chance = {
+		factor = 50000
+		modifier = {
+			NOT = { is_subject_of = ACH }
+			factor = 0
+		}
+	}
+	
+	ai_chance = { 	#Chance AI chooses
+		factor = 10
+		modifier = {
+			c:ACH = {
+				is_ai = no
+			}
+			factor = 0
+		}
+	}					
+
+    potential = {
+        tag = SPA
+		is_subject_of = ACH
+        has_civil_war = no
+		NOT = { war_with = ACH }
+    }
+
+    abort = {
+		OR = {
+			is_subject = no
+			NOT = { is_subject_of = ACH }
+		}
+    	has_variable = cde_me_spa_01_independence_war_active_flag	#gained in Achaean War event
+    }
+
+    on_start = {
+    	
+    }
+
+    on_abort = {
+    	custom_tooltip = general_mission_cooldown_tt
+		
+    }
+
+    on_completion = {
+    	complete_mission_effect = yes
+    	
+    }
+
+    01_cde_laconia_missions_01_task_1 = { # Debate for Defiance
+        icon = "task_expansion"
+		
+		allow = {
+			has_civil_war = no
+			political_influence >= 10
+		}
+		
+		duration = 180	#optional - in days
+		
+		on_start = {
+			add_political_influence = -10
+			trigger_event = { 
+				id = cde_me_spa_01.1	#Start event
+			}
+		}
+
+        on_completion = {
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_spa_defiant_laconians
+					duration = 10950
+				}
+			}
+			trigger_event = { 
+				id = cde_me_spa_01.2	#End of task event
+			}
+        }
+    }
+	
+	01_cde_laconia_missions_01_task_2 = { # Press Land Disputes
+        icon = "task_artemis"
+		
+		requires = { 01_cde_laconia_missions_01_task_1 }
+		
+		bypass = {
+			p:473 = {
+				NOT = { owner = c:ACH }
+			}
+		}
+		
+		highlight = {
+        	scope:province = {
+        		OR = {
+					province_id = 473	#Leuktron
+				}
+        	}
+        }
+		
+		allow = {
+			has_civil_war = no
+			political_influence >= 5
+		}
+		
+		duration = 90	#optional - in days
+		
+		on_start = {
+			add_political_influence = -5
+		}
+
+        on_completion = {
+			show_as_tooltip = {
+				p:473 = {
+					add_claim = root
+				}
+				c:ACH = {
+					add_opinion = { 
+						modifier = spa_ach_claims_dispute_made
+						target = root
+					}
+				}
+			}
+			trigger_event = { 
+				id = cde_me_spa_01.3	#End of task event
+			}
+        }
+    }
+	
+	01_cde_laconia_missions_01_task_3 = { # Delegate to Rome
+        icon = "task_diplomatic"
+		
+		requires = { 01_cde_laconia_missions_01_task_2 }
+		
+		allow = {
+			has_civil_war = no
+			has_senate_approval >= 0.60
+			treasury >= 40
+		}
+		
+		duration = 90	#optional - in days
+		
+		on_start = {
+			add_treasury = -40
+		}
+
+        on_completion = {
+			show_as_tooltip = {
+				c:ACH = {
+					add_opinion = { 
+						modifier = spa_ach_roman_delegate_ach
+						target = root
+					}
+				}
+				c:ROM = {
+					add_opinion = { 
+						modifier = spa_ach_roman_delegate_rom
+						target = root
+					}
+				}
+				add_country_modifier = {
+					name = cde_me_spa_overseas_sponsors
+					duration = 3650
+				}
+			}
+			trigger_event = { 
+				id = cde_me_spa_01.4	#End of task event
+			}
+        }
+    }
+	
+	01_cde_laconia_missions_01_task_4 = { # Ally the Likeminded
+        icon = "task_political"
+		
+		requires = { 01_cde_laconia_missions_01_task_2 }
+		
+		allow = {
+			has_civil_war = no
+			custom_tooltip = {
+				text = 01_cde_laconia_missions_01_task_4.tt
+				any_character = {
+					count >= 7
+					employer = root
+					is_male = yes
+					is_adult = yes
+					loyalty >= 70
+					is_minor_character = no
+				}
+			}
+		}
+
+        on_completion = {
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = cde_me_spa_independence_faction_majority
+					duration = 3650
+				}
+			}
+			trigger_event = { 
+				id = cde_me_spa_01.5	#End of task event
+			}
+        }
+    }
+	
+	01_cde_laconia_missions_01_task_5 = { # Friends in Achaea
+        icon = "task_zeus_cornucopia"
+		
+		requires = { 01_cde_laconia_missions_01_task_2 }
+		
+		allow = {
+			has_civil_war = no
+			trigger_if = {		#used instead of if in triggers
+				limit = {
+					char:98 = {		#Menalkides of Sparta in Achaea
+						employer = c:ACH
+						prisoner = no
+						is_alive = yes
+					}
+				}
+				custom_tooltip = {
+					text = 01_cde_laconia_missions_01_task_5.tt2
+					any_character = {
+						employer = root
+						is_adult = yes
+						is_minor_character = no
+						is_friend = char:98
+					}
+				}
+			}
+			custom_tooltip = {
+				text = 01_cde_laconia_missions_01_task_5.tt
+				any_character = {
+					employer = root
+					any_friend = {
+						employer = c:ACH
+						is_adult = yes
+						is_minor_character = no
+						has_any_office = yes
+					}
+				}
+			}
+		}
+
+        on_completion = {
+			custom_tooltip = 01_cde_laconia_missions_01_task_5.ttcompletion
+			trigger_event = { 
+				id = cde_me_spa_01.6	#End of task event
+			}
+        }
+    }
+	
+	01_cde_laconia_missions_01_task_6 = { # Purge Achaean Sympathizers
+        icon = "task_conquest"
+		
+		requires = { 01_cde_laconia_missions_01_task_4 }
+		
+		allow = {
+			has_civil_war = no
+			political_influence >= 20
+		}
+		
+		duration = 180	#optional - in days
+		
+		on_start = {
+			add_political_influence = -20
+		}
+
+        on_completion = {
+			custom_tooltip = 01_cde_laconia_missions_01_task_6.tt
+			show_as_tooltip = {
+				add_tyranny = 10
+				current_ruler = {
+					add_popularity = 5
+				}
+				add_country_modifier = {
+					name = cde_me_spa_anti_achaean_purge
+					duration = 1825
+				}
+			}
+			trigger_event = { 
+				id = cde_me_spa_01.7	#End of task event
+			}
+        }
+    }
+	
+	01_cde_laconia_missions_01_task_7 = { # Molon Labe
+        icon = "task_athena"
+		
+		requires = { 01_cde_laconia_missions_01_task_3 01_cde_laconia_missions_01_task_4 01_cde_laconia_missions_01_task_5 }
+		
+		allow = {
+			has_civil_war = no
+			manpower >= 4		#2k manpower of cohorts
+			capital_scope = {
+				fort_level = 2
+			}
+			custom_tooltip = {
+				text = 01_cde_laconia_missions_01_task_7.tt
+				any_owned_province = {
+					count >= 2
+					OR = {
+						has_building = military_building	#Training Camp, for Cities
+						has_building = barracks_building	#for Settlements
+					}
+				}
+			}
+		}
+		
+        on_completion = {
+			set_variable = {
+				name = cde_me_spa_01_independence_war_active_flag	#flag prevents automatic mission abort
+			}
+			add_country_modifier = {
+				name = cde_me_spa_molon_labe
+				duration = 1825		#5 years
+			}
+			custom_tooltip = 01_cde_laconia_missions_01_task_7.tt2
+			
+			trigger_event = { 
+				id = cde_me_spa_01.8	#Begins Achaean War event chain
+			}
+			c:ROM = {
+				trigger_event = { 
+					id = cde_me_spa_01.8	#Begins Achaean War event chain
+				}
+			}
+			c:ACH = {
+				trigger_event = { 
+					id = cde_me_spa_01.8	#Begins Achaean War event chain
+				}
+			}
+        }
+    }
+	
+	01_cde_laconia_missions_01_task_8 = { # Free Laconia, final task
+        icon = "task_apollo"
+		
+		requires = { 01_cde_laconia_missions_01_task_7 }
+		
+		final = yes
+		
+		allow = {
+			has_civil_war = no
+			war = no			#not at war
+			is_subject = no		#is independent
+		}
+		
+		on_completion = {
+			add_country_modifier = {
+				name = cde_me_spa_laconian_freedom
+				duration = 3650		#10 years
+			}
+		}
+	}
+	
+}

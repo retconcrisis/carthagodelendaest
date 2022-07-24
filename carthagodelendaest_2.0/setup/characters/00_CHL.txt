@@ -1,0 +1,23 @@
+﻿"CHL"={
+	country="CHL"
+	
+	#Kantaman, fictional ruler of the Chola dynasty
+	259={		
+		first_name="Kantaman"
+		family = c:CHL.fam:Chola
+		birth_date=559.7.2		#195 BC
+		culture="chola"
+		religion="hindu"
+		no_stats=yes
+		add_martial=6
+		add_charisma=8
+		add_finesse=8
+		add_zeal=7
+		add_gold=350
+		add_popularity=60
+		c:CHL = {
+			set_as_ruler=char:259
+		}
+	}
+	
+}

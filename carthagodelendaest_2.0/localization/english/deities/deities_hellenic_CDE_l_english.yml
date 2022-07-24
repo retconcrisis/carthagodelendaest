@@ -1,0 +1,14 @@
+﻿l_english:
+ ## Hellenic
+ deity_roma:0 "$omen_roma$"
+ omen_roma:0 "Roma"
+ omen_roma_desc:0 "Worshipped by the cult of Roma that was conceived by the city of Smyrna, the goddess Roma embodies the Roman Republic and its values. Representing the divine nature of the city of Rome, Roma has become worshipped throughout the Hellenistic world, and various cities including Athens, Rhodes and Delphi have accepted the deity as a goddess of the common people.\n\nRoma presides over athletic games held throughout the Roman and Greek world, and is the mother of the entire Roman people. Though rarely worshipped by the people of Rome themselves, the spread of her cult beyond Rome itself is a testament to the glory and expansion of the Roman Republic."
+ deity_parthenos:0 "$omen_parthenos$"
+ omen_parthenos:0 "Parthenos"
+ omen_parthenos_desc:0 "The Virgin Goddess worshipped by the Tauri as well as the city of Parthenion, Parthenos was associated with either Iphigenia, daughter of Agamemnon, or Artemis Tauropolos. Parthenos may have been a hybrid goddess of the Taurian and Hellenic religions. As per Tauri tradition, any shipwrecked men as well as any Greeks who found themselves on Tauric shores would be sacrificed to Parthenos, who herself delights in this shedding of blood in exchange for her protection."
+ 
+ ## Indian - Hindu, Buddhist and Jain
+ deity_kataragama_deviyo:0 "$omen_kataragama_deviyo$"
+ omen_kataragama_deviyo:0 "Kataragama Deviyo"
+ omen_kataragama_deviyo_desc:0 "The guardian deity of Sri Lanka, Kataragama deviyo was said to have been instructed by the Lord Buddha to protect and help the Lankan people. King Dutthagamani of Anuradhapura was given a sword, blessings and guidance from Kataragama deviyo in his war against the Chola dynasty - after successfully driving the Chola invaders out of Anuradhapura, Dutthagamani built a temple to the deity, the Kataragama Devalaya, in Ruhunu, Dutthagamani's kingdom of origin."
+ 

@@ -7,3 +7,18 @@ pax_romana_modifier = {
 	army_maintenance_cost = 0.2
 	war_exhaustion = 0.15
 }
+
+rom_bacchanalian_cults_banned = {
+	local_nobles_happyness = -0.2
+}
+rom_senate_power_consolidated = {
+	subject_loyalty = 0.1
+	subject_opinions = -0.1
+}
+rom_senate_perceived_weak = {
+	subject_loyalty = -0.1
+}
+rom_greek_rhetoricians_unbanned = {
+	culture_citizen_happiness = 0.1
+	culture_nobles_happiness = 0.1
+}

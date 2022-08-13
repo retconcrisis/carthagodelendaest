@@ -18,7 +18,11 @@
 		##################################
 		#New CDE mod events
 		##################################
+		
 		cde_flavor_rom.1			#Decline of Republic heritage for Rome
+		cde_flavor_rom.2			#Removal of decline - stay republic
+		cde_flavor_rom.3			#Removal of decline - become monarchy
+		
 		cde_character_appearances.1		#Gaius Marius appearance
 		cde_character_appearances.2		#Sulla appearance
 		cde_character_appearances.3		#Tigranes II appearance

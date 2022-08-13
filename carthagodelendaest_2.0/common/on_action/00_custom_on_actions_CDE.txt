@@ -1,0 +1,20 @@
+﻿
+CDE_event_pulse_country = {		#in yearly on_action
+	trigger = {
+		num_of_cities >= 1
+		NOR = {
+			tag = REB
+			tag = BAR
+			has_variable = ongoing_mission_pulse_flag
+		}
+	}
+	events = {
+		
+	}
+	random_events = {
+		500 = 0
+		100 = cde_flavor_rom.4		#Bacchanlain mystery cults
+		50 = cde_flavor_rom.5		#Greek Rhetoricians in Rome
+	}
+}
+

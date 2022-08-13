@@ -39,6 +39,9 @@
 		great_work_misc_yearly_pulse
 		delay = { days = { 1 364 } }
 		babylonian_priest_yearly_pulse
+		
+		delay = { days = { 30 335 } }
+		CDE_event_pulse_country				#New CDE mod
 	}
 	
 	effect = {

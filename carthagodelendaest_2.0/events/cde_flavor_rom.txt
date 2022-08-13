@@ -27,6 +27,9 @@ cde_flavor_rom.1 = {
 	
 	immediate = {
 		set_country_heritage = decline_of_roman_republic_heritage
+		set_variable = { 
+			name = decline_of_roman_republic_var
+		}
 	}
 	
 	option = {
@@ -35,3 +38,204 @@ cde_flavor_rom.1 = {
 		add_stability = -5
 	}
 }
+
+#End of the Republic's Decline - remain a Republic
+cde_flavor_rom.2 = {
+	type = country_event
+	title = "cde_flavor_rom.2.t"
+	desc = "cde_flavor_rom.2.desc"
+	picture = oration
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		has_variable = decline_of_roman_republic_var
+		tyranny < 1
+		stability = 80
+		is_republic = yes
+	}
+	
+	immediate = {
+		remove_variable = decline_of_roman_republic_var
+	}
+	
+	option = {
+		name = cde_flavor_rom.2.a
+		
+		custom_tooltip = cde_flavor_rom.2.tt
+		set_country_heritage = roman_republic_heritage
+	}
+}
+
+#End of the Declining Republic - become a monarchy / empire
+cde_flavor_rom.3 = {
+	type = country_event
+	title = "cde_flavor_rom.3.t"
+	desc = "cde_flavor_rom.3.desc"
+	picture = proscription
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		has_variable = decline_of_roman_republic_var
+		NOT = { government = dictatorship }
+		is_monarchy = yes
+	}
+	
+	immediate = {
+		remove_variable = decline_of_roman_republic_var
+	}
+	
+	option = {
+		name = cde_flavor_rom.3.a
+		
+		custom_tooltip = cde_flavor_rom.3.tt
+		if = {
+			limit = {
+				OR = {
+					government = imperium
+					government = imperial_cult
+				}
+			}
+			set_country_heritage = roman_empire_heritage
+		}
+		else = {
+			set_country_heritage = roman_kingdom_heritage
+		}
+	}
+}
+
+#Bacchanalian Mystery Cults
+cde_flavor_rom.4 = {
+	type = country_event
+	title = "cde_flavor_rom.4.t"
+	desc = "cde_flavor_rom.4.desc"
+	picture = celtic_religious_festival
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		is_republic = yes
+	}
+	
+	option = {
+		name = cde_flavor_rom.4.a
+		
+		add_political_influence = influence_small
+		add_country_modifier = {
+			name = rom_senate_power_consolidated
+			duration = 1825
+		}
+		every_owned_province = {
+			limit = {
+				is_in_region = central_italy_region
+			}
+			custom = cde_flavor_rom.4.tt
+			add_province_modifier = {
+				name = rom_bacchanalian_cults_banned
+				duration = 1825
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_rom.4.b
+		
+		add_country_modifier = {
+			name = rom_senate_perceived_weak
+			duration = 1825
+		}
+		ordered_character = {
+			limit = {
+				is_ruler = no
+				is_party_leader = yes
+			}
+			max = 3
+			add_loyalty = disappointed_party_leader
+		}
+	}
+}
+
+#Greek Rhetoricians in Rome
+cde_flavor_rom.5 = {
+	type = country_event
+	title = "cde_flavor_rom.5.t"
+	desc = "cde_flavor_rom.5.desc"
+	picture = cde_event_greek_debate_crowd
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		is_republic = yes
+		OR = {
+			has_party = boni_party
+			has_party = optimates_party
+		}
+	}
+	
+	option = {
+		name = cde_flavor_rom.5.a
+		
+		every_country_culture = {
+			limit = {
+				OR = {
+					is_culture = macedonian
+					is_culture = italiotian
+					is_culture = thracian
+					is_culture = cretan
+					is_culture = achaean
+					is_culture = argolian
+					is_culture = arcadian
+					is_culture = epirote
+					is_culture = boeotian
+					is_culture = peloponnesian
+					is_culture = athenian
+					is_culture = euboean
+					is_culture = aetolian
+					is_culture = aegean
+					is_culture = greco_pontic
+					is_culture = aeolian
+					is_culture = troan
+					is_culture = ionian
+					is_culture = cypriot
+					is_culture = thessalian
+					is_culture = bosporan
+					is_culture = syracusan
+					is_culture = cyrenaican
+					is_culture = massalian
+					is_culture = hellenistic
+					is_culture = greco_bactrian
+				}
+			}
+			add_country_culture_modifier = {
+				name = "rom_greek_rhetoricians_unbanned"
+				duration = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = cde_flavor_rom.5.b
+		
+		if = {
+			limit = {
+				has_party = boni_party
+			}
+			approval_effect = {
+				PARTY = boni_party
+				VALUE = party_approval_medium_svalue
+			}
+		}
+		else = {
+			approval_effect = {
+				PARTY = optimates_party
+				VALUE = party_approval_medium_svalue
+			}
+		}
+	}
+}
+

@@ -132,7 +132,16 @@
  cde_flavor_egy.1.t: "Ptolemaios Falls From His Horse!"
  cde_flavor_egy.1.desc: "In a fierce battle with the enemy, our basileus #Y Ptolemaios VI#! fell from atop his horse and sustained serious injuries. Despite his injuries, Ptolemaios insists on continuing the war effort."
  cde_flavor_egy.1.a: "Ptolemaios' spirit cannot be broken!"
- 
+ cde_flavor_egy.2.t: "Ptolemaios' Physical Condition"
+ cde_flavor_egy.2.desc: "While the war has finally ended, the condition of #Y Ptolemaios VI#! has worsened since falling off of his horse while in battle. Our priests are now doing their best to call upon the gods to save Ptolemaios from his injuries, although his condition does not look particularly good..."
+ cde_flavor_egy.2.a: "We shall await the gods' answer with worry..."
+ cde_flavor_egy.3.t: "Ptolemaios VI Succumbs to His Injuries!"
+ cde_flavor_egy.3.desc: "Unfortunately, the injuries sustained by #Y Ptolemaios#! after falling from his horse was far too grave for our physicians to treat. Even those in attendance of his deathbed who had not even read a single medical treatise knew that he would not survive. Although Ptolemaios knew that his death was inevitable, his fate sealed by the gods, he seemed content as he drifted off into an eternal sleep. May the gods bless his soul as he moves on to the afterlife."
+ cde_flavor_egy.3.a: "How tragic, passing on after a hard-earned peace!"
+ cde_flavor_egy.4.t: "Ptolemy VI Paralyzed!"
+ cde_flavor_egy.4.desc: "Although our physicians tried their best to treat the injured #Y Ptolemaios VI#!, there is a limit to what human hands can accomplish. While all attending his bedside were relieved upon hearing that Ptolemaios survived, the room quickly fell silent when it was realized that he could not move his lower limbs.\n\nThus, while Ptolemaios has recovered from his initial injuries, it seems that he is unable to move a large portion of his body. Thus, Ptolemaios is nobly considering retirement from public life so that a healthier successor may take the throne in his place."
+ cde_flavor_egy.4.a: "It may be wise indeed to step down"
+ cde_flavor_egy.4.b: "He is still the true basileus; nothing has changed!"
  
  
  #Flavor BAC and other Bactria countries
@@ -225,7 +234,6 @@
  cde_flavor_hispania.4.a: "May the noble Viriathus lead us to victory!"
  cde_flavor_hispania.4.tt: " #Y Viriathus#! becomes the ruler of our people"
  
- 
  #Tribal Flavor
  cde_flavor_tribal.1.t: "New Female Matriarch"
  cde_flavor_tribal.1.desc: "The Sitones have always elected female leaders to take charge after the death of the previous chief. Thus, in accordance with Sitonian tradition, we have elected a female matriarch to lead our peoples. Though we still mourn the passing of our previous matriarch, we must not falter and stand firm behind our new matriarch, the noble [ROOT.GetCountry.GetRuler.GetName]."
@@ -265,17 +273,23 @@
  cde_flavor_rom.1.t: "The Decline of the Republic"
  cde_flavor_rom.1.desc: "Since our ancestors overthrew the corrupt monarchy of the Tarquins and established the Roman Republic under Lucius Junius Brutus, we Romans had taken great care to ensure that all ideals and traditions of the Republic were upheld. However, in recent times we have observed what may be interpreted as a decline in republican ideals: street gangs fighting for electoral candidates, abuse of imperium by Roman authorities, and the accumulation of power in the hands of a few rather than many."
  cde_flavor_rom.1.a: "Silent enim leges inter arma - in times of war, the law falls silent"
- cde_flavor_egy.2.t: "Ptolemaios' Physical Condition"
- cde_flavor_egy.2.desc: "While the war has finally ended, the condition of #Y Ptolemaios VI#! has worsened since falling off of his horse while in battle. Our priests are now doing their best to call upon the gods to save Ptolemaios from his injuries, although his condition does not look particularly good..."
- cde_flavor_egy.2.a: "We shall await the gods' answer with worry..."
- cde_flavor_egy.3.t: "Ptolemaios VI Succumbs to His Injuries!"
- cde_flavor_egy.3.desc: "Unfortunately, the injuries sustained by #Y Ptolemaios#! after falling from his horse was far too grave for our physicians to treat. Even those in attendance of his deathbed who had not even read a single medical treatise knew that he would not survive. Although Ptolemaios knew that his death was inevitable, his fate sealed by the gods, he seemed content as he drifted off into an eternal sleep. May the gods bless his soul as he moves on to the afterlife."
- cde_flavor_egy.3.a: "How tragic, passing on after a hard-earned peace!"
- cde_flavor_egy.4.t: "Ptolemy VI Paralyzed!"
- cde_flavor_egy.4.desc: "Although our physicians tried their best to treat the injured #Y Ptolemaios VI#!, there is a limit to what human hands can accomplish. While all attending his bedside were relieved upon hearing that Ptolemaios survived, the room quickly fell silent when it was realized that he could not move his lower limbs.\n\nThus, while Ptolemaios has recovered from his initial injuries, it seems that he is unable to move a large portion of his body. Thus, Ptolemaios is nobly considering retirement from public life so that a healthier successor may take the throne in his place."
- cde_flavor_egy.4.a: "It may be wise indeed to step down"
- cde_flavor_egy.4.b: "He is still the true basileus; nothing has changed!"
- 
+ cde_flavor_rom.2.t: "End of the Republic's Decline"
+ cde_flavor_rom.2.desc: "By returning stability to Rome and closely adhering to our old Republican values, eliminating the corrupt and the tyrannical from our state, we have returned the Roman Republic to its former glory from its previous decline. Never again shall the likes of tyrants and kings ever rule Rome!"
+ cde_flavor_rom.2.a: "Glory to the Republic!"
+ cde_flavor_rom.2.tt: "#Y Decline of the Republic#! Heritage is removed"
+ cde_flavor_rom.3.t: "End of the Declining Republic"
+ cde_flavor_rom.3.desc: "From the decaying Republic arose our great [ROOT.GetCountry.GetRuler.GetTitle] [ROOT.GetCountry.GetRuler.GetName], who swiftly put an end to the rotting state, plagued by corrupt senators and tyrranical officials who tarnished the legacy of the Republic. Thus, our great [ROOT.GetCountry.GetRuler.GetTitle] [ROOT.GetCountry.GetRuler.GetName] deemed that the Republic was beyond saving, an animal that needed to be put down. In its place, we have established a state in which the affairs of the realm shall rest solely within the capable hands of one individual, rather than the incapable and corrupt hands of many."
+ cde_flavor_rom.3.a: "Glory to the Roman Empire!"
+ cde_flavor_rom.3.tt: "#Y Decline of the Republic#! Heritage is removed"
+ cde_flavor_rom.4.t: "Bacchanalian Mystery Cults"
+ cde_flavor_rom.4.desc: "The mystery cults of Bacchus grew popular among the Roman and Italian elite not very long ago; the cult, unsanctioned and secretly organized outside the purview of the Roman Senate, held unofficial and immoral festivals, in which repulsive acts and unspeakable practices were performed by the cult members in secrecy of the night. As a result, the law known as the Senatus Consultum de Bacchanalibus was passed, restricting Bacchanalia festivals in all of Italy, allowing them to be held only after approval by the Senate. Even so, the cult remains popular despite our attempts to suppress it. As a symbol of Italian disobedience and independence from the influence of Rome, it is imperative that we make a decision on how to deal with this followers of Bacchus."
+ cde_flavor_rom.4.a: "The cult must be restricted further in Italy!"
+ cde_flavor_rom.4.b: "We should not persecute the cult further"
+ cde_flavor_rom.4.tt: "Every owned province in the Central Italy region"
+ cde_flavor_rom.5.t: "Greek Rhetoricians in Rome"
+ cde_flavor_rom.5.desc: "In 593 A.U.C., Greek rhetoricians were banned in the city of Rome by the Senate, as Greek rhetoricians were viewed as one of the many inferior Greek influences that infiltrated pure Roman traditions of old. However, today, it can be seen that Greek rhetoric continues to influence even the Roman elite, as some of the most prominent figures in Roman politics and society have adopted Greek styles of rhetoric and debate, achieving a great deal of success with their new political weapon. Thus, the debate has emerged in the Senate once more concerning whether these Greek orators and teachers should be permitted in Roman circles."
+ cde_flavor_rom.5.a: "Permit Greek rhetoricians in Rome once more"
+ cde_flavor_rom.5.b: "The Greek rhetoricians shall not pollute Roman society!"
  
  
  #Tooltips

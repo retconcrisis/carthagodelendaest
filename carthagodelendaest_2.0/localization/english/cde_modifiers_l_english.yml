@@ -18,6 +18,9 @@
   loyalty_galba_trial_justice_denied: "Justice Denied in Galba's Trial"
   loyalty_galba_trial_bribed: "Accepted Bribe for Acquittal"
   
+  #Culture Modifiers
+  rom_greek_rhetoricians_unbanned: "Greek Rhetoricians Unbanned in Rome"
+  
   #Decision modifiers
   pax_romana_modifier: "Pax Romana"
   granted_spartan_autonomy_modifier: "Granted Lacedaemonian Autonomy"
@@ -27,6 +30,12 @@
   ashes_of_menander_country_state_mod: "Stupa of Menandros' Ashes"
   
   servile_revolt_fervor: "Servile Revolt Fervor"
+  rom_bacchanalian_cults_banned: "Bacchanalian Cults Restricted"
+  rom_senate_power_consolidated: "Senate Power Consolidated"
+  desc_rom_senate_power_consolidated: "By making a firm stand on suppressing the Bacchanalian cults of the Italians, we have made it clear that all of our Italian socii answer directly to the Senate, and only to the Senate."
+  rom_senate_perceived_weak: "Senate Perceived as Weak"
+  desc_rom_senate_perceived_weak: "By going back on our policy of suppressing the Bacchanalian cults, we have showed our Italian subjects that they have autonomy that shall not be stepped upon by Senate authority, a move that has made us look weak."
+  
   
   #Other
   cde_child_ruler: "Child Ruler"
